@@ -192,11 +192,11 @@ table {
    
 }
 .powered{
-    display: flex;
+    display: none;
     align-items: center;
     color: gold;
  
-     margin-left: 500px;+
+     margin-left: 500px;
      margin-bottom: 50px;
      margin-top: 30px;
  }
