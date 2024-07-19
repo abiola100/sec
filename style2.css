@@ -16,6 +16,24 @@ header{
 .s{
     font-size: 60px;
 }
+       /* ADS */
+.ads1{
+     margin-top: 5px;
+    margin-left: 100px;
+    margin-right: 100px ;
+}
+.ads2{
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 100px;
+}
+.ads3{
+    margin-left: 400px;
+    margin-right: 300px;
+}
+.ads4{
+    margin-left: 500px;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -169,7 +187,7 @@ table {
 } 
 .lower-side{
 
-    height: 500px;
+    height: 900px;
     background-color: rgb(91, 110, 96);
    
 }
@@ -178,7 +196,7 @@ table {
     align-items: center;
     color: gold;
  
-     margin-left: 600px;
+     margin-left: 500px;+
      margin-bottom: 50px;
      margin-top: 30px;
  }
@@ -365,8 +383,9 @@ table {
 /* FOOTER SECTION*/
 
 footer{
-    margin-left: 600px;
+    margin-left: 500px;
     margin-top: 20px;
+    font-size: 25px;
 }
 
  .info{
@@ -402,6 +421,27 @@ footer{
     padding: 10px;
     border-radius: 20%;
 }
+     /* ADS*/
+    
+     .ads1{
+    
+        margin-left: 30px;
+        
+    }
+
+     .ads2{
+        margin-top: 30px;
+        margin-left: 10px;
+        
+    }
+    .ads3{
+        margin-left: 50px;
+    
+    }
+    .ads4{
+        margin-left: 50px;
+    }
+
 .form-container{
     
     margin-left: 30px;
