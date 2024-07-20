@@ -218,7 +218,7 @@ table {
         margin-left: 30px;
     }
     .title{
-        margin-left: 10px;
+        margin-left: 1px;
         margin-bottom: 20px;
         color: rgb(139, 0, 93);
         padding: 20px;
@@ -488,7 +488,7 @@ footer{
     margin-left: 10px;
     
     .title{
-        margin-left: 0;
+        margin-left: 1px;
         font-size: 16px;
     }
     .title2{
