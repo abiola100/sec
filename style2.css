@@ -488,7 +488,7 @@ footer{
     margin-left: 10px;
     
     .title{
-        margin-left: 5px;
+        margin-left: 0;
         font-size: 16px;
     }
     .title2{
