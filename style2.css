@@ -210,6 +210,8 @@ table {
     margin-left: 300px;
     margin-bottom: 50px;
     font-weight: 500;
+    text-align:left;
+    align-items: center;
     b{
         font-weight: 800;
     }
