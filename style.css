@@ -108,6 +108,7 @@ a{
     font-size: 22px;
     background: linear-gradient(to right, #ffff66, #ffccff,#ffb3b3,#4d4dff,#4dff4d);
     font-weight: 600;
+    max-width: 400px;
     height: 150px;
     border-style: none;
     border-radius: 30px;
@@ -146,7 +147,8 @@ a{
     background-color: rgb(190, 178, 180);
     border: none;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 40px;
+    height: 30px;
     margin-top: 20px;
     font-size: 20px;
     width: 230px;
@@ -2223,7 +2225,7 @@ footer{
     margin-left: 2px;
  }
  .all-subject{
-    width: 90% ;
+    width: 75% ;
     align-items: center;
     margin: 30px 10px;
     clear: both;
@@ -2303,6 +2305,16 @@ footer{
    .nav-toggle{
     display: block;
    }
+   .agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
+.eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
+    font-size: 16px;
+    
+   
+    font-weight: 400;
+    max-width: 300px;
+    height: 80px;
+   align-items: center;
+}
    
   
 
