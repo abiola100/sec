@@ -2213,6 +2213,7 @@ footer{
     width: 100%;
     overflow: hidden;
     margin-top: 0;
+    margin-bottom: 10px;
   }
   .go img{
     height: 30px;
@@ -2224,9 +2225,9 @@ footer{
     margin-left: 2px;
  }
  .all-subject{
-    width: 75% ;
+    width: 70% ;
     align-items: center;
-    margin: 30px 10px;
+    margin: 10px 5px;
     clear: both;
  }
 
@@ -2317,7 +2318,9 @@ footer{
 .agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
 .eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
    
-   width: 300px;
+   width: 280px;
+   font-size: 16px;
+   padding: 5px;
  
  }
    
