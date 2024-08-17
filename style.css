@@ -109,7 +109,8 @@ a{
     background: linear-gradient(to right, #ffff66, #ffccff,#ffb3b3,#4d4dff,#4dff4d);
     font-weight: 600;
     max-width: 400px;
-    height: 150px;
+    height: 100px;
+    margin-bottom: 10px;
     border-style: none;
     border-radius: 30px;
     color: #000000;
@@ -2193,14 +2194,12 @@ section{
 /* FOOTER */
 
 footer{
-    max-width: 150px;
-    margin-left: 450px;
-    margin-top: 40px;
-    color: white;
-    background-color: rgb(123,34, 58);
+    align-items: center;
     
-    padding: 10px;
-    border-radius: 20%;
+    border-radius: 5px;
+    margin-left: 350px;
+    margin-top: 30px;
+    font-size: 22px;
 }
 @media (max-width: 750px){
    
@@ -2269,13 +2268,12 @@ footer{
 
 
  footer{
-    margin-left: 75px;
-    margin-top: 20px;
-    color: white;
-    background-color: rgb(123,34, 58);
-    max-width: 40%;
-    padding: 10px;
-    border-radius: 20%;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
 }
 .container{
     flex-direction: column;
@@ -2312,6 +2310,7 @@ footer{
    
     font-weight: 400;
     max-width: 300px;
+    width: 300px;
     height: 80px;
    align-items: center;
 }
