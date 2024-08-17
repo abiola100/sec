@@ -107,13 +107,13 @@ a{
     font-size: 22px;
     font-size: 22px;
     background: linear-gradient(to right, #ffff66, #ffccff,#ffb3b3,#4d4dff,#4dff4d);
-    font-weight: 600;
+    font-weight: 800;
     max-width: 400px;
     height: 100px;
     margin-bottom: 10px;
     border-style: none;
     border-radius: 30px;
-    color: #000000;
+    color: white;
 }
 .agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
 .eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
@@ -2306,10 +2306,10 @@ footer{
    }
    .agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
 .eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
-    font-size: 16px;
+    font-size: 18px;
     
    
-    font-weight: 400;
+    font-weight: 600;
     max-width: 300px;
     width: 300px;
     height: 80px;
