@@ -40,15 +40,19 @@ body{
     margin: 0 300px;
     margin-top: 30px;
 }
-header{
+.header{
     background-color: white;
     border-radius: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     
 }
 .s{
     font-size: 60px;
 }
 .container{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,49 +83,15 @@ a{
  }
 
 
-
+.go img{
+    height: 50px;
+    
+}
 
 
 
 /*ALL CLASSES SUBJECT*/
-.agric-j1-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-.agric-j2-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-.agric-j3-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-.bs-j1-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-.bs-j2-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-.bs-j3-subjects{
-    background-color: wheat;
-    font-weight:800;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*  phe section*/
-.phe{
+.agric,.phe, .bs{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -130,6 +100,111 @@ a{
     max-width: 400px;
     
 }
+
+
+.agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
+.eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
+    font-size: 22px;
+    font-size: 22px;
+    background: linear-gradient(to right, #ffff66, #ffccff,#ffb3b3,#4d4dff,#4dff4d);
+    font-weight: 600;
+    height: 150px;
+    border-style: none;
+    border-radius: 30px;
+    color: #000000;
+}
+.agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
+.eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
+   
+    padding: 35px;
+    background-color: turquoise;
+    border-radius: 40px;
+ 
+ }
+ 
+
+.agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects{
+    background-color: wheat;
+    font-weight:800;
+    border-radius: 20px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.agric-first button,.agric-second button, .agric-third button,
+.agric2-first button, .agric2-second button,.agric2-third button,
+.agric3-first button, .agric3-second button, .agric3-third button,
+.phe-first button,.phe-second button,.phe-third button,
+.phe2-first button,.phe2-second button,.phe2-third button,
+.phe3-first button,.phe3-second button,.phe3-third button,
+.bs-first button,.bs-second button,.bs-third button,
+.bs2-first button,.bs2-second button,.bs2-third button,
+.bs3-first button,.bs3-second button,.bs3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+
+
+
+
+
+
+.agric-jss1 button,.agric-jss2 button, .agric-jss3 button,
+.bs-jss1 button,.bs-jss2 button,.bs-jss3 button,
+.bt-jss1 button,.bt-jss2 button,.bt-jss3 button,
+.bst-jss1 button,.bst-jss2 button,.bst-jss3 button,
+.civic-jss1 button,.civic-jss2 button,.civic-jss3 button,
+.cca-jss1 button,.cca-jss2 button,.cca-jss3 button,
+.com-jss1 button,.com-jss2 button,.com-jss3 button,
+.eng-jss1 button,.eng-jss2 button,.eng-jss3 button,
+.hi-jss1 button,.hi-jss2 button,.hi-jss3 button,
+.he-jss1 button,.he-jss2 button,.he-jss3 button,
+.irk-jss1 button,.irk-jss2 button,.irk-jss3 button,
+.math-jss1 button,.math-jss2 button,.math-jss3 button,
+.jss1 button,.jss2 button,.jss3 button,
+.se-jss1 button,.se-jss2 button,.se-jss3 button,
+.ss-jss1 button,.ss-jss2 button,.ss-jss3 button,
+.yo-jss1 button,.yo-jss2 button,.yo-jss3 button{
+    font-size: 16px;
+    font-weight: 600;
+    border-style: none;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.agric-first  button:hover,.agric-second  button:hover,.agric-third  button:hover,
+.agric2-first  button:hover, .agric2-second  button:hover, .agric2-third  button:hover,
+.agric3-first  button:hover, .agric3-second  button:hover, .agric3-third  button:hover,
+.phe-first  button:hover,.phe-second  button:hover,.phe-third  button:hover,
+.phe2-first  button:hover,.phe2-second  button:hover,.phe2-third  button:hover,
+.phe3-first  button:hover,.phe3-second  button:hover,.phe3-third  button:hover,
+.bs-first  button:hover,.bs-second  button:hover,.bs-third  button:hover,
+.bs2-first  button:hover,.bs2-second  button:hover,.bs2-third  button:hover,
+.bs3-first  button:hover,.bs3-second  button:hover,.bs3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+
+
+
+
+/*  phe section*/
+
 section{
     margin-left: 30px;
 }
@@ -143,182 +218,13 @@ section{
    
 
 }
-.phe-topics1 button:hover{
+.phe-topics1 button:hover, .bs-topics1 button:hover{
     background-color: rgb(159, 163, 156);
     color: rgb(13, 9, 17);
 }
-.class1{
-   
-    padding: 35px;
-
-}
-
-/* jss1 terms button */
-.phe-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-
-.phe-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.phe-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss1 hover*/
-.phe-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-/* pages */
-/* about **/
-.about{
-    
-}
-
-
-/* jss2 terms button */
-.phe2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.phe2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.phe2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss2 hover*/
-
-.phe2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-/* jss3 terms button*/
-.phe3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.phe3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.phe3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss3 hover*/
-.phe3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.phe3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-/*  agric section*/
-.agric{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2px;
-    margin-bottom: 5px;
-    max-width: 400px;
-    
-}
-.agric-sub{
-    font-size: 22px;
-    font-size: 22px;
-    background-color: rgb(155, 165, 162);
-    font-weight: 600;
-}
 
 
 
-.agric-class1{
-   
-   padding: 35px;
-   background-color: turquoise;
-
-}
-
-
-
-
-
-
-
-.agric-jss1 button{
-    font-size: 16px;
-    font-weight: 600;
-}
-.agric-jss2 button{
-    font-size: 16px;
-    font-weight: 600;
-}
-.agric-jss3 button{
-    font-size: 16px;
-    font-weight: 600;
-}
 
 /*CLASS HOVER*/
 .agric-jss1 button:hover,.agric-jss2 button:hover,.agric-jss3 button:hover,
@@ -347,304 +253,9 @@ section{
 }
 
 
-/* jss1 terms button */
-.agric-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-
-.agric-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-
-}
-.agric-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-/* jss1 hover*/
-.agric-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
 
 
-/* jss2 terms button */
-.agric2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.agric2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.agric2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-    border-radius: 4px;
-}
-/* jss2 hover*/
-
-.agric2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-/* jss3 terms button*/
-.agric3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.agric3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.agric3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss3 hover*/
-.agric3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.agric3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-/*  BASIC SCIENCE*/
-.bs{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2px;
-    margin-bottom: 5px;
-    max-width: 400px;
-    
-}
-
-.bs-topics1 button:hover{
-    background-color: rgb(159, 163, 156);
-    color: rgb(13, 9, 17);
-}
-.bs-class1{
-   
-    padding: 35px;
-    background-color: turquoise;
-
-}
-.bs-sub{
-    font-size: 22px;
-    font-size: 22px;
-    background-color:rgb(218, 204, 186);
-    font-weight: 600;
-}
-.bs-jss1 button{
-    font-size: 16px;
-    font-weight: 600;
-}
-.bs-jss2 button{
-    font-size: 16px;
-    font-weight: 600;
-}
-.bs-jss3 button {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-/* jss1 terms button */
-.bs-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.bs-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-.bs-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-/* jss1 hover*/
-.bs-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-
-
-/* jss2 terms button */
-.bs2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-.bs2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    font-weight: 600;
-}
-.bs2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-/* jss2 hover*/
-
-.bs2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-/* jss3 terms button*/
-.bs3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-.bs3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-.bs3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-/* jss3 hover*/
-.bs3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.bs3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
 /* BASIC TECHNOLOGY*/
 .bt{
@@ -2596,22 +2207,28 @@ footer{
    max-width: 100% ;
    font-size: 16px ;
   }
-  header{
+  .header{
     padding: 0;
     width: 100%;
+    overflow: hidden;
+    margin-top: 0;
   }
+  .go img{
+    height: 30px;
+    
+}
  .container{
     max-width: 200% ;
     padding: 0;
     margin-left: 2px;
  }
  .all-subject{
-    max-width: 70% ;
+    width: 90% ;
+    align-items: center;
+    margin: 30px 10px;
+    clear: both;
  }
- .all-subject{
-    margin: 0 10px;
-    margin-left: 40px;
-}
+
 .intro{
     font-size: 16px;
     background-color: violet;
@@ -2686,6 +2303,7 @@ footer{
    .nav-toggle{
     display: block;
    }
+   
   
 
 }
