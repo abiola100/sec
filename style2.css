@@ -27,24 +27,110 @@ ul{
     padding: 0;
     margin-left: 11px;
 }       
-.ads1{
-     margin-top: 5px;
-    margin-left: 100px;
-    margin-right: 100px ;
+
+/*NOTE FLEX CLASS*/
+.note-flex{
+    display: flex;
+    
+    margin-bottom: 10px;
+
+    .note1{
+        max-width: 700px;
+        margin-left: 100px;
+        border-right: solid 1px  #999966;
+        
+    }
+
+    .note2{
+        
+        
+        margin-left: 100px;
+
+        
+       
+        .learn{
+            font-family: "Oswald", sans-serif;
+            background: linear-gradient(to right, #990000,#cc0066);
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+            color: transparent;     
+            margin-left: 20px; 
+            
+        }
+        .tell-us{
+            font-weight: 700;
+            background: linear-gradient(to right,#ff6600, #ff0066, #00cccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .explanation{
+            background-image: url(./images/secondarySchool.jpeg);
+            background-size: 300px 400px;
+            max-width: 400px;
+            
+            border-radius: 5px;
+            align-items: center;
+            list-style-type:decimal-leading-zero;
+            
+            .iam{
+                text-decoration: none;
+                
+            }
+            li{
+                background-color: #ffb3ff;
+                border-radius: 10px;
+                color: #993300;
+                font-weight: 800;
+                padding: 10px;
+                text-align: center;
+                max-width: 200px;
+            }
+        }
+    }
+    
 }
-.ads2{
-    display: none;
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 100px;
+.image2{
+    height: 400px;
 }
-.ads3{
-    margin-left: 400px;
-    margin-right: 300px;
+.note-container{
+    margin-right: 30px;
+       
+    b{
+        font-weight: 800;
+    }
+  
+    p{
+        margin-left: 30px;
+    }
+    .title{
+        margin-left: 1px;
+        margin-bottom: 20px;
+        color: rgba(0, 72, 139, 0.664);
+        padding: 20px;
+        background-color: rgb(182, 202, 224);
+        font-size: 25px;
+        font-weight: 600;
+
+    }
+    .farm-image{
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .farm-image img{
+        height: 400px;
+        margin: 1px;
+       
+    }
+    .para{
+        color: #cb2c2c;
+    }
 }
-.ads4{
-    margin-left: 500px;
-}
+
+/*TABLE*/
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -80,9 +166,10 @@ table {
     margin-left: 5px;
     margin-bottom: 20px;
     color:#22041b;
-    background-color: rgb(190, 190, 166);
+    background-color: rgb(126, 126, 79);
     font-size: 25px;
     padding: 20px;
+    font-weight: 600;
 }
 .plant{
     height: 300px;
@@ -134,7 +221,7 @@ table {
 
 .form-container{
     display: block;
-    margin-left: 100px;
+    margin-left: 50px;
     #name{
         width: 300px;
         height: 20px;
@@ -144,6 +231,7 @@ table {
         width: 300px;
         height: 20px;
         margin-bottom: 20px;
+        font-weight: 600;
     }
     #complaint{
         width: 300px;
@@ -197,9 +285,63 @@ table {
          
 } 
 .lower-side{
-
-    height: 900px;
-    background-color: rgb(91, 110, 96);
+    background-color: rgb(221, 91, 91);
+    height: 400px;
+    .social{
+        display: flex;
+    .facebook{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 100px;
+        border-radius: 20px;
+        width: 200px;
+       
+       background-color: white;
+       img{
+        height: 100px;
+    }
+    .info{
+          font-size: 22px;  
+    }
+        
+    }
+    .whatsapp{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 100px;
+        border-radius: 20px;
+        width: 200px;
+       
+       background-color: white;
+       img{
+        height: 100px;
+    }
+    .info{
+          font-size: 22px;  
+    }
+        
+    }
+    .gmail{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-left: 100px;
+        border-radius: 20px;
+        width: 300px;
+       
+       background-color: white;
+       img{
+        height: 100px;
+    }
+    .info{
+          font-size: 22px;  
+    }
+        
+    }
+}
+    
    
 }
 .powered{
@@ -215,43 +357,7 @@ table {
         
       
 /*  note page*/
-.note-container{
-    margin-right: 400px;
-    margin-left: 300px;
-    margin-bottom: 50px;
-    font-weight: 500;
-    text-align:left;
-    align-items: center;
-    b{
-        font-weight: 800;
-    }
-  
-    p{
-        margin-left: 30px;
-    }
-    .title{
-        margin-left: 1px;
-        margin-bottom: 20px;
-        color: rgb(139, 0, 93);
-        padding: 20px;
-        background-color: rgb(224, 226, 228);
-        font-size: 25px;
 
-    }
-    .farm-image{
-        margin-left: 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .farm-image img{
-        height: 400px;
-        margin: 1px;
-       
-    }
-    .para{
-        color: #cb2c2c;
-    }
-}
 .title01{
    
     margin-bottom: 20px;
@@ -259,6 +365,7 @@ table {
     color:#cb2c2c;
     font-size: 25px;
     padding: 25px;
+    font-weight: 600;
     
 
 }
@@ -291,6 +398,7 @@ table {
     background-color: #679;
     padding: 20px;
     font-size: 20px;
+    font-weight: 600;
 }
 .title1{
     margin-left: 10px;
@@ -299,6 +407,7 @@ table {
     font-size: 30px;
     background-color: rgb(91, 110, 96);
     padding: 20px;
+    font-weight: 600;
 }
 .height{
     font-size: 18px;
@@ -307,10 +416,11 @@ table {
 }
 .pollution{
     margin-left: 10px;
-    color:  darkcyan;
-    background-color: #dddddd;
+    color:  rgb(82, 49, 12);
+    background-color: rgb(110, 151, 151);
     padding: 20px;
     font-size: 30px;
+
 }
 .list{
     color: #cb2c61;
@@ -334,8 +444,8 @@ table {
 .topic-image img{
     margin-bottom: 5px;
     height: 300px;
-    width: 500px;
-}
+    width: 100%;
+} 
 
 /** TOPIC SECTION */
 .nav-toggle{
@@ -397,9 +507,15 @@ table {
 /* FOOTER SECTION*/
 
 footer{
-    margin-left: 500px;
-    margin-top: 20px;
-    font-size: 25px;
+    align-items: center;
+    margin-left: 400px;
+    
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 22px;
 }
 
  .info{
@@ -425,36 +541,48 @@ footer{
         background-color: white;
         color: white;
     }
+    .note-flex{
+        display: block;
+        align-items: center;
+        .note1{
+            
+            margin-left: 10px;
+            
+        }
+        .note2{
+            margin-top: 20px;
+            margin-left: 10px;
+            align-items: center;
+            .learn{
+                margin-left: 2%;
+                font-size: 15px;
+                
+            }
+            .explanation{
+                max-width: 90%;
+                align-items: center;
+            }
+            li{
+                align-items: center;
+                list-style-type: none;
+            }
+        }
+    }
     
    footer{
-    margin-left:75px;
-    margin-top: 20px;
-    color: white;
-    background-color: rgb(123,34, 58);
-    max-width: 40%;
-    padding: 10px;
-    border-radius: 20%;
-}
-     /* ADS*/
-    
-     .ads1{
-    
-        margin-left: 20px;
-        
-    }
+   align-items: center;
+   background-color: white;
+   max-width: 300px;
+   color: #000;
+   margin-left: 10%;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 600;
 
-     .ads2{
-        margin-top: 30px;
-        margin-left: 10px;
-        
-    }
-    .ads3{
-        margin-left: 50px;
+}
     
-    }
-    .ads4{
-        margin-left: 30%;
-    }
+    
+    
 
 .form-container{
     
@@ -494,11 +622,16 @@ footer{
     
      }
  }
+ body{
+    width: 98%;
+    align-items: center;
+ }
 
  
  .note-container{
-    margin-right: 10px;
-    margin-left: 10px;
+    
+    width: 97%;
+    align-items: center;
     
     .title{
         margin-left: 1px;
@@ -564,7 +697,7 @@ footer{
 .topic-image img{
     margin-bottom: 30px;
     height: 200px;
-    width: 90%;
+    width: 100%;
 }
  
  .me{
@@ -607,6 +740,23 @@ footer{
    }
    .nav-toggle img{
     margin-right: 1px;
+   }
+   .lower-side{
+    height: 500px;
+    .social{
+        display: block;
+        gap: 20px;
+    }
+    .facebook{
+        margin-bottom: 20px;
+    }
+    .whatsapp{
+        margin-bottom: 20px;
+    }
+   }
+   .gmail{
+    max-width: 200px;
+    margin-top: 50px;
    }
    
 }
