@@ -5,8 +5,10 @@ body{
     font-family: "Ubuntu Sans", sans-serif;
     margin: 0 0px;
     background-color: aliceblue;
-    background-image: url('./images/education.jpg');
-    background-size: 100%;
+    background-image: url('./images/students.jpeg'), url('./images/secodary-library.jpeg');
+    background-position: left top, right top;
+    background-size: 50% 100%,50% 100%;
+    background-repeat: no-repeat;
     
 }
 .intro{
