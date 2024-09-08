@@ -93,6 +93,8 @@ function deleteComplaint(id) {
     }
 }
 
-
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Disable right-click menu
+});
 
 
