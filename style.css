@@ -84,7 +84,8 @@ a{
 
 
 .go img{
-    height: 50px;
+    height: 25px;
+    margin-top: 5px;
     
 }
 
@@ -2207,7 +2208,7 @@ footer{
     margin-top: 30px;
     font-size: 22px;
 }
-@media (max-width: 750px){
+@media (max-width: 720px){
    
     
   body{
