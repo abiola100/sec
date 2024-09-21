@@ -12,7 +12,7 @@ body{
 .intro{
     font-size: 30px;
     background-color: violet;
-    margin: 0 100px 0 200px;
+    margin-left: 17%;
     font-size: 16px;
     padding: 20px;
     max-width: 600px;
@@ -24,7 +24,7 @@ body{
     font-size: 30px;
     color: rgb(3, 1, 2);
     background-color: white;
-    margin: 0 100px 10px 200px;
+    margin-left: 17%;
     font-size: 19px;
     font-weight: 600;
     padding: 20px;
@@ -37,8 +37,9 @@ body{
     color: rgb(123,156,24);
 }
 .all-subject{
-    margin: 0 300px;
-    margin-top: 30px;
+   margin-left: 24%;
+   margin-top: 20px;
+   align-items: center;
 }
 .header{
     background-color: white;
@@ -2204,7 +2205,7 @@ footer{
     align-items: center;
     
     border-radius: 5px;
-    margin-left: 350px;
+    margin-left: 27%;
     margin-top: 30px;
     font-size: 22px;
 }
