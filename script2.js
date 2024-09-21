@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function closeElement(){
-        if($(window).width()<= 720){
+        if($(window).width()<= 820){
             $('.add2').height('400PX');
             $('.me').hide();
             $('.nav-toggle').click(function(){
