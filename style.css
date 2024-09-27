@@ -2257,22 +2257,17 @@ footer{
     text-align: center;
     margin-bottom: 10px;
 }
- .agric-class1{   padding: 15px;}
- .bs-class1{ padding: 15px;}
- .bt-class1{padding: 15px;}
- .bst-class1{padding: 15px;}
- .civic-class1{padding: 15px;}
- .cca-class1{padding: 15px;}
- .com-class1{padding: 15px;}
- .eng-class1{padding: 15px;}
- .hi-class1{padding: 15px;}
- .he-class1{padding: 15px;}
- .irk-class1{padding: 15px}
- .math-class1{padding: 15px;}
- .class1{padding: 15px;}
- .se-class1{padding: 15px;}
- .ss-class1{padding: 15px;}
- .yo-class1{padding: 15px;}
+ 
+ .agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
+.eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
+   
+    padding: 15px;
+    max-width: 300px;
+   
+    width: 300px;
+    
+ 
+ }
  
 
 

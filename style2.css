@@ -642,7 +642,7 @@ footer{
         font-size: 16px;
     }
     .title2{
-        margin-left: 5px;
+        margin-left: 1px;
         font-size: 16px;
     
     }
@@ -651,18 +651,19 @@ footer{
     }
 }
 .title1{
-    margin-left: 5px;
+    margin-left: 1px;
     font-size: 16px;
    
 }
 .title01{
-    margin-left: 6px;
+    margin-left: 1px;
     font-size: 16px;
     
 
 }
 .title0{
-    margin-left: 5px;
+    
+    margin: 0;
     font-size: 16px;
 }
 .height{
@@ -677,7 +678,7 @@ footer{
     
 }
 .pollution{
-    margin-left: 5px;
+    margin-left: 1px;
     font-size: 16px;
 }
 .work{
