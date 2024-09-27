@@ -637,18 +637,19 @@ footer{
     width: 97%;
     align-items: center;
     
-    .title{
-        margin-left: 1px;
-        font-size: 16px;
-    }
-    .title2{
-        margin-left: 1px;
-        font-size: 16px;
     
-    }
-    .farm-image img{
-        height: 160px;
-    }
+}
+.title{
+    margin-left: 1px;
+    font-size: 16px;
+}
+.title2{
+    margin-left: 1px;
+    font-size: 16px;
+
+}
+.farm-image img{
+    height: 160px;
 }
 .title1{
     margin-left: 1px;
@@ -663,7 +664,7 @@ footer{
 }
 .title0{
     
-    margin: 0;
+    margin: 1px;
     font-size: 16px;
 }
 .height{
