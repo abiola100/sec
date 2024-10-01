@@ -108,16 +108,7 @@ ul{
     }
   
     
-    .title{
-        margin-left: 1px;
-        margin-bottom: 20px;
-        color: rgba(0, 72, 139, 0.664);
-        padding: 20px;
-        background-color: rgb(182, 202, 224);
-        font-size: 25px;
-        font-weight: 600;
-
-    }
+    
     .farm-image{
         margin-left: 20px;
         display: flex;
@@ -131,6 +122,16 @@ ul{
     .para{
         color: #cb2c2c;
     }
+}
+.title{
+    margin-left: 1px;
+    margin-bottom: 20px;
+    color: rgba(0, 72, 139, 0.664);
+    padding: 20px;
+    background-color: rgb(182, 202, 224);
+    font-size: 25px;
+    font-weight: 600;
+
 }
 
 /*TABLE*/
