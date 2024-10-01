@@ -769,7 +769,10 @@ footer{
     max-width: 200px;
     margin-top: 50px;
    }
-   
+   p{
+    margin-left: 2px;
+
+   }
 }
 
 
