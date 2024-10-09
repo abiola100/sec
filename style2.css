@@ -133,7 +133,19 @@ ul{
     font-weight: 600;
 
 }
-
+.list2{
+    color:#660099;
+}   
+.list3{
+    color: #FF0033;
+} 
+.list4{
+    color: #996600;
+} 
+ 
+.list5{
+    color: #66FF00;
+} 
 /*TABLE*/
 table {
     font-family: arial, sans-serif;
@@ -423,7 +435,7 @@ table {
     color:  rgb(82, 49, 12);
     background-color: rgb(110, 151, 151);
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
 
 }
 .list{
@@ -684,7 +696,7 @@ footer{
 }
 .pollution{
     margin-left: 1px;
-    font-size: 16px;
+    font-size: 12px;
    
 }
 .work{
