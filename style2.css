@@ -30,7 +30,10 @@ ul{
     margin: 0;
     padding: 0;
     margin-left: 11px;
-}       
+} 
+p{
+    margin-left: 10px;
+}
 
 /*NOTE FLEX CLASS*/
 .note-flex{
