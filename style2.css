@@ -34,7 +34,68 @@ ul{
 p{
     margin-left: 10px;
 }
-
+/* CBT SECTION*/
+.quiz-place{
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    
+    margin-left: 20%;
+}
+#quiz {
+    margin-bottom: 20px;
+    color: #22041b;
+    font-size: 20px;
+    
+}
+#result {
+    display: none;
+}
+#timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#submitBtn {
+    display: inline-block;
+}
+.first-praise{
+    font-size: 16px;
+    color:#009926;
+    font-size: large;
+}
+.yourScore{
+    font-size: 24px;
+    color:#660099;
+    margin-left: 10%;
+}
+.quizn{
+    font-size: 50px;
+    font-weight: 600;
+}
+.question{
+    color: #009926;
+    font-size: 50;
+}
+#nextBtn{
+    background-color: #bd917a;
+    font-weight: 600;
+}
+#prevBtn{
+    background-color: #6e4c66;
+    font-weight: 600;
+}
+#submitBtn{
+    background-color: slategrey;
+    font-weight: 600;
+}
+#quiz-app{
+    color: #993300;
+    font-weight: 600;
+    font-size: 20px;
+}
+.youresult{
+    color: red;
+}
 /*NOTE FLEX CLASS*/
 .note-flex{
     display: flex;
@@ -797,6 +858,22 @@ footer{
     margin-left: 2px;
 
    }
+   /*QUIZ*/
+   #quiz {
+    
+    font-size: 16px;
+    
+}
+
+   .quiz-place{
+    
+    
+    margin-left: 10%;
+}
+.yourScore{
+    
+    margin-left: 5%;
+}
 }
 
 
