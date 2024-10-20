@@ -35,6 +35,11 @@ p{
     margin-left: 10px;
 }
 /* CBT SECTION*/
+.quiz-Class{
+    align-items: center;
+    text-align: center;
+}
+
 .quiz-place{
     font-family: Arial, sans-serif;
     max-width: 1200px;
@@ -45,6 +50,7 @@ p{
     margin-bottom: 20px;
     color: #22041b;
     font-size: 20px;
+    
     
 }
 #result {
@@ -66,7 +72,7 @@ p{
 .yourScore{
     font-size: 24px;
     color:#660099;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .quizn{
     font-size: 50px;
@@ -93,6 +99,8 @@ p{
     font-weight: 600;
     font-size: 20px;
 }
+
+
 .youresult{
     color: red;
 }

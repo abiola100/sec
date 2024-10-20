@@ -3,46 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGRIC JSS1 FIRST TERM COMPUTER BASED TEST(CBT)</title>
-    
     <link rel="stylesheet" href="../../../../style2.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
-    crossorigin="anonymous"></script>
-    
+    <title>Quiz App</title>
     
 </head>
-<body class="">
-   <div class="quiz-place">
-
-
-    <h4 id="quiz-app">SELECT THE CORRECT  ANSWER</h4>
+<body class="quiz-Class">
+    <h1 id="quiz-app">SELECT YOUR PREFERRED ANSWER</h1>
     <div id="timer">Time left: 2:00</div>
     <div id="quiz"></div>
     <button id="prevBtn" onclick="prevQuestion()">Previous</button>
     <button id="nextBtn" onclick="nextQuestion()">Next</button>
     <button id="submitBtn" onclick="submitQuiz()">Submit</button>
     <div id="result"></div>
-   
-    
-    
-    
-
-   </div>
-    
-   
 
     <script>
         const quizData = [
-            {
-                 question: "What is the meaning of agriculture?", 
-                 a: "The science of building bridges", 
-                 b: "The science of growing plants and raising animals", 
-                 c: "The study of stars and planets", 
-                 correct: "b" 
-        },
+            { question: "What is the meaning of agriculture?", a: "The science of building bridges", b: "The science of growing plants and raising animals", c: "The study of stars and planets", correct: "b" },
             { question: "Why is agriculture important?", a: "It helps in producing food for survival", b: "It is only for decorative purposes", c: "It reduces the amount of land in a country", correct: "a" },
             { question: "Which of the following is a type of agriculture?", a: "Industrial farming", b: "Manufacturing farming", c: "Subsistence farming", correct: "c" },
             { question: "What does subsistence farming involve?", a: "Growing crops for export", b: "Growing crops to feed the farmer's family", c: "Growing crops in factories", correct: "b" },
@@ -64,7 +42,8 @@
             { question: "What type of food can be sourced from animals?", a: "Eggs", b: "Beans", c: "Rice", correct: "a" }
         ];
 
-        let currentQuestion = 0;
+        let askedQuestions = []; // Array to store asked questions
+        let currentQuestion = -1; // Set to -1 to load the first question correctly
         let score = 0;
         let timeLeft = 300; // 2 minutes in seconds
         let timerInterval;
@@ -75,7 +54,7 @@
         const submitBtn = document.getElementById('submitBtn');
         const resultContainer = document.getElementById('result');
         const timerDisplay = document.getElementById('timer');
-        const quizapp = document.getElementById('quiz-app');
+        const quizapp = document.getElementById('quiz-app')
 
         prevBtn.style.display = 'none'; // Hide previous button initially
 
@@ -84,7 +63,7 @@
                 timeLeft--;
                 const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
-                timerDisplay.innerHTML = `<b class="list3">Time left:</b> ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                timerDisplay.innerHTML = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
                 
                 if (timeLeft <= 0) {
                     clearInterval(timerInterval);
@@ -100,50 +79,55 @@
             prevBtn.style.display = 'none';
             submitBtn.style.display = 'none';
             timerDisplay.style.display = 'none'; // Hide the timer after submission
-            resultContainer.innerHTML = `<div class="yourScore"><b class="youresult">Your result</b> = <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+            resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> = <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
             resultContainer.style.display = 'block';
-            if(score <= 8 && score >5){
+            if (score <= 8 && score > 5) {
                 quizapp.innerHTML = '  <div class="first-praise"> YOU NEED TO DO MORE </div>';
-
-            }
-            else if(score <= 5){
+            } else if (score <= 5) {
                 quizapp.innerHTML = '  <div class="first-praise"> YOUR SCORE LOOKS VERY POOR YOU NEED TO IMPROVE </div>'; 
-
-            }
-            else if(score <= 15 && score >8){
+            } else if (score <= 15 && score > 8) {
                 quizapp.innerHTML = '  <div class="first-praise"> YOU ARE ALMOST THERE BUT YOU CAN STILL DO BETTER </div>';
-
-            }
-            else if(score <= 20 && score > 15){
-                quizapp.innerHTML = '<div class="first-praise"> YOU ARE THE BEST, YOU WILL BECOME MORE GREATER IN LIFE </div>';
-
-            }
             
+            }  else if (score <= 18 && score > 15) {
+                quizapp.innerHTML = '<div class="first-praise">WOW WELL DONE!!! BUT YOU SHOULD MORE</div>';
+            }
+            else if (score <= 20 && score > 18) {
+                quizapp.innerHTML = '<div class="first-praise">WOW WELL DONE!!! THIS IS THE HIGHEST MARK NOW </div>';
+            }
+
         }
 
-        function loadQuestion() {
-            if (currentQuestion < quizData.length) {
-                const questionData = quizData[currentQuestion];
-                quizContainer.innerHTML = `
-                    <h2 class="question">${questionData.question}</h2>
-                    <label>
-                        <input type="radio" name="answer" value="a">
-                        ${questionData.a}
-                    </label><br>
-                    <label>
-                        <input type="radio" name="answer" value="b">
-                        ${questionData.b}
-                    </label><br>
-                    <label>
-                        <input type="radio" name="answer" value="c">
-                        ${questionData.c}
-                    </label>
-                `;
-                prevBtn.style.display = currentQuestion > 0 ? 'inline-block' : 'none'; // Show or hide previous button
-            } else {
-                submitQuiz(); // If quiz is finished before timeout
-                clearInterval(timerInterval); // Stop the timer when the quiz ends
+        function loadRandomQuestion() {
+            if (askedQuestions.length === quizData.length) {
+                alert("All questions have been answered.");
+                return;
             }
+
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * quizData.length);
+            } while (askedQuestions.includes(randomIndex)); // Ensure we don't repeat questions
+
+            askedQuestions.push(randomIndex); // Mark this question as asked
+            currentQuestion = randomIndex; // Update the current question index
+
+            const questionData = quizData[currentQuestion];
+            quizContainer.innerHTML = `
+                <h2 class="question">${questionData.question}</h2>
+                <label>
+                    <input type="radio" name="answer" value="a">
+                    ${questionData.a}
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="b">
+                    ${questionData.b}
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="c">
+                    ${questionData.c}
+                </label>
+            `;
+            prevBtn.style.display = askedQuestions.length > 1 ? 'inline-block' : 'none'; // Show or hide previous button
         }
 
         function nextQuestion() {
@@ -152,21 +136,23 @@
                 if (selectedAnswer.value === quizData[currentQuestion].correct) {
                     score++;
                 }
-                currentQuestion++;
-                loadQuestion();
+                loadRandomQuestion(); // Load a new random question
             } else {
                 alert('Please select an answer.');
             }
         }
 
         function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                loadQuestion();
+            if (askedQuestions.length > 1) {
+                askedQuestions.pop(); // Remove the last asked question
+                currentQuestion = askedQuestions.pop(); // Get the last question index again
+                loadRandomQuestion(); // Load the previous question
+            } else {
+                alert('This is the first question.');
             }
         }
 
-        loadQuestion();
+        loadRandomQuestion(); // Load the first random question
         startTimer(); // Start the 2-minute timer and display it
     </script>
 </body>
