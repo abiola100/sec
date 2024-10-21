@@ -19,6 +19,8 @@
     <button id="nextBtn" onclick="nextQuestion()">Next</button>
     <button id="submitBtn" onclick="submitQuiz()">Submit</button>
     <div id="result"></div>
+    <br><br><br>
+    
 
     <script>
         const quizData = [
@@ -128,6 +130,7 @@
                     <input type="radio" name="answer" value="c">
                     ${questionData.c}
                 </label>
+                
             `;
             prevBtn.style.display = askedQuestions.length > 1 ? 'inline-block' : 'none'; // Show or hide previous button
         }
