@@ -12,7 +12,7 @@ body{
 .intro{
     font-size: 30px;
     background-color: violet;
-    margin-left: 17%;
+    
     font-size: 16px;
     padding: 20px;
     max-width: 600px;
@@ -24,7 +24,7 @@ body{
     font-size: 30px;
     color: rgb(3, 1, 2);
     background-color: white;
-    margin-left: 17%;
+    
     font-size: 19px;
     font-weight: 600;
     padding: 20px;
@@ -37,10 +37,13 @@ body{
     color: rgb(123,156,24);
 }
 .all-subject{
-   margin-left: 24%;
-   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
    align-items: center;
+   justify-content: center;
+   
 }
+
 .header{
     background-color: white;
     border-radius: 1px;
@@ -111,6 +114,7 @@ a{
     background: linear-gradient(to right,#ffe6e6, #ffccff,#ffb3b3,#ffb3d1,#99ffeb,#99ff99, #ff99ff,#ffb3b3);
     font-weight: 600;
     max-width: 400px;
+    width: 400px;
     height: 100px;
     margin-bottom: 10px;
     border-style: none;
@@ -216,9 +220,7 @@ a{
 
 /*  phe section*/
 
-section{
-    margin-left: 30px;
-}
+
 /**/ 
 .phe-topics1 button{
     width: 150px;
@@ -2233,30 +2235,10 @@ footer{
     margin-left: 2px;
  }
  .all-subject{
-    width: 70% ;
-    align-items: center;
-    margin: 10px 5px;
-    clear: both;
+    
  }
 
-.intro{
-    font-size: 16px;
-    background-color: violet;
-    margin: 0 ;
-    padding: 5px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.intro2{
-    font-size: 18px;
 
-    margin: 0 ;
-    padding: 5px;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-}
  
  .agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
 .eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
