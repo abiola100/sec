@@ -104,6 +104,13 @@ p{
 .youresult{
     color: red;
 }
+.explain{
+    color: white;
+    background-color: rgb(89, 89, 197);
+    height: 100px;
+    font-weight: 600;
+    font-size: 20px;
+}
 /*NOTE FLEX CLASS*/
 .note-flex{
     display: flex;
