@@ -99,18 +99,15 @@ p{
     font-weight: 600;
     font-size: 20px;
 }
+.explain{
+    color: white;
+    background-color: rgb(16, 16, 36);
+    height: 50px;
+}
 
 
 .youresult{
     color: red;
-}
-.explain{
-    color: white;
-    background-color: rgb(15, 15, 29);
-    height: 100px;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
 }
 /*NOTE FLEX CLASS*/
 .note-flex{
@@ -385,57 +382,40 @@ table {
 } 
 .lower-side{
     background-color: rgb(221, 91, 91);
-    height: 400px;
+    height: 200px;
     .social{
         display: flex;
-    .facebook{
-        display: flex;
+        flex-direction: row;
+        gap: 100px;
         align-items: center;
-        text-decoration: none;
-        margin-left: 100px;
-        border-radius: 20px;
-        width: 200px;
+        justify-content: center;
+    .facebook{
        
-       background-color: white;
        img{
-        height: 100px;
+        height: 50px;
     }
     .info{
-          font-size: 22px;  
+          display: none;
     }
         
     }
     .whatsapp{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        margin-left: 100px;
-        border-radius: 20px;
-        width: 200px;
-       
-       background-color: white;
+        
        img{
-        height: 100px;
+        height: 50px;
     }
     .info{
-          font-size: 22px;  
+          display: none;
     }
         
     }
     .gmail{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        margin-left: 100px;
-        border-radius: 20px;
-        width: 300px;
        
-       background-color: white;
        img{
-        height: 100px;
+        height: 50px;
     }
     .info{
-          font-size: 22px;  
+          display: none;
     }
         
     }
@@ -610,15 +590,12 @@ table {
 /* FOOTER SECTION*/
 
 footer{
-    align-items: center;
-    margin-left: 400px;
     
-    padding: 5px;
     background-color: white;
-    border-radius: 20px;
-    max-width: 400px;
-    text-align: center;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
  .info{
@@ -854,10 +831,9 @@ footer{
     margin-right: 1px;
    }
    .lower-side{
-    height: 500px;
+   
     .social{
-        display: block;
-        gap: 20px;
+        
     }
     .facebook{
         margin-bottom: 20px;
@@ -867,8 +843,7 @@ footer{
     }
    }
    .gmail{
-    max-width: 200px;
-    margin-top: 50px;
+   
    }
    p{
     margin-left: 2px;
