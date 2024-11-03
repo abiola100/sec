@@ -106,10 +106,11 @@ p{
 }
 .explain{
     color: white;
-    background-color: rgb(89, 89, 197);
+    background-color: blue;
     height: 100px;
     font-weight: 600;
     font-size: 20px;
+    text-transform: uppercase;
 }
 /*NOTE FLEX CLASS*/
 .note-flex{
