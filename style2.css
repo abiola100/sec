@@ -226,7 +226,7 @@ p{
 } 
 /*TABLE*/
 table {
-    font-family: arial, sans-serif;
+    font-family: arial, sans-serif;   
     border-collapse: collapse;
     width: 100%;
   }
@@ -816,7 +816,10 @@ footer{
 .about-text{
     font-size: 15px;
 }
-
+.explain{
+    
+    height: 100px;
+}
 
 
   
