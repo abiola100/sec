@@ -124,7 +124,7 @@
             prevBtn.style.display = 'none';
             submitBtn.style.display = 'none';
             timerDisplay.style.display = 'none'; // Hide the timer after submission
-            resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> = <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+            resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
             resultContainer.style.display = 'block';
             if (score <= 8 && score > 5) {
                 quizapp.innerHTML = '  <div class="first-praise"> YOU NEED TO DO MORE </div>';
@@ -143,60 +143,66 @@
         }
 
         function loadRandomQuestion() {
-            if (askedQuestions.length === quizData.length) {
-                alert("All questions have been answered.");
-                return;
-            }
+    if (askedQuestions.length === quizData.length) {
+        alert("All questions have been answered.");
+        return;
+    }
 
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * quizData.length);
-            } while (askedQuestions.includes(randomIndex)); // Ensure we don't repeat questions
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * quizData.length);
+    } while (askedQuestions.includes(randomIndex)); // Ensure we don't repeat questions
 
-            askedQuestions.push(randomIndex); // Mark this question as asked
-            currentQuestion = randomIndex; // Update the current question index
+    askedQuestions.push(randomIndex); // Mark this question as asked
+    currentQuestion = randomIndex; // Update the current question index
 
-            const questionData = quizData[currentQuestion];
-            quizContainer.innerHTML = `
-                <h2 class="question">${questionData.question}</h2>
-                <label>
-                    <input type="radio" name="answer" value="a">
-                    ${questionData.a}
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="b">
-                    ${questionData.b}
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="c">
-                    ${questionData.c}
-                </label>
-                
-            `;
-            prevBtn.style.display = askedQuestions.length > 1 ? 'inline-block' : 'none'; // Show or hide previous button
-        }
+    const questionData = quizData[currentQuestion];
+    quizContainer.innerHTML = `
+        <h2 class="question">${questionData.question}</h2>
+        <label>
+            <input type="radio" name="answer" value="a" onclick="checkAnswer(this.value)">
+            ${questionData.a}
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="b" onclick="checkAnswer(this.value)">
+            ${questionData.b}
+        </label><br>
+        <label>
+            <input type="radio" name="answer" value="c" onclick="checkAnswer(this.value)">
+            ${questionData.c}
+        </label>
+    `;
+    prevBtn.style.display = askedQuestions.length > 1 ? 'inline-block' : 'none'; // Show or hide previous button
+}
 
-        function nextQuestion() {
-            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-            if (selectedAnswer) {
-                if (selectedAnswer.value === quizData[currentQuestion].correct) {
-                    score++;
-                }
-                loadRandomQuestion(); // Load a new random question
-            } else {
-                alert('Please select an answer.');
-            }
-        }
+function checkAnswer(selectedValue) {
+    // Update score immediately if the selected answer is correct
+    if (selectedValue === quizData[currentQuestion].correct) {
+        score++;
+    }
+    // Disable all answer options to prevent changing answers
+    document.querySelectorAll('input[name="answer"]').forEach(option => option.disabled = true);
+}
 
-        function prevQuestion() {
-            if (askedQuestions.length > 1) {
-                askedQuestions.pop(); // Remove the last asked question
-                currentQuestion = askedQuestions.pop(); // Get the last question index again
-                loadRandomQuestion(); // Load the previous question
-            } else {
-                alert('This is the first question.');
-            }
-        }
+function nextQuestion() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (selectedAnswer) {
+        loadRandomQuestion(); // Load a new random question
+    } else {
+        alert('Please select an answer.');
+    }
+}
+
+function prevQuestion() {
+    if (askedQuestions.length > 1) {
+        askedQuestions.pop(); // Remove the last asked question
+        currentQuestion = askedQuestions.pop(); // Get the last question index again
+        loadRandomQuestion(); // Load the previous question
+    } else {
+        alert('This is the first question.');
+    }
+}
+
 
         loadRandomQuestion(); // Load the first random question
         startTimer(); // Start the 2-minute timer and display it
