@@ -126,7 +126,8 @@ p{
 
     .note1{
         max-width: 800px;
-        margin-left: 20px;
+        margin-left: 50px;
+        margin-right: 20px;
         border-right: solid 1px  #999966;
         
     }
@@ -634,7 +635,7 @@ footer{
         align-items: center;
         .note1{
             max-width: 100%;
-            
+            margin-right: 0;
             margin-left: 10px;
             
         }
