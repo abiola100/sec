@@ -211,7 +211,7 @@ p{
     }
 }
 .title{
-   
+    margin-left: 1px;
     margin-bottom: 20px;
     color: rgba(0, 72, 139, 0.664);
     padding: 20px;
@@ -508,7 +508,7 @@ table {
 .pollution{
    
     color:  rgb(82, 49, 12);
-    background-color: rgb(154, 182, 182);
+    background-color: rgb(110, 151, 151);
     padding: 20px;
     font-size: 24px;
     border-radius: 10px;
