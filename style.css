@@ -114,10 +114,13 @@ a{
     background: linear-gradient(to right,#ffe6e6, #ffccff,#ffb3b3,#ffb3d1,#99ffeb,#99ff99, #ff99ff,#ffb3b3);
     font-weight: 600;
     max-width: 400px;
+    box-shadow: 3px 3px 3px hsl(0, 2%, 56%);
+    
     width: 400px;
     height: 100px;
     margin-bottom: 10px;
     border-style: none;
+   
     border-radius: 10px;
     color: #22223b;
 }
@@ -159,6 +162,8 @@ a{
     border: none;
     font-weight: 600;
     border-radius: 4px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     height: 50px;
     margin-top: 20px;
     font-size: 20px;
@@ -167,6 +172,7 @@ a{
     gap: 10px;
     text-align: center;
     align-items: center;
+    box-shadow: 10px 10px 10px black;
     
 }
 
@@ -200,6 +206,9 @@ a{
     text-align: center;
     padding: 20px;
     display: flex;
+    box-shadow: 10px 10px 10px black;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
     
 }
 
@@ -2210,8 +2219,9 @@ a{
 footer{
     align-items: center;
     
+    max-width: 1000px;
     border-radius: 5px;
-    margin-left: 27%;
+    margin-left: 15%;
     margin-top: 30px;
     font-size: 22px;
 }
