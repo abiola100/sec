@@ -464,31 +464,10 @@ a{
 }
 
 /* jss1 terms button */
-.bst-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
 
-.bst-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.bst-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
+
+
+
 /* jss1 hover*/
 .bst-first  button:hover{
     background-color: rgb(184, 144, 151);
@@ -505,31 +484,6 @@ a{
 
 
 
-/* jss2 terms button */
-.bst2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.bst2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.bst2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
 /* jss2 hover*/
 
 .bst2-first  button:hover{
@@ -545,31 +499,7 @@ a{
     color: red;
 }
 
-/* jss3 terms button*/
-.bst3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.bst3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.bst3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
+
 /* jss3 hover*/
 .bst3-first  button:hover{
     background-color: rgb(184, 144, 151);
@@ -2267,7 +2197,7 @@ footer{
 
  footer{
     align-items: center;
-    background-color: white;
+   
     border-radius: 5px;
     text-align: center;
     font-size: 18px;
