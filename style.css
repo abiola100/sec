@@ -6,7 +6,8 @@ body{
     margin: 0 0px;
     background-color: aliceblue;
     background-image: url('./images/home.jpeg');
-    background-size: 50%;
+    background-size: cover;
+    background-attachment: fixed;
     
 }
 .intro{
