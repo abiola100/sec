@@ -13,6 +13,49 @@ body{
      
      
 }
+.t1{
+    font-size: 30px;
+    font-weight: 900;
+
+}
+
+.t2{
+    font-size: 20px;
+    font-weight: 600;
+}
+.my-result{
+    display: inline-block !important;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    color: #660099;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.tg-btn{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: red;
+    font-weight: 900;
+}
+.no-answer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-self{
+  width: 90%;           
+  max-width: 600px;     
+  text-align: left;     
+  margin-bottom: 8px;  
+  background: #f9f9f9;  
+  padding: 6px 10px;    
+  border-radius: 4px;
+  margin: 0 auto;
+}
 header{
     background-color: white;
     border-radius: 1px;
@@ -253,7 +296,10 @@ table {
     padding: 8px;
   }
   
- 
+ .arrow-back button{
+    background-color: red;
+    color: white;
+}
  
 .container{
     display: flex;
@@ -830,7 +876,16 @@ footer{
     
     height: 100px;
 }
+.t1{
+    font-size: 20px;
+    font-weight: 800;
 
+}
+
+.t2{
+    font-size: 17px;
+    font-weight: 600;
+}
 
   
    .menu{
