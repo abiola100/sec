@@ -4,119 +4,109 @@ document.getElementById('me').innerHTML = year;
 
 $(document).ready(function(){
 
-    // Helper function to handle toggle with state saving/restoring
-    function setToggleState(buttonSelector, contentSelector, storageKey) {
-        // Restore saved state on load
-        let saved = localStorage.getItem(storageKey);
-        if (saved === "true") {
-            $(contentSelector).show();
-        } else {
-            $(contentSelector).hide();
-        }
-
-        // Save new state on toggle click
+    // Helper function to handle simple toggle
+    function simpleToggle(buttonSelector, contentSelector) {
+        $(contentSelector).hide(); // Always hide by default
         $(buttonSelector).off('click').on('click', function(){
             $(contentSelector).toggle();
-            let isVisible = $(contentSelector).is(':visible');
-            localStorage.setItem(storageKey, isVisible);
         });
     }
 
     // PHE
-    setToggleState('.phe-sub', '.class1', 'toggle-phe-sub');
-    setToggleState('.jss1', '.j1-subjects', 'toggle-jss1');
-    setToggleState('.jss2', '.j2-subjects', 'toggle-jss2');
-    setToggleState('.jss3', '.j3-subjects', 'toggle-jss3');
+    simpleToggle('.phe-sub', '.class1');
+    simpleToggle('.jss1', '.j1-subjects');
+    simpleToggle('.jss2', '.j2-subjects');
+    simpleToggle('.jss3', '.j3-subjects');
 
     // AGRIC CLASS
-    setToggleState('.agric-sub', '.agric-class1', 'toggle-agric-sub');
-    setToggleState('.agric-jss1', '.agric-j1-subjects', 'toggle-agric-jss1');
-    setToggleState('.agric-jss2', '.agric-j2-subjects', 'toggle-agric-jss2');
-    setToggleState('.agric-jss3', '.agric-j3-subjects', 'toggle-agric-jss3');
+    simpleToggle('.agric-sub', '.agric-class1');
+    simpleToggle('.agric-jss1', '.agric-j1-subjects');
+    simpleToggle('.agric-jss2', '.agric-j2-subjects');
+    simpleToggle('.agric-jss3', '.agric-j3-subjects');
 
     // BASIC SCIENCE
-    setToggleState('.bs-sub', '.bs-class1', 'toggle-bs-sub');
-    setToggleState('.bs-jss1', '.bs-j1-subjects', 'toggle-bs-jss1');
-    setToggleState('.bs-jss2', '.bs-j2-subjects', 'toggle-bs-jss2');
-    setToggleState('.bs-jss3', '.bs-j3-subjects', 'toggle-bs-jss3');
+    simpleToggle('.bs-sub', '.bs-class1');
+    simpleToggle('.bs-jss1', '.bs-j1-subjects');
+    simpleToggle('.bs-jss2', '.bs-j2-subjects');
+    simpleToggle('.bs-jss3', '.bs-j3-subjects');
 
     // BASIC TECH
-    setToggleState('.bt-sub', '.bt-class1', 'toggle-bt-sub');
-    setToggleState('.bt-jss1', '.bt-j1-subjects', 'toggle-bt-jss1');
-    setToggleState('.bt-jss2', '.bt-j2-subjects', 'toggle-bt-jss2');
-    setToggleState('.bt-jss3', '.bt-j3-subjects', 'toggle-bt-jss3');
+    simpleToggle('.bt-sub', '.bt-class1');
+    simpleToggle('.bt-jss1', '.bt-j1-subjects');
+    simpleToggle('.bt-jss2', '.bt-j2-subjects');
+    simpleToggle('.bt-jss3', '.bt-j3-subjects');
 
     // BUSINESS STUDIES
-    setToggleState('.bst-sub', '.bst-class1', 'toggle-bst-sub');
-    setToggleState('.bst-jss1', '.bst-j1-subjects', 'toggle-bst-jss1');
-    setToggleState('.bst-jss2', '.bst-j2-subjects', 'toggle-bst-jss2');
-    setToggleState('.bst-jss3', '.bst-j3-subjects', 'toggle-bst-jss3');
+    simpleToggle('.bst-sub', '.bst-class1');
+    simpleToggle('.bst-jss1', '.bst-j1-subjects');
+    simpleToggle('.bst-jss2', '.bst-j2-subjects');
+    simpleToggle('.bst-jss3', '.bst-j3-subjects');
 
     // CIVIC EDUCATION
-    setToggleState('.civic-sub', '.civic-class1', 'toggle-civic-sub');
-    setToggleState('.civic-jss1', '.civic-j1-subjects', 'toggle-civic-jss1');
-    setToggleState('.civic-jss2', '.civic-j2-subjects', 'toggle-civic-jss2');
-    setToggleState('.civic-jss3', '.civic-j3-subjects', 'toggle-civic-jss3');
+    simpleToggle('.civic-sub', '.civic-class1');
+    simpleToggle('.civic-jss1', '.civic-j1-subjects');
+    simpleToggle('.civic-jss2', '.civic-j2-subjects');
+    simpleToggle('.civic-jss3', '.civic-j3-subjects');
 
     // CULTURAL AND CREATIVE ART CCA
-    setToggleState('.cca-sub', '.cca-class1', 'toggle-cca-sub');
-    setToggleState('.cca-jss1', '.cca-j1-subjects', 'toggle-cca-jss1');
-    setToggleState('.cca-jss2', '.cca-j2-subjects', 'toggle-cca-jss2');
-    setToggleState('.cca-jss3', '.cca-j3-subjects', 'toggle-cca-jss3');
+    simpleToggle('.cca-sub', '.cca-class1');
+    simpleToggle('.cca-jss1', '.cca-j1-subjects');
+    simpleToggle('.cca-jss2', '.cca-j2-subjects');
+    simpleToggle('.cca-jss3', '.cca-j3-subjects');
 
     // COMPUTER SCIENCE
-    setToggleState('.com-sub', '.com-class1', 'toggle-com-sub');
-    setToggleState('.com-jss1', '.com-j1-subjects', 'toggle-com-jss1');
-    setToggleState('.com-jss2', '.com-j2-subjects', 'toggle-com-jss2');
-    setToggleState('.com-jss3', '.com-j3-subjects', 'toggle-com-jss3');
+    simpleToggle('.com-sub', '.com-class1');
+    simpleToggle('.com-jss1', '.com-j1-subjects');
+    simpleToggle('.com-jss2', '.com-j2-subjects');
+    simpleToggle('.com-jss3', '.com-j3-subjects');
 
     // ENGLISH
-    setToggleState('.eng-sub', '.eng-class1', 'toggle-eng-sub');
-    setToggleState('.eng-jss1', '.eng-j1-subjects', 'toggle-eng-jss1');
-    setToggleState('.eng-jss2', '.eng-j2-subjects', 'toggle-eng-jss2');
-    setToggleState('.eng-jss3', '.eng-j3-subjects', 'toggle-eng-jss3');
+    simpleToggle('.eng-sub', '.eng-class1');
+    simpleToggle('.eng-jss1', '.eng-j1-subjects');
+    simpleToggle('.eng-jss2', '.eng-j2-subjects');
+    simpleToggle('.eng-jss3', '.eng-j3-subjects');
 
     // HISTORY
-    setToggleState('.hi-sub', '.hi-class1', 'toggle-hi-sub');
-    setToggleState('.hi-jss1', '.hi-j1-subjects', 'toggle-hi-jss1');
-    setToggleState('.hi-jss2', '.hi-j2-subjects', 'toggle-hi-jss2');
-    setToggleState('.hi-jss3', '.hi-j3-subjects', 'toggle-hi-jss3');
+    simpleToggle('.hi-sub', '.hi-class1');
+    simpleToggle('.hi-jss1', '.hi-j1-subjects');
+    simpleToggle('.hi-jss2', '.hi-j2-subjects');
+    simpleToggle('.hi-jss3', '.hi-j3-subjects');
 
     // HOME ECONOMICS
-    setToggleState('.he-sub', '.he-class1', 'toggle-he-sub');
-    setToggleState('.he-jss1', '.he-j1-subjects', 'toggle-he-jss1');
-    setToggleState('.he-jss2', '.he-j2-subjects', 'toggle-he-jss2');
-    setToggleState('.he-jss3', '.he-j3-subjects', 'toggle-he-jss3');
+    simpleToggle('.he-sub', '.he-class1');
+    simpleToggle('.he-jss1', '.he-j1-subjects');
+    simpleToggle('.he-jss2', '.he-j2-subjects');
+    simpleToggle('.he-jss3', '.he-j3-subjects');
 
     // ISLAMIC RELIGION
-    setToggleState('.irk-sub', '.irk-class1', 'toggle-irk-sub');
-    setToggleState('.irk-jss1', '.irk-j1-subjects', 'toggle-irk-jss1');
-    setToggleState('.irk-jss2', '.irk-j2-subjects', 'toggle-irk-jss2');
-    setToggleState('.irk-jss3', '.irk-j3-subjects', 'toggle-irk-jss3');
+    simpleToggle('.irk-sub', '.irk-class1');
+    simpleToggle('.irk-jss1', '.irk-j1-subjects');
+    simpleToggle('.irk-jss2', '.irk-j2-subjects');
+    simpleToggle('.irk-jss3', '.irk-j3-subjects');
 
     // MATHEMATICS
-    setToggleState('.math-sub', '.math-class1', 'toggle-math-sub');
-    setToggleState('.math-jss1', '.math-j1-subjects', 'toggle-math-jss1');
-    setToggleState('.math-jss2', '.math-j2-subjects', 'toggle-math-jss2');
-    setToggleState('.math-jss3', '.math-j3-subjects', 'toggle-math-jss3');
+    simpleToggle('.math-sub', '.math-class1');
+    simpleToggle('.math-jss1', '.math-j1-subjects');
+    simpleToggle('.math-jss2', '.math-j2-subjects');
+    simpleToggle('.math-jss3', '.math-j3-subjects');
 
     // SECURITY
-    setToggleState('.se-sub', '.se-class1', 'toggle-se-sub');
-    setToggleState('.se-jss1', '.se-j1-subjects', 'toggle-se-jss1');
-    setToggleState('.se-jss2', '.se-j2-subjects', 'toggle-se-jss2');
-    setToggleState('.se-jss3', '.se-j3-subjects', 'toggle-se-jss3');
+    simpleToggle('.se-sub', '.se-class1');
+    simpleToggle('.se-jss1', '.se-j1-subjects');
+    simpleToggle('.se-jss2', '.se-j2-subjects');
+    simpleToggle('.se-jss3', '.se-j3-subjects');
 
     // SOCIAL STUDIES
-    setToggleState('.ss-sub', '.ss-class1', 'toggle-ss-sub');
-    setToggleState('.ss-jss1', '.ss-j1-subjects', 'toggle-ss-jss1');
-    setToggleState('.ss-jss2', '.ss-j2-subjects', 'toggle-ss-jss2');
-    setToggleState('.ss-jss3', '.ss-j3-subjects', 'toggle-ss-jss3');
+    simpleToggle('.ss-sub', '.ss-class1');
+    simpleToggle('.ss-jss1', '.ss-j1-subjects');
+    simpleToggle('.ss-jss2', '.ss-j2-subjects');
+    simpleToggle('.ss-jss3', '.ss-j3-subjects');
 
     // YORUBA
-    setToggleState('.yo-sub', '.yo-class1', 'toggle-yo-sub');
-    setToggleState('.yo-jss1', '.yo-j1-subjects', 'toggle-yo-jss1');
-    setToggleState('.yo-jss2', '.yo-j2-subjects', 'toggle-yo-jss2');
-    setToggleState('.yo-jss3', '.yo-j3-subjects', 'toggle-yo-jss3');
+    simpleToggle('.yo-sub', '.yo-class1');
+    simpleToggle('.yo-jss1', '.yo-j1-subjects');
+    simpleToggle('.yo-jss2', '.yo-j2-subjects');
+    simpleToggle('.yo-jss3', '.yo-j3-subjects');
 
 });
 
