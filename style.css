@@ -136,7 +136,7 @@ a{
  
 
 .agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects,
-.bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects{
+.bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects{
     background-color: wheat;
     font-weight:800;
     border-radius: 10px;
@@ -158,7 +158,12 @@ a{
 .bs3-first button,.bs3-second button,.bs3-third button,
 .bst-first button,.bst-second button, .bst-third button,
 .bst2-first button, .bst2-second button, .bst2-third button,
-.bst3-first button, .bst3-second button, .bst3-third button{
+.bst3-first button, .bst3-second button, .bst3-third button,
+
+
+.com-first button, .com-second button, .com-third button,
+.com2-first button, .com2-second button, .com2-third button,
+.com3-first button, .com3-second button, .com3-third button{
     background-color: rgb(190, 178, 180);
     border: none;
     font-weight: 600;
@@ -221,7 +226,11 @@ a{
 .phe3-first  button:hover,.phe3-second  button:hover,.phe3-third  button:hover,
 .bs-first  button:hover,.bs-second  button:hover,.bs-third  button:hover,
 .bs2-first  button:hover,.bs2-second  button:hover,.bs2-third  button:hover,
-.bs3-first  button:hover,.bs3-second  button:hover,.bs3-third  button:hover{
+.bs3-first  button:hover,.bs3-second  button:hover,.bs3-third  button:hover,
+
+.com-first  button:hover,.com-second  button:hover,.com-third  button:hover,
+.com2-first  button:hover,.com2-second  button:hover,.com2-third  button:hover,
+.com3-first  button:hover,.com3-second  button:hover,.com3-third  button:hover{
     background-color: rgb(184, 144, 151);
     color: red;
 }
@@ -842,124 +851,12 @@ a{
 
 }
 
-/* jss1 terms button */
-.com-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-
-.com-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.com-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss1 hover*/
-.com-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
 
 
-/* jss2 terms button */
-.com2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.com2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.com2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss2 hover*/
 
-.com2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
-/* jss3 terms button*/
-.com3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.com3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.com3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss3 hover*/
-.com3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.com3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
+
 /* ENGLISH */
 .eng{
     display: flex;
