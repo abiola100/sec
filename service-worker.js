@@ -15,7 +15,7 @@ const urlsToCache = [
   '/terms/second-term/agric-second/second-term-js3-agric.html',
   '/terms/third-term/agric-third/third-term-js3-agric.html',
 
-  '/style.css',
+  '/style.css',   
   '/style2.css',
   '/script.js',
   '/script2.js'
