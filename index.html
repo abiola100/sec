@@ -7,6 +7,9 @@
     <title>secondary|Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+   <!-- PWA Manifest -->
+   <link rel="manifest" href="/manifest.json">
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
@@ -148,6 +151,8 @@
             <div class="bst3-third"><a href="terms/third-term/b.studies-third/third-term-js3-b.studies.html"><button><div class="go"><img src="./images/arrow.jpg" alt=""></div>THIRD TERM </button></a></div>
               
         </div>
+       
+        
             
            </div>
         </div>
@@ -192,6 +197,23 @@
     <footer >No duplication is allowed,as Intellectual property is protected. copyright &copy; <b id="me"></b> Abisoft Technology</footer>
     
         <script src="script.js"> </script>
+
+
+        <script>
+         if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+               navigator.serviceWorker.register('/sw.js')
+               .then(() => {
+                  // Service worker registered successfully
+               })
+               .catch((error) => {
+                  // Service worker registration failed
+                  console.error('ServiceWorker registration failed:', error);
+               });
+            });
+         }
+      </script>
+
 
 
        
