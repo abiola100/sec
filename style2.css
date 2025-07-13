@@ -554,7 +554,8 @@ table {
 .pollution{
    
     color:  rgb(82, 49, 12);
-    background-color: rgb(110, 151, 151);
+    
+    background-color: rgb(182, 202, 224);
     padding: 20px;
     font-size: 24px;
     border-radius: 10px;

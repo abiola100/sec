@@ -139,7 +139,8 @@ a{
  
 
 .agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects,
-.bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects{
+.bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects,
+.j1-subjects, .j2-subjects, .j3-subjects {
     background-color: wheat;
     font-weight:800;
     border-radius: 10px;
