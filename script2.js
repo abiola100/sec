@@ -1,20 +1,23 @@
-$(document).ready(function(){
-    function closeElement(){
-        if($(window).width()<= 820){
-            $('.add2').height('400PX');
-            $('.me').hide();
-            $('.nav-toggle').click(function(){
-                $('.me').toggle();
-            });
-        }
-        else{
-            $('.me').show();
-        }
-    }
-    closeElement()
-    $(window).resize(function(){
-        closeElement();
+const navTogle = document.querySelector('#navtogle');
+const nav = document.querySelector('nav');
+const navIcon = document.querySelectorAll('.navIcon');
+const hambuger = document.querySelector('#hambuger')
+
+navTogle.addEventListener('click', ()=>{
+    nav.classList.toggle('open')
+    navIcon.forEach(icon =>{
+        icon.classList.toggle('hidden');
+    })
+})
+window.addEventListener('resize', ()=>{
+    if(document.body.clientWidth > 820){
+       nav.classList.remove('open')
+       navIcon.forEach(icon =>{
+        icon.classList.add('hidden');
     });
+    hambuger.classList.remove('hidden')
+       
+    }
 })
 
 

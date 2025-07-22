@@ -2,6 +2,28 @@ var date = new Date();
 var year = date.getFullYear();
 document.getElementById('me').innerHTML = year;
 
+const navTogle = document.querySelector('#navtogle');
+const nav = document.querySelector('nav');
+const navIcon = document.querySelectorAll('.navIcon');
+const hambuger = document.querySelector('#hambuger')
+
+navTogle.addEventListener('click', ()=>{
+    nav.classList.toggle('open')
+    navIcon.forEach(icon =>{
+        icon.classList.toggle('hidden');
+    })
+})
+window.addEventListener('resize', ()=>{
+    if(document.body.clientWidth > 820){
+       nav.classList.remove('open')
+       navIcon.forEach(icon =>{
+        icon.classList.add('hidden');
+    });
+    hambuger.classList.remove('hidden')
+       
+    }
+})
+
 $(document).ready(function(){
 
     // Helper function to handle simple toggle

@@ -63,17 +63,10 @@ header{
 .s{
     font-size: 60px;
 }
-       /* ADS */
-ol{
-    margin: 0;
-    padding: 0;
-    margin-left: 11px;
+
+ul, ol{
+    margin-left: -15px;
 }
-ul{
-    margin: 0;
-    padding: 0;
-    margin-left: 11px;
-} 
 p{
     margin-left: 10px;
 }
@@ -851,9 +844,14 @@ footer{
  .me a{
     font-size: 1.4rem ;
  }
- nav{
-    
+  nav{
+    height: 0;
     width: 100%;
+    overflow: hidden;
+    transition: 250ms height ease-in-out;
+ }
+ .hidden{
+    display: none;
  }
  .powered{
     margin-left: 75px;
@@ -894,6 +892,9 @@ footer{
    }
    .nav-toggle{
     display: block;
+   }
+   .open{
+    height: 40vh;
    }
    .nav-toggle img{
     margin-right: 1px;

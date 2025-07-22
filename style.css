@@ -2122,16 +2122,23 @@ footer{
  .me a{
     font-size: 1.4rem ;
  }
- nav{
-    
+  nav{
+    height: 0;
     width: 100%;
-   
+    overflow: hidden;
+    transition: 250ms height ease-in-out;
+ }
+ .hidden{
+    display: none;
  }
  .menu{
     display: block;
    }
    .nav-toggle{
     display: block;
+   }
+   .open{
+    height: 40vh;
    }
    .agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
 .eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
