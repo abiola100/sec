@@ -65,8 +65,8 @@ header{
 }
 
 ul, ol{
-    margin-left: 0;
-    padding-left: 0;
+    margin-left: -15px;
+    padding-left: -15px;
 }
 p{
     margin-left: 10px;
@@ -593,7 +593,7 @@ table {
     margin-bottom: 100px;
 }
 .topic li{
-    margin-left: 40px;
+    margin-left: 1px;
 }
 .topic a{
     text-decoration: none;
