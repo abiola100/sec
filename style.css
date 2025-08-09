@@ -1,0 +1,2118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+body{
+    max-width: 1200;
+    font-family: "Ubuntu Sans", sans-serif;
+    margin: 0 0px;
+    background-color: aliceblue;
+    background-image: url('./images/home.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.intro{
+    font-size: 30px;
+    background-color: violet;
+    
+    font-size: 16px;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+.intro2{
+    font-size: 30px;
+    color: rgb(3, 1, 2);
+    background-color: white;
+    
+    margin-bottom: 5px;
+    
+    font-size: 19px;
+    font-weight: 600;
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 5px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.list{
+    color: rgb(123,156,24);
+}
+.all-subject{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+.header{
+    background-color: white;
+    border-radius: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 1px;
+    
+}
+.s{
+    font-size: 60px;
+}
+.container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 5px;
+    
+}
+.nav-toggle{
+    display: none;
+    position: absolute;
+    margin-top: -58px;
+    right: 1rem;
+    
+}
+
+li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 10px;
+}
+a{
+    text-decoration: none;
+    color:rgb(70, 116, 108);
+}
+.logo{
+    font-family: 'Brush Script MT',cursive;
+ }
+
+
+.go img{
+    height: 20px;
+    margin-top: 5px;
+    
+}
+
+
+
+/*ALL CLASSES SUBJECT*/
+.agric,.phe, .bs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+
+
+.agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
+.eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
+    font-size: 22px;
+   
+    background: linear-gradient(to right,#ffe6e6, #ffccff,#ffb3b3,#ffb3d1,#99ffeb,#99ff99, #ff99ff,#ffb3b3);
+    font-weight: 600;
+    max-width: 400px;
+    box-shadow: 3px 3px 3px hsl(0, 2%, 56%);
+    
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-style: none;
+   
+    border-radius: 10px;
+    color: #22223b;
+}
+.agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
+.eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
+   
+    padding: 35px;
+    background-color: turquoise;
+    border-radius: 5px;
+ 
+ }
+ 
+
+.agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects,
+.bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects,
+.cca-j1-subjects , .cca-j2-subjects , .cca-j3-subjects,.j1-subjects, .j2-subjects, .j3-subjects {
+    background-color: wheat;
+    font-weight:800;
+    border-radius: 10px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.agric-first button,.agric-second button, .agric-third button,
+.agric2-first button, .agric2-second button,.agric2-third button,
+.agric3-first button, .agric3-second button, .agric3-third button,
+.phe-first button,.phe-second button,.phe-third button,
+.phe2-first button,.phe2-second button,.phe2-third button,
+.phe3-first button,.phe3-second button,.phe3-third button,
+.bs-first button,.bs-second button,.bs-third button,
+.bs2-first button,.bs2-second button,.bs2-third button,
+.bs3-first button,.bs3-second button,.bs3-third button,
+.bst-first button,.bst-second button, .bst-third button,
+.bst2-first button, .bst2-second button, .bst2-third button,
+.bst3-first button, .bst3-second button, .bst3-third button,
+
+.cca-first button,.cca-second button, .cca-third button,
+.cca2-first button, .cca2-second button, .cca2-third button,
+.cca3-first button, .cca3-second button, .cca3-third button,
+
+
+.com-first button, .com-second button, .com-third button,
+.com2-first button, .com2-second button, .com2-third button,
+.com3-first button, .com3-second button, .com3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    font-weight: 600;
+    border-radius: 4px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px black;
+    
+}
+
+
+
+
+
+
+.agric-jss1 button,.agric-jss2 button, .agric-jss3 button,
+.bs-jss1 button,.bs-jss2 button,.bs-jss3 button,
+.bt-jss1 button,.bt-jss2 button,.bt-jss3 button,
+.bst-jss1 button,.bst-jss2 button,.bst-jss3 button,
+.civic-jss1 button,.civic-jss2 button,.civic-jss3 button,
+.cca-jss1 button,.cca-jss2 button,.cca-jss3 button,
+.com-jss1 button,.com-jss2 button,.com-jss3 button,
+.eng-jss1 button,.eng-jss2 button,.eng-jss3 button,
+.hi-jss1 button,.hi-jss2 button,.hi-jss3 button,
+.he-jss1 button,.he-jss2 button,.he-jss3 button,
+.irk-jss1 button,.irk-jss2 button,.irk-jss3 button,
+.math-jss1 button,.math-jss2 button,.math-jss3 button,
+.jss1 button,.jss2 button,.jss3 button,
+.se-jss1 button,.se-jss2 button,.se-jss3 button,
+.ss-jss1 button,.ss-jss2 button,.ss-jss3 button,
+.yo-jss1 button,.yo-jss2 button,.yo-jss3 button{
+    font-size: 16px;
+    font-weight: 600;
+    border-style: none;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    box-shadow: 10px 10px 10px black;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    
+}
+
+.agric-first  button:hover,.agric-second  button:hover,.agric-third  button:hover,
+.agric2-first  button:hover, .agric2-second  button:hover, .agric2-third  button:hover,
+.agric3-first  button:hover, .agric3-second  button:hover, .agric3-third  button:hover,
+.phe-first  button:hover,.phe-second  button:hover,.phe-third  button:hover,
+.phe2-first  button:hover,.phe2-second  button:hover,.phe2-third  button:hover,
+.phe3-first  button:hover,.phe3-second  button:hover,.phe3-third  button:hover,
+.bs-first  button:hover,.bs-second  button:hover,.bs-third  button:hover,
+.bs2-first  button:hover,.bs2-second  button:hover,.bs2-third  button:hover,
+.bs3-first  button:hover,.bs3-second  button:hover,.bs3-third  button:hover,
+
+.com-first  button:hover,.com-second  button:hover,.com-third  button:hover,
+.com2-first  button:hover,.com2-second  button:hover,.com2-third  button:hover,
+.com3-first  button:hover,.com3-second  button:hover,.com3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+
+
+
+
+/*  phe section*/
+
+
+/**/ 
+.phe-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.phe-topics1 button:hover, .bs-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+
+
+
+
+/*CLASS HOVER*/
+.agric-jss1 button:hover,.agric-jss2 button:hover,.agric-jss3 button:hover,
+.bs-jss1 button:hover,.bs-jss2 button:hover,.bs-jss3 button:hover,
+.bt-jss1 button:hover,.bt-jss2 button:hover,.bt-jss3 button:hover,
+.bst-jss1 button:hover,.bst-jss2 button:hover,.bst-jss3 button:hover,
+.civic-jss1 button:hover,.civic-jss2 button:hover,.civic-jss3 button:hover,
+.cca-jss1 button:hover,.cca-jss2 button:hover,.cca-jss3 button:hover,
+.com-jss1 button:hover,.com-jss2 button:hover,.com-jss3 button:hover,
+.eng-jss1 button:hover,.eng-jss2 button:hover,.eng-jss3 button:hover,
+.hi-jss1 button:hover,.hi-jss2 button:hover,.hi-jss3 button:hover,
+.he-jss1 button:hover,.he-jss2 button:hover,.he-jss3 button:hover,
+.irk-jss1 button:hover,.irk-jss2 button:hover,.irk-jss3 button:hover,
+.math-jss1 button:hover,.math-jss2 button:hover,.math-jss3 button:hover,
+.jss1 button:hover,.jss2 button:hover,.jss3 button:hover,
+.se-jss1 button:hover,.se-jss2 button:hover,.se-jss3 button:hover,
+.ss-jss1 button:hover,.ss-jss2 button:hover,.ss-jss3 button:hover,
+.yo-jss1 button:hover,.yo-jss2 button:hover,.yo-jss3 button:hover{
+    background-color: rgb(211, 112, 112);
+}
+.agric-sub:hover,.bs-sub:hover,.bt-sub:hover,.bst-sub:hover,.civic-sub:hover,
+.cca-sub:hover,.com-sub:hover,.eng-sub:hover,.hi-sub:hover,.he-sub:hover,
+.irk-sub:hover,.math-sub:hover,.phe-sub:hover,.se-sub:hover,.ss-sub:hover,
+.yo-sub:hover{
+    background-color: rgb(116, 197, 116);
+}
+
+
+
+
+
+
+/* BASIC TECHNOLOGY*/
+.bt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.bt-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.bt-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.bt-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.bt-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.bt-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.bt-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.bt-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.bt2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.bt2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.bt2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.bt2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.bt3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.bt3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.bt3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.bt3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bt3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* BUSINESS STUDIES*/ 
+.bst{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.bst-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.bst-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.bst-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+
+
+
+
+/* jss1 hover*/
+.bst-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 hover*/
+
+.bst2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+/* jss3 hover*/
+.bst3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.bst3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+    /* CIVIC EDUCATION */
+    .civic{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2px;
+        margin-bottom: 5px;
+        max-width: 400px;
+        
+    }
+    /**/
+    .civic-topics1 button{
+        width: 150px;
+        align-items: center;
+        text-align: center;
+        margin-left: 10px;
+        
+       
+    
+    }
+    .civic-topics1 button:hover{
+        background-color: rgb(159, 163, 156);
+        color: rgb(13, 9, 17);
+    }
+    .civic-class1{
+       
+        padding: 35px;
+    
+    }
+    
+    /* jss1 terms button */
+    .civic-first button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    
+    .civic-second button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    .civic-third button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    /* jss1 hover*/
+    .civic-first  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic-second  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic-third  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    
+    
+    
+    /* jss2 terms button */
+    .civic2-first button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    .civic2-second button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+    }
+    .civic2-third button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    /* jss2 hover*/
+    
+    .civic2-first  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic2-second  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic2-third  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    
+    /* jss3 terms button*/
+    .civic3-first button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+    }
+    .civic3-second button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    .civic3-third button{
+        background-color: rgb(190, 178, 180);
+        border: none;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 230px;
+        border-radius: 4px;
+    }
+    /* jss3 hover*/
+    .civic3-first  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic3-second  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+    .civic3-third  button:hover{
+        background-color: rgb(184, 144, 151);
+        color: red;
+    }
+
+
+/* CCA*/
+.cca{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.cca-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.cca-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.cca-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+
+
+
+
+/* jss1 hover*/
+.cca-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+
+
+
+/* jss2 hover*/
+
+.cca2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+
+/* jss3 hover*/
+.cca3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.cca3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* computer*/
+.com{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.com-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.com-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.com-class1{
+   
+    padding: 35px;
+
+}
+
+
+
+
+
+
+
+/* ENGLISH */
+.eng{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.eng-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.eng-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.eng-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.eng-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.eng-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.eng-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.eng-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.eng2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.eng2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.eng2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.eng2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.eng3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.eng3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.eng3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.eng3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.eng3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* HISTORY */
+.hi{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.hi-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.hi-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.hi-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.hi-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.hi-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.hi-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.hi-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.hi2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.hi2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.hi2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.hi2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.hi3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.hi3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.hi3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.hi3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.hi3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* HOME ECONOMICS */
+.he{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.he-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.he-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.he-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.he-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+ 
+.he-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.he-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.he-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.he2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.he2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.he2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.he2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.he3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.he3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.he3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.he3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.he3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/*  ISLAMIC RELIGION STUDIES */
+.irk{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.irk-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.irk-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.irk-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.irk-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.irk-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.irk-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.irk-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.irk2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.irk2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.irk2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.irk2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.irk3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.irk3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.irk3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.irk3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.irk3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* MATHEMATICA */
+.math{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.math-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.math-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.math-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.math-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.math-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.math-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.math-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.math2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.math2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.math2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.math2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.math3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.math3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.math3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.math3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.math3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+    
+/* SECURITY EDUCATION*/
+.se{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.se-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.se-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.se-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.se-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.se-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.se-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.se-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.se2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.se2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.se2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.se2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.se3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.se3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.se3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.se3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.se3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* SOCIAL STUDIES*/
+.ss{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.ss-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.ss-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.ss-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.ss-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.ss-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.ss-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.ss-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.ss2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.ss2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.ss2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.ss2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.ss3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.ss3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.ss3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    width: 250px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.ss3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.ss3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+/* YORUBA */
+.yo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    margin-bottom: 5px;
+    max-width: 400px;
+    
+}
+/**/
+.yo-topics1 button{
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    
+   
+
+}
+.yo-topics1 button:hover{
+    background-color: rgb(159, 163, 156);
+    color: rgb(13, 9, 17);
+}
+.yo-class1{
+   
+    padding: 35px;
+
+}
+
+/* jss1 terms button */
+.yo-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+
+.yo-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.yo-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss1 hover*/
+.yo-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+
+/* jss2 terms button */
+.yo2-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.yo2-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.yo2-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss2 hover*/
+
+.yo2-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo2-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo2-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+/* jss3 terms button*/
+.yo3-first button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+}
+.yo3-second button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+.yo3-third button{
+    background-color: rgb(190, 178, 180);
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 230px;
+    border-radius: 4px;
+}
+/* jss3 hover*/
+.yo3-first  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo3-second  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+.yo3-third  button:hover{
+    background-color: rgb(184, 144, 151);
+    color: red;
+}
+
+
+/* FOOTER */
+
+footer{
+    align-items: center;
+    
+    max-width: 1000px;
+    border-radius: 5px;
+    margin-left: 15%;
+    margin-top: 30px;
+    font-size: 22px;
+}
+@media (max-width: 820px){
+   
+    
+  body{
+   max-width: 100% ;
+   font-size: 16px ;
+  }
+  .header{
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+    
+  }
+  .go img{
+    height: 20px;
+    
+}
+ .container{
+    max-width: 200% ;
+    padding: 0;
+    margin-left: 2px;
+ }
+
+
+
+ 
+ .agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
+.eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
+   
+    padding: 15px;
+    max-width: 300px;
+   
+    width: 300px;
+    
+ 
+ }
+ 
+
+
+ footer{
+    align-items: center;
+                 
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+}
+.container{
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ .me{
+    border-top:gray solid;
+ }
+ 
+ .me li{
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+
+ }
+ .me a{
+    font-size: 1.4rem ;
+ }
+  nav{
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: 250ms height ease-in-out;
+ }
+ .hidden{
+    display: none;
+ }
+ .menu{
+    display: block;
+   }
+   .nav-toggle{
+    display: block;
+   }
+   .open{
+    height: 40vh;
+   }
+   .agric-sub, .phe-sub,.bs-sub,.bt-sub,.bst-sub,.civic-sub, .cca-sub,.com-sub,
+.eng-sub,.hi-sub,.he-sub, .irk-sub, .math-sub,.se-sub, .ss-sub, .yo-sub{
+    font-size: 18px;
+    
+   
+    font-weight: 600; 
+    max-width: 300px;
+   
+    width: 300px;
+       
+   align-items: center;
+}
+.agric-class1,.bst-class1,.class1,.bt-class1,.civic-class1,.cca-class1,.com-class1,
+.eng-class1,.hi-class1,.he-class1, .irk-class1, .math-class1, .se-class1, .ss-class1, .yo-class1,.bs-class1{
+   
+   width: 290px;
+   font-size: 16px;
+   padding: 5px;
+ 
+ }
+   
+  
+
+}
+
+    
+    
+
+    
+
+
+
+    
+

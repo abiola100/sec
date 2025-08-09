@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE | COMPUTER SCIENCE FOR JSS2 | SECOND TERM</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/csc-third/third-term-js2-csc.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+const quizData = [
+      { question: "What is information transmission?", a: "The process of sharing information from one place to another", b: "The act of cooking food", c: "The way of building houses", correct: "a" },
+      { question: "Which of these is an ancient method of transmitting information?", a: "Beating drums", b: "Using mobile phones", c: "Using computers", correct: "a" },
+      { question: "How did people in ancient times send messages?", a: "By smoke signals", b: "By sending emails", c: "By printing newspapers", correct: "a" },
+      { question: "What is a town crier?", a: "A person who announces news loudly in the community", b: "A person who sells food", c: "A person who builds houses", correct: "a" },
+      { question: "What does GSM stand for?", a: "Global System for Mobile Communications", b: "General System for Media", c: "Global Service Mobile", correct: "a" },
+      { question: "What does a fax machine do?", a: "Sends and receives documents over a telephone line", b: "Makes phone calls", c: "Sends text messages", correct: "a" },
+      { question: "Which device is mainly used for voice communication?", a: "Telephone", b: "Fax machine", c: "Printer", correct: "a" },
+      { question: "Which of the following uses a SIM card?", a: "GSM mobile phone", b: "Fax machine", c: "Landline telephone", correct: "a" },
+      { question: "What is SMS in GSM?", a: "Short Message Service", b: "System Mobile Service", c: "Simple Message Sending", correct: "a" },
+      { question: "How do you send a message using GSM?", a: "By typing and sending a text message on your mobile phone", b: "By faxing a document", c: "By calling on a landline", correct: "a" },
+      { question: "How is a fax message sent?", a: "By scanning a paper document and sending over a telephone line", b: "By typing on a mobile phone", c: "By sending emails", correct: "a" },
+      { question: "Where can information be stored on a GSM handset?", a: "Contacts, messages, notes, and files", b: "Only on SIM card", c: "Only on memory card", correct: "a" },
+      { question: "How can you retrieve stored contacts on a mobile phone?", a: "Open the Contacts app and search for a name", b: "Call customer service", c: "Send a message", correct: "a" },
+      { question: "What is the Internet?", a: "A network connecting millions of computers worldwide", b: "A type of mobile phone", c: "A place to buy computers", correct: "a" },
+      { question: "Which of these is NOT a feature of the Internet?", a: "Works only during the day", b: "Allows communication", c: "Provides information on many topics", correct: "a" },
+      { question: "Which device is needed to access the Internet?", a: "Computer, phone or tablet", b: "Fax machine", c: "Landline telephone", correct: "a" },
+      { question: "Which of the following is a danger of the Internet?", a: "Cyberbullying", b: "Playing games", c: "Sending emails", correct: "a" },
+      { question: "What is cyberbullying?", a: "Hurting others by sending mean messages online", b: "Playing computer games", c: "Helping friends online", correct: "a" },
+      { question: "How can you stay safe on the Internet?", a: "Do not share your passwords", b: "Share all your information", c: "Click on all links", correct: "a" },
+      { question: "What does the globe icon represent on the Internet?", a: "Internet or World Wide Web", b: "Email", c: "Save file", correct: "a" },
+      { question: "What does the email icon (envelope) mean?", a: "Sending or receiving emails", b: "Saving files", c: "Searching information", correct: "a" },
+      { question: "What is the meaning of the lock icon on a website?", a: "The website is secure and safe", b: "The website is broken", c: "You cannot visit the website", correct: "a" },
+      { question: "What does the magnifying glass icon mean?", a: "Search for information", b: "Send message", c: "Delete files", correct: "a" },
+      { question: "Which of these is NOT an abuse of the Internet?", a: "Being polite online", b: "Cyberbullying", c: "Hacking accounts", correct: "a" },
+      { question: "What is hacking?", a: "Breaking into someone’s computer without permission", b: "Sending emails", c: "Playing online games", correct: "a" },
+      { question: "What is the purpose of a town crier in ancient times?", a: "To announce news loudly in the community", b: "To send emails", c: "To print newspapers", correct: "a" },
+      { question: "Which of these is an example of online scam?", a: "Tricking people to give money or personal info", b: "Sending friendly messages", c: "Watching videos online", correct: "a" },
+      { question: "How do you add a contact on a GSM mobile phone?", a: "Open Contacts app and choose 'Add contact'", b: "Send a text message", c: "Make a call", correct: "a" },
+      { question: "What does the home icon usually do on websites?", a: "Takes you to the main page", b: "Sends an email", c: "Searches for information", correct: "a" },
+      { question: "What is the full form of SMS?", a: "Short Message Service", b: "Simple Message Sending", c: "System Mobile Service", correct: "a" },
+      { question: "What should you do if you see bad things online?", a: "Tell a trusted adult", b: "Ignore it", c: "Share it with friends", correct: "a" },
+      { question: "Which icon is used to save a file?", a: "Floppy disk icon", b: "Trash bin icon", c: "Home icon", correct: "a" },
+      { question: "How does the Internet help in education?", a: "Provides access to learning materials and information", b: "Makes phones ring", c: "Sends printed books", correct: "a" },
+      { question: "What is the use of a fax machine?", a: "To send copies of documents over telephone lines", b: "To make phone calls", c: "To send emails", correct: "a" },
+      { question: "Which device sends messages using cellular towers?", a: "GSM mobile phone", b: "Fax machine", c: "Landline phone", correct: "a" },
+      { question: "How is a fax message received?", a: "Printed out on paper by a fax machine", b: "As a text message", c: "By email", correct: "a" },
+      { question: "What is a safe practice when using the Internet?", a: "Never share your password with strangers", b: "Share your password with friends", c: "Click all links you see", correct: "a" },
+      { question: "What does the trash bin icon mean?", a: "Delete or remove files", b: "Save files", c: "Search files", correct: "a" },
+      { question: "Which network allows mobile phones to connect and send messages?", a: "GSM network", b: "Fax network", c: "Telephone line", correct: "a" },
+      { question: "Which of the following is an example of an Internet browser?", a: "Google Chrome", b: "Microsoft Word", c: "WhatsApp", correct: "a" },
+      { question: "What is the best way to avoid fake news online?", a: "Check if information is true before sharing", b: "Share everything immediately", c: "Ignore all news", correct: "a" },
+      { question: "What is a SIM card used for?", a: "Identifies your mobile phone on the GSM network", b: "Saves files", c: "Makes calls directly", correct: "a" },
+      { question: "Which of these is a way to communicate over the Internet?", a: "Sending emails", b: "Sending letters by post", c: "Shouting loudly", correct: "a" },
+      { question: "What should you do before clicking on a link from unknown sources?", a: "Avoid clicking if suspicious", b: "Click immediately", c: "Ignore the link exists", correct: "a" },
+      { question: "Which icon means ‘link’ on websites?", a: "Chain link icon", b: "Trash bin icon", c: "Home icon", correct: "a" },
+      { question: "What is the main purpose of the Internet?", a: "To connect people and share information", b: "To make phones ring", c: "To send faxes", correct: "a" },
+      { question: "Which of these can be done on the Internet?", a: "Online shopping", b: "Only phone calls", c: "Only faxing", correct: "a" },
+      { question: "What does a mobile phone use to connect to the GSM network?", a: "A SIM card", b: "A fax machine", c: "A landline cable", correct: "a" }
+    ];
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got this one right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You selected the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE| COMPUTER SCIENCE | JSS2| SECOND TERM</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/second-term/csc-second/second-term-js2-csc.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+        const quizData = [
+  // BASIC PROGRAMMING LANGUAGE
+  { question: "What is a programming language?", a: "A language used to give instructions to a computer", b: "A language spoken by humans", c: "A type of music", correct: "a" },
+  { question: "Which of these is an example of a programming language?", a: "Python", b: "English", c: "French", correct: "a" },
+  { question: "What is the main purpose of a programming language?", a: "To instruct the computer on what to do", b: "To decorate the computer", c: "To clean the computer", correct: "a" },
+  { question: "Which of these is NOT a programming language?", a: "Calculator", b: "Java", c: "C++", correct: "a" },
+  { question: "Which programming language is commonly used to create websites?", a: "JavaScript", b: "Spanish", c: "Swahili", correct: "a" },
+
+  // BASIC CHARACTER SET
+  { question: "What does 'character set' mean in computing?", a: "The letters, numbers, and symbols a computer can use", b: "The actors in a play", c: "The colors of a screen", correct: "a" },
+  { question: "Which of these is a character in a computer character set?", a: "@", b: "Tree", c: "Sun", correct: "a" },
+  { question: "Which of these is part of the basic character set?", a: "A to Z", b: "Fruits", c: "Cars", correct: "a" },
+  { question: "Which symbol is used in email addresses?", a: "@", b: "#", c: "&", correct: "a" },
+  { question: "Which is NOT part of a computer's character set?", a: "Bird", b: "1", c: "?", correct: "a" },
+
+  // KEY BASIC STATEMENT
+  { question: "What is a statement in programming?", a: "A line of code that tells the computer what to do", b: "A sentence in English", c: "A song", correct: "a" },
+  { question: "Which of these is a basic programming statement?", a: "Print", b: "Dance", c: "Sing", correct: "a" },
+  { question: "What does a PRINT statement do?", a: "Displays information on the screen", b: "Plays music", c: "Opens a file", correct: "a" },
+  { question: "What does an INPUT statement do?", a: "Takes information from the user", b: "Plays a video", c: "Closes a program", correct: "a" },
+  { question: "Which of these is used to get data from a user?", a: "INPUT", b: "JUMP", c: "RUN", correct: "a" },
+
+  // COMPUTER ETHICS
+  { question: "What are computer ethics?", a: "Rules for using computers properly", b: "How to cook food", c: "How to play games", correct: "a" },
+  { question: "Which is an example of good computer ethics?", a: "Respecting others' privacy", b: "Hacking into accounts", c: "Stealing files", correct: "a" },
+  { question: "Which of these is bad computer practice?", a: "Spreading viruses", b: "Protecting your password", c: "Using antivirus software", correct: "a" },
+  { question: "Why should you follow computer ethics?", a: "To use computers responsibly and fairly", b: "To win prizes", c: "To play better games", correct: "a" },
+  { question: "Which of these is NOT part of computer ethics?", a: "Cheating in online games", b: "Respecting copyrights", c: "Being honest online", correct: "a" },
+
+  // ABUSE OF COMPUTER
+  { question: "What is computer abuse?", a: "Using a computer to harm others", b: "Using a computer for learning", c: "Playing educational games", correct: "a" },
+  { question: "Which of these is an example of computer abuse?", a: "Spreading viruses", b: "Creating a school project", c: "Learning to type", correct: "a" },
+  { question: "Which is a way people abuse computers?", a: "Hacking into other people's systems", b: "Typing notes", c: "Designing graphics", correct: "a" },
+  { question: "What is a virus in computing?", a: "A program that damages computers", b: "A type of food", c: "A type of music", correct: "a" },
+  { question: "What should you do to avoid computer abuse?", a: "Use computers for good purposes", b: "Steal files", c: "Cheat online", correct: "a" },
+
+  // SAFETY MEASURE IN USING COMPUTER
+  { question: "What is one safety measure when using a computer?", a: "Sit properly on a chair", b: "Sit on the floor", c: "Stand on the table", correct: "a" },
+  { question: "Why should you keep liquids away from computers?", a: "To avoid damaging the computer", b: "To clean it faster", c: "To make it look good", correct: "a" },
+  { question: "Which is a good safety habit?", a: "Switching off the computer properly", b: "Shouting at the computer", c: "Hitting the keyboard hard", correct: "a" },
+  { question: "Why is good lighting important when using a computer?", a: "To protect your eyes", b: "To see the mouse better", c: "To hear sounds clearly", correct: "a" },
+  { question: "Which of these is unsafe when using a computer?", a: "Using wet hands", b: "Using a mouse", c: "Using a keyboard", correct: "a" },
+
+  // GRAPHICS PACKAGE
+  { question: "What is a graphics package?", a: "A program for creating pictures and designs", b: "A package of food", c: "A music CD", correct: "a" },
+  { question: "Which of these is a graphics package?", a: "CorelDraw", b: "Microsoft Word", c: "Notepad", correct: "a" },
+  { question: "What is the main use of a graphics package?", a: "To create and edit images", b: "To cook food", c: "To play music", correct: "a" },
+  { question: "Which of these is NOT a graphics package?", a: "Calculator", b: "Paint", c: "CorelDraw", correct: "a" },
+  { question: "What can you do with a graphics package?", a: "Draw and color shapes", b: "Bake a cake", c: "Make a call", correct: "a" },
+
+  // TYPE OF GRAPHICS PACKAGE
+  { question: "Which is a type of graphics package?", a: "Paint", b: "Telephone", c: "Radio", correct: "a" },
+  { question: "Which of these is a drawing package?", a: "CorelDraw", b: "Calculator", c: "Clock", correct: "a" },
+  { question: "Which of these is NOT a graphics package?", a: "Television", b: "Paint", c: "CorelDraw", correct: "a" },
+  { question: "What type of graphics package is used for freehand drawing?", a: "Paint", b: "Microsoft Excel", c: "Calculator", correct: "a" },
+  { question: "Which type of graphics package is used for editing photos?", a: "Photo editor", b: "Radio", c: "Telephone", correct: "a" },
+
+  // FEATURES OF GRAPHICS PACKAGE
+  { question: "Which is a feature of a graphics package?", a: "Drawing shapes", b: "Boiling water", c: "Singing songs", correct: "a" },
+  { question: "Which of these is a tool in a graphics package?", a: "Pencil tool", b: "Spoon", c: "Cup", correct: "a" },
+  { question: "What feature allows coloring in graphics packages?", a: "Fill tool", b: "Knife tool", c: "Brush tool", correct: "a" },
+  { question: "Which feature helps to add text in a graphics package?", a: "Text tool", b: "Cooking tool", c: "Music tool", correct: "a" },
+  { question: "Which of these is a common feature of graphics packages?", a: "Eraser tool", b: "Microwave", c: "Television", correct: "a" }
+];
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got this one right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You selected the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/second-term/cca-second/second-term-js2-cca.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+  {
+    question: "Which of the following is most accurately classified as a performing art?",
+    a: "Pottery",
+    b: "Singing",
+    c: "Weaving",
+    correct: "b"
+  },
+  {
+    question: "Why is drama considered a form of communication?",
+    a: "It uses costumes",
+    b: "It tells stories through acting and dialogue",
+    c: "It requires memorization",
+    correct: "b"
+  },
+  {
+    question: "Which material is least likely to be used in creating a mosaic artwork?",
+    a: "Paper",
+    b: "Glass",
+    c: "Clay tiles",
+    correct: "a"
+  },
+  {
+    question: "In music theory, what is the function of the treble clef?",
+    a: "It marks the end of a song",
+    b: "It indicates high-pitched notes",
+    c: "It shows the rhythm of the piece",
+    correct: "b"
+  },
+  {
+    question: "Which of the following is not a type of musical texture?",
+    a: "Monophony",
+    b: "Polyphony",
+    c: "Synphony",
+    correct: "c"
+  },
+  {
+    question: "A mosaic art form is best described as:",
+    a: "Painting done with fingers",
+    b: "Images formed using small colored pieces",
+    c: "Art created with only clay",
+    correct: "b"
+  },
+  {
+    question: "What is the main difference between solo and choral singing?",
+    a: "Solo is louder",
+    b: "Solo involves one singer; choral involves many",
+    c: "Choral singing is faster",
+    correct: "b"
+  },
+  {
+    question: "Which of these activities is most important during vocal warm-up?",
+    a: "Eating sugary snacks",
+    b: "Stretching legs",
+    c: "Breathing exercises",
+    correct: "c"
+  },
+  {
+    question: "Theatre is a combination of which two major elements?",
+    a: "Sound and light",
+    b: "Acting and storytelling",
+    c: "Design and music",
+    correct: "b"
+  },
+  {
+    question: "Which of these musical symbols tells a singer to hold a note longer than usual?",
+    a: "Fermata",
+    b: "Sharp",
+    c: "Bar line",
+    correct: "a"
+  },
+  {
+    question: "Which is the most likely reason for teaching running scales in vocal training?",
+    a: "To test memory",
+    b: "To improve vocal control and pitch accuracy",
+    c: "To shorten rehearsal time",
+    correct: "b"
+  },
+  {
+    question: "Which of these is not typically part of a vocal rehearsal session?",
+    a: "Voice relaxation",
+    b: "Instrument tuning",
+    c: "Note drills",
+    correct: "b"
+  },
+  {
+    question: "What does harmony add to a song?",
+    a: "Dance moves",
+    b: "Depth and richness",
+    c: "Volume",
+    correct: "b"
+  },
+  {
+    question: "Ear training helps musicians to:",
+    a: "Draw notes",
+    b: "Recognize and reproduce musical sounds",
+    c: "Avoid stage fright",
+    correct: "b"
+  },
+  {
+    question: "In drama, what does improvisation involve?",
+    a: "Acting with no rehearsed script",
+    b: "Repeating written lines exactly",
+    c: "Copying another actor",
+    correct: "a"
+  },
+  {
+    question: "Which of these is a line pattern commonly used in art design?",
+    a: "Polka dot",
+    b: "Wavy",
+    c: "Solid red",
+    correct: "b"
+  },
+  {
+    question: "Which instrument is most commonly used to teach pitch during music lessons?",
+    a: "Drum",
+    b: "Keyboard",
+    c: "Tambourine",
+    correct: "b"
+  },
+  {
+    question: "Which of the following best shows contrast in theatre?",
+    a: "Same lighting throughout",
+    b: "Changes between light and dark scenes",
+    c: "Same costume for all actors",
+    correct: "b"
+  },
+  {
+    question: "Which of the following describes 'beat' in music?",
+    a: "The loudest part of a song",
+    b: "A regular pulse that drives rhythm",
+    c: "The emotion in a song",
+    correct: "b"
+  },
+  {
+    question: "Why is rehearsal important in a performance?",
+    a: "To waste free time",
+    b: "To reduce energy",
+    c: "To perfect timing and coordination",
+    correct: "c"
+  },
+  {
+    question: "A good singing posture includes:",
+    a: "Slouching shoulders",
+    b: "Straight back and relaxed neck",
+    c: "Closed mouth",
+    correct: "b"
+  },
+  {
+    question: "Which of these is a function of drama in society?",
+    a: "Cooking training",
+    b: "Moral education and entertainment",
+    c: "Making clothes",
+    correct: "b"
+  },
+  {
+    question: "Which is an example of a percussion instrument?",
+    a: "Flute",
+    b: "Violin",
+    c: "Drum",
+    correct: "c"
+  },
+  {
+    question: "When is it best to perform vocal exercises?",
+    a: "After shouting",
+    b: "Before singing practice",
+    c: "At bedtime",
+    correct: "b"
+  },
+  {
+    question: "What makes a pattern 'repetitive' in art?",
+    a: "Use of dark colours",
+    b: "Designs repeated in sequence",
+    c: "Including human figures",
+    correct: "b"
+  },
+  {
+    question: "What is a staff in music?",
+    a: "An actor’s role",
+    b: "Five lines and four spaces used to write music",
+    c: "A type of drum",
+    correct: "b"
+  },
+  {
+    question: "Which of the following is a reason musicians train their ears?",
+    a: "To avoid being loud",
+    b: "To identify and correct pitch errors",
+    c: "To memorize lyrics",
+    correct: "b"
+  },
+  {
+    question: "Theatre originated from:",
+    a: "Modern fashion shows",
+    b: "Religious rituals and storytelling",
+    c: "Military parades",
+    correct: "b"
+  },
+  {
+    question: "Which of these helps singers develop tone quality?",
+    a: "Yawning",
+    b: "Proper breathing and resonance practice",
+    c: "Chewing gum",
+    correct: "b"
+  },
+  {
+    question: "Which of these best describes a ‘melody’?",
+    a: "A loud noise",
+    b: "A series of musical notes arranged in a pleasing order",
+    c: "A drum beat",
+    correct: "b"
+  }
+];
+
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

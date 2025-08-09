@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+          <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/phe-third/third-term-js3-phe.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+const quizData = [
+  {
+    question: "Which of the following diseases is most likely to be caused by poor sanitation and contaminated water?",
+    a: "Cholera",
+    b: "Measles",
+    c: "Asthma",
+    correct: "a"
+  },
+  {
+    question: "Why is malaria more common in areas with many uncovered water containers?",
+    a: "Mosquitoes lay eggs in stagnant water",
+    b: "Flies spread malaria in dirty water",
+    c: "Contaminated water causes blood infection",
+    correct: "a"
+  },
+  {
+    question: "A child with red eyes, fever, and skin rash most likely has which disease?",
+    a: "Measles",
+    b: "Kwashiorkor",
+    c: "Typhoid",
+    correct: "a"
+  },
+  {
+    question: "Why is tuberculosis classified as a communicable disease?",
+    a: "It spreads through coughing and sneezing",
+    b: "It is inherited from parents",
+    c: "It only affects people who eat poorly",
+    correct: "a"
+  },
+  {
+    question: "Which condition is most likely to be passed from parents to children by genes?",
+    a: "Sickle cell anaemia",
+    b: "Cholera",
+    c: "Ringworm",
+    correct: "a"
+  },
+  {
+    question: "What is the major role of houseflies in disease spread?",
+    a: "They carry germs from dirty places to food",
+    b: "They bite and suck blood like mosquitoes",
+    c: "They lay eggs in human skin",
+    correct: "a"
+  },
+  {
+    question: "Which disease can be spread by sharing unwashed cutlery with a sick person?",
+    a: "Typhoid",
+    b: "Sickle cell",
+    c: "Kwashiorkor",
+    correct: "a"
+  },
+  {
+    question: "Why is handwashing with soap important in disease prevention?",
+    a: "It removes germs that may cause infections",
+    b: "It stops hands from feeling dry",
+    c: "It makes the skin grow faster",
+    correct: "a"
+  },
+  {
+    question: "Which disease is most likely when a person regularly breathes in smoke and dust?",
+    a: "Asthma",
+    b: "Cholera",
+    c: "Diabetes",
+    correct: "a"
+  },
+  {
+    question: "Which of these best describes a non-communicable disease?",
+    a: "It cannot be transferred from one person to another",
+    b: "It only affects children under five",
+    c: "It is always caused by germs",
+    correct: "a"
+  },
+  {
+    question: "Why is measles considered dangerous in young children?",
+    a: "It can cause complications like pneumonia or blindness",
+    b: "It gives strength to the immune system",
+    c: "It improves appetite and growth",
+    correct: "a"
+  },
+  {
+    question: "Which of these is a vector-borne disease?",
+    a: "Sleeping sickness",
+    b: "Diabetes",
+    c: "Kwashiorkor",
+    correct: "a"
+  },
+  {
+    question: "Which insect transmits sleeping sickness?",
+    a: "Tsetse fly",
+    b: "Blackfly",
+    c: "Housefly",
+    correct: "a"
+  },
+  {
+    question: "Why should we dispose of refuse properly in our environment?",
+    a: "To prevent flies from spreading germs to our food",
+    b: "To decorate the street",
+    c: "To reduce school fees",
+    correct: "a"
+  },
+  {
+    question: "Which of the following best prevents mosquito bites at night?",
+    a: "Using treated mosquito nets",
+    b: "Eating garlic before bed",
+    c: "Sleeping under the stars",
+    correct: "a"
+  },
+  {
+    question: "What is the main goal of vaccination?",
+    a: "To protect the body against specific infectious diseases",
+    b: "To cure any disease instantly",
+    c: "To clean the blood system",
+    correct: "a"
+  },
+  {
+    question: "Which group is most at risk of getting kwashiorkor?",
+    a: "Children with poor protein intake",
+    b: "Teenagers who stay up late",
+    c: "Elderly people with diabetes",
+    correct: "a"
+  },
+  {
+    question: "What is the main cause of obesity in teenagers?",
+    a: "Too much junk food and lack of exercise",
+    b: "Catching it from a friend",
+    c: "Washing hands too often",
+    correct: "a"
+  },
+  {
+    question: "A person with frequent thirst, weight loss, and sugar in urine may have?",
+    a: "Diabetes",
+    b: "Malaria",
+    c: "Tuberculosis",
+    correct: "a"
+  },
+  {
+    question: "Which of the following best describes a disease vector?",
+    a: "An insect that carries germs from one host to another",
+    b: "A virus that attacks blood cells directly",
+    c: "A bacteria that floats in water",
+    correct: "a"
+  },
+  {
+    question: "Which method can prevent houseflies from contaminating food?",
+    a: "Covering food properly",
+    b: "Opening windows always",
+    c: "Eating outdoors only",
+    correct: "a"
+  },
+  {
+    question: "Why are communities with poor drainage systems more likely to have malaria?",
+    a: "Because stagnant water helps mosquitoes breed",
+    b: "Because water pipes create dust",
+    c: "Because it is colder there",
+    correct: "a"
+  },
+  {
+    question: "What is one reason why students should avoid sharing sharp objects?",
+    a: "To prevent blood-related infections like HIV",
+    b: "To stop body odour",
+    c: "To reduce theft in school",
+    correct: "a"
+  },
+  {
+    question: "How does disease affect school attendance?",
+    a: "Sick students miss lessons and may fall behind",
+    b: "It makes school more exciting",
+    c: "It increases classroom fun",
+    correct: "a"
+  },
+  {
+    question: "Which of the following is a long-term effect of poor disease prevention in a society?",
+    a: "Increased poverty and low productivity",
+    b: "Faster road construction",
+    c: "More holidays for students",
+    correct: "a"
+  },
+  {
+    question: "Why should families take health education seriously?",
+    a: "To understand how to prevent sickness and keep everyone healthy",
+    b: "To avoid going to school",
+    c: "To avoid cooking at home",
+    correct: "a"
+  },
+  {
+    question: "What is one role of government in disease prevention?",
+    a: "Providing clean water and health centers",
+    b: "Giving everyone free phones",
+    c: "Building amusement parks",
+    correct: "a"
+  },
+  {
+    question: "Which of these is a simple way to prevent food poisoning at home?",
+    a: "Washing hands and utensils before cooking",
+    b: "Reheating old food many times",
+    c: "Leaving food uncovered overnight",
+    correct: "a"
+  },
+  {
+    question: "Which practice can help stop the spread of airborne diseases in a classroom?",
+    a: "Opening windows for ventilation",
+    b: "Keeping lights off",
+    c: "Turning off fans",
+    correct: "a"
+  },
+  {
+    question: "Which best explains why sickle cell disease has no cure?",
+    a: "It is inherited and affects the blood permanently",
+    b: "It is caused by bacteria",
+    c: "It can be washed out of the body",
+    correct: "a"
+  }
+];
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You are right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You are wrong </span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

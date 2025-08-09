@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/cca-third/third-term-js3-cca.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+       const quizData = [
+            {
+                question: "Which of the following best explains why choreography is a creative art?",
+                a: "It applies old dance steps in new ways",
+                b: "It involves imaginative arrangement of movements to express ideas",
+                c: "It uses popular dances for public shows",
+                correct: "b"
+            },
+            {
+                question: "Drama contributes to rural development mainly by:",
+                a: "Providing local dance and entertainment",
+                b: "Spreading messages through stage action and emotional appeal",
+                c: "Bringing music and acting to the audience",
+                correct: "b"
+            },
+            {
+                question: "What is most essential for harmony in music?",
+                a: "Singers keeping to the same key",
+                b: "Voices blending in complementary tones",
+                c: "Matching beats and rhythms in performance",
+                correct: "b"
+            },
+            {
+                question: "Unity in a dance group is best shown when:",
+                a: "Every dancer follows individual interpretation",
+                b: "All dancers move in rhythm and direction together",
+                c: "Choreography allows free personal expression",
+                correct: "b"
+            },
+            {
+                question: "What does a dance idea mainly express?",
+                a: "The music and tempo used",
+                b: "The storyline or emotion behind the movements",
+                c: "The outfit and stage setting",
+                correct: "b"
+            },
+            {
+                question: "Effective drama in rural areas often leads to:",
+                a: "Better understanding and behavior in the community",
+                b: "Increased love for stage performance",
+                c: "Creation of traditional theatre halls",
+                correct: "a"
+            },
+            {
+                question: "What mostly disrupts unity in a creative group?",
+                a: "Disagreements and personal rivalry",
+                b: "Differing opinions during rehearsals",
+                c: "Poor communication and selfish attitudes",
+                correct: "c"
+            },
+            {
+                question: "A good source of dance movement ideas includes:",
+                a: "Emotions, imagination, and cultural observation",
+                b: "Classical steps, textbook notes, and costume changes",
+                c: "Learning from senior dancers and imitating moves",
+                correct: "a"
+            },
+            {
+                question: "Choreography in stage drama helps to:",
+                a: "Fill gaps with physical movement and expression",
+                b: "Replace dialogue with movement",
+                c: "Add musical performance to a scene",
+                correct: "a"
+            },
+            {
+                question: "Unity in Cultural and Creative Arts refers to:",
+                a: "Working together with one spirit to achieve a goal",
+                b: "Group participation in the same activity",
+                c: "Common interest in art and performance",
+                correct: "a"
+            },
+            {
+                question: "In musical harmony, the instruments must:",
+                a: "Balance sounds to support the main melody",
+                b: "Play exactly the same notes",
+                c: "Produce louder sounds to lead the performance",
+                correct: "a"
+            },
+            {
+                question: "The role of a dramaturge in stage production is to:",
+                a: "Direct actors and arrange lighting",
+                b: "Interpret scripts and advise on artistic direction",
+                c: "Handle costumes and stage props",
+                correct: "b"
+            },
+            {
+                question: "Arranging dance movements properly helps to:",
+                a: "Make dancers remember the steps easily",
+                b: "Show the message, rhythm, and theme clearly",
+                c: "Keep the choreography simple for the audience",
+                correct: "b"
+            },
+            {
+                question: "A united dance performance shows:",
+                a: "Energetic and expressive individuals",
+                b: "Synchronized steps with clear coordination",
+                c: "Improvised moves that match the beat",
+                correct: "b"
+            },
+            {
+                question: "One reason songs are added to drama is:",
+                a: "To entertain and reduce boredom",
+                b: "To create deeper emotional connection with message",
+                c: "To give performers more lines",
+                correct: "b"
+            },
+            {
+                question: "Which career is LEAST related to stage drama?",
+                a: "Script writer", b: "Makeup artist", c: "Quantity surveyor", correct: "c"
+            },
+            {
+                question: "The rise of dance in Nigeria is mainly because of:",
+                a: "International awareness and cultural pride",
+                b: "More funding from local groups",
+                c: "Younger generation’s interest in foreign dance",
+                correct: "a"
+            },
+            {
+                question: "Poor choreography is noticed when:",
+                a: "Movements lack direction and rhythm",
+                b: "The dance does not match cultural identity",
+                c: "The costumes don’t reflect the dance theme",
+                correct: "a"
+            },
+            {
+                question: "When training dancers, what is most important?",
+                a: "Teaching movement meanings and emotional delivery",
+                b: "Rehearsing songs and costumes",
+                c: "Explaining dance origin and tempo",
+                correct: "a"
+            },
+            {
+                question: "National unity promotes development by:",
+                a: "Helping different regions grow independently",
+                b: "Creating peaceful living and collective progress",
+                c: "Allowing equal access to national TV for all states",
+                correct: "b"
+            }
+            ];
+
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

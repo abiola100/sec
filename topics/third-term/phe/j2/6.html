@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/phe-third/third-term-js2-phe.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+const quizData = [
+  // ACCIDENTS & FIRST AID
+  { question: "What is a domestic accident?", a: "An accident that happens at home", b: "An accident on a football field", c: "A school fight", correct: "a" },
+  { question: "Which of the following is a type of domestic accident?", a: "Burns", b: "Cholera", c: "Typhoid", correct: "a" },
+  { question: "Which is a common cause of domestic accidents?", a: "Wet and slippery floors", b: "Clean dry ground", c: "Open fields", correct: "a" },
+  { question: "How can we prevent burns at home?", a: "Keep hot items away from children", b: "Play with hot water", c: "Cook without watching", correct: "a" },
+  { question: "What is the first thing to do when someone gets burnt?", a: "Cool the burn with clean water", b: "Cover with cloth", c: "Apply dirty oil", correct: "a" },
+  { question: "Which of these is a first aid treatment for cuts?", a: "Clean and cover the wound", b: "Rub salt on it", c: "Ignore the wound", correct: "a" },
+  { question: "What is a sports injury?", a: "An injury that happens during physical activity or sports", b: "An injury in the kitchen", c: "A sickness", correct: "a" },
+  { question: "Which of the following is a common sports injury?", a: "Sprain", b: "Cough", c: "Malaria", correct: "a" },
+  { question: "How can we prevent sports injuries?", a: "Warm up before playing", b: "Play barefoot", c: "Ignore safety rules", correct: "a" },
+  { question: "Why is first aid important?", a: "To help an injured person before medical help arrives", b: "To punish someone", c: "To play with medicine", correct: "a" },
+
+  // SCHOOL HEALTH PROGRAMME
+  { question: "What is a school health programme?", a: "All activities that promote health in school", b: "Reading novels in school", c: "Wearing school uniform", correct: "a" },
+  { question: "One aim of school health programme is?", a: "To help students stay healthy", b: "To sell snacks", c: "To cancel lessons", correct: "a" },
+  { question: "Which of the following is a component of school health?", a: "School health services", b: "Video games", c: "Cooking lessons", correct: "a" },
+  { question: "School feeding service is important because?", a: "It helps students stay healthy and focused", b: "It wastes food", c: "It causes sickness", correct: "a" },
+  { question: "What is school-home-community relationship?", a: "Working together to support students' health", b: "Fighting with parents", c: "Making rules alone", correct: "a" },
+  { question: "What is a healthful school environment?", a: "A clean and safe school setting", b: "Dirty and noisy classrooms", c: "Overcrowded spaces", correct: "a" },
+
+  // FRESH APPROACH
+  { question: "What does FRESH stand for?", a: "Focusing Resources on Effective School Health", b: "Fast Reading Every Single Hour", c: "Food Rules Every School Holiday", correct: "a" },
+  { question: "How many main pillars does the FRESH approach have?", a: "Four", b: "Three", c: "Six", correct: "a" },
+  { question: "Which of these is a pillar of FRESH?", a: "Skills-based health education", b: "Computer games", c: "Selling snacks", correct: "a" },
+  { question: "What does 'safe and supportive school environment' mean?", a: "A clean and friendly school", b: "A noisy classroom", c: "A dark room", correct: "a" },
+  { question: "School-based health services include?", a: "First aid and feeding", b: "Dancing competition", c: "Basket weaving", correct: "a" },
+
+  // ENVIRONMENTAL POLLUTION
+  { question: "What is environmental pollution?", a: "Dirtying the environment", b: "Cleaning the house", c: "Planting flowers", correct: "a" },
+  { question: "What is one effect of air pollution?", a: "Breathing problems", b: "Clean air", c: "Good smell", correct: "a" },
+  { question: "How does water pollution affect health?", a: "Causes diseases like cholera", b: "Cleans the teeth", c: "Improves strength", correct: "a" },
+  { question: "Which is an effect of land pollution?", a: "Poor farming and food shortage", b: "Better crops", c: "More rain", correct: "a" },
+  { question: "One effect of noise pollution is?", a: "Hearing problems", b: "Better rest", c: "Peaceful sleep", correct: "a" },
+  { question: "What is a good way to prevent air pollution?", a: "Avoid burning waste", b: "Burn tyres", c: "Play with smoke", correct: "a" },
+  { question: "How can we prevent water pollution?", a: "Avoid throwing waste in rivers", b: "Pour oil in the stream", c: "Use dirty water", correct: "a" },
+  { question: "What can help prevent land pollution?", a: "Use dustbins", b: "Drop waste on the floor", c: "Burn all plastics", correct: "a" },
+  { question: "How does pollution affect students?", a: "Makes them sick and miss school", b: "Improves learning", c: "Increases sleep", correct: "a" },
+  { question: "How can we stop noise pollution?", a: "Reduce loud music and shouting", b: "Use loud horns always", c: "Shout at people", correct: "a" },
+
+  // NON-COMMUNICABLE DISEASES
+  { question: "What is a non-communicable disease?", a: "A disease that cannot spread from person to person", b: "A disease that spreads fast", c: "A skin infection", correct: "a" },
+  { question: "Which of these is a non-communicable disease?", a: "Diabetes", b: "Malaria", c: "Measles", correct: "a" },
+  { question: "What causes non-communicable diseases?", a: "Poor lifestyle and body conditions", b: "Germs", c: "Cold weather", correct: "a" },
+  { question: "Is cancer a non-communicable disease?", a: "Yes", b: "No", c: "Sometimes", correct: "a" },
+  { question: "Which of these is caused by family history?", a: "Sickle cell", b: "Flu", c: "Headache", correct: "a" },
+  { question: "What is one way to prevent non-communicable diseases?", a: "Eat healthy and exercise", b: "Smoke often", c: "Avoid rest", correct: "a" },
+  { question: "Lack of exercise can lead to?", a: "Obesity and heart disease", b: "Strong bones", c: "Better sleep", correct: "a" },
+  { question: "Stress can cause which disease?", a: "High blood pressure", b: "Toothache", c: "Cold", correct: "a" },
+  { question: "One effect of non-communicable disease is?", a: "Long-term illness", b: "Faster growth", c: "Free food", correct: "a" },
+  { question: "How can we control diabetes?", a: "Eat less sugar and follow doctor’s advice", b: "Eat more sweets", c: "Drink dirty water", correct: "a" }
+];
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You are right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You are wrong </span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>
