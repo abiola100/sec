@@ -140,7 +140,7 @@ a{
 
 .agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects,
 .bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects,
-.cca-j1-subjects , .cca-j2-subjects , .cca-j3-subjects,.j1-subjects, .j2-subjects, .j3-subjects {
+.cca-j1-subjects , .cca-j2-subjects ,.ss-j1-subjects , .ss-j2-subjects , .ss-j3-subjects, .cca-j3-subjects,.j1-subjects, .j2-subjects, .j3-subjects {
     background-color: wheat;
     font-weight:800;
     border-radius: 10px;
@@ -167,6 +167,10 @@ a{
 .cca-first button,.cca-second button, .cca-third button,
 .cca2-first button, .cca2-second button, .cca2-third button,
 .cca3-first button, .cca3-second button, .cca3-third button,
+
+.ss-first button,.ss-second button, .ss-third button,
+.ss2-first button, .ss2-second button, .ss2-third button,
+.ss3-first button, .ss3-second button, .ss3-third button,
 
 
 .com-first button, .com-second button, .com-third button,
@@ -1722,32 +1726,7 @@ a{
 
 }
 
-/* jss1 terms button */
-.ss-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
 
-.ss-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.ss-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
 /* jss1 hover*/
 .ss-first  button:hover{
     background-color: rgb(184, 144, 151);
@@ -1764,30 +1743,9 @@ a{
 
 
 
-/* jss2 terms button */
-.ss2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.ss2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.ss2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
+
+
+
 /* jss2 hover*/
 
 .ss2-first  button:hover{
@@ -1804,27 +1762,8 @@ a{
 }
 
 /* jss3 terms button*/
-.ss3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.ss3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.ss3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    width: 250px;
-    border-radius: 4px;
-}
+
+
 /* jss3 hover*/
 .ss3-first  button:hover{
     background-color: rgb(184, 144, 151);
