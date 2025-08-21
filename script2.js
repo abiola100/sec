@@ -79,7 +79,7 @@ function addComplaintToDOM(complaint) {
     complaintBox.innerHTML = `
         <h4>NAME  : ${complaint.name}  <br><br>TITLE  : ${complaint.title}</h4>
         
-        <p><b class="complain">${complaint.complaint}</b></p>
+        <p><span class="complain">${complaint.complaint}</span></p>
         <button class="delete-btn" onclick="deleteComplaint(${complaint.id})">Delete</button>
     `;
     document.getElementById('complaints-list').appendChild(complaintBox);

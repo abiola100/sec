@@ -196,8 +196,9 @@ p{
         }
         .explanation{
             background-image: url(./images/secondarySchool.jpeg);
-            background-size: 300px 400px;
+            
             max-width: 400px;
+            background-size: cover;
             
             border-radius: 5px;
             align-items: center;
@@ -344,7 +345,7 @@ table {
 }
 .delete-btn {
 
-    
+    display: none;
     
     background-color: #ff4b4b;
     color: white;
@@ -354,7 +355,7 @@ table {
     padding: 5px;
 }
 .complain{
-    border-bottom: solid 1px;
+    align-items: center;
 }
 .comp-name{
     border-bottom: 1px;
