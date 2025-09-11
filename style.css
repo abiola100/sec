@@ -140,8 +140,9 @@ a{
 
 .agric-j1-subjects,.agric-j2-subjects,.agric-j3-subjects,.bs-j1-subjects, .bs-j2-subjects,.bs-j3-subjects,
 .bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects,
-.cca-j1-subjects , .cca-j2-subjects , .cca-j3-subjects, .ss-j1-subjects , .ss-j2-subjects ,
- .ss-j3-subjects, .j1-subjects, .j2-subjects, .j3-subjects, .he-j1-subjects , .he-j2-subjects , .he-j3-subjects {
+.cca-j1-subjects , .cca-j2-subjects , .cca-j3-subjects, .ss-j1-subjects , .ss-j2-subjects , .ss-j3-subjects,
+ .j1-subjects, .j2-subjects, .j3-subjects, .he-j1-subjects , .he-j2-subjects , .he-j3-subjects, .j3-subjects, 
+ .hi-j1-subjects , .hi-j2-subjects , .hi-j3-subjects {
     background-color: wheat;
     font-weight:800;
     border-radius: 10px;
@@ -175,6 +176,10 @@ a{
 .ss-first button,.ss-second button, .ss-third button,
 .ss2-first button, .ss2-second button, .ss2-third button,
 .ss3-first button, .ss3-second button, .ss3-third button,
+
+.hi-first button,.hi-second button, .hi-third button,
+.hi2-first button, .hi2-second button, .hi2-third button,
+.hi3-first button, .hi3-second button, .hi3-third button,
 
 .he-first button,.he-second button, .he-third button,
 .he2-first button, .he2-second button, .he2-third button,
@@ -252,6 +257,10 @@ a{
 .he-first  button:hover,.he-second  button:hover,.he-third  button:hover,
 .he2-first  button:hover,.he2-second  button:hover,.he2-third  button:hover,
 .he3-first  button:hover,.he3-second  button:hover,.he3-third  button:hover,
+
+.hi-first  button:hover,.hi-second  button:hover,.hi-third  button:hover,
+.hi2-first  button:hover,.hi2-second  button:hover,.hi2-third  button:hover,
+.hi3-first  button:hover,.hi3-second  button:hover,.hi3-third  button:hover,
 
 
 
@@ -1000,124 +1009,8 @@ a{
 
 }
 
-/* jss1 terms button */
-.hi-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-
-.hi-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.hi-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss1 hover*/
-.hi-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
 
-
-/* jss2 terms button */
-.hi2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.hi2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.hi2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss2 hover*/
-
-.hi2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-/* jss3 terms button*/
-.hi3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.hi3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.hi3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss3 hover*/
-.hi3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.hi3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 /* HOME ECONOMICS */
 .he{
     display: flex;
