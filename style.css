@@ -142,7 +142,7 @@ a{
 .bst-j1-subjects, .bst-j2-subjects, .bst-j3-subjects , .com-j1-subjects , .com-j2-subjects , .com-j3-subjects,
 .cca-j1-subjects , .cca-j2-subjects , .cca-j3-subjects, .ss-j1-subjects , .ss-j2-subjects , .ss-j3-subjects,
  .j1-subjects, .j2-subjects, .j3-subjects, .he-j1-subjects , .he-j2-subjects , .he-j3-subjects, .j3-subjects, 
- .hi-j1-subjects , .hi-j2-subjects , .hi-j3-subjects {
+ .hi-j1-subjects , .hi-j2-subjects , .hi-j3-subjects, .math-j1-subjects , .math-j2-subjects , .math-j3-subjects {
     background-color: wheat;
     font-weight:800;
     border-radius: 10px;
@@ -184,6 +184,10 @@ a{
 .he-first button,.he-second button, .he-third button,
 .he2-first button, .he2-second button, .he2-third button,
 .he3-first button, .he3-second button, .he3-third button,
+
+.math-first button,.math-second button, .math-third button,
+.math2-first button, .math2-second button, .math2-third button,
+.math3-first button, .math3-second button, .math3-third button,
 
 
 .com-first button, .com-second button, .com-third button,
@@ -261,6 +265,11 @@ a{
 .hi-first  button:hover,.hi-second  button:hover,.hi-third  button:hover,
 .hi2-first  button:hover,.hi2-second  button:hover,.hi2-third  button:hover,
 .hi3-first  button:hover,.hi3-second  button:hover,.hi3-third  button:hover,
+
+.math-first  button:hover, .math-third  button:hover, 
+.math-second  button:hover, .math2-first  button:hover,
+.math2-second  button:hover, .math2-third  button:hover,
+.math3-first  button:hover, .math3-second  button:hover, .math3-third  button:hover,
 
 
 
@@ -1220,124 +1229,10 @@ a{
 
 }
 
-/* jss1 terms button */
-.math-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-
-.math-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.math-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss1 hover*/
-.math-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
 
 
 
-/* jss2 terms button */
-.math2-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.math2-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.math2-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss2 hover*/
 
-.math2-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math2-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math2-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-
-/* jss3 terms button*/
-.math3-first button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-}
-.math3-second button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-.math3-third button{
-    background-color: rgb(190, 178, 180);
-    border: none;
-    margin-top: 20px;
-    font-size: 20px;
-    width: 230px;
-    border-radius: 4px;
-}
-/* jss3 hover*/
-.math3-first  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math3-second  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
-.math3-third  button:hover{
-    background-color: rgb(184, 144, 151);
-    color: red;
-}
     
 /* SECURITY EDUCATION*/
 .se{

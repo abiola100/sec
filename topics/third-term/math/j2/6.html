@@ -1,0 +1,694 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Probability - mathematics - jss2</title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header> 
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/third-term/math-third/third-term-js2-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title" style="background-color: purple;color: white;"><b>PROBABILITY</b></div>
+        
+
+        <h3>Meaning of Probability</h3>
+        <p>Probability is the branch of mathematics that deals with the study of chance and uncertainty.<br>
+        It tells us how likely an event is to occur.</p>
+        <p>We use probability to describe situations where we are not certain about the outcome — for example:</p>
+        <ol>
+        <li>Will it rain tomorrow?</li><br>
+        <li>Will our school team win the next match?</li><br>
+        <li>If I pick a card, what are the chances it will be red?</li><br>
+        </ol>
+        <p>In short, probability measures how likely or unlikely something is to happen.</p>
+
+        <br><br>
+        <div class="title" style="background-color: #0b5a3a;color: white;"><b>Examples of Probability in Everyday Life</b></div>
+        <ol>
+        <li>Predicting if it will rain or not.</li><br>
+        <li>Tossing a coin and expecting heads or tails.</li><br>
+        <li>Drawing a card from a pack.</li><br>
+        <li>Selecting a student at random to answer a question.</li><br>
+        <li>Checking the chance that a bus will arrive late.</li><br>
+        <li>Expecting your name to be chosen in a school raffle draw.</li><br>
+        <li>Guessing whether a baby will be a boy or girl.</li><br>
+        <li>Choosing a colour of ball from a bag without looking.</li><br>
+        <li>Estimating the chance of passing an exam based on past results.</li><br>
+        <li>Predicting which football team will win a match.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkkhaki;color: black;"><b>Important Terms in Probability</b></div>
+        <ol>
+        <li><strong>Experiment</strong> — Any activity or process that can be repeated and has two or more possible outcomes.<br>
+        Example: Tossing a coin or drawing a card.</li><br>
+
+        <li><strong>Outcome</strong> — The result of an experiment.<br>
+        Example: Getting “head” when a coin is tossed.</li><br>
+
+        <li><strong>Sample Space</strong> — The set of all possible outcomes of an experiment.<br>
+        Example: When tossing a coin → {Head, Tail}.</li><br>
+
+        <li><strong>Event</strong> — One or more outcomes of interest from an experiment.<br>
+        Example: Getting an even number when a die is rolled.</li><br>
+
+        <li><strong>Favourable Outcomes</strong> — The outcomes we are looking for.<br>
+        Example: Getting a 4 when rolling a die — only one favourable outcome.</li><br>
+
+        <li><strong>Trial</strong> — Each performance or repetition of an experiment.<br>
+        Example: Tossing a coin once is one trial.</li><br>
+
+        <li><strong>Impossible Event</strong> — An event that cannot happen.<br>
+        Example: Getting a number greater than 6 on a die.</li><br>
+
+        <li><strong>Certain Event</strong> — An event that must happen.<br>
+        Example: Getting a number less than 7 when rolling a die (since all numbers 1–6 are less than 7).</li><br>
+
+        <li><strong>Equally Likely Events</strong> — Events that have the same chance of occurring.<br>
+        Example: When tossing a fair coin, getting heads or tails are equally likely.</li><br>
+        </ol>
+
+        <h3>Formula for Probability</h3>
+        <p>The probability of an event is given by:</p>
+        <p><strong>P(E) = Number of favourable outcomes / Total number of possible outcomes</strong></p>
+
+        <p>Where:</p>
+        <ol>
+        <li>P(E) = probability of the event E occurring.</li><br>
+        <li>The result is always between 0 and 1.</li><br>
+        </ol>
+
+        <h3>Probability Scale</h3>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>Event Type</th>
+            <th>Meaning</th>
+            <th>Probability</th>
+        </tr>
+        <tr>
+            <td>Impossible</td>
+            <td>Cannot happen</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Unlikely</td>
+            <td>May not happen</td>
+            <td>Between 0 and 0.5</td>
+        </tr>
+        <tr>
+            <td>Even Chance</td>
+            <td>Can happen or not happen</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>Likely</td>
+            <td>Expected to happen</td>
+            <td>Between 0.5 and 1</td>
+        </tr>
+        <tr>
+            <td>Certain</td>
+            <td>Must happen</td>
+            <td>1</td>
+        </tr>
+        </table>
+
+        <p><strong>0</strong> means the event will never happen.<br>
+        <strong>1</strong> means the event will definitely happen.<br>
+        Values between 0 and 1 show how likely it is.</p><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>Types of Probability</b></div>
+        <ol>
+        <li><strong>Theoretical Probability</strong><br><br>
+        – Found using reasoning or calculation, without actual experiment.<br><br>
+        – Based on what should happen in theory.<br><br>
+        – Example: The probability of getting a head when tossing a fair coin is ½.</li><br>
+
+        <li><strong>Experimental Probability</strong><br><br>
+        – Found by carrying out an actual experiment or observation.<br><br>
+        – Based on what really happens when the experiment is performed.<br><br>
+        – Formula:<br>
+        <strong>Experimental Probability = Number of times event occurs / Total number of trials</strong></li><br>
+        </ol><br><br>
+
+
+        <div class="title" style="background-color: darkcyan;color: white;"><b>Properties of Probability</b></div>
+        <ol>
+        <li>The probability of any event lies between 0 and 1. (That is, 0 ≤ P(E) ≤ 1).</li><br>
+        <li>The sum of probabilities of all possible outcomes is 1.</li><br>
+        <li>The probability of an event not happening is given by: <strong>P(not E) = 1 − P(E)</strong></li><br>
+        <li>If an event is certain, P(E) = 1.</li><br>
+        <li>If an event is impossible, P(E) = 0.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: seagreen;color: white;"><b>Uses and Importance of Probability</b></div>
+        <ol>
+        <li>It helps us to make better predictions and decisions.</li><br>
+        <li>It helps in planning — like estimating risks and chances of success.</li><br>
+        <li>It helps in games and sports for predicting possible outcomes.</li><br>
+        <li>It is used in business and insurance to calculate risks and profits.</li><br>
+        <li>It helps in weather forecasting.</li><br>
+        <li>It is used in medicine for predicting success of treatment.</li><br>
+        <li>It helps in education — teachers can estimate the chance of students passing exams.</li><br>
+        <li>It helps in transportation planning — e.g., predicting bus delays.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Advantages of Understanding Probability</b></div>
+        <ol>
+        <li>Makes decision-making easier and more logical.</li><br>
+        <li>Helps to estimate possible risks and benefits.</li><br>
+        <li>Useful in everyday life situations.</li><br>
+        <li>Helps in reasoning and problem-solving.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: rosybrown;color: black;"><b>Disadvantages or Limitations of Probability</b></div>
+        <ol>
+        <li>Results are not always certain, only likely.</li><br>
+        <li>It depends on the accuracy of information or experiment.</li><br>
+        <li>Incomplete or biased data can lead to wrong results.</li><br>
+        <li>Some real-life events are too complex to calculate exactly.</li><br>
+        </ol><br><br>
+        <hr>
+        <h2>Practice Questions</h2>
+        <h2>Probability = (Number of favourable outcomes) ÷ (Total number of possible outcomes)</h2>
+
+
+        <h3>1) Rainy Days (Weather)</h3>
+        <p><b>Problem:</b> Over the last 10 days it rained on 7 days. If you pick one of those days at random, what is the probability it was a rainy day?</p>
+        <p><b>Steps:</b><br>
+        Total days = 10.<br>
+        Favourable (rain) = 7.<br>
+        Probability = 7 ÷ 10 = 7/10.<br>
+        As a percent = 70%.<br>
+        <b>Answer:</b> 7/10 (70%).</p>
+
+        <h3>2) Exam Pass (Class)</h3>
+        <p><b>Problem:</b> In a class of 40 students, 28 passed English. If the teacher picks one student at random, what is the probability the student passed English?</p>
+        <p><b>Steps:</b><br>
+        Total students = 40.<br>
+        Favourable (passed English) = 28.<br>
+        Probability = 28 ÷ 40 = divide by 4 → 7 ÷ 10 = 7/10.<br>
+        Percent = 70%.<br>
+        <b>Answer:</b> 7/10 (70%).</p>
+
+        <h3>3) School Football Team (Sports)</h3>
+        <p><b>Problem:</b> The school team played 12 matches this season: they won 7, drew 3, lost 2. What is the probability that a randomly chosen match was a win?</p>
+        <p><b>Steps:</b><br>
+        Total matches = 12.<br>
+        Favourable (win) = 7.<br>
+        Probability = 7 ÷ 12 → 7/12 ≈ 58.3%.<br>
+        <b>Answer:</b> 7/12 (≈58.3%).</p>
+
+        <h3>4) Market Tomatoes (Food)</h3>
+        <p><b>Problem:</b> A trader has 50 tomatoes; 15 are rotten and 35 are good. If you pick one tomato without looking, what is the probability it is good?</p>
+        <p><b>Steps:</b><br>
+        Total tomatoes = 50.<br>
+        Favourable (good) = 35.<br>
+        Probability = 35 ÷ 50 = divide by 5 → 7 ÷ 10 = 7/10.<br>
+        <b>Answer:</b> 7/10 (70%).</p>
+
+        <h3>5) Bus Arrival (Transport)</h3>
+        <p><b>Problem:</b> A commuter notes that in 20 days the local bus arrived late on 5 days. If we choose one of those 20 days at random, what is the probability the bus was on time?</p>
+        <p><b>Steps:</b><br>
+        Total days = 20.<br>
+        Favourable (on time) = 20 − 5 = 15.<br>
+        Probability = 15 ÷ 20 = 3 ÷ 4 = 3/4 = 75%.<br>
+        <b>Answer:</b> 3/4 (75%).</p>
+
+        <h3>6) Snack Seller (Food Stall)</h3>
+        <p><b>Problem:</b> A seller has 20 puff-puffs: 8 plain, 7 sugar-coated, 5 banana. You pick one. What is the probability it is sugar-coated?</p>
+        <p><b>Steps:</b><br>
+        Total = 20.<br>
+        Favourable (sugar-coated) = 7.<br>
+        Probability = 7 ÷ 20 = 7/20 = 35%.<br>
+        <b>Answer:</b> 7/20 (35%).</p>
+
+        <h3>7) Library Book (School)</h3>
+        <p><b>Problem:</b> The school library shelf has 3 Maths textbooks, 2 English, and 5 story books. A student takes one book at random. What is the probability it is a story book?</p>
+        <p><b>Steps:</b><br>
+        Total books = 3 + 2 + 5 = 10.<br>
+        Favourable (story) = 5.<br>
+        Probability = 5 ÷ 10 = 1/2 = 50%.<br>
+        <b>Answer:</b> 1/2 (50%).</p>
+
+        <h3>8) Subject Choice (Students)</h3>
+        <p><b>Problem:</b> In JSS3, 60 students were asked about their preferred stream: 35 picked Arts, 25 picked Science. What is the probability a student chosen at random picked Science?</p>
+        <p><b>Steps:</b><br>
+        Total students = 60.<br>
+        Favourable (Science) = 25.<br>
+        Probability = 25 ÷ 60 = divide by 5 → 5 ÷ 12 = 5/12 ≈ 41.7%.<br>
+        <b>Answer:</b> 5/12 (≈41.7%).</p>
+
+        <h3>9) School Raffle (Lottery)</h3>
+        <p><b>Problem:</b> A school sells 100 raffle tickets and will draw 3 winning tickets. If you buy one ticket, what is the probability you win at least one prize?</p>
+        <p><b>Steps:</b><br>
+        Total tickets = 100. Number of winners = 3.<br>
+        Probability = 3 ÷ 100 = 3/100 = 0.03 = 3%.<br>
+        <b>Answer:</b> 3/100 (3%).</p>
+
+        <h3>10) Fruit Box — Two without Replacement (Shopping)</h3>
+        <p><b>Problem:</b> A box has 3 mangoes, 4 oranges, 3 apples (total 10 fruits). You pick 2 fruits one after the other without replacement. What is the probability both picked are apples?</p>
+        <p><b>Steps:</b><br>
+        Total fruits = 10. Favourable first pick (apple) = 3.<br>
+        P(first apple) = 3 ÷ 10.<br>
+        After one apple is taken, apples left = 2, total left = 9.<br>
+        P(second apple | first apple) = 2 ÷ 9.<br>
+        Multiply: P(both apples) = (3/10) × (2/9) = 6 ÷ 90 = 1 ÷ 15 = 1/15 ≈ 6.67%.<br>
+        <b>Answer:</b> 1/15 (≈6.67%).</p>
+
+        <h3>11) School Survey (Union of Events)</h3>
+        <p><b>Problem:</b> At a club fair, 30 students like football, 20 like basketball, and 10 like both sports. If a student is chosen at random from the group, what is the probability they like football or basketball?</p>
+        <p><b>Steps:</b><br>
+        P(Football or Basketball) = P(F) + P(B) − P(F and B)<br>
+        Total unique students = 30 + 20 − 10 = 40.<br>
+        P(F) = 30 ÷ 40 = 3/4.<br>
+        P(B) = 20 ÷ 40 = 1/2.<br>
+        P(F and B) = 10 ÷ 40 = 1/4.<br>
+        P(F or B) = 3/4 + 1/2 − 1/4 = 1 (100%).<br>
+        <b>Answer:</b> 1 (100%).</p>
+
+        <h3>12) School Prize (Conditional Choice)</h3>
+        <p><b>Problem:</b> In a class of 30, 18 brought books and 12 did not. The teacher picks one student at random who brought books for a prize. What is the probability the picked student brought books?</p>
+        <p><b>Steps:</b><br>
+        Total students = 30. Favourable (brought books) = 18.<br>
+        Probability = 18 ÷ 30 = divide by 6 → 3 ÷ 5 = 3/5 = 60%.<br>
+        <b>Answer:</b> 3/5 (60%).</p>
+
+        <h3>13) Bus Card Top-up (Percent to Probability)</h3>
+        <p><b>Problem:</b> A small survey found 60% of commuters use bus card A. If you meet one commuter at random, what is the probability they use bus card A?</p>
+        <p><b>Steps:</b><br>
+        Percent 60% = 60 ÷ 100 = 0.60.<br>
+        As fraction = 60/100 = 3/5.<br>
+        Probability = 3/5 (0.6 or 60%).<br>
+        <b>Answer:</b> 3/5 (60%).</p>
+
+        <h3>14) School Canteen (At least one)</h3>
+        <p><b>Problem:</b> The canteen sells 4 types of drinks; yesterday 40 cartons were sold: 10 cola, 12 malt, 8 juice, 10 water. If you pick one sold carton at random, what is the probability it is not juice?</p>
+        <p><b>Steps:</b><br>
+        Total = 40. Favourable (not juice) = 40 − 8 = 32.<br>
+        Probability = 32 ÷ 40 = divide by 8 → 4 ÷ 5 = 4/5 = 80%.<br>
+        <b>Answer:</b> 4/5 (80%).</p>
+
+        <h3>15) Two-stage with Replacement (Marbles)</h3>
+        <p><b>Problem:</b> A jar has 6 red and 4 blue marbles. You draw one marble, note the colour, put it back, then draw again. What is the probability both draws are red?</p>
+        <p><b>Steps:</b><br>
+        Since we replace, probabilities do not change between draws.<br>
+        P(red on first) = 6 ÷ 10 = 3/5.<br>
+        P(red on second) = 3/5.<br>
+        Multiply: (3/5) × (3/5) = 9/25 = 36%.<br>
+        <b>Answer:</b> 9/25 (36%).</p>
+
+
+       
+
+        <h3>16) Tossing a Coin</h3>
+        <p>When a coin is tossed:</p>
+        <p>Sample space = {Head (H), Tail (T)}<br>
+        Total outcomes = 2<br>
+        Favourable outcomes for Head = 1</p>
+        <pre>
+        P(Head) = 1 ÷ 2 = 1/2
+        </pre>
+        <p>Similarly,</p>
+        <pre>
+        P(Tail) = 1 ÷ 2 = 1/2
+        </pre>
+
+        <h3>17) Rolling a Die</h3>
+        <p>When a die is rolled:</p>
+        <p>Sample space = {1, 2, 3, 4, 5, 6}</p>
+        <p>If we want the probability of getting an even number:</p>
+        <p>Favourable outcomes = {2, 4, 6} → 3 outcomes</p>
+        <pre>
+        P(Even number) = 3 ÷ 6 = 1/2
+        </pre>
+
+        <h3>18) Picking a Red Ball</h3>
+        <p>A box contains 5 red balls, 3 blue balls, and 2 green balls.<br>
+        Find the probability of picking:</p>
+        <ul>
+        <li>A red ball</li><br>
+        <li>A green ball</li>
+        </ul>
+        <p>Solution:</p>
+        <p>Total number of balls = 5 + 3 + 2 = 10</p>
+        <p>(i) Favourable outcomes for red = 5</p>
+        <pre>
+        P(Red) = 5 ÷ 10 = 1/2
+        </pre>
+        <p>(ii) Favourable outcomes for green = 2</p>
+        <pre>
+        P(Green) = 2 ÷ 10 = 1/5
+        </pre>
+
+        <h3>19) Getting a 3 on a Die</h3>
+        <p>Sample space = {1, 2, 3, 4, 5, 6}<br>
+        Favourable outcome = {3}<br>
+        Total outcomes = 6</p>
+        <pre>
+        P(3) = 1 ÷ 6
+        </pre>
+
+        <h3>Range of Probability</h3>
+        <p>The value of probability is always between 0 and 1.</p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+        <th>Probability</th>
+        <th>Meaning</th>
+        <th>Example</th>
+        </tr>
+        <tr>
+        <td>0</td>
+        <td>Impossible event</td>
+        <td>Getting 8 when rolling a die</td>
+        </tr>
+        <tr>
+        <td>1/2</td>
+        <td>Equal chance</td>
+        <td>Getting Head or Tail</td>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>Certain event</td>
+        <td>Getting a number less than 7 on a die</td>
+        </tr>
+        </table>
+
+        <h3>Complementary Events</h3>
+        <p>If the probability of an event happening is P(E), then the probability of it not happening is:</p>
+        <pre>
+        P(not E) = 1 - P(E)
+        </pre>
+        <p>Example: If P(getting a head) = 1/2, then<br>
+        P(not getting a head) = 1 - 1/2 = 1/2</p>
+
+        <h3>20) Word Problem — White and Black Balls</h3>
+        <p>A bag contains 4 white balls and 6 black balls. If one ball is picked at random, find:</p>
+        <ul>
+        <li>(a) The probability of picking a white ball.</li><br>
+        <li>(b) The probability of picking a black ball.</li>
+        </ul>
+        <p>Solution:</p>
+        <p>Total balls = 4 + 6 = 10</p>
+        <p>(a) P(White) = 4/10 = 2/5</p>
+        <p>(b) P(Black) = 6/10 = 3/5</p>
+
+        <h3>21) Word Problem — Red, Green, Blue Balls</h3>
+        <p>A box contains 2 red, 3 green, and 5 blue balls. If a ball is selected at random, find the probability that it is:</p>
+        <ul>
+        <li>(a) Red</li><br>
+        <li>(b) Not blue</li>
+        </ul>
+        <p>Solution:</p>
+        <p>Total = 2 + 3 + 5 = 10</p>
+        <p>(a) P(Red) = 2/10 = 1/5</p>
+        <p>(b) Not blue → Red or Green = 2 + 3 = 5<br>
+        P(Not blue) = 5/10 = 1/2</p>
+
+        <h3>22) Word Problem — Prime Number or Greater than 4</h3>
+        <p>A die is thrown once. Find the probability of getting:</p>
+        <ul>
+        <li>(a) A prime number</li><br>
+        <li>(b) A number greater than 4</li>
+        </ul>
+        <p>Solution:</p>
+        <p>Sample space = {1, 2, 3, 4, 5, 6}</p>
+        <p>(a) Prime numbers = {2, 3, 5} → 3 outcomes<br><br>
+        P(Prime) = 3/6 = 1/2</p>
+        <p>(b) Numbers greater than 4 = {5, 6} → 2 outcomes<br><br>
+        P(Greater than 4) = 2/6 = 1/3</p>
+
+        <h3>23) Word Problem — Coin Tossed Twice</h3>
+        <p>A coin is tossed twice. Find the probability of getting:</p>
+        <ul>
+        <li>(a) Two heads</li><br>
+        <li>(b) One head</li>
+        </ul>
+        <p>Solution:</p>
+        <p>Sample space = {HH, HT, TH, TT} → 4 outcomes</p>
+        <p>(a) Two heads = {HH} → 1 outcome<br><br>
+        P(Two heads) = 1/4</p>
+        <p>(b) One head = {HT, TH} → 2 outcomes<br><br>
+        P(One head) = 2/4 = 1/2</p>
+
+
+        <h3>Quick Tips for Solving Real-Life Probability Problems</h3>
+        <ol>
+        <li>Count the total possible items (people, days, fruits, tickets).</li><br>
+        <li>Count the favourable cases (the outcomes you want).</li><br>
+        <li>Divide favourable by total.</li><br>
+        <li>Simplify the fraction and, if helpful, convert to percent or decimal.</li><br>
+        <li>Use complement (1 − P(E)) when “not” is easier to count.</li><br>
+        <li>For sequential draws: if without replacement, reduce the total after each draw; if with replacement, totals stay the same and multiply probabilities.</li><br>
+        </ol>
+
+
+        <h3>Summary</h3>
+        <ol>
+        <li>Probability measures how likely an event is to occur.</li><br>
+        <li>The value of probability is between 0 and 1.</li><br>
+        <li>Formula: <strong>P(E) = Number of favourable outcomes / Total number of possible outcomes</strong></li><br>
+        <li>Probability helps us to make informed predictions in uncertain situations.</li><br>
+        </ol>
+
+        
+       
+
+
+        
+
+
+      
+          
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/third-term/math/j2/1.html" class="iam">
+                <br>
+                <li >ANGLES </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/2.html" class="iam">
+
+                <li > BEARING      </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/3.html" class="iam">
+
+                <li > CONSTRUCTION  </li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/4.html" class="iam">
+
+                <li > BISECTING ANGLES </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/5.html" class="iam">
+                <li >DATA PRESENTATION</li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/6.html" class="iam">
+
+                <li > PROBABILITY </li>
+            </a>
+            <br>
+            </a>
+            
+            
+            
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Algebraic expression - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+        <a href="../../../../terms/second-term/math-second/second-term-js2-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color: purple;color: white;"><b>GRAPHS </b></div>
+       
+
+        <h2> What is a Graph?</h2>
+        <p>A graph is a visual representation of numerical information. In mathematics, graphs help us <strong>see relationships between numbers</strong> or variables.</p>
+        <ul>
+        <li>Compare quantities.<br></li><br>
+        <li>Understand trends.<br></li><br>
+        <li>Solve equations and inequalities visually.<br></li>
+        </ul>
+
+        <h2> The Cartesian Plane</h2>
+        <p>The <strong>Cartesian plane</strong> is a flat surface made of two perpendicular number lines:</p>
+        <ul>
+        <li><strong>x-axis</strong>: horizontal line.<br></li><br>
+        <li><strong>y-axis</strong>: vertical line.<br></li>
+        </ul>
+        <p>The point where the two axes meet is called the <strong>origin</strong> and is denoted by (0, 0).</p>
+        <p>Each point is identified by an <strong>ordered pair (x, y)</strong>, where:</p>
+        <ul>
+        <li>x = horizontal distance from origin.<br></li><br>
+        <li>y = vertical distance from origin.<br></li>
+        </ul>
+
+        <h2> Plotting Points on the Cartesian Plane</h2>
+        <p><strong>Steps to plot a point (x, y):</strong></p>
+        <ol>
+        <li>Start at the origin (0,0).<br></li>
+        <li>Move horizontally to x units (right if x>0, left if x < 0 ). </li><br>
+        <li>Move vertically to y units (up if y>0, down if y < 0 ). </li><br>
+        <li>Mark the point and label it.<br></li>
+        </ol>
+        <p><strong>Example:</strong> Plot (3,2)</p>
+        <p>Move 3 units right, 2 units up → mark the point.</p>
+
+        <h2> Graph of a Linear Equation in Two Variables</h2>
+        <p>A <strong>linear equation in two variables</strong> has the form: <em>y = mx + c</em></p>
+        <ul>
+        <li>m = slope (steepness of the line)<br></li><br>
+        <li>c = y-intercept (where line crosses y-axis)<br></li>
+        </ul>
+
+        <p><strong>Example:</strong> y = 2x + 1</p>
+        <p><strong>Steps to draw the graph:</strong></p>
+        <ol>
+        <li>Choose at least two values for x and calculate y:</li>
+        <table border="1" cellpadding="5">
+        <tr><th>x</th><th>y = 2x + 1</th></tr>
+        <tr><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>3</td></tr>
+        <tr><td>2</td><td>5</td></tr>
+        </table><br>
+        <li>Plot the points (0,1), (1,3), (2,5) on the Cartesian plane.</li><br>
+        <li>Draw a straight line through the points.</li><br>
+        <li>Label the line with the equation y = 2x + 1.</li>
+        </ol>
+
+        <h2> Cartesian Plane Example</h2>
+<pre>
+y
+6 |          
+5 |         *
+4 |          
+3 |      *
+2 |          
+1 |   *
+0 |---------------- x
+   0  1  2  3  4
+</pre>
+<p>Points plotted: (0,1), (1,3), (2,5)</p>
+
+<h2> Key Points</h2>
+<ul>
+<li>The graph of a linear equation is always a <strong>straight line</strong>.<br></li><br>
+<li>Positive slope → line rises; negative slope → line falls.<br></li><br>
+<li>x-intercept = value of x when y = 0; y-intercept = value of y when x = 0.<br></li><br>
+<li>At least two points are required to draw the line.<br></li>
+</ul>
+
+<h2> Practical Uses</h2>
+<ul>
+<li>Represent relationships in real life (distance vs time, cost vs quantity).<br></li><br>
+<li>Solve problems graphically, including intersections of lines.<br></li><br>
+<li>Visualize inequalities when shading regions above or below a line.<br></li>
+</ul><br><br>
+<hr><br><br>
+
+<h1>Graphs and Linear Equations in Two Variables </h1>
+
+<h2>Real-Life Problems with Step-by-Step Solutions </h2>
+
+<h3>1) Buying Notebooks</h3>
+<p>Problem: The cost of buying x notebooks is y = 150x + 200. Draw the graph for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 200 → point (0,200)</li><br>
+<li>x = 1 → y = 350 → point (1,350)</li><br>
+<li>x = 2 → y = 500 → point (2,500)</li><br>
+<li>x = 3 → y = 650 → point (3,650)</li><br>
+<li>Plot points and draw a straight line.</li>
+</ol>
+<pre>
+y
+650 |                   *
+500 |             *
+350 |       *
+200 |  *
+0   |_________________ x
+     0  1  2  3
+</pre>
+
+<h3>2) Cinema Tickets</h3>
+<p>Problem: Adult tickets = ₦500, children tickets = ₦300. Total revenue y for x adult tickets with 50 children tickets: y = 500x + 15000. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 15000 → point (0,15000)</li><br>
+<li>x = 1 → y = 15500 → point (1,15500)</li><br>
+<li>x = 2 → y = 16000 → point (2,16000)</li><br>
+<li>x = 3 → y = 16500 → point (3,16500)</li><br>
+<li>Plot points and draw a line.</li>
+</ol>
+<pre>
+y
+16500 |                      *
+16000 |                 *
+15500 |            *
+15000 |      *
+0     |_________________________ x
+       0   1   2   3
+</pre>
+
+<h3>3) Taxi Fare</h3>
+<p>Problem: Taxi charges ₦200 for first km, ₦100 each extra km. Total fare y = 200 + 100x. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 200 → point (0,200)</li><br>
+<li>x = 1 → y = 300 → point (1,300)</li><br>
+<li>x = 2 → y = 400 → point (2,400)</li><br>
+<li>x = 3 → y = 500 → point (3,500)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+500 |                  *
+400 |             *
+300 |        *
+200 |   *
+0   |________________ x
+     0 1 2 3
+</pre>
+
+<h3>4) Selling Phones</h3>
+<p>Problem: Phone = ₦25000 each + ₦5000 shipping. Total cost y = 25000x + 5000. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 5000 → point (0,5000)</li><br>
+<li>x = 1 → y = 30000 → point (1,30000)</li><br>
+<li>x = 2 → y = 55000 → point (2,55000)</li><br>
+<li>x = 3 → y = 80000 → point (3,80000)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+80000 |                       *
+55000 |                  *
+30000 |             *
+5000  |        *
+0     |________________ x
+       0  1  2  3
+</pre>
+
+<h3>5) Selling Eggs</h3>
+<p>Problem: Farmer sells x dozens of eggs at ₦600 per dozen + ₦200 packaging. Total revenue y = 600x + 200. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 200 → point (0,200)</li><br>
+<li>x = 1 → y = 800 → point (1,800)</li><br>
+<li>x = 2 → y = 1400 → point (2,1400)</li><br>
+<li>x = 3 → y = 2000 → point (3,2000)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+2000 |                  *
+1400 |             *
+800  |        *
+200  |   *
+0    |________________ x
+      0 1 2 3
+</pre>
+
+<h3>6) Selling Water Bottles</h3>
+<p>Problem: Each bottle = ₦100. Fixed cost for delivery = ₦500. Total cost y = 100x + 500. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 500 → point (0,500)</li><br>
+<li>x = 1 → y = 600 → point (1,600)</li><br>
+<li>x = 2 → y = 700 → point (2,700)</li><br>
+<li>x = 3 → y = 800 → point (3,800)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+800 |                  *
+700 |             *
+600 |        *
+500 |   *
+0   |________________ x
+     0 1 2 3
+</pre>
+
+<h3>7) Selling Books</h3>
+<p>Problem: Book = ₦200, delivery = ₦100. Total cost y = 200x + 100. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 100 → point (0,100)</li><br>
+<li>x = 1 → y = 300 → point (1,300)</li><br>
+<li>x = 2 → y = 500 → point (2,500)</li><br>
+<li>x = 3 → y = 700 → point (3,700)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+700 |                  *
+500 |             *
+300 |        *
+100 |   *
+0   |________________ x
+     0 1 2 3
+</pre>
+
+<h3>8) School Transport</h3>
+<p>Problem: Bus fare = ₦150 per student. Extra charge = ₦50 for snacks. Total y = 150x + 50. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 50 → point (0,50)</li><br>
+<li>x = 1 → y = 200 → point (1,200)</li><br>
+<li>x = 2 → y = 350 → point (2,350)</li><br>
+<li>x = 3 → y = 500 → point (3,500)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+500 |                  *
+350 |             *
+200 |        *
+50  |   *
+0   |________________ x
+     0 1 2 3
+</pre>
+
+<h3>9) Selling Fruit</h3>
+<p>Problem: Apples = ₦300 per kg, transport = ₦100. Total y = 300x + 100. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 100 → point (0,100)</li><br>
+<li>x = 1 → y = 400 → point (1,400)</li><br>
+<li>x = 2 → y = 700 → point (2,700)</li><br>
+<li>x = 3 → y = 1000 → point (3,1000)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+1000 |                  *
+700  |             *
+400  |        *
+100  |   *
+0    |________________ x
+      0 1 2 3
+</pre>
+
+<h3>10) Printing Flyers</h3>
+<p>Problem: Printing cost = ₦50 per flyer + ₦500 fixed setup. Total y = 50x + 500. Draw for x = 0,1,2,3.</p>
+<ol>
+<li>x = 0 → y = 500 → point (0,500)</li><br>
+<li>x = 1 → y = 550 → point (1,550)</li><br>
+<li>x = 2 → y = 600 → point (2,600)</li><br>
+<li>x = 3 → y = 650 → point (3,650)</li><br>
+<li>Plot points and draw line.</li>
+</ol>
+<pre>
+y
+650 |                  *
+600 |             *
+550 |        *
+500 |   *
+0   |________________ x
+     0 1 2 3
+</pre>
+
+
+        
+       
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+<br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j2/1.html" class="iam">
+                <br>
+                <li >ALGEBRAIC EXPRESSION</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j2/2.html" class="iam">
+
+                <li > QUANTITATIVE REASONING</li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j2/3.html" class="iam">
+
+                <li >ALGEBRAIC EXPRESSION OF FRACTION WITH MONOMIAL DENOMINATOR </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j2/4.html" class="iam">
+
+                <li >WORD PROBLEM LEADING TO SIMPLE ALGEBRAIC FRACTIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j2/5.html" class="iam">
+                
+                <li >SIMPLE EQUATIONS </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/6.html" class="iam">
+                <br>
+                <li >LINEAR INEQUALITIES   </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/7.html" class="iam">
+                <br>
+                <li > GRAPHS </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/8.html" class="iam">
+                <br>
+                <li >LINEAR GRAPHS FROM REAL LIFE SITUATION      </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/9.html" class="iam">
+                <br>
+                <li >PLANE FIGURE/SHAPES </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/10.html" class="iam">
+                <br>
+                <li > SCALE DRAWING    </li>
+            </a>
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

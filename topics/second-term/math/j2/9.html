@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Plane fioure/shapes - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+        <a href="../../../../terms/second-term/math-second/second-term-js2-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title" style="background-color: purple;color: white;"><b>PLANE FIGURES / SHAPES</b></div>
+       
+        <div class="t2"><b>Meaning of Plane Figures</b></div>
+        <p><b>A plane figure (or plane shape)</b> is a flat, two-dimensional shape that lies entirely on a flat surface (plane). It has length and breadth (width) but no thickness.</p><br>
+        <p>Examples of plane figures include:</p>
+        <p><b>Triangle, Square, Rectangle, Parallelogram, Rhombus, Trapezium, Kite, Circle.</b></p>
+        <p>Each of these shapes has its own properties, such as the number of sides, angles, and lines of symmetry.</p>
+        <br><br>
+        <div class="title" style="background-color: sienna; color: white;"><b>TYPES OF PLANE FIGURES AND THEIR PROPERTIES</b></div>
+
+<h3>1. PARALLELOGRAM</h3>
+<p>A parallelogram is a quadrilateral (four-sided figure) whose opposite sides are parallel and equal in length.</p>
+
+<p><b>Properties of a Parallelogram:</b></p>
+<ol>
+<li>Opposite sides are parallel and equal in length.</li><br>
+<li>Opposite angles are equal.</li><br>
+<li>Adjacent angles are supplementary (add up to 180°).</li><br>
+<li>The diagonals bisect each other (cut each other into two equal parts).</li><br>
+<li>Each diagonal divides the parallelogram into two equal triangles.</li><br>
+</ol>
+
+<p><b>Examples of Parallelograms:</b> Rectangle, Square, and Rhombus are all special types of parallelograms.</p>
+
+<pre>
+ Diagram of a Parallelogram:
+     _________
+    /        /
+   /________/
+</pre>
+
+<hr>
+
+<h3>2. RECTANGLE</h3>
+<p>A rectangle is a parallelogram with four right angles (90° each).</p>
+
+<p><b>Properties of a Rectangle:</b></p>
+<ol>
+<li>Opposite sides are equal and parallel.</li><br>
+<li>All angles are right angles (90°).</li><br>
+<li>The diagonals are equal in length.</li><br>
+<li>The diagonals bisect each other.</li><br>
+<li>Each diagonal divides the rectangle into two congruent triangles.</li><br>
+</ol>
+
+<p><b>Example:</b></p>
+<p>If a rectangle has length = 8 cm and breadth = 4 cm:</p>
+<p>Perimeter = 2(l + b) = 2(8 + 4) = 24 cm<br><br>
+Area = l × b = 8 × 4 = 32 cm²</p>
+
+<pre>
+ Diagram of a Rectangle:
++----------+
+|          |  breadth = 4 cm
+|          |
++----------+
+  length = 8 cm
+</pre>
+
+<hr>
+
+<h3>3. RHOMBUS</h3>
+<p>A rhombus is a parallelogram with all sides equal in length.</p>
+
+<p><b>Properties of a Rhombus:</b></p>
+<ol>
+<li>All sides are equal.</li><br>
+<li>Opposite sides are parallel.</li><br>
+<li>Opposite angles are equal.</li><br>
+<li>The diagonals bisect each other at right angles (90°).</li><br>
+<li>Each diagonal divides the rhombus into two congruent triangles.</li><br>
+</ol>
+
+<p><b>Example:</b></p>
+<p>If each side of a rhombus is 6 cm and one diagonal is 8 cm, find the other diagonal (d₂) if area = (½ × d₁ × d₂):</p>
+<p>Area = ½ × 8 × d₂<br><br>
+Suppose area = 24 cm²,<br>
+24 = 4 × d₂ → d₂ = 6 cm</p>
+
+<pre>
+ Diagram of a Rhombus:
+   /\ 
+  /  \
+  \  /
+   \/ 
+(Diagonals cross at 90°)
+</pre>
+
+<hr>
+
+<h3>4. SQUARE</h3>
+<p>A square is a special type of rectangle and rhombus — all sides are equal and all angles are 90°.</p>
+
+<p><b>Properties of a Square:</b></p>
+<ol>
+<li>All sides are equal.</li><br>
+<li>All angles are 90°.</li><br>
+<li>Opposite sides are parallel.</li><br>
+<li>The diagonals are equal and bisect each other at right angles.</li><br>
+<li>It has 4 lines of symmetry.</li><br>
+</ol>
+
+<p><b>Example:</b></p>
+<p>If a square has side 5 cm:<br><br>
+Perimeter = 4 × 5 = 20 cm<br><br>
+Area = 5² = 25 cm²</p>
+
+<pre>
+ Diagram of a Square:
++----+
+|    | side = 5 cm
++----+
+(All angles 90°)
+</pre>
+
+<hr>
+
+<h3>5. TRAPEZIUM</h3>
+<p>A trapezium (US: trapezoid) is a quadrilateral with only one pair of parallel sides.</p>
+
+<p><b>Properties of a Trapezium:</b></p>
+<ol>
+<li>Only one pair of opposite sides are parallel.</li><br>
+<li>The non-parallel sides are called the “legs.”</li><br>
+<li>If the non-parallel sides are equal, it is called an isosceles trapezium.</li><br>
+<li>The diagonals of an isosceles trapezium are equal in length.</li><br>
+</ol>
+
+<p><b>Example:</b></p>
+<p>If the parallel sides of a trapezium are 8 cm and 4 cm, and the height is 3 cm:<br><br>
+Area = ½ × (sum of parallel sides) × height<br><br>
+= ½ × (8 + 4) × 3<br><br>
+= ½ × 12 × 3 = 18 cm²</p>
+
+<pre>
+ Diagram of a Trapezium:
+   ______8 cm______
+  /                \
+ /__________________\
+        4 cm
+  height = 3 cm
+</pre>
+
+<hr>
+
+<h3>6. KITE</h3>
+<p>A kite is a quadrilateral with two pairs of adjacent sides equal.</p>
+
+<p><b>Properties of a Kite:</b></p>
+<ol>
+<li>Two pairs of adjacent sides are equal.</li><br>
+<li>One pair of opposite angles are equal (those between unequal sides).</li><br>
+<li>The diagonals intersect at right angles (90°).</li><br>
+<li>One diagonal bisects the other.</li><br>
+<li>It has one line of symmetry.</li><br>
+</ol>
+
+<p><b>Example:</b></p>
+<p>If diagonals of a kite are 6 cm and 8 cm,<br><br>
+Area = ½ × d₁ × d₂ = ½ × 6 × 8 = 24 cm²</p>
+
+<pre>
+ Diagram of a Kite:
+   /\
+  /  \
+  \  /
+   \/
+(Diagonals cross at 90°)
+</pre>
+
+<hr>
+
+<h3>Summary of Properties of Parallelogram and Related Shapes</h3>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<tr>
+<th>Shape</th>
+<th>Opposite Sides Parallel</th>
+<th>All Sides Equal</th>
+<th>All Angles 90°</th>
+<th>Diagonals Equal</th>
+<th>Diagonals Bisect at 90°</th>
+</tr>
+<tr>
+<td>Parallelogram</td>
+<td>✔</td>
+<td>✖</td>
+<td>✖</td>
+<td>✖</td>
+<td>✖</td>
+</tr>
+<tr>
+<td>Rectangle</td>
+<td>✔</td>
+<td>✖</td>
+<td>✔</td>
+<td>✔</td>
+<td>✖</td>
+</tr>
+<tr>
+<td>Rhombus</td>
+<td>✔</td>
+<td>✔</td>
+<td>✖</td>
+<td>✖</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Square</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Trapezium</td>
+<td>One pair</td>
+<td>✖</td>
+<td>✖</td>
+<td>Sometimes</td>
+<td>✖</td>
+</tr>
+<tr>
+<td>Kite</td>
+<td>✖</td>
+<td>Two pairs (adjacent)</td>
+<td>✖</td>
+<td>✖</td>
+<td>✔</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>Quantitative Reasoning Example</h3>
+<p><b>Question:</b><br>
+A parallelogram has base 10 cm and height 6 cm. Find its area and perimeter if the side length is 8 cm.</p>
+
+<p><b>Solution:</b></p>
+<ol>
+<li>Formula for area = base × height = 10 × 6 = 60 cm².</li><br>
+<li>Formula for perimeter = 2 × (sum of adjacent sides) = 2 × (10 + 8) = 36 cm.</li><br>
+<li><b>Answer:</b> Area = 60 cm², Perimeter = 36 cm.</li><br>
+</ol>
+
+<pre>
+ Diagram of a Parallelogram:
+     _________
+    /        /
+   /________/
+ base = 10 cm, height = 6 cm
+</pre>
+<br><br>
+<hr>
+<br>
+
+<div class="title" style="background-color: darkolivegreen;color: white;"><b>Real-Life Applications of Plane Figures</b></div>
+
+<ol>
+
+<li><b>Fence for a Rectangular Vegetable Plot</b></li><br>
+<p><b>Problem:</b> A rectangular vegetable plot is 12 m long and 8 m wide. How much fencing is needed to go all the way round the plot? Also find the area of the plot.</p>
+
+<p><b>Solution:</b></p>
+<p>Perimeter of rectangle = 2 × (length + width).</p>
+
+<p>Step 1: length + width = 12 + 8 = 20.<br><br>
+Step 2: Perimeter = 2 × 20 = 40.<br><br>
+So 40 m of fencing is needed.</p>
+
+<p>Area of rectangle = length × width = 12 × 8.<br><br>
+12 × 8 = 96.<br><br>
+So area = 96 m².</p>
+
+<pre>
+ Diagram:
+12 m
+┌────────────────────┐
+│                    │  8 m
+│                    │
+└────────────────────┘
+</pre>
+
+<hr>
+
+<li><b>Parallelogram Garden Bed (Area)</b></li><br>
+<p><b>Problem:</b> A gardener makes a parallelogram bed whose base is 7 m and perpendicular height is 3 m. Find the area.</p>
+
+<p><b>Solution:</b></p>
+<p>Area of parallelogram = base × height.</p>
+
+<p>Step: 7 × 3 = 21.<br><br>
+So area = 21 m².</p>
+
+<pre>
+ Diagram (height shown):
+base = 7 m
+┌─────────┐
+\        |
+ \       | height = 3 m (perpendicular)
+  \______|
+</pre>
+
+<hr>
+
+<li><b>Perimeter of a Parallelogram (Find Side)</b></li><br>
+<p><b>Problem:</b> A parallelogram has base 9 cm and the other side (adjacent side) is 6 cm. Find its perimeter.</p>
+
+<p><b>Solution:</b></p>
+<p>Perimeter of parallelogram = 2 × (sum of adjacent sides) = 2 × (base + side).</p>
+
+<p>Step 1: base + side = 9 + 6 = 15.<br><br>
+Step 2: Perimeter = 2 × 15 = 30.<br><br>
+So perimeter = 30 cm.</p>
+
+<hr>
+
+<li><b>Find Missing Height from Area (Painting a Wall Panel)</b></li><br>
+<p><b>Problem:</b> A triangular-shaped wall panel is formed by splitting a parallelogram in half along a diagonal. The parallelogram has base 10 m and area 60 m². Find the perpendicular height of the parallelogram and hence the area of one triangular half.</p>
+
+<p><b>Solution:</b></p>
+<p>Area of parallelogram = base × height → height = area ÷ base.</p>
+
+<p>Step 1: height = 60 ÷ 10 = 6.<br>
+So height = 6 m.</p><br>
+
+<p>Area of one triangle = half the parallelogram area = 60 ÷ 2 = 30 m².</p>
+
+<hr>
+
+<li><b>Sheet Metal for a Rhombus-Shaped Sign (Using Diagonals)</b></li><br>
+<p><b>Problem:</b> A decorative sign is a rhombus whose diagonals measure 8 cm and 6 cm. Find the area of the sign.</p>
+
+<p><b>Solution:</b></p>
+<p>Area of a rhombus = ½ × (product of the diagonals).</p>
+
+<p>Step 1: product = 8 × 6 = 48.<br><br>
+Step 2: area = ½ × 48 = 24.<br><br>
+So area = 24 cm².</p>
+
+<pre>
+ Diagram (diagonals):
+   \  |  /
+    \ | /
+     \|/
+     /|\
+    / | \
+   /  |  \
+d1=8  d2=6
+</pre>
+
+<hr>
+
+<li><b>Square Courtyard — Tiling Cost</b></li><br>
+<p><b>Problem:</b> A square courtyard has side 9 m. Tiles cost ₦800 per m². How much will it cost to tile the courtyard?</p>
+
+<p><b>Solution:</b></p>
+<p>Area of square = side² = 9 × 9 = 81 m².<br><br>
+Cost = area × price per m² = 81 × 800.</p>
+
+<p>Step 1: 81 × 800 = 81 × (8 × 100) = (81 × 8) × 100.<br><br>
+Compute 81 × 8: 80×8 = 640, plus 1×8 = 8 → 640 + 8 = 648.<br><br>
+Then ×100 → 648 × 100 = 64,800.<br><br>
+So cost = ₦64,800.</p>
+
+<hr>
+
+<li><b>Trapezium Farm Bed (Area)</b></li><br>
+<p><b>Problem:</b> A farmer makes a trapezium bed with parallel sides 12 m and 8 m, and height 4 m. Find area of the bed.</p>
+
+<p><b>Solution:</b></p>
+<p>Area of trapezium = ½ × (sum of parallel sides) × height.</p>
+
+<p>Step 1: sum of parallels = 12 + 8 = 20.<br><br>
+Step 2: ½ × 20 = 10.<br><br>
+Step 3: area = 10 × height 4 = 40.<br><br>
+So area = 40 m².</p>
+
+<pre>
+ Diagram:
+   ______12 m______
+  /                \
+ /                  \
+/_____8 m___________\
+      height = 4 m
+</pre>
+
+<hr>
+
+<li><b>Composite Shape: Lawn Around a Rectangular Pool</b></li><br>
+<p><b>Problem:</b> A rectangular pool is 6 m by 4 m. A uniform grass border 2 m wide is built all around the pool forming a larger rectangle. Find the area of the border (grass).</p>
+
+<p><b>Solution:</b></p>
+<p>Outer rectangle dimensions = (length + 2×border) and (width + 2×border).</p>
+
+<p>Step 1: outer length = 6 + 2×2 = 6 + 4 = 10.<br><br>
+Step 2: outer width = 4 + 2×2 = 4 + 4 = 8.<br><br>
+Step 3: area outer = 10 × 8 = 80.<br><br>
+Step 4: area pool = 6 × 4 = 24.<br><br>
+Step 5: area border = outer area − pool area = 80 − 24 = 56.<br><br>
+So the grass border area = 56 m².</p>
+
+<pre>
+ Diagram:
+Outer 10×8
+┌────────────────────┐
+│  border 2m         │
+│  ┌───────6×4────┐  │
+│  │   pool      │  │
+│  └─────────────┘  │
+└────────────────────┘
+</pre>
+
+<hr>
+
+<li><b>Find Side of a Square Garden Given Perimeter</b></li><br>
+<p><b>Problem:</b> A family wants a square garden. They have 48 m of fence available. What should be the length of each side?</p>
+
+<p><b>Solution:</b></p>
+<p>Perimeter of square = 4 × side → side = perimeter ÷ 4.<br><br>
+Step: side = 48 ÷ 4 = 12.<br><br>
+So each side = 12 m.<br><br>
+Area would be 12 × 12 = 144 m² (extra info).</p>
+
+<hr>
+
+<li><b>Parallelogram Roof Panel — Find Missing Side from Area and Height</b></li><br>
+<p><b>Problem:</b> A parallelogram roof panel has base length 15 m and area 75 m². A contractor says one side (adjacent side) must be 11 m so that the panel fits the supports. Is the contractor correct? (Find the perpendicular height, then compare with side length using right-triangle idea.)</p>
+
+<p><b>Solution:</b></p>
+<p>First find the perpendicular height from area: height = area ÷ base = 75 ÷ 15 = 5 m. So perpendicular height is 5 m.</p>
+
+<p>If the side length along the slant is 11 m, is that inconsistent? The slanted side is not the perpendicular height; a slanted side can be larger than the height. To check plausibility, one can imagine the slanted side and height form a right triangle only if we know the horizontal offset (which we do not). So nothing in the area/height data contradicts a slanted side of 11 m.</p>
+
+<p>But if the contractor meant the side length should equal the perpendicular height (i.e., 11 m = 5 m), that would be wrong. The correct perpendicular height is 5 m, and the adjacent (slanted) side can be any length ≥ height depending on the shape. So contractor is not correct if he meant height = 11 m; the height is 5 m.</p>
+
+</ol>
+
+<hr>
+
+<h3>Short Quick-Reference Formulas</h3>
+
+<ol>
+<li>Rectangle area = length × width</li><br>
+<li>Rectangle perimeter = 2 × (length + width)</li><br>
+<li>Square area = side²; perimeter = 4 × side</li><br>
+<li>Parallelogram area = base × perpendicular height</li><br>
+<li>Parallelogram perimeter = 2 × (sum of adjacent sides)</li><br>
+<li>Rhombus area = ½ × (d₁ × d₂)</li><br>
+<li>Trapezium area = ½ × (sum of parallel sides) × height</li><br>
+<li>Kite area = ½ × (d₁ × d₂)</li><br>
+</ol>
+
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j2/1.html" class="iam">
+                <br>
+                <li >ALGEBRAIC EXPRESSION</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j2/2.html" class="iam">
+
+                <li > QUANTITATIVE REASONING</li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j2/3.html" class="iam">
+
+                <li >ALGEBRAIC EXPRESSION OF FRACTION WITH MONOMIAL DENOMINATOR </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j2/4.html" class="iam">
+
+                <li >WORD PROBLEM LEADING TO SIMPLE ALGEBRAIC FRACTIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j2/5.html" class="iam">
+                
+                <li >SIMPLE EQUATIONS </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/6.html" class="iam">
+                <br>
+                <li >LINEAR INEQUALITIES   </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/7.html" class="iam">
+                <br>
+                <li > GRAPHS </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/8.html" class="iam">
+                <br>
+                <li >LINEAR GRAPHS FROM REAL LIFE SITUATION      </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/9.html" class="iam">
+                <br>
+                <li >PLANE FIGURE/SHAPES </li>
+            </a>
+             <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j2/10.html" class="iam">
+                <br>
+                <li > SCALE DRAWING    </li>
+            </a>
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

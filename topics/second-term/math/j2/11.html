@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+              <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/second-term/math-second/second-term-js2-math.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+  // ALGEBRAIC EXPRESSIONS
+  { question: "Simplify: 3x + 5x − 2", a: "8x − 2", b: "15x", c: "8x + 2", correct: "a" },
+  { question: "Factorize: x² + 5x + 6", a: "(x + 2)(x + 3)", b: "(x + 1)(x + 6)", c: "(x + 2)(x + 6)", correct: "a" },
+  { question: "Expand: (x + 3)(x + 4)", a: "x² + 7x + 12", b: "x² + 12x + 7", c: "x² + 7x + 7", correct: "a" },
+  { question: "Simplify: 2(x + 3) − 5", a: "2x + 1", b: "2x − 1", c: "2x + 11", correct: "a" },
+  { question: "Simplify: 5x − 2x + 7", a: "3x + 7", b: "7x − 3", c: "3x − 7", correct: "a" },
+  { question: "Factorize: x² − 9", a: "(x − 3)(x + 3)", b: "(x − 9)(x + 1)", c: "(x − 1)(x + 9)", correct: "a" },
+  { question: "Expand: (x − 2)(x − 5)", a: "x² − 7x + 10", b: "x² − 10x + 7", c: "x² − 7x − 10", correct: "a" },
+
+  // QUANTITATIVE REASONING WITH ALGEBRAIC EXPRESSIONS
+  { question: "If 3x = 12, then x = ?", a: "4", b: "3", c: "6", correct: "a" },
+  { question: "Simplify: (6x²) ÷ (2x)", a: "3x", b: "3x²", c: "12x", correct: "a" },
+  { question: "If 5k − 3 = 12, find k", a: "3", b: "4", c: "5", correct: "b" },
+  { question: "Simplify: 4(x + 2) − 3(x − 1)", a: "x + 11", b: "x − 5", c: "7x + 1", correct: "a" },
+
+  // SIMPLE EQUATIONS
+  { question: "Solve: 2x + 5 = 13", a: "4", b: "5", c: "3", correct: "a" },
+  { question: "Solve: 3x − 7 = 8", a: "5", b: "7", c: "4", correct: "a" },
+  { question: "Solve: 4x + 1 = 13", a: "3", b: "4", c: "2", correct: "a" },
+  { question: "Solve: 5x − 9 = 16", a: "5", b: "6", c: "4", correct: "a" },
+
+  // LINEAR INEQUALITIES
+  { question: "Solve: 3x + 4 > 13", a: "x > 3", b: "x > 4", c: "x < 3", correct: "a" },
+  { question: "Solve: −2x + 5 ≤ 1", a: "x ≥ 2", b: "x ≤ 2", c: "x ≥ −2", correct: "a" },
+  { question: "Solve: 5x − 7 < 8", a: "x < 3", b: "x < 2", c: "x < 4", correct: "a" },
+  { question: "Solve: −3x + 9 ≥ 0", a: "x ≤ 3", b: "x ≥ 3", c: "x ≤ −3", correct: "a" },
+
+  // GRAPHICAL REPRESENTATION
+  { question: "Graph y = x + 2. What is y when x = 3?", a: "5", b: "4", c: "6", correct: "a" },
+  { question: "For y = 2x − 1, x = 4 gives y =", a: "7", b: "8", c: "6", correct: "a" },
+  { question: "Point (2, y) lies on y = −x + 5. Find y.", a: "3", b: "4", c: "2", correct: "a" },
+  { question: "If y = 0.5x + 1, x = 6, then y =", a: "4", b: "3", c: "5", correct: "a" },
+
+  // PLANE FIGURES / SHAPES
+  { question: "Rectangle: length 8 cm, breadth 5 cm. Area?", a: "40 cm²", b: "13 cm²", c: "26 cm²", correct: "a" },
+  { question: "Square: side 6 cm. Perimeter?", a: "24 cm", b: "36 cm", c: "12 cm", correct: "a" },
+  { question: "Area of rhombus: diagonals 8 cm, 6 cm?", a: "24 cm²", b: "48 cm²", c: "28 cm²", correct: "a" },
+  { question: "Parallelogram: base 9 cm, height 4 cm. Area?", a: "36 cm²", b: "13 cm²", c: "40 cm²", correct: "a" },
+  { question: "Trapezium: parallel sides 8 cm & 12 cm, height 5 cm. Area?", a: "50 cm²", b: "40 cm²", c: "60 cm²", correct: "a" },
+  { question: "Kite: diagonals 10 cm & 6 cm. Area?", a: "30 cm²", b: "16 cm²", c: "60 cm²", correct: "a" },
+
+  // REAL-LIFE APPLICATIONS
+  { question: "A rectangular garden 12 m × 8 m. Fence needed?", a: "40 m", b: "20 m", c: "48 m", correct: "a" },
+  { question: "A parallelogram bed: base 7 m, height 3 m. Area?", a: "21 m²", b: "10 m²", c: "24 m²", correct: "a" },
+  { question: "Square courtyard side 9 m. Tile cost ₦800 per m². Total cost?", a: "₦64,800", b: "₦72,000", c: "₦65,000", correct: "a" },
+  { question: "Trapezium farm bed: parallel sides 12 m & 8 m, height 4 m. Area?", a: "40 m²", b: "45 m²", c: "50 m²", correct: "a" },
+  { question: "Lawn around pool: 6 m × 4 m pool, 2 m border. Border area?", a: "56 m²", b: "60 m²", c: "52 m²", correct: "a" },
+  { question: "Square garden: perimeter 48 m. Side length?", a: "12 m", b: "11 m", c: "10 m", correct: "a" },
+  { question: "Rhombus diagonals 8 cm & 6 cm. Area?", a: "24 cm²", b: "28 cm²", c: "20 cm²", correct: "a" },
+  { question: "Parallelogram roof: base 15 m, area 75 m². Height?", a: "5 m", b: "4 m", c: "6 m", correct: "a" },
+
+  // SCALE DRAWING / GENERAL GEOMETRY
+  { question: "Scale map: 1 cm = 5 km. 8 cm represents?", a: "40 km", b: "38 km", c: "36 km", correct: "a" },
+  { question: "Scale drawing: 1 cm = 2 m. 15 cm on drawing represents?", a: "30 m", b: "28 m", c: "32 m", correct: "a" },
+  { question: "Scale drawing: length 10 cm represents 50 m. True scale?", a: "1:500", b: "1:50", c: "1:100", correct: "a" },
+
+  // ADDITIONAL CHALLENGING QUESTIONS
+  { question: "Solve: 2x − 7 = 3x − 12", a: "5", b: "4", c: "6", correct: "a" },
+  { question: "If 4x + 5 = 2x + 13, find x", a: "4", b: "3", c: "5", correct: "a" },
+  { question: "Simplify: 5(x − 2) + 3x", a: "8x − 10", b: "8x − 7", c: "8x − 11", correct: "a" },
+  { question: "Solve inequality: 5x − 2 > 3x + 4", a: "x > 3", b: "x > 2", c: "x > 4", correct: "a" },
+  { question: "Graph y = −2x + 6. Find y when x = 1", a: "4", b: "3", c: "5", correct: "a" },
+  { question: "Rectangle: length 10 cm, breadth 7 cm. Area?", a: "70 cm²", b: "67 cm²", c: "72 cm²", correct: "a" },
+  { question: "Square: side 8 cm. Area?", a: "64 cm²", b: "66 cm²", c: "60 cm²", correct: "a" },
+  { question: "Parallelogram: base 12 cm, height 5 cm. Area?", a: "60 cm²", b: "55 cm²", c: "65 cm²", correct: "a" },
+  { question: "Trapezium: parallel sides 9 m & 7 m, height 4 m. Area?", a: "32 m²", b: "34 m²", c: "30 m²", correct: "a" },
+  { question: "Kite: diagonals 12 cm & 8 cm. Area?", a: "48 cm²", b: "50 cm²", c: "44 cm²", correct: "a" },
+  { question: "Parallelogram: perimeter = 2(base + side), base 8 cm, side 5 cm. Perimeter?", a: "26 cm", b: "25 cm", c: "28 cm", correct: "a" },
+  { question: "Square: perimeter 36 m. Side length?", a: "9 m", b: "10 m", c: "8 m", correct: "a" },
+  { question: "Rhombus: all sides 6 cm. Perimeter?", a: "24 cm", b: "22 cm", c: "26 cm", correct: "a" },
+  { question: "Rectangle: length 14 m, breadth 9 m. Perimeter?", a: "46 m", b: "45 m", c: "44 m", correct: "a" },
+  { question: "Trapezium: area = ½ × (sum of parallel sides) × height, sides 10 & 6, height 4. Area?", a: "32 m²", b: "34 m²", c: "30 m²", correct: "a" },
+  { question: "A car travels 120 km in 3 hours. Average speed?", a: "40 km/h", b: "30 km/h", c: "50 km/h", correct: "a" },
+  { question: "If 3 pens cost ₦90, cost of 5 pens?", a: "₦150", b: "₦120", c: "₦180", correct: "a" },
+  { question: "A triangular panel area = ½ × base × height. Base 10 m, height 6 m. Area?", a: "30 m²", b: "32 m²", c: "28 m²", correct: "a" },
+  { question: "If sum of two consecutive even numbers is 26. Smaller number?", a: "12", b: "14", c: "10", correct: "a" },
+  { question: "If 12 workers finish a job in 6 days, 6 workers will finish in?", a: "12 days", b: "11 days", c: "10 days", correct: "a" },
+  { question: "Simplify: 3(x + 4) − 2(x − 5)", a: "x + 22", b: "x + 23", c: "x + 21", correct: "a" },
+  { question: "Solve: 7x − 5 = 2x + 20", a: "5", b: "6", c: "4", correct: "a" },
+  { question: "Graph y = 3x − 2. Find y when x = 2", a: "4", b: "5", c: "6", correct: "a" },
+  { question: "If a rectangle has perimeter 50 cm, length 15 cm. Find breadth.", a: "10 cm", b: "12 cm", c: "11 cm", correct: "a" },
+  { question: "A square has area 196 m². Find side length.", a: "14 m", b: "13 m", c: "15 m", correct: "a" },
+  { question: "Parallelogram: base 10 cm, height 7 cm. Area?", a: "70 cm²", b: "72 cm²", c: "68 cm²", correct: "a" },
+  { question: "Trapezium: parallel sides 5 m & 9 m, height 6 m. Area?", a: "42 m²", b: "41 m²", c: "43 m²", correct: "a" },
+  { question: "Kite diagonals 14 cm & 10 cm. Area?", a: "70 cm²", b: "71 cm²", c: "68 cm²", correct: "a" },
+  { question: "Solve inequality: 4x − 3 ≤ 13", a: "x ≤ 4", b: "x ≤ 5", c: "x ≤ 3", correct: "a" },
+  { question: "A car travels 150 km in 3 hours. Average speed?", a: "50 km/h", b: "48 km/h", c: "52 km/h", correct: "a" }
+
+
+];
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "click here to See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer </span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

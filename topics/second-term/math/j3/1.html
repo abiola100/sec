@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Algebraic operations - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+        <a href="../../../../terms/second-term/math-second/second-term-js3-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color: purple;color: white;"><b>ALGEBRAIC OPERATIONS </b></div>
+        
+
+        <h2>MEANING OF ALGEBRA</h2>
+        <p>Algebra is a part of mathematics that uses letters, numbers, and signs to show ideas or problems.</p>
+        <p>The letters are called symbols or variables because they can change.</p>
+        <p>The numbers are called constants because they do not change.</p>
+        <p>For example:</p>
+        <p>In the expression <strong>2x + 3</strong>,</p>
+        <ul>
+        <li><strong>x</strong> is a variable (it can be 1, 2, 3, or any number).</li><br>
+        <li><strong>2</strong> and <strong>3</strong> are constants (they stay the same).</li>
+        </ul>
+        <p>So, Algebra helps us to write mathematical ideas using letters and numbers together.</p>
+
+        <h2>TERMS USED IN ALGEBRA</h2>
+        <ul>
+        <li><strong>Term</strong> – A term is a number, a letter, or a combination of both.<br>Example: 3x, 5, y, 2a are all terms.</li><br>
+        <li><strong>Coefficient</strong> – The number that is multiplied by a letter.<br>Example: In 5x, the coefficient is 5.</li><br>
+        <li><strong>Variable</strong> – The letter that stands for a number.<br>Example: In 5x, the variable is x.</li><br>
+        <li><strong>Constant</strong> – A number that does not change.<br>Example: In 2x + 4, the constant is 4.</li><br>
+        <li><strong>Expression</strong> – A group of terms joined by + or − signs.<br>Example: 3x + 2y − 4 is an expression.</li>
+        </ul><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>TYPES OF ALGEBRAIC OPERATIONS</b></div>
+        <p>There are four main algebraic operations:</p>
+        <ul>
+        <li>Addition of algebraic terms</li><br>
+        <li>Subtraction of algebraic terms</li><br>
+        <li>Multiplication of algebraic terms</li><br>
+        <li>Division of algebraic terms</li>
+        </ul>
+        <p>Let us explain each one carefully.</p>
+
+        <h3>1. ADDITION OF ALGEBRAIC TERMS</h3>
+        <p><strong>Definition:</strong> Addition of algebraic terms means putting together like terms.</p>
+        <p>Like terms are terms that have the same letters and powers.</p>
+        <p>For example:</p>
+        <ul>
+        <li>3x and 5x are like terms (both have x)</li><br>
+        <li>2y and 4y are like terms (both have y)</li><br>
+        <li>3x and 2y are unlike terms because the letters are different</li><br>
+        </ul>
+        <p><strong>Rule:</strong> Add the coefficients of like terms and keep the same letter.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+        <li>3x + 5x = 8x</li><br>
+        <li>4a + 6a = 10a</li><br>
+        <li>7p + 2p + 3p = 12p</li><br>
+        <li>2x + 3y + 4x = 6x + 3y</li><br>
+        <li>a + b + 2a + 3b = 3a + 4b</li><br>
+        <li>6m + 5n + 3m = 9m + 5n</li>
+        </ul>
+
+        <h3>2. SUBTRACTION OF ALGEBRAIC TERMS</h3>
+        <p><strong>Definition:</strong> Subtraction of algebraic terms means taking away one term from another. We also subtract like terms only.</p>
+        <p><strong>Rule:</strong> Subtract the coefficients of like terms and keep the same letter.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+        <li>7x − 4x = 3x</li><br>
+        <li>9a − 3a = 6a</li><br>
+        <li>10p − 2p − 3p = 5p</li><br>
+        <li>8x − 3y − 2x = 6x − 3y</li><br>
+        <li>5a + 7b − 3a − 2b = 2a + 5b</li><br>
+        <li>12m − 5m + 4n − 2n = 7m + 2n</li>
+        </ul>
+
+        <h3>3. MULTIPLICATION OF ALGEBRAIC TERMS</h3>
+        <p><strong>Definition:</strong> Multiplication of algebraic terms means finding the product of numbers and letters.</p>
+        <p><strong>Rules:</strong></p>
+        <ul>
+        <li>Multiply the numbers (coefficients).</li>
+        <li>Multiply the letters by adding their powers.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+        <li>2 × 3x = 6x</li><br>
+        <li>4a × 5b = 20ab</li><br>
+        <li>3x × 2x = 6x²</li><br>
+        <li>2a × 3a × 4a = 24a³</li><br>
+        <li>5x × 2y = 10xy</li><br>
+        <li>7m × 3m² = 21m³</li><br>
+        <li>2x² × 3x³ = 6x⁵</li><br>
+        <li>a × b × c = abc</li><br>
+        <li>3p × 2p × 4q = 24p²q</li><br>
+        <li>5a × 2b × 3c = 30abc</li>
+        </ul>
+
+        <h3>4. DIVISION OF ALGEBRAIC TERMS</h3>
+        <p><strong>Definition:</strong> Division of algebraic terms means sharing one term by another.</p>
+        <p><strong>Rules:</strong></p>
+        <ul>
+        <li>Divide the numbers (coefficients).</li><br>
+        <li>Subtract the powers of the letters.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+        <li>6x ÷ 2 = 3x</li><br>
+        <li>10a ÷ 5 = 2a</li><br>
+        <li>12x² ÷ 3x = 4x</li><br>
+        <li>8a³ ÷ 2a = 4a²</li><br>
+        <li>15m²n ÷ 3m = 5mn</li><br>
+        <li>20x³y² ÷ 5xy = 4x²y</li><br>
+        <li>18a²b ÷ 6a = 3ab</li><br>
+        <li>9p² ÷ 3p = 3p</li><br>
+        <li>16x⁴ ÷ 8x² = 2x²</li><br>
+        <li>25m³n² ÷ 5mn = 5m²n</li>
+        </ul>
+
+        <h3>5. FACTORIZATION OF ALGEBRAIC EXPRESSIONS</h3>
+        <p><strong>Definition:</strong> Factorization means breaking down an algebraic expression into simpler parts (factors) that, when multiplied together, give back the original expression. It is the opposite of multiplication.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+        <li>ax + ay = a(x + y)</li><br>
+        <li>3m + 3p = 3(m + p)</li><br>
+        <li>pq + p² = p(q + p)</li><br>
+        <li>4x² + 8x = 4x(x + 2)</li><br>
+        <li>2a²b + 6ab² = 2ab(a + 3b)</li><br>
+        <li>5x³y + 10x²y² = 5x²y(x + 2y)</li><br>
+        <li>7a + 14b = 7(a + 2b)</li><br>
+        <li>9p²q + 3pq² = 3pq(3p + q)</li><br>
+        <li>ab + ac + ad = a(b + c + d)</li><br>
+        <li>6m + 9n = 3(2m + 3n)</li>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <ul>
+        <li>Addition means putting like terms together.</li><br>
+        <li>Subtraction means taking away like terms.</li><br>
+        <li>Multiplication means multiplying numbers and adding powers of the same letters.</li><br>
+        <li>Division means dividing numbers and subtracting powers of the same letters.</li><br>
+        <li>Factorization means breaking an expression into smaller parts (factors).</li>
+        </ul><br><br><br>
+
+        <hr>
+        <br><br>
+        <h2>ACTIVITIES EXAMPLES </h2>
+        <h1>ADDITION OF ALGEBRAIC TERMS</h1>
+
+        <h2>Definition:</h2>
+        <p>Addition of algebraic terms means putting together like terms. Like terms have the same letters raised to the same powers. When we add, we add the numbers (coefficients) and keep the letters the same.</p>
+
+        <h3>Example 1</h3>
+        <p><strong>Question:</strong> If Amina had 3x red beads in one box and her friend gave her 5x more red beads, and then Amina found 2y blue beads in her drawer, how many red-bead terms and blue-bead terms does she have together written as an algebraic expression?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>We have 3x and 5x which are like terms because both are x.</li><br>
+        <li>Add the numbers in front: 3 + 5 = 8.</li><br>
+        <li>Keep the x letter the same. So 3x + 5x = 8x.</li><br>
+        <li>There is also 2y, which is not like x. So we keep it separate.</li><br>
+        <li>Final answer: 8x + 2y.</li><br>
+        <li>Readable sentence: Amina has 8x red beads and 2y blue beads, so the algebraic expression is 8x + 2y.</li><br>
+        </ul>
+
+        <h3>Example 2</h3>
+        <p><strong>Question:</strong> Mr. Musa is making gift packs. He put 4a sweets in one packet and 6a sweets in another packet. He also put 3b cookies in a third packet and then added 2a sweets into the first packet again. Write the total sweets and cookies as one algebraic expression.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Identify like terms: sweets are 4a, 6a, and 2a. Cookies are 3b.</li><br>
+        <li>Add sweets: 4a + 6a + 2a. Add coefficients: 4 + 6 + 2 = 12. So sweets become 12a.</li><br>
+        <li>Cookies remain 3b.</li><br>
+        <li>Final expression: 12a + 3b.</li><br>
+        <li>In words: There are 12a sweets and 3b cookies.</li><br>
+        </ul>
+
+        <h3>Example 3</h3>
+        <p><strong>Question:</strong> The teacher wrote 7p + 2q on the board. Later she added 3p + 5q below it and then added 4p more for the class. What is the final expression for the total p and q items?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>List p terms: 7p, 3p, 4p. List q terms: 2q, 5q.</li><br>
+        <li>Add p terms: 7 + 3 + 4 = 14, so 14p.</li><br>
+        <li>Add q terms: 2 + 5 = 7, so 7q.</li><br>
+        <li>Final: 14p + 7q.</li><br>
+        <li>Spoken: The teacher has 14p of p items and 7q of q items.</li><br>
+        </ul>
+
+        <h3>Example 4</h3>
+        <p><strong>Question:</strong> A farmer counted 2x baskets of yams in one field and 8x baskets of yams in the other field. He also counted 6y baskets of cassava. Later he moved 3x baskets of yams to the storage. How many baskets of yams and cassava are there now combined?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start with yams: 2x + 8x = 10x.</li><br>
+        <li>Keep cassava 6y separate.</li><br>
+        <li>Final expression: 10x + 6y.</li><br>
+        <li>If subtracting 3x from fields: 10x − 3x = 7x, giving 7x + 6y.</li><br>
+        </ul>
+
+        <h3>Example 5</h3>
+        <p><strong>Question:</strong> In a classroom, children received books as 5a in the morning and 7a in the afternoon. Also 4b pencils were handed in the morning and 3b in the afternoon. Show the total books and pencils as an algebraic expression.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Add book terms: 5a + 7a = 12a.</li><br>
+        <li>Add pencil terms: 4b + 3b = 7b.</li><br>
+        <li>Final: 12a + 7b.</li><br>
+        <li>This tells us 12a books and 7b pencils in total.</li><br>
+        </ul>
+
+        <h3>Example 6</h3>
+        <p><strong>Question:</strong> A shop sold 9m shirts of one type and 4m of the same type the next day. The shop also sold 7n hats. The shop owner returned 2m shirts from returns which became available for sale again. Write the algebraic expression for total shirts and hats now in shop stock.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Shirts: 9m + 4m + 2m = 15m.</li><br>
+        <li>Hats: 7n.</li><br>
+        <li>Final expression: 15m + 7n.</li><br>
+        </ul>
+
+        <h3>Example 7</h3>
+        <p><strong>Question:</strong> A gardener planted 8x flower bulbs on Monday, 5x more on Tuesday, and 3y tree seedlings. On Wednesday she planted 2x more flower bulbs but some y seedlings were moved to another garden, adding −1y. What is the algebraic expression for remaining flower bulbs and tree seedlings?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Flower bulbs: 8x + 5x + 2x = 15x.</li><br>
+        <li>Tree seedlings: 3y + (−1y) = 2y.</li><br>
+        <li>Final: 15x + 2y.</li><br>
+        <li>In words: 15x bulbs and 2y seedlings remain.</li><br>
+        </ul>
+
+        <h1>SUBTRACTION OF ALGEBRAIC TERMS</h1>
+
+        <h2>Definition:</h2>
+        <p>Subtraction means taking away one term from another. We only subtract like terms by subtracting their coefficients and keeping the letter the same.</p>
+
+        <h3>Example 1</h3>
+        <p><strong>Question:</strong> Amina had 12x sweets. She gave 5x sweets to her friend and then ate 2y candies which are different. Show what is left as an algebraic expression.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Subtract like terms: 12x − 5x = 7x.</li><br>
+        <li>The 2y candies are different, so not included in remaining stock.</li><br>
+        <li>Final answer: 7x.</li><br>
+        <li>Optional: show both remaining and eaten: 7x (remaining sweets) and −2y (eaten candies).</li><br>
+        </ul>
+
+        <h3>Example 2</h3>
+        <p><strong>Question:</strong> A toy store had 15a dolls. They sold 6a dolls on Monday, 3a dolls on Tuesday, and returned 2a dolls from a customer. Show the final dolls in algebraic form.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start with 15a. Subtract sold dolls: 15a − 6a − 3a = 6a.</li><br>
+        <li>Add returned dolls: 6a + 2a = 8a.</li><br>
+        <li>Final: 8a.</li><br>
+        </ul>
+
+        <h3>Example 3</h3>
+        <p><strong>Question:</strong> A baker prepared 20p loaves of bread for a party. After the party 8p were eaten and 4p were given to neighbors. How many loaves remain?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start: 20p − 8p = 12p.</li><br>
+        <li>Subtract given away: 12p − 4p = 8p.</li><br>
+        <li>Final: 8p loaves remain.</li><br>
+        </ul>
+
+        <h3>Example 4</h3>
+        <p><strong>Question:</strong> A school library had 30b books. During the year they lost 4b books and lent 10b books out. Later they bought back 3b books. What is the number of books now?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start: 30b − 4b = 26b.</li><br>
+        <li>Subtract lent out: 26b − 10b = 16b.</li><br>
+        <li>Add bought back: 16b + 3b = 19b.</li><br>
+        <li>Final: 19b.</li><br>
+        </ul>
+
+        <h3>Example 5</h3>
+        <p><strong>Question:</strong> A farm had 18m pigs. The farmer sold 7m pigs and 2n cows to another farmer. Then he bought 1m pig back. How many pigs remain?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start with pigs: 18m − 7m = 11m.</li><br>
+        <li>Add bought back: 11m + 1m = 12m.</li><br>
+        <li>Final pigs: 12m.</li><br>
+        </ul>
+
+        <h3>Example 6</h3>
+        <p><strong>Question:</strong> A box contained 50x pencils. During the day 20x pencils were used and 5y erasers were used. Later 10x pencils were found again and put back. How many pencils are in the box now?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start: 50x − 20x = 30x.</li><br>
+        <li>Add found pencils: 30x + 10x = 40x.</li><br>
+        <li>Final: 40x pencils.</li><br>
+        </ul>
+
+        <h3>Example 7</h3>
+        <p><strong>Question:</strong> A class had 25a students registered. 3a students left and 2a joined later. Write final number of students.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Start: 25a − 3a = 22a.</li><br>
+        <li>Add joining students: 22a + 2a = 24a.</li><br>
+        <li>Final: 24a.</li><br>
+        </ul>
+        <h1>MULTIPLICATION OF ALGEBRAIC TERMS</h1>
+
+        <h2>Definition:</h2>
+        <p>Multiplication of algebraic terms means multiplying the numbers (coefficients) and multiplying letters by adding their powers (exponents).</p>
+
+        <h3>Example 1</h3>
+        <p><strong>Question:</strong> If one packet contains 2x candies and Sam bought 3 such packets, how many candies does Sam have? Write the answer as an algebraic expression and show steps.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>One packet = 2x candies. Multiply 3 × 2x.</li><br>
+        <li>Multiply coefficients: 3 × 2 = 6. Keep x. Result: 6x.</li><br>
+        <li>Final: 6x.</li><br>
+        <li>In words: Sam has 6x candies.</li><br>
+        </ul>
+
+        <h3>Example 2</h3>
+        <p><strong>Question:</strong> A farmer planted 4a seeds in a row and there were 5 such identical rows. Show how many seeds were planted in total.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Multiply 5 × 4a. Coefficients: 5 × 4 = 20. Keep a: 20a.</li><br>
+        <li>Final: 20a.</li><br>
+        </ul>
+
+        <h3>Example 3</h3>
+        <p><strong>Question:</strong> If a ribbon length is 3x meters and a shop sells 4 ribbons together, and then each ribbon is doubled in length (two ribbons tied), find the final algebraic expression for total length.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>First 4 ribbons of 3x each: 4 × 3x = 12x.</li><br>
+        <li>If each ribbon is doubled in length: 2 × 12x = 24x.</li><br>
+        <li>Final: 24x.</li><br>
+        </ul>
+
+        <h3>Example 4</h3>
+        <p><strong>Question:</strong> Multiply the expressions 3x and 2x and explain why the result has an exponent.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Multiply coefficients: 3 × 2 = 6.</li><br>
+        <li>Multiply variables: x × x = x² because 1 + 1 = 2.</li><br>
+        <li>Product: 6x².</li><br>
+        <li>In words: There are six times x times x, which is six x squared.</li><br>
+        </ul>
+
+        <h3>Example 5</h3>
+        <p><strong>Question:</strong> A machine makes 2a parts in an hour. If the machine runs 3 hours and there are 4 machines working the same time, what is the algebraic expression for the total parts made?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>One machine in one hour: 2a. Three hours: 3 × 2a = 6a.</li><br>
+        <li>Four machines: 4 × 6a = 24a.</li><br>
+        <li>Final: 24a.</li><br>
+        </ul>
+
+        <h3>Example 6</h3>
+        <p><strong>Question:</strong> Multiply 5x² by 3x³. Explain how exponents combine.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Multiply coefficients: 5 × 3 = 15.</li><br>
+        <li>Multiply x² × x³: add exponents: 2 + 3 = 5. Result: x⁵.</li><br>
+        <li>Final: 15x⁵.</li><br>
+        <li>In words: Multiply numbers and add exponents when the base is the same.</li><br>
+        </ul>
+
+        <h3>Example 7</h3>
+        <p><strong>Question:</strong> Multiply 2ab by 3a²b³ and explain each step slowly.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Multiply coefficients: 2 × 3 = 6.</li><br>
+        <li>Multiply a terms: a¹ × a² = a³.</li><br>
+        <li>Multiply b terms: b¹ × b³ = b⁴.</li><br>
+        <li>Combine: 6a³b⁴.</li><br>
+        <li>Final: 6a³b⁴.</li><br>
+        </ul>
+
+        <h1>DIVISION OF ALGEBRAIC TERMS</h1>
+
+        <h2>Definition:</h2>
+        <p>Division of algebraic terms means dividing the numbers (coefficients) and subtracting the powers of the same letters (exponents).</p>
+
+        <h3>Example 1</h3>
+        <p><strong>Question:</strong> A baker made 12x cakes and wants to put them in boxes that hold 4 cakes each. Write how many boxes of x-cakes he will fill as an algebraic expression.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 12 ÷ 4 = 3.</li><br>
+        <li>Keep x: 3x.</li><br>
+        <li>Final: 3x boxes.</li><br>
+        </ul>
+
+        <h3>Example 2</h3>
+        <p><strong>Question:</strong> Divide 18x² by 3x. Explain why an exponent reduces.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 18 ÷ 3 = 6.</li><br>
+        <li>Subtract exponents: x² ÷ x¹ = x¹ = x.</li><br>
+        <li>Final: 6x.</li><br>
+        </ul>
+
+        <h3>Example 3</h3>
+        <p><strong>Question:</strong> A farmer had 20m³ units of a product and shared them among 4m containers equally. How many units are in each container?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 20 ÷ 4 = 5.</li><br>
+        <li>Divide variables: m³ ÷ m = m².</li><br>
+        <li>Combine: 5m².</li><br>
+        <li>Final: 5m² units per container.</li><br>
+        </ul>
+
+        <h3>Example 4</h3>
+        <p><strong>Question:</strong> Divide 30a²b by 5ab. Show step by step.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 30 ÷ 5 = 6.</li><br>
+        <li>a² ÷ a = a.</li><br>
+        <li>b ÷ b = 1, so b cancels.</li><br>
+        <li>Final: 6a.</li><br>
+        <li>In words: b disappears because it divides out.</li><br>
+        </ul>
+
+        <h3>Example 5</h3>
+        <p><strong>Question:</strong> If 40x³y² is shared among 8x children equally, how much does each child get?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 40 ÷ 8 = 5.</li><br>
+        <li>x³ ÷ x = x².</li><br>
+        <li>y² remains: y².</li><br>
+        <li>Combine: 5x²y².</li><br>
+        <li>Final: 5x²y².</li><br>
+        </ul>
+
+        <h3>Example 6</h3>
+        <p><strong>Question:</strong> Divide 24p²q³ by 6pq. Explain each subtraction of exponents.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 24 ÷ 6 = 4.</li><br>
+        <li>p² ÷ p = p.</li><br>
+        <li>q³ ÷ q = q².</li><br>
+        <li>Combine: 4p q².</li><br>
+        <li>Final: 4p q².</li><br>
+        </ul>
+
+        <h3>Example 7</h3>
+        <p><strong>Question:</strong> A recipe needed 50x²y grams of flour which was packaged in sacks of 10xy grams. How many sacks are needed?</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 50 ÷ 10 = 5.</li><br>
+        <li>x² ÷ x = x.</li><br>
+        <li>y ÷ y = 1, so y cancels.</li><br>
+        <li>Combine: 5x.</li><br>
+        <li>Final: 5x sacks.</li><br>
+        </ul>
+
+        <h1>FACTORIZATION OF ALGEBRAIC EXPRESSIONS</h1>
+
+        <h2>Definition:</h2>
+        <p>Factorization means breaking an algebraic expression into simpler factors that multiply together to give the original expression. It is the reverse of multiplication.</p>
+
+        <h3>Example 1 — Factor out common factor</h3>
+        <p><strong>Question:</strong> Factorize 12x + 8.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Common number: 4 divides 12 and 8.</li><br>
+        <li>Factor numbers: 12x = 4(3x), 8 = 4(2).</li><br>
+        <li>Expression: 4(3x + 2).</li><br>
+        <li>Final: 4(3x + 2).</li><br>
+        </ul>
+
+        <h3>Example 2 — Factor out common variable</h3>
+        <p><strong>Question:</strong> Factorize 6ab + 9a.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Common number: 3 divides 6 and 9.</li><br>
+        <li>Common letters: a appears in both terms.</li><br>
+        <li>Factor: 6ab = 3a(2b), 9a = 3a(3).</li><br>
+        <li>Combine: 3a(2b + 3).</li><br>
+        <li>Final: 3a(2b + 3).</li><br>
+        </ul>
+
+        <h3>Example 3 — Factor by grouping</h3>
+        <p><strong>Question:</strong> Factorize ax + ay + bx + by.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Group: (ax + ay) + (bx + by).</li><br>
+        <li>Factor each: ax + ay = a(x + y), bx + by = b(x + y).</li><br>
+        <li>Combine: (x + y)(a + b).</li><br>
+        <li>Final: (x + y)(a + b) or (a + b)(x + y).</li><br>
+        </ul>
+
+        <h3>Example 4 — Factor common plus difference</h3>
+        <p><strong>Question:</strong> Factorize 4x² + 8x.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>GCF: 4x.</li><br>
+        <li>Write: 4x² = 4x(x), 8x = 4x(2).</li><br>
+        <li>Combine: 4x(x + 2).</li><br>
+        <li>Final: 4x(x + 2).</li><br>
+        </ul>
+
+        <h3>Example 5 — Factor a quadratic</h3>
+        <p><strong>Question:</strong> Factorize x² + 5x + 6.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Find numbers multiplying to 6 and adding to 5: 2 and 3.</li><br>
+        <li>Split middle term: x² + 2x + 3x + 6.</li><br>
+        <li>Group: (x² + 2x) + (3x + 6).</li><br>
+        <li>Factor each: x(x + 2) + 3(x + 2).</li><br>
+        <li>Combine: (x + 2)(x + 3).</li><br>
+        <li>Final: (x + 2)(x + 3).</li><br>
+        </ul>
+
+        <h3>Example 6 — Difference of squares</h3>
+        <p><strong>Question:</strong> Factorize 9y² − 16.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Recognize: 9y² = (3y)², 16 = 4².</li><br>
+        <li>Apply difference of squares: (3y − 4)(3y + 4).</li><br>
+        <li>Final: (3y − 4)(3y + 4).</li><br>
+        </ul>
+
+        <h3>Example 7 — Factor a trinomial with leading coefficient not 1</h3>
+        <p><strong>Question:</strong> Factorize 6x² + 11x + 3.</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Multiply first and last coefficients: 6 × 3 = 18.</li><br>
+        <li>Find numbers adding to 11 and multiplying to 18: 9 and 2.</li><br>
+        <li>Split middle term: 6x² + 9x + 2x + 3.</li><br>
+        <li>Group: (6x² + 9x) + (2x + 3).</li><br>
+        <li>Factor each: 3x(2x + 3) + 1(2x + 3).</li><br>
+        <li>Combine: (2x + 3)(3x + 1).</li><br>
+        <li>Final: (2x + 3)(3x + 1).</li><br>
+        </ul>
+
+        <h1>SHORT REVIEW</h1>
+        <ul>
+        <li>Addition and subtraction: combine only like terms by adding or subtracting coefficients.</li><br>
+        <li>Multiplication: multiply numbers and add exponents for like letters.</li><br>
+        <li>Division: divide numbers and subtract exponents for like letters.</li><br>
+        <li>Factorization: find common factors or use patterns (grouping, difference of squares, trinomial factoring).</li><br>
+        </ul><br><br>
+
+        <hr>
+        <br><br>
+
+
+        <div class="title" style="background-color: seagreen;color: white;"><b>EXAM-STYLE QUESTIONS  SOLUTIONS</b></div>
+
+        <h3>Question 1</h3>
+        <p><strong>Question:</strong> Simplify and write your answer in simplest form: 3x + 5x − 2x + 4y − y</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Group like terms: x terms → 3x + 5x − 2x; y terms → 4y − y</li><br>
+        <li>Add x terms: 3 + 5 − 2 = 6 → 6x</li><br>
+        <li>Add y terms: 4 − 1 = 3 → 3y</li><br>
+        <li>Final expression: 6x + 3y</li><br>
+        <li>Readable sentence: When we simplify, we get 6x + 3y.</li><br>
+        </ul>
+
+        <h3>Question 2</h3>
+        <p><strong>Question:</strong> Simplify and collect like terms: 7a + 2b − 4a + 5b − 3</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>a terms: 7a − 4a = 3a; b terms: 2b + 5b = 7b; constant: −3</li><br>
+        <li>Final expression: 3a + 7b − 3</li><br>
+        <li>Readable sentence: After simplifying, the expression becomes 3a + 7b − 3.</li><br>
+        </ul>
+
+        <h3>Question 3</h3>
+        <p><strong>Question:</strong> Expand and simplify: 2(x + 3) + 4x − (x + 2)</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Expand: 2(x + 3) = 2x + 6; −(x + 2) = −x − 2</li><br>
+        <li>Combine all: 2x + 6 + 4x − x − 2</li><br>
+        <li>x terms: 2x + 4x − x = 5x; constants: 6 − 2 = 4</li><br>
+        <li>Final: 5x + 4</li><br>
+        <li>Readable sentence: After expanding and simplifying, the expression becomes 5x + 4.</li><br>
+        </ul>
+
+        <h3>Question 4</h3>
+        <p><strong>Question:</strong> Simplify: 8m + 6n − 3m − 2n</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>m terms: 8m − 3m = 5m; n terms: 6n − 2n = 4n</li><br>
+        <li>Final: 5m + 4n</li><br>
+        <li>Readable sentence: The simplified form of the expression is 5m + 4n.</li><br>
+        </ul>
+
+        <h3>Question 5</h3>
+        <p><strong>Question:</strong> Factorize completely: 6x + 9</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>GCF of 6x and 9 is 3 → 6x = 3(2x), 9 = 3(3)</li><br>
+        <li>Factor out 3: 3(2x + 3)</li><br>
+        <li>Final: 3(2x + 3)</li><br>
+        <li>Readable sentence: When we factorize, we get 3(2x + 3).</li><br>
+        </ul>
+
+        <h3>Question 6</h3>
+        <p><strong>Question:</strong> Simplify: 14x + 9y − 5x − 4y</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>x terms: 14x − 5x = 9x; y terms: 9y − 4y = 5y</li><br>
+        <li>Final: 9x + 5y</li><br>
+        <li>Readable sentence: The simplified form of the expression is 9x + 5y.</li><br>
+        </ul>
+
+        <h3>Question 7</h3>
+        <p><strong>Question:</strong> Divide and simplify: 12x² ÷ 3x</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Divide coefficients: 12 ÷ 3 = 4; divide variables: x² ÷ x = x</li><br>
+        <li>Final: 4x</li><br>
+        <li>Readable sentence: When 12x² is divided by 3x, the result is 4x.</li><br>
+        </ul>
+
+        <h3>Question 8</h3>
+        <p><strong>Question:</strong> Simplify: 5a + 8b − 3a + 2b − 4</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>a terms: 5a − 3a = 2a; b terms: 8b + 2b = 10b; constant: −4</li><br>
+        <li>Final: 2a + 10b − 4</li><br>
+        <li>Readable sentence: Simplifying gives 2a + 10b − 4.</li><br>
+        </ul>
+
+        <h3>Question 9</h3>
+        <p><strong>Question:</strong> Expand: 3(x + 4) − 2(x − 1)</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Expand: 3x + 12 − 2x + 2</li><br>
+        <li>x terms: 3x − 2x = x; constants: 12 + 2 = 14</li><br>
+        <li>Final: x + 14</li><br>
+        <li>Readable sentence: The simplified expression is x + 14.</li><br>
+        </ul>
+
+        <h3>Question 10</h3>
+        <p><strong>Question:</strong> Factorize: 10y + 15</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>GCF of 10y and 15 is 5 → 10y = 5(2y), 15 = 5(3)</li><br>
+        <li>Factor out 5: 5(2y + 3)</li><br>
+        <li>Final: 5(2y + 3)</li><br>
+        </ul>
+
+        <h3>Question 11</h3>
+        <p><strong>Question:</strong> Simplify: 7x + 5y − 2x + 3y</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>x terms: 7x − 2x = 5x; y terms: 5y + 3y = 8y</li><br>
+        <li>Final: 5x + 8y</li><br>
+        </ul>
+
+        <h3>Question 12</h3>
+        <p><strong>Question:</strong> Expand: 2(a + 3) + 5</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>2(a + 3) = 2a + 6; add 5 → 2a + 11</li><br>
+        <li>Final: 2a + 11</li><br>
+        </ul>
+
+        <h3>Question 13</h3>
+        <p><strong>Question:</strong> Divide: 18x³ ÷ 6x</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>Coefficients: 18 ÷ 6 = 3; variables: x³ ÷ x = x²</li><br>
+        <li>Final: 3x²</li><br>
+        </ul>
+
+        <h3>Question 14</h3>
+        <p><strong>Question:</strong> Simplify: 12p + 7q − 5p + 2q − 3</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>p terms: 12p − 5p = 7p; q terms: 7q + 2q = 9q; constant: −3</li><br>
+        <li>Final: 7p + 9q − 3</li><br>
+        </ul>
+
+        <h3>Question 15</h3>
+        <p><strong>Question:</strong> Factorize: 8x + 12</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>GCF: 4 → 8x = 4(2x), 12 = 4(3)</li><br>
+        <li>Factor: 4(2x + 3)</li><br>
+        </ul>
+
+        <h3>Question 16</h3>
+        <p><strong>Question:</strong> Expand: 4(x + 2) − 3(x − 1)</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>4x + 8 − 3x + 3 = x + 11</li><br>
+        <li>Final: x + 11</li><br>
+        </ul>
+
+        <h3>Question 17</h3>
+        <p><strong>Question:</strong> Simplify: 10a + 6b − 4a − 2b</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>10a − 4a = 6a; 6b − 2b = 4b</li><br>
+        <li>Final: 6a + 4b</li><br>
+        </ul>
+
+        <h3>Question 18</h3>
+        <p><strong>Question:</strong> Divide: 24x² ÷ 8x</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>24 ÷ 8 = 3; x² ÷ x = x</li><br>
+        <li>Final: 3x</li><br>
+        </ul>
+
+        <h3>Question 19</h3>
+        <p><strong>Question:</strong> Simplify: 9m + 5n − 3m + 2n − 1</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>m terms: 9m − 3m = 6m; n terms: 5n + 2n = 7n; constant: −1</li><br>
+        <li>Final: 6m + 7n − 1</li><br>
+        </ul>
+
+        <h3>Question 20</h3>
+        <p><strong>Question:</strong> Factorize: 15x + 20</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ul>
+        <li>GCF: 5 → 15x = 5(3x), 20 = 5(4)</li><br>
+        <li>Factor: 5(3x + 4)</li><br>
+        </ul>
+
+
+
+       
+        
+
+
+       
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j3/1.html" class="iam">
+                <br>
+                <li > ALGEBRAIC OPERATIONS</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j3/2.html" class="iam">
+
+                <li >FACTORIZATION    </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j1/3.html" class="iam">
+
+                <li > SIMPLE EQUATIONS INVOLVING FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/4.html" class="iam">
+
+                <li >SIMULTANEOUS LINEAR EQUATIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/5.html" class="iam">
+                
+                <li > SIMILAR SHAPES   </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j3/6.html" class="iam">
+                <br>
+                <li > TRIGONOMETRY  </li>
+            </a>
+             <br>
+
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

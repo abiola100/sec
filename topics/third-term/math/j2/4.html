@@ -1,0 +1,563 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>bisecting angles - mathematics - jss2</title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header> 
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/third-term/math-third/third-term-js2-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title" style="background-color: purple;color: white;"><b> BISSECTING ANGLES</b></div>
+
+        <h2>Meaning / Definition</h2>
+        <p>To bisect means to divide into two equal parts.</p>
+        <p>So bisecting an angle means drawing a line (or ray) that splits the given angle into two equal angles.</p>
+        <p>The line or ray that does the division is called the angle bisector or bisector of that angle.</p>
+        <p>After bisecting, each of the two smaller angles has the same measure.</p>
+        <p>For example, if you have an angle of 60°, and you bisect it, each part becomes 30°.</p>
+
+        <br><br>
+        <div class="title" style="background-color: darkcyan;color: white;"><b>Why Bisect Angles?</b></div>
+        <ol>
+            <li>It helps us to divide angles into exact halves without measuring with a protractor.</li><br>
+            <li>It is used in construction problems and many geometry proofs.</li><br>
+            <li>It is used when we want special angles like 15°, 30°, 45° (by bisecting 30°, 60°, 90°, etc.).</li><br>
+            <li>In triangles, angle bisectors have special properties (e.g. angle bisector theorem).</li>
+        </ol>
+
+        <h2>Tools Needed</h2>
+        <p>To do angle bisection you need:</p>
+        <ul>
+            <li>A compass</li><br>
+            <li>A ruler (straightedge)</li><br>
+            <li>Pencil</li><br>
+            <li>(Optional: protractor, for verification, but not needed in the construction)</li>
+        </ul><br><br>
+
+        <div class="title" style="background-color: seagreen;color: white;"><b>Properties of the Angle Bisector</b></div>
+        <ul>
+            <li>The bisector divides the angle into two equal angles.</li><br>
+            <li>Any point on the bisector is equidistant from the two sides (arms) of the angle.</li><br>
+            <li>The angle bisector in a triangle divides the opposite side in the ratio of the other two sides (Angle Bisector Theorem).</li><br>
+            <li>You can bisect any angle — acute, obtuse, or right angle.</li>
+        </ul><br><br>
+
+        <div class="title" style="background-color: rosybrown;color: black;"><b>Step-by-Step Construction: Bisecting a Given Angle</b></div>
+        <p>Suppose we have an angle ∠ABC (vertex at B, rays BA and BC).</p>
+        <p><strong>Goal:</strong> Construct the bisector of ∠ABC, that is a ray from B that divides ∠ABC into two equal angles.</p>
+
+        <h3>Steps:</h3>
+        <ol>
+            <li>Place the compass point at <strong>B</strong> (the vertex). Open it to some convenient radius (not too small, not too big).</li><br>
+            <li>With center <strong>B</strong>, draw an arc that cuts both arms BA and BC. Let the arc cut BA at point <strong>D</strong> and BC at point <strong>E</strong>.</li><br>
+            <li>Without changing the compass width, place the compass at <strong>D</strong> and draw an arc inside the angle.</li><br>
+            <li>Keeping the same compass width, place the compass at <strong>E</strong> and draw another arc inside the angle, so that this arc intersects the one from D. Label their intersection <strong>F</strong>.</li><br>
+            <li>Use your ruler to draw ray <strong>BF</strong>. That is the angle bisector of ∠ABC.</li>
+        </ol>
+
+        <h3>Text Diagram (ASCII-style):</h3>
+  <pre>
+       C
+      /
+     / 
+    E
+   /  
+  /   F
+ B----D
+  \
+   \
+    A
+  </pre>
+
+        <p><strong>B is the vertex.</strong></p>
+        <p><strong>The arcs from D and E meet at F.</strong></p>
+        <p><strong>BF is the bisector.</strong></p>
+        <p>After construction, ∠DBF = ∠FBC (they are equal).</p>
+
+        <h2>Explanation / Why It Works (Proof Sketch)</h2>
+        <div class="box">
+            <p>When you draw the first arc from B that meets the sides at D and E, BD = BE (both are arcs from B).</p>
+            <p>Then you draw arcs from D and E of the same radius, so the intersection point F is equidistant from D and E.</p>
+            <p>In triangles BDF and BEF, we have:</p>
+            <ul>
+            <li>BD = BE</li>
+            <li>DF = EF</li>
+            <li>BF is common</li>
+            </ul>
+            <p>So by SSS (side-side-side), triangles BDF and BEF are congruent. Hence ∠DBF = ∠FBE, so BF bisects ∠DBE (i.e., original angle).</p>
+        </div><br><br>
+
+        <hr>
+        <br><br>
+
+
+        <h2>Practice Questions</h2>
+
+
+        <h2>Problem 1 — Bisect an acute angle (70°)</h2>
+
+<p><strong>Question:</strong> Bisect ∠XYZ (given as 70° on the diagram).</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>Put the compass point at the vertex Y. Open it to a convenient width.</li><br>
+<li>With centre Y, draw an arc that cuts YX at A and YZ at B.</li><br>
+<li>Without changing the compass width, put the point at A and draw an arc inside the angle.</li><br>
+<li>With the same compass width put the point at B and draw another arc so it meets the arc from A at C.</li><br>
+<li>Use the ruler to join Y to C. Ray YC is the bisector.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+    Z
+     \
+      \
+       B
+        \
+         C
+        /
+ Y----A/
+      /
+     X
+</pre>
+
+<p><strong>Check:</strong> Measure ∠XYC and ∠CYZ with a protractor — both should be 35° (half of 70°).</p>
+<p><strong>Answer:</strong> YC bisects ∠XYZ; ∠XYC = ∠CYZ = 35°.</p>
+
+<hr>
+
+<h2>Problem 2 — Bisect a right angle (90°)</h2>
+
+<p><strong>Question:</strong> Bisect the right angle at vertex P to get 45°.</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>Place the compass at P. Draw an arc that meets both arms at D and E.</li><br>
+<li>With the same compass width, draw an arc from D inside the angle.</li><br>
+<li>With the same width draw an arc from E so the two arcs meet at F.</li><br>
+<li>Join P to F. Ray PF bisects the 90° angle.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+    |
+    |
+ F  |
+    |
+P---D---->  (other arm)
+    \
+     E
+</pre>
+
+<p><strong>Check:</strong> ∠(one arm, PF) should be 45°; verify with protractor.</p>
+<p><strong>Answer:</strong> PF bisects the 90° angle; each part = 45°.</p>
+
+<hr>
+
+<h2>Problem 3 — Bisect an obtuse angle (120°)</h2>
+
+<p><strong>Question:</strong> Bisect ∠AOB that is 120°.</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>Put compass at O and draw an arc that cuts OA at U and OB at V.</li><br>
+<li>With the same compass width draw an arc from U inside the angle.</li><br>
+<li>With the same width draw an arc from V so the two arcs meet at W.</li><br>
+<li>Join O to W. Ray OW bisects ∠AOB.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+ A
+  \
+   \
+    U
+     \
+      \
+       W
+      /
+     /
+ O--V
+    \
+     \
+      B
+</pre>
+
+<p><strong>Check:</strong> Each smaller angle should be 60° (since 120° ÷ 2 = 60°). Measure to confirm.</p>
+<p><strong>Answer:</strong> OW bisects the obtuse angle into two 60° angles.</p>
+
+<hr>
+
+<h2>Problem 4 — Make 30° by bisecting 60°</h2>
+
+<p><strong>Question:</strong> Construct a 60° angle and then bisect it to get a 30° angle.</p>
+
+<p><strong>Steps to make 60°</strong></p>
+
+<ol>
+<li>Draw a ray OP (baseline). Mark a point Q on OP.</li><br>
+<li>With centre O and radius OQ draw an arc that meets OP at Q.</li><br>
+<li>With same radius and centre Q draw an arc that meets the arc from O at R.</li><br>
+<li>Join O to R — ∠QOR = 60°.</li><br>
+</ol>
+
+<p><strong>Steps to bisect 60°</strong></p>
+
+<ol start="5">
+<li>With centre O draw an arc that cuts OR at S and OQ at T.</li><br>
+<li>With same radius draw arc from S, and from T, their intersection is U.</li><br>
+<li>Join O to U. ∠QOU = 30°.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+     R
+    /
+   /
+  O---Q----------
+   \
+    \
+     U
+</pre>
+
+<p><strong>Check:</strong> Measure ∠QOU — it should be 30°.</p>
+<p><strong>Answer:</strong> Constructed 60° then bisected to get 30°.</p>
+
+<hr>
+
+<h2>Problem 5 — Bisect an angle in a triangle (bisector from vertex A)</h2>
+
+<p><strong>Question:</strong> In triangle ABC, construct the bisector of angle A and let it meet BC at D.</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>At vertex A, put the compass and draw an arc cutting AB at E and AC at F.</li><br>
+<li>With the same compass width draw an arc from E inside the triangle.</li><br>
+<li>With the same width draw an arc from F so the arcs meet at G.</li><br>
+<li>Join A to G; this line meets BC at D. AD is the angle bisector of ∠A.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+    C
+   / \
+  /   \
+ A-----\
+ | \    \
+ |  \    \
+ E   G    F
+ |    \   |
+ B-----D-- 
+</pre>
+
+<p><strong>Check:</strong> Measure ∠BAD and ∠DAC; they should be equal. Also AD meets BC at D.</p>
+<p><strong>Answer:</strong> AD bisects ∠A and meets BC at D.</p>
+
+<hr>
+
+<h2>Problem 6 — Construct three angle bisectors of a triangle (find the in-center)</h2>
+
+<p><strong>Question:</strong> For triangle PQR, construct the bisectors of ∠P, ∠Q and ∠R. Show that the three bisectors meet at one point (the in-center).</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>Bisect ∠P using the standard arc method to get ray p.</li><br>
+<li>Bisect ∠Q to get ray q.</li><br>
+<li>The intersection of rays p and q is point I.</li><br>
+<li>(Optional) Bisect ∠R — its bisector should also pass through I.</li><br>
+<li>Point I is the in-center (the point where all three internal bisectors meet).</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+     R
+    / \
+   /   \
+  /     \
+ P---I---Q
+</pre>
+
+<p><strong>Check:</strong> After constructing I, draw the bisector of R; it should pass through I. You can also draw a small circle centred at I that touches each side (this is the incircle) — check by measuring distance from I to each side (equal).</p>
+<p><strong>Answer:</strong> The three internal bisectors meet at I (the in-center).</p>
+
+<hr>
+
+<h2>Problem 7 — Construct 15° by repeated bisection</h2>
+
+<p><strong>Question:</strong> Construct a 15° angle (use only ruler and compass).</p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+<li>First construct a 60° angle (use the equilateral/arc method as in Problem 4).</li><br>
+<li>Bisect 60° to get 30° (use the angle bisection steps).</li><br>
+<li>Bisect the 30° angle: draw arcs from the points where the 30° arc cuts its sides, find intersection and join to the vertex — the new ray makes 15° with the baseline.</li><br>
+</ol>
+
+<p><strong>Diagram</strong></p>
+<pre>
+    (top)
+     R
+    /
+   /
+  O---Q---------
+   \
+    \
+     U  (gives 15°)
+</pre>
+
+<p><strong>Check:</strong> Use a protractor to confirm the final angle is 15°. Or check by noting 60° → 30° → 15° by successive halving.</p>
+<p><strong>Answer:</strong> Final ray gives angle of 15° with the base.</p>
+
+
+
+
+        
+       
+
+
+        
+
+
+      
+          
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/third-term/math/j2/1.html" class="iam">
+                <br>
+                <li >ANGLES </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/2.html" class="iam">
+
+                <li > BEARING      </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/3.html" class="iam">
+
+                <li > CONSTRUCTION  </li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/4.html" class="iam">
+
+                <li > BISECTING ANGLES </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/5.html" class="iam">
+                <li >DATA PRESENTATION</li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/6.html" class="iam">
+
+                <li > PROBABILITY </li>
+            </a>
+            <br>
+            </a>
+            
+            
+            
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

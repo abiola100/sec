@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>FACTORIZATION OF ALGEBRAIC EXPRESSIONS - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+        <a href="../../../../terms/second-term/math-second/second-term-js3-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color: purple;color: white;"><b>FACTORIZATION OF ALGEBRAIC EXPRESSIONS </b></div>
+        <h1></h1>
+
+        <h2>DEFINITION</h2>
+        <p>Factorization is the process of breaking an algebraic expression into smaller parts called factors. When you multiply these factors together, you get will the original expression again.</p>
+        <p>Think of it like breaking a chocolate bar into small pieces. Each piece is a factor, and when you put them together, you will get the full chocolate bar again.</p>
+
+        <br><br>
+        <div class="title" style="background-color: seagreen;color: white;"><b>WHY FACTORIZATION IS IMPORTANT</b></div>
+        <ol>
+        <li>It helps us  to simplify expressions.</li><br>
+        <li>It makes solving equations easier.</li><br>
+        <li>It helps us to understand patterns in numbers and letters.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>TYPES OF FACTORIZATION</b></div>
+
+        <h3>1. FACTORING OUT THE GREATEST COMMON FACTOR (GCF)</h3>
+        <p>The GCF is the biggest number and/or letter that is common in all terms.</p>
+        <p><strong>Example 1: Factorize 12x + 8</strong></p>
+        <p><em>Step by step:</em></p>
+        <ol>
+        <li>Find GCF of numbers 12 and 8 → GCF = 4</li><br>
+        <li>Check letters: x is in the first term only, so only number 4 is common.</li><br>
+        <li>Write each term as 4 × something: 12x = 4 × 3x, 8 = 4 × 2</li><br>
+        <li>Factor out 4: 12x + 8 = 4(3x + 2)</li><br>
+        <li>Answer: 4(3x + 2)</li><br>
+        <li>Explanation: 4 is the common factor, and inside the bracket is what is left after dividing each term by 4.</li><br>
+        </ol>
+
+        <h3>2. FACTORING OUT A COMMON VARIABLE</h3>
+        <p>Sometimes letters are common too.</p>
+        <p><strong>Example 2: Factorize 6ab + 9a</strong></p>
+        <ol>
+        <li>GCF of numbers 6 and 9 = 3</li><br>
+        <li>Common letters: a is in both terms. So GCF = 3a</li><br>
+        <li>Write each term: 6ab = 3a × 2b, 9a = 3a × 3</li><br>
+        <li>Factor out 3a: 6ab + 9a = 3a(2b + 3)</li><br>
+        <li>Answer: 3a(2b + 3)</li><br>
+        </ol>
+
+        <h3>3. FACTORING BY GROUPING</h3>
+        <p>Group terms in pairs or sets that have something in common.</p>
+        <p><strong>Example 3: Factorize ax + ay + bx + by</strong></p>
+        <ol>
+        <li>Group terms: (ax + ay) + (bx + by)</li><br>
+        <li>Factor each group: ax + ay = a(x + y), bx + by = b(x + y)</li><br>
+        <li>Factor out the common bracket (x + y): ax + ay + bx + by = (a + b)(x + y)</li><br>
+        <li>Answer: (a + b)(x + y)</li><br>
+        </ol>
+
+        <h3>4. FACTORING SIMPLE QUADRATICS</h3>
+        <p>Quadratic expressions are like x² + 5x + 6. We look for two numbers that multiply to the last number (constant) and add to the middle number (coefficient of x).</p>
+        <p><strong>Example 4: Factorize x² + 5x + 6</strong></p>
+        <ol>
+        <li>Find two numbers that multiply to 6 and add to 5 → numbers = 2 and 3</li><br>
+        <li>Split middle term: x² + 2x + 3x + 6</li><br>
+        <li>Group terms: (x² + 2x) + (3x + 6)</li><br>
+        <li>Factor each group: x(x + 2) + 3(x + 2)</li><br>
+        <li>Factor out common bracket (x + 2) → (x + 2)(x + 3)</li><br>
+        <li>Answer: (x + 2)(x + 3)</li><br>
+        </ol>
+
+        <h3>5. DIFFERENCE OF SQUARES</h3>
+        <p>Formula: A² − B² = (A − B)(A + B)</p>
+        <p><strong>Example 5: Factorize 9y² − 16</strong></p>
+        <ol>
+        <li>Recognize squares: 9y² = (3y)², 16 = 4²</li><br>
+        <li>Apply formula: (3y − 4)(3y + 4)</li><br>
+        <li>Answer: (3y − 4)(3y + 4)</li><br>
+        </ol>
+
+        <h3>6. FACTORING TRINOMIALS WITH LEADING COEFFICIENT NOT 1</h3>
+        <p><strong>Example 6: Factorize 6x² + 11x + 3</strong></p>
+        <ol>
+        <li>Multiply first and last numbers: 6 × 3 = 18</li><br>
+        <li>Find two numbers that multiply to 18 and add to 11 → 9 and 2</li><br>
+        <li>Split middle term: 6x² + 9x + 2x + 3</li><br>
+        <li>Group terms: (6x² + 9x) + (2x + 3)</li><br>
+        <li>Factor each group: 3x(2x + 3) + 1(2x + 3)</li><br>
+        <li>Factor out common bracket (2x + 3) → (2x + 3)(3x + 1)</li><br>
+        <li>Answer: (2x + 3)(3x + 1)</li><br>
+        </ol>
+
+        <h3>7. FACTORING PERFECT SQUARE TRINOMIALS</h3>
+        <p>Formula: A² + 2AB + B² = (A + B)²</p>
+        <p><strong>Example: Factorize x² + 6x + 9</strong></p>
+        <ol>
+        <li>Recognize pattern: x² = x², 9 = 3², 6x = 2×x×3</li><br>
+        <li>Apply formula: (x + 3)²</li><br>
+        <li>Answer: (x + 3)²</li><br>
+        </ol>
+
+        <h2>SHORT REVIEW </h2>
+        <ul>
+        <li>Addition & subtraction → combine like terms first</li><br>
+        <li>Multiplication → multiply numbers and add powers of letters</li><br>
+        <li>Division → divide numbers and subtract powers of letters</li><br>
+        <li>Factorization → break into smaller pieces (factors) that can multiply back to the original expression</li><br>
+        </ul><br><br>
+
+        <hr>
+        <br><br>
+
+
+        <div class="title" style="background-color: darkcyan;color: white;"><b>FACTORIZATION OF EXPRESSIONS</b></div>
+
+        <h3>1. FACTORIZATION OF EXPRESSIONS OF THE FORM <em>ax + ay</em></h3>
+
+        <h4>Definition</h4>
+        <p>Factorization means taking out a common factor from all the terms in an expression so that you can write it as multiplication.</p>
+
+        <h4>Rule</h4>
+        <p><code>ax + ay = a(x + y)</code></p>
+
+        <h4>Explanation</h4>
+        <p>If two terms share the same letter (or number), you can “take it out” and write the remaining parts in a bracket.</p>
+
+        <h4> Exam-Style Questions </h4>
+
+        <h5>Example 1</h5>
+        <p><strong>Factorize:</strong> 6x + 9x</p>
+        <p><strong>Solution (step by step):</strong></p>
+        <ol>
+            <li>Identify common factor of numbers: 6 and 9 → 3.</li><br>
+            <li>Factor out 3: 6x = 3(2x), 9x = 3(3x).</li><br>
+            <li>Combine: 3(2x + 3x) = 3(5x) = 15x.</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 15x</p>
+
+        <h5>Example 2</h5>
+        <p><strong>Factorize:</strong> 8a + 12b</p>
+        <ol>
+            <li>Common number: 4.</li><br>
+            <li>8a = 4(2a), 12b = 4(3b).</li><br>
+            <li>Combine: 4(2a + 3b).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 4(2a + 3b)</p>
+
+        <h5>Example 3</h5>
+        <p><strong>Factorize:</strong> 7x + 14y</p>
+        <ol>
+            <li>Common number: 7.</li><br>
+            <li>7x = 7(x), 14y = 7(2y).</li><br>
+            <li>Combine: 7(x + 2y).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 7(x + 2y)</p>
+
+        <h5>Example 4</h5>
+        <p><strong>Factorize:</strong> 15m + 10n</p>
+        <ol>
+            <li>Common number: 5.</li><br>
+            <li>15m = 5(3m), 10n = 5(2n).</li><br>
+            <li>Combine: 5(3m + 2n).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 5(3m + 2n)</p>
+
+        <h5>Example 5</h5>
+        <p><strong>Factorize:</strong> 12p + 18q</p>
+        <ol>
+            <li>Common number: 6.</li><br>
+            <li>12p = 6(2p), 18q = 6(3q).</li><br>
+            <li>Combine: 6(2p + 3q).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 6(2p + 3q)</p>
+
+        <h5>Example 6</h5>
+        <p><strong>Factorize:</strong> 20x + 30y</p>
+        <ol>
+            <li>Common number: 10.</li><br>
+            <li>20x = 10(2x), 30y = 10(3y).</li><br>
+            <li>Combine: 10(2x + 3y).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 10(2x + 3y)</p>
+
+        <h5>Example 7</h5>
+        <p><strong>Factorize:</strong> 14a + 21b</p>
+        <ol>
+            <li>Common number: 7.</li><br>
+            <li>14a = 7(2a), 21b = 7(3b).</li><br>
+            <li>Combine: 7(2a + 3b).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 7(2a + 3b)</p>
+
+        <h5>Example 8</h5>
+        <p><strong>Factorize:</strong> 9x + 12y</p>
+        <ol>
+            <li>Common number: 3.</li><br>
+            <li>9x = 3(3x), 12y = 3(4y).</li><br>
+            <li>Combine: 3(3x + 4y).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 3(3x + 4y)</p>
+
+        <h5>Example 9</h5>
+        <p><strong>Factorize:</strong> 25m + 35n</p>
+        <ol>
+            <li>Common number: 5.</li><br>
+            <li>25m = 5(5m), 35n = 5(7n).</li><br>
+            <li>Combine: 5(5m + 7n).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 5(5m + 7n)</p>
+
+        <h5>Example 10</h5>
+        <p><strong>Factorize:</strong> 18p + 24q</p>
+        <ol>
+            <li>Common number: 6.</li><br>
+            <li>18p = 6(3p), 24q = 6(4q).</li><br>
+            <li>Combine: 6(3p + 4q).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> 6(3p + 4q)</p>
+
+        <hr />
+
+        <h3>2. FACTORIZATION OF EXPRESSIONS OF THE FORM <em>3m + pq + 3p + mp</em></h3>
+
+        <h4>Definition</h4>
+        <p>Here we group terms cleverly to find common factors. This method is called <strong>factorization by grouping</strong>.</p>
+
+        <h4>Rule</h4>
+        <p>Group terms in pairs so that each pair has a common factor, then factor out the common factors and combine.</p>
+
+        <h4>Example (illustration)</h4>
+        <p><strong>Expression:</strong> 3m + pq + 3p + mp</p>
+        <p><strong>Step 1:</strong> Group terms: (3m + 3p) + (pq + mp)</p>
+        <p><strong>Step 2:</strong> Factor each group:<br>
+            3m + 3p = 3(m + p)<br>
+            pq + mp = p(q + m) = p(m + q)
+        </p>
+        <p><strong>Note:</strong> The bracket orders must match to factor further. If they do not match you may try another grouping such as (3m + mp) + (3p + pq):</p>
+        <p>3m + mp = m(3 + p)<br>
+            3p + pq = p(3 + q)</p>
+        <p>Sometimes rearrangement helps; other times expression stops there.</p>
+
+        <h4>Exam-Style Questions </h4>
+
+        <ol>
+            <li>Factorize: 3m + 3p + m + p → (3m + m) + (3p + p) = 4m + 4p = 4(m + p)</li><br>
+            <li>Factorize: 5a + 5b + 2a + 2b → (5a + 2a) + (5b + 2b) = 7a + 7b = 7(a + b)</li><br>
+            <li>Factorize: 6x + 9y + 2x + 3y → (6x + 2x) + (9y + 3y) = 8x + 12y = 4(2x + 3y)</li><br>
+            <li>Factorize: 2m + 2n + 3m + 3n → (2m + 3m) + (2n + 3n) = 5m + 5n = 5(m + n)</li><br>
+            <li>Factorize: 7p + 3q + 14p + 6q → (7p + 14p) + (3q + 6q) = 21p + 9q = 3(7p + 3q)</li><br>
+            <li>Factorize: 4x + 2y + 8x + 6y → (4x + 8x) + (2y + 6y) = 12x + 8y = 4(3x + 2y)</li><br>
+            <li>Factorize: 5a + 10b + 15a + 20b → (5a + 15a) + (10b + 20b) = 20a + 30b = 10(2a + 3b)</li><br>
+            <li>Factorize: 3m + 9n + 6m + 12n → (3m + 6m) + (9n + 12n) = 9m + 21n = 3(3m + 7n)</li><br>
+            <li>Factorize: 8x + 4y + 12x + 6y → (8x + 12x) + (4y + 6y) = 20x + 10y = 10(2x + y)</li><br>
+            <li>Factorize: 6p + 9q + 12p + 18q → (6p + 12p) + (9q + 18q) = 18p + 27q = 9(2p + 3q)</li><br>
+        </ol>
+
+        <hr />
+
+        <h3>3. FACTORIZATION OF EXPRESSIONS OF THE FORM <em>a − b<sup>2</sup></em> (Difference of Squares)</h3>
+
+        <h4>Definition</h4>
+        <p>This is called <strong>difference of squares</strong>. It happens when you have one square number minus another square number.</p>
+
+        <h4>Rule</h4>
+        <p><code>A<sup>2</sup> − B<sup>2</sup> = (A − B)(A + B)</code></p>
+
+        <h4>Example</h4>
+        <p><strong>Factorize:</strong> x<sup>2</sup> − 9</p>
+        <ol>
+            <li>Recognize squares: x<sup>2</sup> = x × x, 9 = 3 × 3.</li><br>
+            <li>Apply formula: x<sup>2</sup> − 3<sup>2</sup> = (x − 3)(x + 3).</li><br>
+        </ol>
+        <p><strong>Final answer:</strong> (x − 3)(x + 3)</p>
+
+        <h4> Examples</h4>
+        <ol>
+            <li>x<sup>2</sup> − 16 = (x − 4)(x + 4)</li><br>
+            <li>9y<sup>2</sup> − 25 = (3y − 5)(3y + 5)</li><br>
+            <li>4a<sup>2</sup> − 49 = (2a − 7)(2a + 7)</li><br>
+            <li>36m<sup>2</sup> − 64 = (6m − 8)(6m + 8)</li><br>
+            <li>x<sup>2</sup> − 1 = (x − 1)(x + 1)</li><br>
+            <li>25p<sup>2</sup> − 9q<sup>2</sup> = (5p − 3q)(5p + 3q)</li><br>
+            <li>49x<sup>2</sup> − 64y<sup>2</sup> = (7x − 8y)(7x + 8y)</li><br>
+            <li>100a<sup>2</sup> − 121b<sup>2</sup> = (10a − 11b)(10a + 11b)</li><br>
+            <li>81x<sup>2</sup> − 36 = (9x − 6)(9x + 6)</li><br>
+            <li>4m<sup>2</sup> − 49n<sup>2</sup> = (2m − 7n)(2m + 7n)</li><br>
+            <li>x<sup>2</sup> − 36 = (x − 6)(x + 6)</li><br>
+            <li>16y<sup>2</sup> − 1 = (4y − 1)(4y + 1)</li><br>
+            <li>25x<sup>2</sup> − 64 = (5x − 8)(5x + 8)</li><br>
+            <li>49a<sup>2</sup> − 1 = (7a − 1)(7a + 1)</li><br>
+            <li>9p<sup>2</sup> − 4q<sup>2</sup> = (3p − 2q)(3p + 2q)</li><br>
+            <li>36x<sup>2</sup> − 81 = (6x − 9)(6x + 9)</li><br>
+            <li>64y<sup>2</sup> − 49 = (8y − 7)(8y + 7)</li><br>
+            <li>121a<sup>2</sup> − 4b<sup>2</sup> = (11a − 2b)(11a + 2b)</li><br>
+            <li>100x<sup>2</sup> − 25y<sup>2</sup> = (10x − 5y)(10x + 5y)</li><br>
+            <li>9m<sup>2</sup> − 1 = (3m − 1)(3m + 1)</li><br>
+        </ol>
+
+        
+        <ul>
+            <li>Always look for squares.</li><br>
+            <li>Apply <code>A<sup>2</sup> − B<sup>2</sup> = (A − B)(A + B)</code>.</li><br>
+            <li>Keep it short and clean; the exam likes direct answers.</li><br>
+        </ul>
+
+        <hr />
+
+        <h3>4. FACTORIZATION OF EXPRESSIONS OF THE FORM <em>a<sup>2</sup> − ab + b</em></h3>
+
+        <h4>Definition</h4>
+        <p>This is a trinomial with three terms. We first look for common factors, then try grouping or the split-middle-term method where applicable.</p>
+
+        <h4>Explanation</h4>
+        <p>Sometimes <code>a<sup>2</sup> − ab + b</code> can be partially factored (take out common parts). In many JSSCE examples the trinomial is chosen so splitting the middle term works (e.g. when the constant is simple).</p>
+
+        <h4>Short Example (illustration)</h4>
+        <p><strong>Expression:</strong> x<sup>2</sup> − xy + y</p>
+        <ol>
+            <li>Group the first two terms: (x<sup>2</sup> − xy) + y</li><br>
+            <li>Factor the first group: x(x − y)</li><br>
+            <li>The second term y has no (x − y) factor, so expression stays as: x(x − y) + y</li><br>
+        </ol>
+        <p>This is a partial factor form: <code>x(x − y) + y</code>. Unless the expression has a nicer pattern, we stop here.</p>
+
+        <h4>Practice Questions  Examples </h4>
+        <ol>
+            <li>x<sup>2</sup> − 5x + 6 = (x − 2)(x − 3)</li><br>
+            <li>x<sup>2</sup> − 7x + 12 = (x − 3)(x − 4)</li><br>
+            <li>x<sup>2</sup> − 8x + 15 = (x − 3)(x − 5)</li><br>
+            <li>x<sup>2</sup> − 6x + 8 = (x − 2)(x − 4)</li><br>
+            <li>x<sup>2</sup> − 9x + 20 = (x − 4)(x − 5)</li><br>
+            <li>x<sup>2</sup> − 11x + 24 = (x − 3)(x − 8)</li><br>
+            <li>x<sup>2</sup> − 10x + 21 = (x − 3)(x − 7)</li><br>
+            <li>x<sup>2</sup> − 12x + 35 = (x − 5)(x − 7)</li><br>
+            <li>x<sup>2</sup> − 13x + 40 = (x − 5)(x − 8)</li><br>
+            <li>x<sup>2</sup> − 14x + 45 = (x − 5)(x − 9)</li><br>
+            <li>x<sup>2</sup> − 15x + 56 = (x − 7)(x − 8)</li><br>
+            <li>x<sup>2</sup> − 16x + 60 = (x − 10)(x − 6)</li><br>
+            <li>x<sup>2</sup> − 17x + 72 = (x − 9)(x − 8)</li><br>
+            <li>x<sup>2</sup> − 18x + 77 = (x − 11)(x − 7)</li><br>
+            <li>x<sup>2</sup> − 19x + 90 = (x − 10)(x − 9)</li><br>
+            <li>x<sup>2</sup> − 20x + 96 = (x − 12)(x − 8)</li><br>
+            <li>x<sup>2</sup> − 21x + 110 = (x − 11)(x − 10)</li><br>
+            <li>x<sup>2</sup> − 22x + 120 = (x − 10)(x − 12)</li><br>
+            <li>x<sup>2</sup> − 23x + 132 = (x − 11)(x − 12)</li><br>
+            <li>x<sup>2</sup> − 24x + 135 = (x − 9)(x − 15)</li><br>
+        </ol>
+
+        <p><strong>Tips:</strong></p>
+        <ul>
+            <li>Look for two numbers that multiply to the last number (constant) and add/subtract to the middle coefficient.</li><br>
+            <li>Use splitting the middle term method and factor by grouping.</li><br>
+            <li>Write the final answer as two brackets.</li><br>
+        </ul>
+
+        <hr />
+        <h2>WORD PROBLEMS INVOLVING FACTORIZATION</h2>
+
+        <p><strong>Definition:</strong></p>
+
+        <p>Factorization means finding what is common in all the terms of an expression and writing it outside brackets. Think of it like sharing candies equally among friends: we see what each friend can get and put the rest in a group.</p>
+
+        <ol>
+        <li><strong>Amina has x² + 5x beads. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at each term: x² and 5x.</p>
+        <p><strong>Step 2:</strong> Ask: What is common in x² and 5x? → Both have x.</p>
+        <p><strong>Step 3:</strong> Take x outside the bracket.</p>
+        <p><strong>Step 4:</strong> Inside bracket, divide each term by x: x² ÷ x = x, 5x ÷ x = 5.</p>
+        <p><strong>Step 5:</strong> Write the final answer: x(x + 5)</p>
+
+        <li><strong>A farmer planted 6ab + 9a seeds. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at each term: 6ab and 9a.</p>
+        <p><strong>Step 2:</strong> Find common number: 6 and 9 → common factor = 3</p>
+        <p><strong>Step 3:</strong> Find common letters: both have a → take a too.</p>
+        <p><strong>Step 4:</strong> Take 3a outside bracket.</p>
+        <p><strong>Step 5:</strong> Inside bracket: 6ab ÷ 3a = 2b, 9a ÷ 3a = 3.</p>
+        <p><strong>Step 6:</strong> Final answer: 3a(2b + 3)</p>
+
+        <li><strong>A shop sold 3x + 3y items. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 3x and 3y.</p>
+        <p><strong>Step 2:</strong> Common number: 3. Both terms have no letters in common.</p>
+        <p><strong>Step 3:</strong> Take 3 outside.</p>
+        <p><strong>Step 4:</strong> Inside: 3x ÷ 3 = x, 3y ÷ 3 = y.</p>
+        <p><strong>Step 5:</strong> Answer: 3(x + y)</p>
+
+        <li><strong>A rectangle has length 2x + 4. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 2x and 4.</p>
+        <p><strong>Step 2:</strong> Common number = 2</p>
+        <p><strong>Step 3:</strong> Take 2 outside.</p>
+        <p><strong>Step 4:</strong> Inside: 2x ÷ 2 = x, 4 ÷ 2 = 2.</p>
+        <p><strong>Step 5:</strong> Answer: 2(x + 2)</p>
+
+        <li><strong>The sum of two numbers is written as x² + xy. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at x² and xy.</p>
+        <p><strong>Step 2:</strong> Common letter = x.</p>
+        <p><strong>Step 3:</strong> Take x outside.</p>
+        <p><strong>Step 4:</strong> Inside: x² ÷ x = x, xy ÷ x = y.</p>
+        <p><strong>Step 5:</strong> Answer: x(x + y)</p>
+
+        <li><strong>The total cost of pencils is written as 5m + 10n. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 5m and 10n.</p>
+        <p><strong>Step 2:</strong> Common number = 5.</p>
+        <p><strong>Step 3:</strong> Take 5 outside.</p>
+        <p><strong>Step 4:</strong> Inside: 5m ÷ 5 = m, 10n ÷ 5 = 2n.</p>
+        <p><strong>Step 5:</strong> Answer: 5(m + 2n)</p>
+
+        <li><strong>A gardener has 3x + 3y + 6 plants. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 3x, 3y, and 6.</p>
+        <p><strong>Step 2:</strong> Common number = 3.</p>
+        <p><strong>Step 3:</strong> Take 3 outside.</p>
+        <p><strong>Step 4:</strong> Inside: 3x ÷ 3 = x, 3y ÷ 3 = y, 6 ÷ 3 = 2.</p>
+        <p><strong>Step 5:</strong> Answer: 3(x + y + 2)</p>
+
+        <li><strong>A factory produced 4ab + 6ac items. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 4ab and 6ac.</p>
+        <p><strong>Step 2:</strong> Common number = 2.</p>
+        <p><strong>Step 3:</strong> Common letter = a.</p>
+        <p><strong>Step 4:</strong> Take 2a outside.</p>
+        <p><strong>Step 5:</strong> Inside: 4ab ÷ 2a = 2b, 6ac ÷ 2a = 3c.</p>
+        <p><strong>Step 6:</strong> Answer: 2a(2b + 3c)</p>
+
+        <li><strong>The sum of two expressions is written as x² + 3x. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at x² and 3x.</p>
+        <p><strong>Step 2:</strong> Common letter = x.</p>
+        <p><strong>Step 3:</strong> Take x outside.</p>
+        <p><strong>Step 4:</strong> Inside: x² ÷ x = x, 3x ÷ x = 3.</p>
+        <p><strong>Step 5:</strong> Answer: x(x + 3)</p>
+
+        <li><strong>A car rental company charges 6x + 9. Factorize.</strong></li><br>
+        <p><strong>Step 1:</strong> Look at 6x and 9.</p>
+        <p><strong>Step 2:</strong> Common number = 3.</p>
+        <p><strong>Step 3:</strong> Take 3 outside.</p>
+        <p><strong>Step 4:</strong> Inside: 6x ÷ 3 = 2x, 9 ÷ 3 = 3.</p>
+        <p><strong>Step 5:</strong> Answer: 3(2x + 3)</p>
+        </ol>
+
+
+                    
+        
+
+
+       
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j3/1.html" class="iam">
+                <br>
+                <li > ALGEBRAIC OPERATIONS</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j3/2.html" class="iam">
+
+                <li >FACTORIZATION    </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j1/3.html" class="iam">
+
+                <li > SIMPLE EQUATIONS INVOLVING FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/4.html" class="iam">
+
+                <li >SIMULTANEOUS LINEAR EQUATIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/5.html" class="iam">
+                
+                <li > SIMILAR SHAPES   </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j3/6.html" class="iam">
+                <br>
+                <li > TRIGONOMETRY  </li>
+            </a>
+             <br>
+
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

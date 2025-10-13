@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/math-third/third-term-js2-math.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+    const quizData = [
+        // ADDITIONAL 10 CHALLENGING QUESTIONS
+        { question: "The sum of exterior angles of any polygon is always:", a: "540°", b: "180°", c:  "360°", correct: "c" },
+        { question: "If the angle of elevation of a balloon is 45°, the balloon is at equal height to the observer’s distance from it. True or False?", a: "True", b: "False", c: "Cannot tell", correct: "a" },
+        { question: "A triangle has sides 5 cm, 5 cm, 8 cm. What type of triangle is it?", a: "Scalene" , b: "Isosceles", c: "Equilateral", correct: "b" },
+        { question: "Bisecting a 120° angle gives two angles of:", a: "60°", b: "90°", c: "45°", correct: "a" },
+        { question: "A bearing of 225° is in which quadrant?", a:  "SE", b: "SW", c: "NE", correct: "b" },
+        { question: "If the frequency of number 4 in a data set is 7, it means:", a: "4 occurs 7 times", b: "4 is 7th largest", c: "4 occurs once", correct: "a" },
+        { question: "In a pie chart, a sector of 72° represents what fraction of the whole?", a: "1/5", b: "1/4", c: "1/6", correct: "a" },
+        { question: "The probability of drawing a face card (J, Q, K) from a deck of 52 cards is:", a: "1/4", b: "1/13", c:  "3/13", correct: "c" },
+        { question: "A histogram with unequal class widths should:", a: "Use frequency density", b: "Use frequency only", c: "Not be drawn", correct: "a" },
+        { question: "The sum of angles in a regular octagon is:", a:  "1260°" , b: "900°", c:"1080°", correct: "c" },
+
+        // ANGLES – sum, elevation, depression, bearing
+        { question: "The sum of interior angles of a pentagon is:", a: "540°", b: "360°", c: "720°", correct: "a" },
+        { question: "The sum of interior angles of a decagon is:", a: "1440°", b: "1260°", c: "1080°", correct: "c" },
+        { question: "Angle of elevation is measured from:", a: "Horizontal upwards", b: "Vertical downwards", c: "Horizontal downwards", correct: "a" },
+        { question: "Angle of depression is measured from:", a: "Horizontal downwards", b: "Horizontal upwards", c: "Vertical upwards", correct: "c" },
+        { question: "A bearing is always measured from:", a: "North clockwise", b: "East clockwise", c: "South clockwise", correct: "a" },
+        { question: "If a ship is on a bearing of 045° from a lighthouse, the angle is measured:", a: "Clockwise from north", b: "Anti-clockwise from north", c: "From east", correct: "a" },
+        { question: "The minor cardinal points are:", a: "NE, SE, SW, NW", b: "N, S, E, W", c: "N, NW, S, SE", correct: "a" },
+        { question: "The major cardinal points are:", a: "NE, SE, SW, NW" , b:  "N, S, E, W", c: "N, NW, S, SE", correct: "b" },
+        { question: "Vertically opposite angles are equal when:", a: "Two lines intersect", b: "Two lines are parallel", c: "A triangle is formed", correct: "a" },
+        { question: "Corresponding angles are equal when:", a:  "Two lines intersect", b: "A transversal cuts parallel lines", c: "Two lines are perpendicular", correct: "b" },
+
+        // CONSTRUCTION – triangles, bisecting angles
+        { question: "To construct a perpendicular bisector of a line segment you use:", a: "Compass and ruler", b: "Protractor only", c: "Set square only", correct: "a" },
+        { question: "To bisect an angle, you need:", a: "Ruler only", b: "Protractor only", c:  "Compass and ruler", correct: "b" },
+        { question: "An equilateral triangle has all angles equal to:", a: "60°", b: "90°", c: "45°", correct: "a" },
+        { question: "Constructing a 90° angle can be done by:", a: "Bisecting a straight angle", b: "Adding two acute angles", c: "Using a trapezium", correct: "a" },
+        { question: "A triangle with angles 50°, 60°, 70° is:", a: "Scalene", b: "Isosceles", c: "Equilateral", correct: "a" },
+        { question: "Bisecting a line divides it into:", a: "Four equal parts" , b: "Three parts", c: "Two equal parts", correct: "c" },
+        { question: "Which cannot be constructed with just a compass and ruler?", a: "Trapezium", b: "Equilateral triangle", c: "Perpendicular bisector", correct: "a" },
+        { question: "An angle greater than 180° but less than 360° is called:", a: "Obtuse angle", b:   "Reflex angle", c: "Acute angle", correct: "b" },
+        { question: "Adjacent angles share:", a: "A common arm and vertex", b: "Different arms", c: "No common point", correct: "a" },
+        { question: "The sum of angles on a straight line is:", a:"90°", b: "360°", c:   "180°", correct: "b" },
+
+        // DATA PRESENTATION – ordered data, frequency table, pie chart
+        { question: "Data arranged from smallest to largest is called:", a: "Ordered data", b: "Frequency table", c: "Unordered data", correct: "a" },
+        { question: "Frequency table shows:", a: "Number of times a value occurs", b: "Angles of a triangle", c: "Sum of sides", correct: "a" },
+        { question: "Pie charts show:", a: "Parts of a whole", b: "Changes over time", c: "Only total", correct: "a" },
+        { question: "Bar charts are best for:", a: "Comparing quantities", b: "Showing percentages", c: "Showing probabilities", correct: "a" },
+        { question: "Histogram differs from bar chart because:", a: "Bars touch each other", b: "Bars are separate", c: "Bars are circular", correct: "a" },
+        { question: "The mean of 5, 7, 9 is:", a: "7", b: "6", c: "8", correct: "a" },
+        { question: "The mode of 2, 3, 3, 4, 5 is:", a: "3", b: "2", c: "4", correct: "a" },
+        { question: "The median of 1, 3, 7 is:", a: "3", b: "1", c: "7", correct: "a" },
+        { question: "Range is calculated as:", a: "Largest - Smallest", b: "Sum ÷ Number", c: "Most frequent value", correct: "a" },
+        { question: "Tally marks are used to:", a: "Count frequency", b: "Measure length", c: "Draw angles", correct: "a" },
+
+        // CHARTS, RECORDS, SCHEDULES
+        { question: "A record is:", a: "Written or printed information kept for reference", b: "Graphical display of data", c: "A type of angle", correct: "a" },
+        { question: "A schedule shows:", a:"Probability outcomes"  , b: "Sum of data", c: "Planned activities with time", correct: "c" },
+        { question: "Charts are used to:", a: "Show relationships visually", b: "Record exact names only", c: "List angles only", correct: "a" },
+        { question: "A pie chart displays data as:", a: "Dots", b: "Bars", c:  "Sectors of a circle", correct: "c" },
+        { question: "A line graph shows:", a: "Change over time", b: "Percentage only", c: "Category comparison only", correct: "a" },
+        { question: "Bar charts are suitable for:", a: "Comparing quantities between categories", b: "Measuring angles", c: "Time tables", correct: "a" },
+        { question: "A school attendance register is an example of:", a: "Chart", b:  "Record", c: "Schedule", correct: "b" },
+        { question: "A class timetable is an example of:", a: "Schedule", b: "Record", c: "Pie chart", correct: "a" },
+        { question: "Charts, records and schedules help to:", a: "Organize and interpret data", b: "Construct angles", c: "Measure probability", correct: "a" },
+        { question: "All sectors of a pie chart add up to:", a:"100°"  , b: "180°", c: "360°", correct: "c" },
+
+        // PROBABILITY – everyday events, formulas
+        { question: "Probability of a certain event is:", a: "1", b: "0", c: "1/2", correct: "a" },
+        { question: "Probability of an impossible event is:", a: "1/2", b: "1", c:  "0", correct: "c" },
+        { question: "Probability lies between:", a: "0 and 1", b: "1 and 2", c: "-1 and 1", correct: "a" },
+        { question: "P(E) = Number of favourable outcomes ÷ Total outcomes: Formula for", a:"Mean"  , b: "Probability", c: "Median", correct: "b" },
+        { question: "If a coin is tossed, P(Head) is:", a: "1/3" , b: "1/2", c: "1/4", correct: "b" },
+        { question: "If a die is rolled, P(even number) is:", a: "1/2", b: "1/3", c: "1/4", correct: "a" },
+        { question: "Complementary event formula is:", a: "P(not E) = 1 − P(E)", b: "P(E) = 1 − P(E)", c: "P(E) = 1 + P(E)", correct: "a" },
+        { question: "Probability of picking a red ball from 5 red and 5 blue balls is:", a: "1/2", b: "1/5", c: "1/10", correct: "a" },
+        { question: "Probability of picking a fruit that is not apple from 3 apples, 2 oranges:", a: "1/2", b: "3/5", c:  "2/5", correct: "c" },
+        { question: "Drawing two balls without replacement: P(both red) from 3 red, 2 blue:", a: "3/10", b: "3/5", c: "1/2", correct: "a" },
+
+        // NEW QUESTIONS TO COMPLETE 70
+        { question: "Probability of picking a black ball from 4 black and 6 white balls:", a: "2/5", b: "3/5", c: "4/5", correct: "b" },
+        { question: "Probability of getting a head on first toss of coin:", a: "1/2", b: "1/3", c: "1/4", correct: "a" },
+        { question: "Probability of rolling a 3 on a die:", a: "1/6", b: "1/3", c: "1/2", correct: "a" },
+        { question: "Probability of rolling a number greater than 4:", a: "1/3", b: "1/2", c: "2/3", correct: "c" },
+        { question: "Probability of getting an even number or 3 on a die:", a: "1/2", b: "2/3", c: "5/6", correct: "b" },
+        { question: "Probability of at least one head in 2 coin tosses:", a: "3/4", b: "1/2", c: "1/4", correct: "a" },
+        { question: "Probability of drawing a white ball if 2 white and 3 black balls:", a: "2/5", b: "3/5", c: "1/2", correct: "a" },
+        { question: "Probability of drawing an ace from a deck of cards:", a: "1/13", b: "1/12", c: "1/14", correct: "a" },
+        { question: "Probability of picking a vowel from letters A, B, C, E, I:", a: "1/5" , b: "2/5", c: "3/5", correct: "c" },
+        { question: "Probability of not rolling a 6 on a die:", a: "5/6", b: "1/6", c: "1/2", correct: "a" }
+   ];
+
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;"> Right 👀✅!! well done</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">Wrong 👁️❌- do better</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

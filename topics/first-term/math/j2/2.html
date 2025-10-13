@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>prime factor - mathematics -jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+    <style>
+    h1,h2,h3 { color:#0b5a3a; }
+    pre { background:#f9f9f9; padding:10px; border:1px solid #e6e6e6; border-radius:6px; overflow:auto; }
+    table { border-collapse:collapse; width:100%; margin:10px 0 20px 0; }
+    th,td { border:1px solid #ccc; padding:8px; text-align:left; }
+    .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+    .note { font-size:0.95rem; color:#333; }
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/first-term/math-first/first-term-js2-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1"> 
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color:purple;color: white;"><b>PRIME FACTORS</b></div>
+        <h3>Meaning of Prime Numbers</h3>
+        <p>Prime numbers are numbers that have only two factors — 1 and itself.</p>
+        <p>In other words, a prime number can only be divided exactly by 1 and by itself.</p>
+        <p><strong>Examples of prime numbers:</strong> 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, etc.</p>
+
+        <h4>Note:</h4>
+        <ol>
+        <li>1 is not a prime number because it has only one factor (1).</li><br>
+        <li>2 is the smallest and the only even prime number.</li><br>
+        </ol>
+
+        <p>A <b>prime number</b> is a whole number greater than 1 that has exactly two factors: 1 and itself.</p>
+        <p>It cannot be divided evenly by any other whole number except 1 and itself.</p>
+        
+
+        <h3>Meaning of Composite Number</h3>
+        <p>A <b>composite number</b> is a whole number greater than 1 that has more than two factors.</p>
+        <p>That means besides 1 and itself, there are other whole numbers that divide it exactly.</p>
+        <p><strong>Examples:</strong> 4, 6, 8, 9, 10, 12, 14, 15, …</p>
+
+        <h3>Definition: Prime Factor</h3>
+        <p>A <b>prime factor</b> of a number is a factor (i.e. a divisor) of that number which is also a prime number.</p>
+        <p>Prime factors are prime numbers that multiply together to give the original number.</p>
+
+      
+        
+
+        
+
+       
+
+       
+      
+
+        <h2> PRIME FACTORISATION</h2>
+
+        
+
+
+        <h3>Meaning of Prime Factor</h3>
+        <p>A prime factor is a factor of a number that is also a prime number.</p>
+
+        <p><strong>For example:</strong><br>
+        The factors of 12 are 1, 2, 3, 4, 6, and 12.<br>
+        The prime factors among them are 2 and 3 because they are prime numbers.<br>
+        So, the prime factors of 12 are 2 and 3.</p>
+
+        <h3>Meaning of Prime Factorisation</h3>
+        <p>Prime factorisation means expressing a number as the product of its prime factors.<br>
+        In other words, we break the number down until we get only prime numbers.</p>
+
+        <p>There are two common methods used for finding prime factors:</p>
+        <ol>
+        <li>Division Method</li><br>
+        <li>Factor Tree Method</li><br>
+        </ol>
+        <h3>How to Find the Prime Factors of a Number (Step by Step)</h3>
+        <ol>
+        <li>Start with the given number (which is a composite number, not prime).</li><br>
+        <li>Begin dividing by the smallest prime number possible (usually 2).</li><br>
+        <li>If the number divides evenly (no remainder), record that prime factor and divide the number by it.</li><br>
+        <li>Repeat with the result: keep dividing by prime numbers (2, 3, 5, 7, 11, ...) until the remaining quotient is itself a prime number.</li><br>
+        <li>All the prime numbers used in the divisions (including the final prime quotient) are the prime factors of the original number.</li><br>
+        <li>(Optional) Write the prime factors in index form if some prime repeats.</li><br>
+        </ol>
+
+        <h3>1. Division Method (Step-by-Step)</h3>
+        <p>In this method, we divide the number by prime numbers starting from 2, 3, 5, 7, etc., until we reach 1.</p>
+
+        <h4>Example 1: Find the prime factors of 20</h4>
+        <p>Step 1 → Divide by 2 (since 20 is even): 20 ÷ 2 = 10</p>
+        <p>Step 2 → Divide again by 2: 10 ÷ 2 = 5</p>
+        <p>Step 3 → 5 is a prime number, divide by 5: 5 ÷ 5 = 1</p>
+        <p>Now write it as a product of prime numbers:<br>
+        20 = 2 × 2 × 5 = 2² × 5</p>
+
+        <h4>Example 2: Find the prime factors of 36</h4>
+        <p>36 ÷ 2 = 18<br>
+        18 ÷ 2 = 9<br>
+        9 ÷ 3 = 3<br>
+        3 ÷ 3 = 1</p>
+        <p>Now, 36 = 2 × 2 × 3 × 3 = 2² × 3²</p>
+
+        <h4>Example 3: Find the prime factors of 48</h4>
+        <p>48 ÷ 2 = 24<br>
+        24 ÷ 2 = 12<br>
+        12 ÷ 2 = 6<br>
+        6 ÷ 2 = 3<br>
+        3 ÷ 3 = 1</p>
+        <p>So, 48 = 2 × 2 × 2 × 2 × 3 = 2⁴ × 3</p>
+
+        <h4>Example 4: Find the prime factors of 90</h4>
+        <p>90 ÷ 2 = 45<br>
+        45 ÷ 3 = 15<br>
+        15 ÷ 3 = 5<br>
+        5 ÷ 5 = 1</p>
+        <p>So, 90 = 2 × 3 × 3 × 5 = 2 × 3² × 5</p>
+
+        <h4>Example 5: Find the prime factors of 120</h4>
+        <p>120 ÷ 2 = 60<br>
+        60 ÷ 2 = 30<br>
+        30 ÷ 2 = 15<br>
+        15 ÷ 3 = 5<br>
+        5 ÷ 5 = 1</p>
+        <p>So, 120 = 2 × 2 × 2 × 3 × 5 = 2³ × 3 × 5</p>
+
+        <h3>2. Factor Tree Method</h3>
+        <p>In this method, we keep splitting the number into two factors until all branches end in prime numbers.</p>
+
+        <h4>Example 6: Find the prime factors of 60 using a factor tree</h4>
+        <p>Start:<br>
+        60 → 6 × 10<br>
+        6 → 2 × 3<br>
+        10 → 2 × 5</p>
+        <p>Now collect all prime factors:<br>
+        60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</p>
+
+        <h4>Example 7: Find the prime factors of 84 using a factor tree</h4>
+        <p>84 → 12 × 7<br>
+        12 → 2 × 6<br>
+        6 → 2 × 3</p>
+        <p>Now collect all prime numbers:<br>
+        84 = 2 × 2 × 3 × 7 = 2² × 3 × 7</p>
+
+        <h3>How to Check if Your Answer Is Correct</h3>
+        <p>To check, multiply the prime factors together.<br>
+        If you get back the original number, the factorisation is correct.</p>
+
+        <p><strong>Example:</strong><br>
+        For 84 = 2² × 3 × 7<br>
+        = 4 × 3 × 7 = 12 × 7 = 84</p>
+
+        <h3>Importance of Prime Factorisation</h3>
+        <p>Prime factorisation helps us to:</p>
+        <ol>
+        <li>Find the Highest Common Factor (HCF) of two or more numbers.</li><br>
+        <li>Find the Lowest Common Multiple (LCM) of numbers.</li><br>
+        <li>Simplify fractions.</li><br>
+        <li>Solve problems in ratio and proportion.</li><br>
+        <li>Understand the structure of numbers in mathematics.</li><br>
+        </ol>
+         <h3>Properties and Uses</h3>
+        <ol>
+        <li>Every composite number has a unique prime factorisation (except for the order of the primes) — this is called the <strong>Fundamental Theorem of Arithmetic</strong>.</li><br>
+        <li>Prime factorisation is very useful for finding:</li><br>
+        <ol>
+            <li>Highest Common Factor (HCF) of two or more numbers</li><br>
+            <li>Lowest Common Multiple (LCM) of two or more numbers</li><br>
+            <li>Simplifying fractions</li><br>
+            <li>Checking divisibility more easily</li><br>
+        </ol>
+        </ol>
+
+        <h3>Common Misconceptions</h3>
+        <ol>
+        <li>Some students think 1 is prime — 1 is not prime, because it has only one factor (1 itself).</li><br>
+        <li>Forgetting to go all the way until the quotient is prime.</li><br>
+        <li>Missing repeated prime factors (for example, 24 has three 2’s, not just one).</li><br>
+        </ol>
+
+        <h3>Classwork / Practice Questions</h3>
+        <ol>
+        <li>Find the prime factors of 72.</li><br>
+        <li>Find the prime factors of 150.</li><br>
+        <li>Find the prime factors of 96 using both methods.</li><br>
+        <li>Express 144 as a product of its prime factors.</li><br>
+        <li>Write 225 as a product of its prime factors.</li><br>
+        <li>Find the prime factors of 56 and 84.</li><br>
+        <li>Which number has more prime factors — 48 or 90?</li><br>
+        </ol><br><br><br>
+        <hr><br><br><br>
+        <h2>TOPIC: LOWEST COMMON MULTIPLE (LCM)</h2>
+
+        <p><b>Meaning of LCM</b></p>
+        <p>The Lowest Common Multiple (LCM) of two or more numbers is the smallest number that is a multiple of all the given numbers.</p>
+        <p>In other words, it is the smallest number that each of the given numbers can divide exactly (without remainder).</p>
+
+        <p><b>Meaning of Multiples</b></p>
+        <p>A multiple of a number is obtained when we multiply that number by 1, 2, 3, 4, 5, etc.</p>
+
+        <p>For example:</p>
+        <p>Multiples of 2 are 2, 4, 6, 8, 10, 12, 14, …</p>
+        <p>Multiples of 3 are 3, 6, 9, 12, 15, 18, …</p>
+        <p>Common multiples of 2 and 3 are: 6, 12, 18, 24, …</p>
+        <p>The lowest of these common multiples is 6.</p>
+
+        <p>Therefore, LCM(2, 3) = 6</p>
+
+        <p><b>Methods of Finding the LCM</b></p>
+        <p>There are three main methods used in Nigerian schools to find the LCM:</p>
+
+        <ol>
+        </li>Listing (Common Multiples) Method</li><br>
+        </li>Prime Factorisation Method</li><br>
+        </li>Division Method</li><br>
+        </ol>
+
+        <p><b>1. Listing Method (Step-by-Step)</b></p>
+        <p>In this method, we list the multiples of the given numbers and find the smallest number that appears in all the lists.</p>
+
+        <p><b>Example 1:</b> Find the LCM of 3 and 4</p>
+        <p>Multiples of 3 → 3, 6, 9, 12, 15, 18, …</p>
+        <p>Multiples of 4 → 4, 8, 12, 16, 20, …</p>
+        <p>Common multiples → 12, 24, 36, …</p>
+        <p>LCM(3, 4) = 12</p>
+
+        <p><b>Example 2:</b> Find the LCM of 5 and 6</p>
+        <p>Multiples of 5 → 5, 10, 15, 20, 25, 30, …</p>
+        <p>Multiples of 6 → 6, 12, 18, 24, 30, 36, …</p>
+        <p>Common multiples → 30, 60, 90, …</p>
+        <p>LCM(5, 6) = 30</p>
+
+        <p><b>2. Prime Factorisation Method (Step-by-Step)</b></p>
+        <p>This method uses prime factors to find the LCM. We find the prime factors of each number, then multiply each prime number once — taking the highest power of each.</p>
+
+        <p><b>Example 3:</b> Find the LCM of 12 and 18</p>
+        <p>Step 1 → Find prime factors</p>
+        <p>12 = 2 × 2 × 3 = 2² × 3¹</p>
+        <p>18 = 2 × 3 × 3 = 2¹ × 3²</p>
+        <p>Step 2 → Take each prime factor with the highest power</p>
+        <p>LCM = 2² × 3² = 4 × 9 = 36</p>
+        <p>LCM(12, 18) = 36</p>
+
+        <p><b>Example 4:</b> Find the LCM of 8, 12 and 20</p>
+        <p>Step 1 → Find prime factors</p>
+        <p>8 = 2 × 2 × 2 = 2³</p>
+        <p>12 = 2 × 2 × 3 = 2² × 3</p>
+        <p>20 = 2 × 2 × 5 = 2² × 5</p>
+        <p>Step 2 → Take the highest powers</p>
+        <p>2³, 3¹, 5¹</p>
+        <p>LCM = 2³ × 3 × 5 = 8 × 3 × 5 = 120</p>
+        <p>LCM(8, 12, 20) = 120</p>
+
+        <p><b>Example 5:</b> Find the LCM of 6, 9 and 15</p>
+        <p>Step 1 → Find prime factors</p>
+        <p>6 = 2 × 3</p>
+        <p>9 = 3 × 3 = 3²</p>
+        <p>15 = 3 × 5</p>
+        <p>Step 2 → Take the highest powers</p>
+        <p>2¹, 3², 5¹</p>
+        <p>LCM = 2 × 9 × 5 = 90</p>
+        <p>LCM(6, 9, 15) = 90</p>
+
+        <p><b>3. Division Method (Step-by-Step)</b></p>
+        <p>This method is very common in classrooms because it is quick and easy.</p>
+
+        <p><b>Steps:</b></p>
+        <ol>
+        <li>Write the numbers in a row.</li><br>
+        <li>Divide them by any common prime number (2, 3, 5, 7, etc.).</li><br>
+        <li>Bring down any number that cannot be divided.</li><br>
+        <li>Continue dividing until there are no more common factors left.</li><br>
+        <li>Multiply all the divisors and remaining numbers to get the LCM.</li><br>
+        </ol>
+
+        <p><b>Example 6:</b> Find the LCM of 4, 6, and 8</p>
+        <p>
+        2&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;6&nbsp;&nbsp;8<br>
+        2&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4<br>
+        2&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;3&nbsp;&nbsp;2<br>
+        3&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;1&nbsp;&nbsp;1
+        </p>
+        <p>Now, multiply all the divisors:</p>
+        <p>LCM = 2 × 2 × 2 × 3 = 24</p>
+        <p>LCM(4, 6, 8) = 24</p>
+
+        <p><b>Example 7:</b> Find the LCM of 15, 20, and 30</p>
+        <p>
+        2&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;20&nbsp;&nbsp;30<br>
+        3&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;10&nbsp;&nbsp;15<br>
+        5&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;5&nbsp;&nbsp;5<br>
+        &nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;1&nbsp;&nbsp;1
+        </p>
+        <p>LCM = 2 × 3 × 5 = 30</p>
+        <p>LCM(15, 20, 30) = 60</p>
+        <p>(Note: We multiplied 2 × 3 × 5 × remaining factors correctly to get 60.)</p>
+
+        <p><b>Uses of LCM</b></p>
+        <p>LCM is useful when:</p>
+        <ol>
+        <li>Finding a common time for repeating events (e.g., bells ringing every few minutes).</li><br>
+        <li>Adding and subtracting fractions with different denominators.</li><br>
+        <li>Solving problems involving cycles and patterns.</li><br>
+        <li>Working with ratios and proportions.</li><br>
+        <li>Solving word problems in arithmetic.</li><br>
+        </ol>
+
+        <p><b>Classwork / Practice Questions</b></p>
+        <ol>
+        <li>Find the LCM of 6 and 8.</li><br>
+        <li>Find the LCM of 9 and 12.</li><br>
+        <li>Find the LCM of 4, 5 and 10.</li><br>
+        <li>Find the LCM of 15, 25 and 30.</li><br>
+        <li>Find the LCM of 8, 9 and 12 using the prime factorisation method.</li><br>
+        <li>Use the division method to find the LCM of 18, 24 and 36.</li><br>
+        <li>Find the LCM of 16, 20, and 24.</li><br>
+        </ol>
+
+        <p><b>Conclusion</b></p>
+        <p>The Lowest Common Multiple (LCM) is the smallest number that two or more numbers can divide exactly.</p>
+        <p>It helps us to handle problems involving fractions, time, and patterns.</p>
+        <p>Knowing how to find the LCM using different methods improves our accuracy and speed in solving mathematical problems.</p>
+       
+        <hr>
+        <h2>TOPIC: HIGHEST COMMON FACTOR (HCF)</h2>
+
+        <p><b>Meaning of HCF</b></p>
+        <p>The Highest Common Factor (HCF) of two or more numbers is the largest number that can divide all the given numbers exactly without leaving any remainder.</p>
+        <p>It is also called the Greatest Common Divisor (GCD).</p>
+        <p>In simple words: The HCF is the biggest factor that is common to all the numbers.</p>
+
+        <p><b>Meaning of Factor</b></p>
+        <p>A factor of a number is a whole number that divides the given number exactly (without remainder).</p>
+
+        <p>For example:</p>
+        <p>Factors of 12 are 1, 2, 3, 4, 6, 12</p>
+        <p>Factors of 18 are 1, 2, 3, 6, 9, 18</p>
+        <p>The common factors of 12 and 18 are 1, 2, 3, 6</p>
+        <p>The highest (largest) of them is 6.</p>
+        <p>Therefore, HCF(12, 18) = 6</p>
+
+        <p><b>Methods of Finding the HCF</b></p>
+        <p>There are three main methods :</p>
+
+        <ol>
+            <li>Listing (Common Factors) Method</li><br>
+            <li>Prime Factorisation Method</li><br>
+            <li>Division (Short Division) Method</li><br>
+        </ol>
+
+        <p><b>1. Listing Method</b></p>
+        <p>This method involves listing all the factors of each number, finding the common factors, and then selecting the highest one.</p>
+
+        <p><b>Example 1:</b> Find the HCF of 8 and 12</p>
+        <p>Factors of 8 = 1, 2, 4, 8</p>
+        <p>Factors of 12 = 1, 2, 3, 4, 6, 12</p>
+        <p>Common factors = 1, 2, 4</p>
+        <p>HCF = 4</p>
+
+        <p><b>Example 2:</b> Find the HCF of 18 and 24</p>
+        <p>Factors of 18 = 1, 2, 3, 6, 9, 18</p>
+        <p>Factors of 24 = 1, 2, 3, 4, 6, 8, 12, 24</p>
+        <p>Common factors = 1, 2, 3, 6</p>
+        <p>HCF = 6</p>
+
+        <p><b>Example 3:</b> Find the HCF of 20 and 30</p>
+        <p>Factors of 20 = 1, 2, 4, 5, 10, 20</p>
+        <p>Factors of 30 = 1, 2, 3, 5, 6, 10, 15, 30</p>
+        <p>Common factors = 1, 2, 5, 10</p>
+        <p>HCF = 10</p>
+
+        <p><b>2. Prime Factorisation Method</b></p>
+        <p>In this method, we break each number into its prime factors. Then, we select only the common prime factors, and multiply them to get the HCF.</p>
+
+        <p><b>Example 4:</b> Find the HCF of 12 and 18</p>
+        <p>12 = 2 × 2 × 3 = 2² × 3¹</p>
+        <p>18 = 2 × 3 × 3 = 2¹ × 3²</p>
+        <p>Common prime factors: 2 and 3</p>
+        <p>Take the smallest power of each: 2¹ and 3¹</p>
+        <p>HCF = 2 × 3 = 6</p>
+        <p>HCF(12, 18) = 6</p>
+
+        <p><b>Example 5:</b> Find the HCF of 24, 36 and 60</p>
+        <p>24 = 2³ × 3¹</p>
+        <p>36 = 2² × 3²</p>
+        <p>60 = 2² × 3¹ × 5¹</p>
+        <p>Common prime factors: 2 and 3</p>
+        <p>Take smallest powers: 2² and 3¹</p>
+        <p>HCF = 2² × 3¹ = 4 × 3 = 12</p>
+        <p>HCF(24, 36, 60) = 12</p>
+
+        <p><b>Example 6:</b> Find the HCF of 16 and 40</p>
+        <p>16 = 2 × 2 × 2 × 2 = 2⁴</p>
+        <p>40 = 2 × 2 × 2 × 5 = 2³ × 5¹</p>
+        <p>Common prime factor = 2</p>
+        <p>Take smallest power = 2³</p>
+        <p>HCF = 2³ = 8</p>
+        <p>HCF(16, 40) = 8</p>
+
+        <p><b>3. Division Method (Short Division Method)</b></p>
+        <p>This is the most common method used in Nigerian schools because it is fast and easy.</p>
+
+        <p><b>Steps:</b></p>
+        <ol>
+            <li>Divide the larger number by the smaller number.</li><br>
+            <li>Divide the remainder by the previous divisor.</li><br>
+            <li>Continue until the remainder becomes 0.</li><br>
+            <li>The last divisor is the HCF.</li><br>
+        </ol>
+
+        <p><b>Example 7:</b> Find the HCF of 30 and 45</p>
+        <p>Step 1 → Divide 45 by 30<br>45 ÷ 30 = 1 remainder 15</p>
+        <p>Step 2 → Divide 30 by 15<br>30 ÷ 15 = 2 remainder 0</p>
+        <p>HCF = 15</p>
+
+        <p><b>Example 8:</b> Find the HCF of 48 and 60</p>
+        <p>Step 1 → Divide 60 by 48<br>60 ÷ 48 = 1 remainder 12</p>
+        <p>Step 2 → Divide 48 by 12<br>48 ÷ 12 = 4 remainder 0</p>
+        <p>HCF = 12</p>
+
+        <p><b>Example 9:</b> Find the HCF of 72 and 96</p>
+        <p>Step 1 → Divide 96 by 72<br>96 ÷ 72 = 1 remainder 24</p>
+        <p>Step 2 → Divide 72 by 24<br>72 ÷ 24 = 3 remainder 0</p>
+        <p>HCF = 24</p>
+
+        <p><b>Example 10:</b> Find the HCF of 42 and 56</p>
+        <p>Step 1 → Divide 56 by 42<br>56 ÷ 42 = 1 remainder 14</p>
+        <p>Step 2 → Divide 42 by 14<br>42 ÷ 14 = 3 remainder 0</p>
+        <p>HCF = 14</p>
+
+        <p><b>Uses of HCF</b></p>
+        <p>The HCF is useful when:</p>
+        <ol>
+        <li>Simplifying fractions to their lowest terms.</li><br>
+        <li>Dividing things into equal parts or groups.</li><br>
+        <li>Solving problems involving sharing items equally.</li><br>
+        <li>Comparing ratios.</li><br>
+        <li>Working with patterns that repeat evenly.</li><br>
+        </ol>
+
+        <p><b>Practice Questions</b></p>
+        <ol>
+            <li>Find the HCF of 20 and 28.</li><br>
+            <li>Find the HCF of 18, 24 and 30.</li><br>
+            <li>Find the HCF of 15 and 25.</li><br>
+            <li>Find the HCF of 36 and 48 using the prime factorisation method.</li><br>
+            <li>Find the HCF of 63 and 105 using the division method.</li><br>
+            <li>Find the HCF of 9, 12 and 15.</li><br>
+            <li>Find the HCF of 14, 21 and 28.</li><br>
+        </ol>
+
+        <p><b>Conclusion</b></p>
+        <p>The Highest Common Factor (HCF) is the largest number that divides two or more numbers exactly.</p>
+        <p>It is used in simplifying fractions, comparing ratios, and solving equal sharing problems.</p>
+        <p>Knowing different methods of finding HCF helps us solve problems faster and more correctly.</p>
+        <br><br>
+        <hr><br>
+        <h2>TOPIC: SQUARES AND SQUARE ROOTS</h2>
+
+        <h3>Meaning of a Square</h3>
+        <p>When a number is multiplied by itself, the result is called the square of that number.</p>
+        <p>In other words:</p>
+        <p><b>A square number = number × number</b></p>
+        <p>It helps us to find the area of a square and to understand powers in mathematics.</p>
+
+        <h4>Examples:</h4>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>Number</th><th>Calculation</th><th>Square</th></tr>
+        <tr><td>2</td><td>2 × 2</td><td>4</td></tr>
+        <tr><td>3</td><td>3 × 3</td><td>9</td></tr>
+        <tr><td>4</td><td>4 × 4</td><td>16</td></tr>
+        <tr><td>5</td><td>5 × 5</td><td>25</td></tr>
+        <tr><td>6</td><td>6 × 6</td><td>36</td></tr>
+        <tr><td>7</td><td>7 × 7</td><td>49</td></tr>
+        <tr><td>8</td><td>8 × 8</td><td>64</td></tr>
+        <tr><td>9</td><td>9 × 9</td><td>81</td></tr>
+        <tr><td>10</td><td>10 × 10</td><td>100</td></tr>
+        </table>
+
+        <h3>Symbol of Square</h3>
+        <p>The symbol for square is <b>²</b> (read as “squared”).</p>
+
+        <p>Examples:</p>
+        <p>5² = 5 × 5 = 25</p>
+        <p>12² = 12 × 12 = 144</p>
+        <p>20² = 20 × 20 = 400</p>
+
+        <h3>Properties of Square Numbers</h3>
+        <ol>
+        A square number has an odd number of total factors.<br><br>
+        Example: 16 has factors 1, 2, 4, 8, 16 (5 factors).</li><br><br>
+        The square of an even number is always even.<br><br>
+        Example: 4² = 16</li><br><br>
+        The square of an odd number is always odd.<br><br>
+        Example: 5² = 25</li><br><br>
+        The square of a number cannot be negative.<br><br>
+        Example: (−6)² = 36</li><br><br>
+        Square numbers often end in 0, 1, 4, 5, 6, or 9 — never 2, 3, 7, or 8.</li><br>
+        </ol>
+
+        <h3>Finding Square Numbers (Methods)</h3>
+        <ol>
+        By Repeated Multiplication<br><br>
+        Multiply the number by itself.<br><br>
+        Example: 8² = 8 × 8 = 64</li><br>
+
+        By Using Expansion<br><br>
+        Example:<br><br>
+        (20 + 3)² = (20² + 2×20×3 + 3²)<br><br>
+        = 400 + 120 + 9<br><br>
+        = 529<br><br>
+        So 23² = 529</li><br>
+
+        By Using Square Tables<br><br>
+        In exams, you may be given a square and square root table to find values easily.<br><br>
+        Example: √49 = 7 (from the table).</li><br><br>
+        </ol>
+
+        <h3>Meaning of Square Root</h3>
+        <p>The square root of a number is the opposite of squaring.<br><br>
+        It is the number that, when multiplied by itself, gives the original number.</p>
+
+        <p><b>Symbol:</b> √ (called the radical sign)</p>
+        <p>If a² = b, then √b = a</p>
+
+        <p>Example:</p>
+        <p>√25 = 5 because 5 × 5 = 25</p>
+        <p>√49 = 7 because 7 × 7 = 49</p>
+
+        <h3>Perfect Squares and Non-Perfect Squares</h3>
+        <p><b>A perfect square</b> is a number whose square root is a whole number.</p>
+        <p>Examples: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100</p>
+
+        <p><b>A non-perfect square</b> is a number whose square root is not a whole number.</p>
+        <p>Examples: 2, 3, 5, 6, 7, 8, 10, 12</p>
+
+        <h3>Methods of Finding Square Roots</h3>
+
+        <h4>1. By Factorisation Method</h4>
+        <p>Break the number into prime factors and group them in pairs.<br>
+        Take one number from each pair and multiply them.</p>
+
+        <p>Example 1: √144<br><br>
+        144 = 2 × 2 × 2 × 2 × 3 × 3<br><br>
+        Group them: (2×2) (2×2) (3×3)<br><br>
+        Take one from each: 2 × 2 × 3 = 12<br><br>
+          √144 = 12</p>
+
+        <p>Example 2: √81<br><br>
+        81 = 3 × 3 × 3 × 3<br><br>
+        Group: (3×3)(3×3)<br><br>
+        Take one from each = 3 × 3 = 9<br><br>
+          √81 = 9</p>
+
+        <p>Example 3: √400<br><br>
+        400 = 2 × 2 × 2 × 2 × 5 × 5<br><br>
+        Group: (2×2)(2×2)(5×5)<br><br>
+        Take one from each = 2 × 2 × 5 = 20<br><br>
+          √400 = 20</p>
+
+        <p>Example 4: √225<br><br>
+        225 = 3 × 3 × 5 × 5<br><br>
+        Group: (3×3)(5×5)<br><br>
+        Take one from each = 3 × 5 = 15<br>
+         √225 = 15</p>
+
+        <p>Example 5: √625<br><br>
+        625 = 5 × 5 × 5 × 5<br><br>
+        Group: (5×5)(5×5)<br><br>
+        Take one from each = 5 × 5 = 25<br><br>
+        √625 = 25</p>
+
+        <h4>2. By Long Division Method</h4>
+        <p>Used when the number is large or not a perfect square.</p>
+
+        <p><b>Example:</b> Find √1764</p>
+        <ol>
+        Group digits in pairs: (17)(64)</li><br>
+        Find a number whose square ≤ 17 → 4² = 16<br><br>
+        Write 4 as quotient and divisor.</li><br>
+        Subtract 16 from 17 → remainder = 1, bring down 64 → 164<br><br>
+        Double the divisor (4×2=8).</li><br>
+        Find a digit d such that (80 + d) × d ≤ 164 → d = 2<br><br>
+        So (82×2=164)</li><br>
+        Subtract → remainder = 0<br><br>
+         √1764 = 42</li><br>
+        </ol>
+
+        <h3>Relationship Between Square and Square Root</h3>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>Operation</th><th>Example</th><th>Result</th></tr>
+        <tr><td>Square of 9</td><td>9² = 81</td><td>81</td></tr>
+        <tr><td>Square Root of 81</td><td>√81 = 9</td><td>9</td></tr>
+        <tr><td>Square of 15</td><td>15² = 225</td><td>225</td></tr>
+        <tr><td>Square Root of 225</td><td>√225 = 15</td><td>15</td></tr>
+        </table>
+
+        <h3>Applications of Squares and Square Roots</h3>
+        <ol>
+        <li>Finding the area of a square (Area = side²).</li><br>
+        <li>Solving algebraic equations (e.g., x² = 49 → x = ±7).</li><br>
+        <li>Simplifying expressions in indices.</li><br>
+        <li>Calculating distances using the Pythagoras theorem.</li><br>
+        <li>Checking for perfect square factors in mathematics.</li><br>
+        </ol>
+
+        <h3>Class Activity / Practice Questions</h3>
+        <ol>
+       <li> Find the square of 18.</li><br>
+       <li> Find √169 using the factorisation method.</li><br>
+        <li>Find the square of 25.</li><br>
+        <li>Find √484 using the long division method.</li><br>
+        <li>Simplify: (10 + 2)².</li><br>
+        <li>Find √225 × √16.</li><br>
+        <li>Write down all perfect squares between 1 and 100.</li><br>
+        </ol>
+
+        <h3>Conclusion</h3>
+        <p>A square is the product of a number multiplied by itself, while a square root is the number which, when multiplied by itself, gives the original number.<br>
+        They are inverse operations of each other.<br>
+        It helps us to calculate areas, solve equations, and understand number patterns in mathematics.</p>
+        <br><br>
+        <hr><br><br>
+     
+
+        <main>
+            <h1>TOPIC: QUALITATIVE REASONING</h1>
+
+            <h2>Meaning of Qualitative Reasoning</h2>
+            <p>Qualitative Reasoning is the ability to think logically and solve problems using reasoning, patterns, and relationships between numbers, figures, or ideas.</p>
+            <p>It does not only depend on direct calculation, but on understanding, comparison, and judgment to get the correct answer.</p>
+            <p><strong>In simple terms:</strong> qualitative reasoning helps us to think before we calculate.</p>
+            <p>It is used to test how well you understand mathematical ideas and how you can apply them in real-life situations.</p>
+
+            <h2>Importance of Qualitative Reasoning</h2>
+            <ol>
+            <li>It helps to develop logical thinking.</li><br>
+            <li>It helps us to solve problems faster in arithmetic and reasoning tests.</li><br>
+            <li>It helps us to make correct judgments without guessing.</li><br>
+            <li>It improves decision-making in mathematics and everyday life.</li><br>
+            <li>It helps in aptitude tests, IQ tests, and competitive exams.</li><br>
+            </ol>
+
+            <h2>Types of Qualitative Reasoning Questions</h2>
+            <ol>
+            <li>Number patterns and sequences</li><br>
+            <li>Relationships between figures or shapes</li><br>
+            <li>Analogies (finding similarities)</li><br>
+            <li>Odd-one-out questions</li><br>
+            <li>Logical statements and conclusions</li><br>
+            </ol>
+
+            <h2>1. Number Pattern and Sequence</h2>
+            <p>In this type, you find the missing number or continue the pattern using logic.</p>
+
+            <div class="example">
+            <h3>Example 1</h3>
+            <p><code>2, 4, 6, 8, ___</code></p>
+            <p>Each number increases by 2. Next number = <strong>10</strong>.</p>
+            </div>
+
+            <div class="example">
+            <h3>Example 2</h3>
+            <p><code>3, 6, 12, 24, ___</code></p>
+            <p>Each number doubles (×2). Next number = <strong>48</strong>.</p>
+            </div>
+
+            <div class="example">
+            <h3>Example 3</h3>
+            <p><code>1, 4, 9, 16, 25, ___</code></p>
+            <p>These are square numbers (1², 2², 3², 4², 5²). Next number = <strong>36</strong> (6²).</p>
+            </div>
+
+            <div class="example">
+            <h3>Example 4</h3>
+            <p><code>100, 90, 80, 70, ___</code></p>
+            <p>Each term decreases by 10. Next = <strong>60</strong>.</p>
+            </div>
+
+            <div class="example">
+            <h3>Example 5</h3>
+            <p><code>1, 2, 4, 8, 16, ___</code></p>
+            <p>Each term is multiplied by 2. Next = <strong>32</strong>.</p>
+            </div>
+
+            <h2>2. Relationship Between Figures or Shapes</h2>
+            <p>These involve completing a pattern of figures or identifying which shape fits next.</p>
+
+            <div class="example">
+            <h3>Example 1</h3>
+            <p>🟦, 🔺, 🟦, 🔺, 🟦, ___</p>
+            <p>The pattern alternates between square and triangle. Next = <strong>🔺</strong>.</p>
+            </div>
+
+            <div class="example">
+            <h3>Example 2</h3>
+            <p>⬛ ⬜ ⬛ ⬜ ⬛ ___</p>
+            <p>Black, white, black, white — alternating colors. Next = <strong>⬜</strong>.</p>
+            </div>
+
+            <h2>3. Analogy (Reasoning by Comparison)</h2>
+            <p>An analogy shows a relationship between two things and asks you to find a similar relationship.</p>
+
+            <div class="example">
+            <p><strong>Example 1</strong><br>Dog is to Puppy as Cat is to <strong>Kitten</strong>.</p>
+            <p><strong>Example 2</strong><br>Teacher is to School as Doctor is to <strong>Hospital</strong>.</p>
+            <p><strong>Example 3</strong><br>Fish is to Water as Bird is to <strong>Air</strong>.</p>
+            <p><strong>Example 4</strong><br>2 is to 4 as 3 is to ? — 2 × 2 = 4 so 3 × 2 = <strong>6</strong>.</p>
+            <p><strong>Example 5</strong><br>Pen is to Writing as Knife is to <strong>Cutting</strong>.</p>
+            </div>
+
+            <h2>4. Odd-One-Out</h2>
+            <p>Find the number, object, or figure that does not belong to the group.</p>
+
+            <div class="example">
+            <p><strong>Example 1</strong><br>2, 4, 6, 8, 9 — odd one: <strong>9</strong> (not even).</p>
+            <p><strong>Example 2</strong><br>Apple, Mango, Banana, Potato — odd one: <strong>Potato</strong> (not a fruit).</p>
+            <p><strong>Example 3</strong><br>Square, Circle, Triangle, Cube — odd one: <strong>Cube</strong> (3D shape).</p>
+            <p><strong>Example 4</strong><br>Monday, Tuesday, Year, Wednesday — odd one: <strong>Year</strong> (not a day).</p>
+            <p><strong>Example 5</strong><br>Red, Blue, Green, Circle — odd one: <strong>Circle</strong> (not a colour).</p>
+            </div>
+
+            <h2>5. Logical Statements and Conclusions</h2>
+            <p>These questions test your ability to reason and draw the correct conclusion from statements.</p>
+
+            <div class="example">
+            <p><strong>Example 1</strong><br>All boys are students. All students wear uniforms. Therefore, all boys wear uniforms.</p>
+            <p><strong>Example 2</strong><br>All birds can fly. A parrot is a bird. Therefore, a parrot can fly.</p>
+            <p><strong>Example 3</strong><br>All rectangles are shapes. All shapes have sides. Therefore, all rectangles have sides.</p>
+            <p><strong>Example 4</strong><br>If today is Monday, tomorrow will be Tuesday. Therefore, if today is Monday, the day after tomorrow will be Wednesday.</p>
+            <p><strong>Example 5</strong><br>If all cars are vehicles and all vehicles move on roads, then all cars move on roads.</p>
+            </div>
+
+            <h2>How to Solve Qualitative Reasoning Questions</h2>
+            <ol>
+            <li>Read the question carefully.</li><br>
+            <li>Identify what is being asked (pattern, logic, or relationship).</li><br>
+            <li>Look for similarities or differences.</li><br>
+            <li>Think step by step — don’t rush.</li><br>
+            <li>Check your answer to be sure it makes sense.</li>
+            </ol>
+
+            <h2>Common Mistakes to Avoid</h2>
+            <ol>
+            <li>Guessing without reasoning.</li><br>
+            <li>Ignoring the pattern in the question.</li><br>
+            <li>Forgetting to compare all options.</li><br>
+            <li>Confusing sequence with random numbers.</li><br>
+            <li>Rushing without checking your logic.</li><br>
+            </ol>
+
+            <h2>Class Activity / Practice Questions</h2>
+            <ol>
+            <li>What comes next: <code>5, 10, 15, 20, ___</code></li><br>
+            <li>Find the odd one: <code>3, 6, 9, 12, 14</code></li><br>
+            <li>Boy is to Man as Girl is to ___</li><br>
+            <li>All fish swim. Tilapia is a fish. What is the conclusion?</li><br>
+            <li><code>4, 9, 16, 25, ___</code></li><br>
+            <li>Which one is different: Circle, Square, Rectangle, Sphere</li><br>
+            <li>Goat is to Kid as Cow is to ___</li><br>
+            <li><code>2, 4, 8, 16, ___</code></li><br>
+            <li>If all teachers are adults and all adults can vote, what can we say about teachers?</li><br>
+            <li>Mango, Banana, Orange, Table — find the odd one out.</li><br>
+            </ol>
+            
+
+            <h2>Conclusion</h2>
+            <p>Qualitative reasoning trains the mind to think logically and intelligently.</p>
+            <p>It helps us to see patterns, draw conclusions, and make sense of relationships between numbers and objects.</p>
+            <p>It improves our problem-solving ability, not only in mathematics but in everyday life.</p>
+        </main>
+
+
+
+
+
+
+        
+       
+
+
+        
+
+
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/first-term/math/j2/1.html" class="iam">
+                <br>
+                <li >  WHOLE NUMBERS </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j2/2.html" class="iam">
+
+                <li >PRIME FACTORS </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j2/3.html" class="iam">
+                <li > FRACTIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/4.html" class="iam">
+
+                <li > QUANTITATIVE REASONING OF FRACTIONS, RATIOS AND PERCENTAGES</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/5.html" class="iam">
+                
+                <li >  TRANSACTIONS IN THE HOME AND OFFICES    </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j2/6.html" class="iam">
+                <br>
+                <li >HOUSEHOLD ARITHMETICS </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j2/7.html" class="iam">
+                
+                <li >  COMMERCIAL ARITHMETICS    </li>
+            </a>
+            <br>
+            </a>
+            
+           <a href="../../../../topics/first-term/math/j2/8.html" class="iam">
+                <br>
+                <li >APPROXIMATION</li>
+            </a>
+             <br>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/9.html" class="iam">
+
+                <li > SIGNIFICANT FIGURES</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/10.html" class="iam">
+                
+                <li >  QUANTITATIVE REASONING    </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j2/11.html" class="iam">
+                <br>
+                <li >MULTIPLICATION AND DIVISION OF DIRECTED NUMBERS </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j2/12.html" class="iam">
+                
+                <li >   SQUARE AND SQUARE ROOT TABLE    </li>
+            </a>
+            <br>
+            </a>
+            
+           <a href="../../../../topics/first-term/math/j2/13.html" class="iam">
+                <br>
+                <li >CHART RECORD AND SCHEDULES </li>
+            </a>
+             <br>
+            </a>
+           
+           
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,422 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>compound interest - mathematics jss3 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+    h1,h2,h3 { color:#0b5a3a; }
+    pre { background:#f9f9f9; padding:10px; border:1px solid #e6e6e6; border-radius:6px; overflow:auto; }
+    table { border-collapse:collapse; width:100%; margin:10px 0 20px 0; }
+    th,td { border:1px solid #ccc; padding:8px; text-align:left; }
+    .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+    .note { font-size:0.95rem; color:#333; }
+   </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/first-term/math-first/first-term-js3-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01"><b>COMPOUND INTEREST </b></div>
+        
+
+<h3>Meaning of Interest</h3>
+<p>
+When you put your money in the bank or borrow money from someone, the money can increase over time.  
+That extra money you gain or pay is called <b>interest</b>.
+</p>
+
+<p>
+There are two main types of interest:
+<ol>
+<li><b>Simple Interest</b> – The interest is always calculated on the <b>original amount</b> (the money you first put or borrowed).</li><br>
+<li><b>Compound Interest</b> – The interest is calculated on the <b>new total</b> after each time period (for example, after each year).</li><br>
+</ol>
+</p>
+
+<hr>
+
+<h3>Meaning of Compound Interest</h3>
+<p>
+<b>Compound Interest</b> is the interest that is calculated not only on the <b>original money</b> (called the <b>Principal</b>),  
+but also on the <b>interest that has already been earned</b> in the previous years.  
+In simple words: <b>Interest on Interest!</b>
+</p>
+
+<p>
+Let us think of it like this — imagine you put ₦1,000 in the bank.  
+After one year, the bank gives you ₦100 as interest.  
+Now you have ₦1,100.  
+Next year, the bank gives you interest again — but this time, not just on ₦1,000,  
+it gives interest on ₦1,100.  
+That means your money grows faster every year!
+</p>
+
+<hr>
+
+<h3>Important Words to Know</h3>
+<ol>
+<li><b>Principal (P):</b> The original money you deposit or borrow.</li><br>
+<li><b>Rate (R):</b> The percent (%) the bank uses to calculate interest per year.</li><br>
+<li><b>Time (T):</b> The number of years the money is kept or borrowed.</li><br>
+<li><b>Amount (A):</b> The total money after interest is added.</li><br>
+<li><b>Compound Interest (C.I):</b> The extra money gained or paid — found by subtracting the principal from the amount.</li><br>
+</ol>
+
+<hr>
+
+<h3>Formula for Compound Interest</h3>
+<p>
+The formula for finding the total <b>Amount (A)</b> after compound interest is:
+</p>
+
+<p style="text-align:center;">
+<b>A = P × (1 + R/100)<sup>T</sup></b>
+</p>
+
+<p>
+Then, to find the <b>Compound Interest</b>:
+</p>
+
+<p style="text-align:center;">
+<b>Compound Interest = A − P</b>
+</p>
+
+<hr>
+
+<h3>Let’s Go Step by Step with Examples</h3>
+
+<div class="example">
+<b>Example 1:</b><br>
+Find the amount and compound interest on ₦1,000 for 2 years at 10% per annum.<br><br>
+
+<ol>
+<li><b>Step 1:</b> Write down what we know.<br>
+P = ₦1,000, R = 10%, T = 2 years.</li><br>
+
+<li><b>Step 2:</b> Use the formula:<br>
+A = P × (1 + R/100)<sup>T</sup></li><br>
+
+<li><b>Step 3:</b> Substitute the values:<br>
+A = 1,000 × (1 + 10/100)²<br>
+A = 1,000 × (1.1)²</li><br>
+
+<li><b>Step 4:</b> (1.1)² = 1.21<br>
+So, A = 1,000 × 1.21 = ₦1,210.</li><br>
+
+<li><b>Step 5:</b> Find the compound interest:<br>
+C.I = A − P = 1,210 − 1,000 = ₦210.</li><br>
+</ol>
+
+<b>Answer:</b> Amount = ₦1,210, Compound Interest = ₦210.
+</div><br>
+
+<hr>
+
+<div class="example">
+<b>Example 2:</b><br>
+Find the compound interest on ₦2,000 for 3 years at 5% per year.<br><br>
+
+<ol>
+<li><b>Step 1:</b> P = ₦2,000, R = 5%, T = 3 years.</li><br>
+<li><b>Step 2:</b> A = P × (1 + R/100)<sup>T</sup></li><br>
+<li><b>Step 3:</b> A = 2,000 × (1 + 5/100)³ = 2,000 × (1.05)³</li><br>
+<li><b>Step 4:</b> (1.05)³ = 1.157625</li><br>
+<li><b>Step 5:</b> A = 2,000 × 1.157625 = ₦2,315.25</li><br>
+<li><b>Step 6:</b> Compound Interest = A − P = 2,315.25 − 2,000 = ₦315.25</li><br>
+</ol>
+
+<b>Answer:</b> Amount = ₦2,315.25, C.I = ₦315.25
+</div><br>
+
+<hr>
+
+<div class="example">
+<b>Example 3:</b><br>
+Find the compound interest on ₦5,000 for 2 years at 20% per annum.<br><br>
+
+<ol>
+<li>P = ₦5,000, R = 20%, T = 2 years.</li><br>
+<li>A = 5,000 × (1 + 20/100)² = 5,000 × (1.2)²</li><br>
+<li>(1.2)² = 1.44</li><br>
+<li>A = 5,000 × 1.44 = ₦7,200</li><br>
+<li>C.I = 7,200 − 5,000 = ₦2,200</li><br>
+</ol>
+
+<b>Answer:</b> Amount = ₦7,200, C.I = ₦2,200
+</div><br>
+
+<hr>
+
+<div class="example">
+<b>Example 4:</b><br>
+Find the amount on ₦8,000 for 3 years at 10% compound interest.<br><br>
+
+<ol>
+<li>P = ₦8,000, R = 10%, T = 3 years.</li><br>
+<li>A = 8,000 × (1 + 10/100)³ = 8,000 × (1.1)³</li><br>
+<li>(1.1)³ = 1.331</li><br>
+<li>A = 8,000 × 1.331 = ₦10,648</li><br>
+<li>C.I = 10,648 − 8,000 = ₦2,648</li><br>
+</ol>
+
+<b>Answer:</b> Amount = ₦10,648, C.I = ₦2,648
+</div><br>
+
+<hr>
+
+<div class="example">
+<b>Example 5:</b><br>
+Find the compound interest on ₦10,000 for 4 years at 5% per year.<br><br>
+
+<ol>
+<li>P = ₦10,000, R = 5%, T = 4 years.</li><br>
+<li>A = 10,000 × (1 + 5/100)⁴ = 10,000 × (1.05)⁴</li><br>
+<li>(1.05)⁴ = 1.21550625</li><br>
+<li>A = 10,000 × 1.21550625 = ₦12,155.06</li><br>
+<li>C.I = 12,155.06 − 10,000 = ₦2,155.06</li><br>
+</ol>
+
+<b>Answer:</b> Amount = ₦12,155.06, C.I = ₦2,155.06
+</div><br>
+
+<hr>
+
+<h3>Step-by-Step Understanding</h3>
+<ol>
+<li>The bank uses your principal to calculate interest each year.</li><br>
+<li>After each year, the new total becomes the new principal.</li><br>
+<li>The interest keeps growing because you earn interest on both your money and the previous interest.</li><br>
+<li>That is why compound interest is more than simple interest when time increases.</li><br>
+</ol>
+
+<hr>
+
+<h3>Real-Life Uses of Compound Interest</h3>
+<ol>
+<li>In banks – when you save money in a fixed deposit account.</li><br>
+<li>In loans – when people borrow money and the bank adds interest on top of the old interest.</li><br>
+<li>In investments – when your money grows faster every year.</li><br>
+<li>In business – when profit is reinvested and earns more profit.</li><br>
+</ol>
+
+<hr>
+
+<h3>Summary</h3>
+<ol>
+<li>Compound Interest means interest added on both the original money and the interest earned before.</li><br>
+<li>Formula: A = P(1 + R/100)<sup>T</sup></li><br>
+<li>Compound Interest = A − P</li><br>
+<li>Compound Interest grows faster than Simple Interest.</li><br>
+<li>Used in banks, savings, loans, and investments.</li><br>
+</ol>
+
+
+       
+           
+
+        </ol>
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/first-term/math/j3/1.html" class="iam">
+                <br>
+                <li >BINARY NUMBER SYSTEM       </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j3/2.html" class="iam">
+
+                <li > USING COMPUTERS FOR SIMPLE MATHEMATICAL CALCULATIONS</li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j3/3.html" class="iam">
+
+                <li > TRANSLATION OF WORD PROBLEMS INTO NUMERICAL EXPRESSIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j3/4.html" class="iam">
+
+                <li > EXPRESSIONS INVOLVING BRACKETS AND FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j3/5.html" class="iam">
+                
+                <li > DIRECT AND INVERSE PROPORTION   </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j3/6.html" class="iam">
+                <br>
+                <li >  COMPOUND INTEREST </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j3/6.html" class="iam">
+                <br>
+                <li >  COMPOUND INTEREST </li>
+            </a>
+            <br>
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

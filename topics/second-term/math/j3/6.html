@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Trigonometry - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+       <a href="../../../../terms/second-term/math-second/second-term-js3-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color: purple;color: white;"><b>TOPIC: TRIGONOMETRY </b></div>
+       
+
+        <h2>DEFINITION</h2>
+        <p><b>Trigonometry</b> is a branch of mathematics that deals with the relationships between the sides and angles of triangles, especially right-angled triangles.</p>
+        <p>It helps us to find unknown sides or angles of triangles using simple ratios.</p>
+        <p>In simple words: Trigonometry is like a tool that tells us how the sides of a triangle relate to its angles.</p>
+
+        <h2>KEY TERMS IN TRIGONOMETRY</h2>
+        <p><strong>Right-angled triangle:</strong> A triangle that has one angle equal to 90° (a right angle).</p>
+        <p><strong>Hypotenuse:</strong> The longest side of a right-angled triangle, always opposite the right angle.</p>
+        <p><strong>Opposite side:</strong> The side that is opposite the angle you are considering.</p>
+        <p><strong>Adjacent side:</strong> The side that is next to the angle you are considering, but not the hypotenuse.</p>
+
+        <h2>TRIGONOMETRIC RATIOS</h2>
+        <p>For a right-angled triangle with an angle θ:</p>
+        <p><strong>Sine (sin θ)</strong> = Opposite ÷ Hypotenuse</p>
+        <p><strong>Cosine (cos θ)</strong> = Adjacent ÷ Hypotenuse</p>
+        <p><strong>Tangent (tan θ)</strong> = Opposite ÷ Adjacent</p>
+        <p>Note: These ratios only work for right-angled triangles.</p>
+
+        <h2>EXPLANATION</h2>
+        <p>Imagine a triangle. If you know one angle (other than the right angle) and one side, you can find the other sides using sine, cosine, or tangent.</p>
+        <p>These ratios are fixed for each angle. For example, sin 30° is always 0.5.</p>
+
+       
+    <pre>
+        |\
+        | \
+        |  \
+Opposite|   \ Hypotenus
+        |    \
+        |     \
+        |______\
+        Adjacent
+    </pre>
+
+        <p>θ is the angle we are considering.</p>
+        <p>The side opposite θ is called the opposite.</p>
+        <p>The side next to θ (but not the hypotenuse) is called the adjacent.</p>
+        <p>The longest side is the hypotenuse.</p>
+
+        <h2>STEPS TO USE TRIGONOMETRY TO FIND SIDES OR ANGLES</h2>
+        <ol>
+        <li>Identify the given angle and sides.</li><br>
+        <li>Decide which trigonometric ratio to use (sine, cosine, or tangent).</li><br>
+        <li>Write the formula for the ratio.</li><br>
+        <li>Substitute the known values.</li><br>
+        <li>Solve for the unknown side or angle.</li><br>
+        </ol>
+
+        <h2>EXAMPLES</h2>
+        <h3>Example 1 – Find a side using sine</h3>
+        <p>A right-angled triangle has an angle 30° and a hypotenuse of 10 cm. Find the length of the side opposite the angle.</p>
+        <p><strong>Solution:</strong></p>
+        <p>sin θ = Opposite ÷ Hypotenuse</p>
+        <p>sin 30° = Opposite ÷ 10</p>
+        <p>0.5 = Opposite ÷ 10</p>
+        <p>Opposite = 0.5 × 10 = 5 cm</p>
+
+        <h3>Example 2 – Find a side using cosine</h3>
+        <p>A right-angled triangle has an angle 60° and a hypotenuse of 12 cm. Find the length of the adjacent side.</p>
+        <p><strong>Solution:</strong></p>
+        <p>cos θ = Adjacent ÷ Hypotenuse</p>
+        <p>cos 60° = Adjacent ÷ 12</p>
+        <p>0.5 = Adjacent ÷ 12</p>
+        <p>Adjacent = 0.5 × 12 = 6 cm</p>
+
+        <h3>Example 3 – Find a side using tangent</h3>
+        <p>A right-angled triangle has an angle 45° and an adjacent side of 7 cm. Find the length of the opposite side.</p>
+        <p><strong>Solution:</strong></p>
+        <p>tan θ = Opposite ÷ Adjacent</p>
+        <p>tan 45° = Opposite ÷ 7</p>
+        <p>1 = Opposite ÷ 7</p>
+        <p>Opposite = 1 × 7 = 7 cm</p>
+
+        <h3>Example 4 – Find an angle</h3>
+        <p>A right-angled triangle has an opposite side of 3 cm and adjacent side of 4 cm. Find the angle θ.</p>
+        <p><strong>Solution:</strong></p>
+        <p>tan θ = Opposite ÷ Adjacent</p>
+        <p>tan θ = 3 ÷ 4</p>
+        <p>θ = tan⁻¹ (0.75) ≈ 37°</p>
+
+        <h2>REAL-LIFE APPLICATIONS OF TRIGONOMETRY</h2>
+        <ul>
+        <li>Measuring heights of tall buildings or trees.</li><br>
+        <li>Finding distances across rivers or lakes without crossing them.</li><br>
+        <li>Designing ramps, roofs, and slopes in construction.</li><br>
+        <li>Navigation and map reading.</li><br>
+        </ul>
+
+        <h2>TIPS TO REMEMBER</h2>
+        <ul>
+        <li>Always label the triangle with the angle you are considering.</li><br>
+        <li>Hypotenuse is always opposite the right angle.</li><br>
+        <li>The side opposite the angle of interest is “opposite,” and the other side next to the angle is “adjacent.”</li><br>
+        <li>Use a calculator for sine, cosine, and tangent values.</li><br>
+        </ul>
+
+        <h2>SUMMARY</h2>
+        <ul>
+        <li>Trigonometry studies the relationship between sides and angles in triangles.</li><br>
+        <li>The main ratios are sine, cosine, and tangent.</li><br>
+        <li>These ratios help find unknown sides or angles in right-angled triangles.</li><br>
+        <li>Trigonometry has practical applications in construction, navigation, and measurement.</li><br>
+        </ul><br><br>
+
+        <hr>
+        <br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>The Sine, Cosine, and Tangent of an Acute Angle (Definitions and Ratios)</b></div>
+
+        <h2>DEFINITION OF TRIGONOMETRY</h2>
+        <p>Trigonometry is a branch of mathematics that deals with the relationship between the sides and angles of triangles, especially right-angled triangles.</p>
+        <p>It helps us to find unknown sides or angles of triangles using special ratios.</p>
+        <p>In simple words: Trigonometry is like a tool that helps us to know how the sides of a triangle relate to its angles, without measuring every side directly.</p>
+
+        <h2>KEY TERMS</h2>
+        <p><strong>Right-angled triangle:</strong> A triangle that has one angle equal to 90°. This is called the right angle.</p>
+        <p><strong>Hypotenuse:</strong> The longest side of a right-angled triangle. It is always opposite the right angle.</p>
+        <p><strong>Opposite side:</strong> The side opposite the angle we are looking at.</p>
+        <p><strong>Adjacent side:</strong> The side next to the angle we are looking at, but not the hypotenuse.</p>
+
+        <h2>THE SINE, COSINE, AND TANGENT RATIOS</h2>
+        <p>For a right-angled triangle, if we are considering an acute angle θ (any angle less than 90°):</p>
+
+        <h3>Sine (sin θ)</h3>
+        <p><strong>Definition:</strong> Sine is the ratio of the opposite side to the hypotenuse.</p>
+        <p><strong>Formula:</strong> sin θ = Opposite side ÷ Hypotenuse</p>
+        <p><strong>Example:</strong> If the opposite side is 3 cm and the hypotenuse is 5 cm, then sin θ = 3 ÷ 5 = 0.6</p>
+
+        <h3>Cosine (cos θ)</h3>
+        <p><strong>Definition:</strong> Cosine is the ratio of the adjacent side to the hypotenuse.</p>
+        <p><strong>Formula:</strong> cos θ = Adjacent side ÷ Hypotenuse</p>
+        <p><strong>Example:</strong> If the adjacent side is 4 cm and the hypotenuse is 5 cm, then cos θ = 4 ÷ 5 = 0.8</p>
+
+        <h3>Tangent (tan θ)</h3>
+        <p><strong>Definition:</strong> Tangent is the ratio of the opposite side to the adjacent side.</p>
+        <p><strong>Formula:</strong> tan θ = Opposite side ÷ Adjacent side</p>
+        <p><strong>Example:</strong> If the opposite side is 3 cm and the adjacent side is 4 cm, then tan θ = 3 ÷ 4 = 0.75</p>
+
+        <h2>STEP-BY-STEP GUIDE TO USING SINE, COSINE, AND TANGENT</h2>
+        <p><strong>Step 1 – Identify the angle of interest:</strong> Choose the angle θ you want to work with. This is usually one of the acute angles in a right-angled triangle.</p>
+        <p><strong>Step 2 – Label the sides:</strong></p>
+        <p>Hypotenuse: Always opposite the right angle.</p>
+        <p>Opposite: Opposite to angle θ.</p>
+        <p>Adjacent: Next to angle θ, not the hypotenuse.</p>
+        <p><strong>Step 3 – Decide which ratio to use:</strong></p>
+        <p>If you know the opposite and hypotenuse → use sine.</p>
+        <p>If you know the adjacent and hypotenuse → use cosine.</p>
+        <p>If you know the opposite and adjacent → use tangent.</p>
+        <p><strong>Step 4 – Write the ratio formula:</strong> Example: sin θ = Opposite ÷ Hypotenuse</p>
+        <p><strong>Step 5 – Substitute the known values:</strong> Plug in the numbers you know into the formula.</p>
+        <p><strong>Step 6 – Solve for the unknown side or angle:</strong> For sides: Multiply or divide to isolate the unknown. For angles: Use the inverse function on a calculator, e.g., θ = sin⁻¹(Opposite ÷ Hypotenuse).</p>
+
+        <h2>EXAMPLES WITH STEP-BY-STEP SOLUTIONS</h2>
+
+        <h3>Example 1 – Find the opposite side using sine</h3>
+        <p>A right-angled triangle has a hypotenuse of 10 cm and an angle of 30°. Find the opposite side.</p>
+        <p><strong>Solution:</strong></p>
+        <p>Step 1: Identify the angle: θ = 30°</p>
+        <p>Step 2: Decide the ratio: Opposite side is unknown, hypotenuse is known → use sine</p>
+        <p>Step 3: Write the formula: sin θ = Opposite ÷ Hypotenuse</p>
+        <p>Step 4: Substitute: sin 30° = Opposite ÷ 10</p>
+        <p>Step 5: Solve: 0.5 = Opposite ÷ 10 → Opposite = 0.5 × 10 = 5 cm</p>
+        <p> Opposite side = 5 cm</p>
+
+        <h3>Example 2 – Find the adjacent side using cosine</h3>
+        <p>A right-angled triangle has a hypotenuse of 12 cm and an angle of 60°. Find the adjacent side.</p>
+        <p><strong>Solution:</strong></p>
+        <p>Step 1: Identify the angle: θ = 60°</p>
+        <p>Step 2: Decide the ratio: Adjacent side is unknown, hypotenuse is known → use cosine</p>
+        <p>Step 3: Write the formula: cos θ = Adjacent ÷ Hypotenuse</p>
+        <p>Step 4: Substitute: cos 60° = Adjacent ÷ 12</p>
+        <p>Step 5: Solve: 0.5 = Adjacent ÷ 12 → Adjacent = 0.5 × 12 = 6 cm</p>
+        <p> Adjacent side = 6 cm</p>
+
+        <h3>Example 3 – Find the opposite side using tangent</h3>
+        <p>A right-angled triangle has an angle of 45° and an adjacent side of 7 cm. Find the opposite side.</p>
+        <p><strong>Solution:</strong></p>
+        <p>Step 1: Identify the angle: θ = 45°</p>
+        <p>Step 2: Decide the ratio: Opposite side is unknown, adjacent is known → use tangent</p>
+        <p>Step 3: Write the formula: tan θ = Opposite ÷ Adjacent</p>
+        <p>Step 4: Substitute: tan 45° = Opposite ÷ 7</p>
+        <p>Step 5: Solve: 1 = Opposite ÷ 7 → Opposite = 1 × 7 = 7 cm</p>
+        <p>Opposite side = 7 cm</p>
+
+        <h3>Example 4 – Find an angle using tangent</h3>
+        <p>A right-angled triangle has an opposite side of 3 cm and adjacent side of 4 cm. Find angle θ.</p>
+        <p><strong>Solution:</strong></p>
+        <p>Step 1: Decide the ratio: Angle unknown, opposite and adjacent known → use tangent</p>
+        <p>Step 2: Write the formula: tan θ = Opposite ÷ Adjacent</p>
+        <p>Step 3: Substitute: tan θ = 3 ÷ 4 = 0.75</p>
+        <p>Step 4: Solve: θ = tan⁻¹(0.75) ≈ 37°</p>
+        <p> Angle θ ≈ 37°</p>
+
+        <h2>SUMMARY AND KEY POINTS</h2>
+        <ul>
+        <li>Trigonometry studies the relationship between sides and angles of right-angled triangles.</li><br>
+        <li>The main ratios are:</li><br>
+        <ul>
+        <li>Sine = Opposite ÷ Hypotenuse</li><br>
+        <li>Cosine = Adjacent ÷ Hypotenuse</li><br>
+        <li>Tangent = Opposite ÷ Adjacent</li><br>
+        </ul>
+        <li>These ratios help us to find unknown sides or angles in right-angled triangles.</li><br>
+        <li>Steps to solve: Identify angle → label sides → choose ratio → substitute → solve.</li><br>
+        <li>Trigonometry has real-life applications: measuring heights of buildings, designing ramps, navigation, and construction.</li>
+        </ul><br><br>
+        <hr>
+        <br><br>
+
+        <h2>DIAGRAM OF A RIGHT-ANGLED TRIANGLE</h2>
+
+<pre>
+              /|
+             / |
+            /  |
+           /   |  ← Opposite side (to angle θ)
+          /θ___|
+         ← Adjacent side
+   (next to angle θ, not the longest)
+
+Hypotenuse = the longest side (always opposite the right angle)
+</pre>
+
+        <h3>Step-by-Step Explanation of the Diagram</h3>
+        <p>Look at the triangle above carefully. It has a small square corner (that means a 90° angle) — that is why it is called a right-angled triangle.</p>
+        <p><strong>Angle θ (theta):</strong> This is the small angle near the bottom left of the triangle.</p>
+
+        <h3>The Hypotenuse</h3>
+        <p>This is the longest side of the triangle. It is always across from the right angle (90°). No matter which angle θ you choose, the hypotenuse does not change.</p>
+
+        <h3>The Opposite side</h3>
+        <p>This is the side that is across from the angle θ you are working with. It is called "opposite" because it is facing the angle.</p>
+
+        <h3>The Adjacent side</h3>
+        <p>This is the side that is next to (or beside) the angle θ. It is not the hypotenuse. It touches the angle θ directly.</p>
+
+        <h3>How to Remember Them Easily</h3>
+        <p>You can remember the three trigonometric ratios using a simple memory trick: <strong>“SOH CAH TOA”</strong></p>
+
+        <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+        <th>Ratio</th>
+        <th>Formula</th>
+        <th>Meaning</th>
+        </tr>
+        <tr>
+        <td>Sine</td>
+        <td>sin θ = Opposite ÷ Hypotenuse</td>
+        <td>S = Sine, O = Opposite, H = Hypotenuse</td>
+        </tr>
+        <tr>
+        <td>Cosine</td>
+        <td>cos θ = Adjacent ÷ Hypotenuse</td>
+        <td>C = Cosine, A = Adjacent, H = Hypotenuse</td>
+        </tr>
+        <tr>
+        <td>Tangent</td>
+        <td>tan θ = Opposite ÷ Adjacent</td>
+        <td>T = Tangent, O = Opposite, A = Adjacent</td>
+        </tr>
+        </table>
+
+        <p>So:</p>
+        <p>SOH → sin θ = Opposite / Hypotenuse</p>
+        <p>CAH → cos θ = Adjacent / Hypotenuse</p>
+        <p>TOA → tan θ = Opposite / Adjacent</p>
+
+        <br><br>
+        <hr>
+        <br><br>
+
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Application of Trigonometric Ratios (Solving Problems Using Sine, Cosine, and Tangent)</b></div>
+
+        <h3>DEFINITION</h3>
+        <p><b>Trigonometric ratios (sine, cosine, and tangent)</b> are special ratios in a right-angled triangle that help us to find unknown sides or angles. </p>
+        <p>In simple words: Trigonometric ratios help us to solve real-life problems where we need to know distances or heights without measuring them directly, just by knowing an angle and one side of a triangle.</p>
+
+        <h3>KEY TERMS REMINDER</h3>
+        <ul>
+        <li>Right-angled triangle: A triangle with one 90° angle.</li><br>
+        <li>Hypotenuse: The longest side, opposite the right angle.</li><br>
+        <li>Opposite side: The side across from the angle of interest.</li><br>
+        <li>Adjacent side: The side next to the angle of interest (not the hypotenuse).</li><br>
+        </ul>
+
+        <h3>STEPS TO SOLVE PROBLEMS USING TRIGONOMETRIC RATIOS</h3>
+        <ol>
+        <li>Identify the triangle and mark the known angle and sides.</li><br>
+        <li>Label the sides as Opposite, Adjacent, and Hypotenuse with respect to the angle you are working with.</li><br>
+        <li>Choose the correct ratio (sine, cosine, tangent) based on which sides you know and which you want to find.</li><br>
+        <li>Write the formula for the chosen ratio.</li><br>
+        <li>Substitute the known values into the formula.</li><br>
+        <li>Solve for the unknown side or angle.</li><br>
+        </ol>
+
+        <h3>EXAMPLES WITH STEP-BY-STEP SOLUTIONS</h3>
+
+        <h4>Example 1 – Find the height of a tree</h4>
+        <p>A tree casts a shadow of 8 m. The angle of elevation of the sun is 30°. Find the height of the tree.</p>
+
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the angle: θ = 30° (angle of elevation).</li><br>
+        <li>Label sides: Opposite = height of tree (unknown), Adjacent = 8 m (shadow), Hypotenuse = not given.</li><br>
+        <li>Choose ratio: Opposite and Adjacent → use tangent.</li><br>
+        <li>Write formula: tan θ = Opposite ÷ Adjacent</li><br>
+        <li>Substitute: tan 30° = Opposite ÷ 8</li><br>
+        <li>Solve: 0.577 = Opposite ÷ 8 → Opposite = 0.577 × 8 ≈ 4.62 m</li>
+        </ol>
+        <p><strong>Height of the tree ≈ 4.62 m</strong></p>
+
+        <h4>Example 2 – Find the length of a ladder</h4>
+        <p>A ladder leans against a wall making an angle of 60° with the ground. The foot of the ladder is 3 m away from the wall. Find the length of the ladder.</p>
+
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the angle: θ = 60°.</li>
+        <li>Label sides: Adjacent = 3 m (distance from wall), Hypotenuse = ladder length (unknown), Opposite = height on wall.</li><br>
+        <li>Choose ratio: Adjacent and Hypotenuse → use cosine.</li><br>
+        <li>Write formula: cos θ = Adjacent ÷ Hypotenuse</li><br>
+        <li>Substitute: cos 60° = 3 ÷ Hypotenuse</li><br>
+        <li>Solve: 0.5 = 3 ÷ Hypotenuse → Hypotenuse = 3 ÷ 0.5 = 6 m</li><br>
+        </ol>
+        <p><strong>Length of the ladder = 6 m</strong></p>
+
+        <h4>Example 3 – Find the distance across a river</h4>
+        <p>A person stands on one bank of a river. The angle of elevation to a tree on the other bank is 40°. The height of the tree is 10 m. Find the distance across the river (base of the tree to the person).</p>
+
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the angle: θ = 40°.</li><br>
+        <li>Label sides: Opposite = 10 m (height of tree), Adjacent = distance across the river (unknown), Hypotenuse = not needed.</li><br>
+        <li>Choose ratio: Opposite and Adjacent → use tangent.</li><br>
+        <li>Write formula: tan θ = Opposite ÷ Adjacent</li><br>
+        <li>Substitute: tan 40° = 10 ÷ Adjacent</li><br>
+        <li>Solve: 0.8391 = 10 ÷ Adjacent → Adjacent = 10 ÷ 0.8391 ≈ 11.92 m</li><br>
+        </ol>
+        <p><strong>Distance across the river ≈ 11.92 m</strong></p>
+
+        <h4>Example 4 – Find the angle of elevation</h4>
+        <p>A building is 15 m high. A person stands 20 m from the base. Find the angle of elevation to the top of the building.</p>
+
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the sides: Opposite = 15 m, Adjacent = 20 m, Hypotenuse = not needed.</li><br>
+        <li>Choose ratio: Opposite and Adjacent → use tangent.</li><br>
+        <li>Write formula: tan θ = Opposite ÷ Adjacent</li><br>
+        <li>Substitute: tan θ = 15 ÷ 20 = 0.75</li><br>
+        <li>Solve: θ = tan⁻¹(0.75) ≈ 37°</li><br>
+        </ol>
+        <p><strong>Angle of elevation ≈ 37°</strong></p>
+
+        <h4>Example 5 – Find the height of a ramp</h4>
+        <p>A ramp rises at an angle of 25° to the ground. The ramp is 12 m long. Find the height it rises to.</p>
+
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the angle: θ = 25°.</li>
+        <li>Label sides: Hypotenuse = 12 m, Opposite = height (unknown), Adjacent = base (not needed).</li><br>
+        <li>Choose ratio: Opposite and Hypotenuse → use sine.</li><br>
+        <li>Write formula: sin θ = Opposite ÷ Hypotenuse</li><br>
+        <li>Substitute: sin 25° = Opposite ÷ 12</li><br>
+        <li>Solve: 0.4226 = Opposite ÷ 12 → Opposite = 0.4226 × 12 ≈ 5.07 m</li><br>
+        </ol>
+        <p><strong>Height of the ramp ≈ 5.07 m</strong></p>
+
+        <h3>SUMMARY</h3>
+        <ul>
+        <li>Identify the angle of interest and label sides correctly.</li><br>
+        <li>Choose the correct trigonometric ratio: sine, cosine, or tangent.</li><br>
+        <li>Use the ratio formula and substitute known values.</li><br>
+        <li>Solve step by step for the unknown side or angle.</li><br>
+        <li>Trigonometry is widely used in real-life: measuring heights, distances, building ramps, and navigation.</li>
+        </ul><br><br><br>
+        <hr>
+        <br><br>
+        <h2> Trigonometry Questions for JSSCE (with Step-by-Step Solutions)</h2>
+
+        <h3>Question 1</h3>
+        <p>A right-angled triangle has a hypotenuse of 10 cm and an angle of 30°. Find the length of the side opposite the angle.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Identify the angle: θ = 30°</li>
+        <li>Known side: Hypotenuse = 10 cm; unknown side = Opposite → use sine.</li>
+        <li>Formula: sin θ = Opposite ÷ Hypotenuse</li>
+        <li>Substitute: sin 30° = Opposite ÷ 10 → 0.5 = Opposite ÷ 10</li>
+        <li>Solve: Opposite = 0.5 × 10 = 5 cm</li>
+        </ol>
+        <p><strong>Answer:</strong> Opposite side = 5 cm</p>
+
+        <h3>Question 2</h3>
+        <p>A ladder leans against a wall at an angle of 60° with the ground. The foot of the ladder is 3 m from the wall. Find the length of the ladder.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Adjacent = 3 m, Hypotenuse = ladder length (unknown), angle θ = 60°.</li>
+        <li>Use cosine: cos θ = Adjacent ÷ Hypotenuse</li>
+        <li>Substitute: cos 60° = 3 ÷ Hypotenuse → 0.5 = 3 ÷ Hypotenuse</li>
+        <li>Solve: Hypotenuse = 3 ÷ 0.5 = 6 m</li>
+        </ol>
+        <p><strong>Answer:</strong> Ladder length = 6 m</p>
+
+        <h3>Question 3</h3>
+        <p>A tree casts a shadow 8 m long. The angle of elevation of the sun is 30°. Find the height of the tree.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Opposite = height of tree (unknown), Adjacent = shadow = 8 m, angle θ = 30°.</li>
+        <li>Use tangent: tan θ = Opposite ÷ Adjacent</li>
+        <li>Substitute: tan 30° = Opposite ÷ 8 → 0.577 = Opposite ÷ 8</li>
+        <li>Solve: Opposite = 0.577 × 8 ≈ 4.62 m</li>
+        </ol>
+        <p><strong>Answer:</strong> Height ≈ 4.62 m</p>
+
+        <h3>Question 4</h3>
+        <p>A ramp rises at an angle of 25° and is 12 m long. Find the vertical height it rises to.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Hypotenuse = 12 m, Opposite = height (unknown), angle θ = 25°.</li>
+        <li>Use sine: sin θ = Opposite ÷ Hypotenuse</li>
+        <li>Substitute: sin 25° = Opposite ÷ 12 → 0.4226 = Opposite ÷ 12</li>
+        <li>Solve: Opposite = 0.4226 × 12 ≈ 5.07 m</li>
+        </ol>
+        <p><strong>Answer:</strong> Height ≈ 5.07 m</p>
+
+        <h3>Question 5</h3>
+        <p>A right-angled triangle has an opposite side of 4 cm and an adjacent side of 3 cm. Find the angle opposite the 4 cm side.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Use tangent: tan θ = Opposite ÷ Adjacent = 4 ÷ 3 = 1.3333</li>
+        <li>θ = tan⁻¹(1.3333) ≈ 53°</li>
+        </ol>
+        <p><strong>Answer:</strong> Angle ≈ 53°</p>
+
+        <h3>Question 6</h3>
+        <p>A right-angled triangle has an angle of 45° and a hypotenuse of 7 cm. Find the length of the side adjacent to the angle.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Use cosine: cos θ = Adjacent ÷ Hypotenuse</li>
+        <li>Substitute: cos 45° = Adjacent ÷ 7 → 0.707 = Adjacent ÷ 7</li>
+        <li>Solve: Adjacent = 0.707 × 7 ≈ 4.95 cm</li>
+        </ol>
+        <p><strong>Answer:</strong> Adjacent ≈ 4.95 cm</p>
+
+        <h3>Question 7</h3>
+        <p>A building is 20 m tall. A person is 15 m from its base. Find the angle of elevation to the top of the building.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Opposite = 20 m, Adjacent = 15 m, angle θ = unknown</li>
+        <li>Use tangent: tan θ = Opposite ÷ Adjacent = 20 ÷ 15 = 1.3333</li>
+        <li>θ = tan⁻¹(1.3333) ≈ 53°</li>
+        </ol>
+        <p><strong>Answer:</strong> Angle of elevation ≈ 53°</p>
+
+        <h3>Question 8</h3>
+        <p>A ramp is 10 m long and rises 6 m. Find the angle the ramp makes with the horizontal.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Opposite = 6 m, Hypotenuse = 10 m, angle θ = unknown</li>
+        <li>Use sine: sin θ = Opposite ÷ Hypotenuse = 6 ÷ 10 = 0.6</li>
+        <li>θ = sin⁻¹(0.6) ≈ 37°</li>
+        </ol>
+        <p><strong>Answer:</strong> Angle ≈ 37°</p>
+
+        <h3>Question 9</h3>
+        <p>A ladder reaches a window 9 m high. The ladder makes an angle of 60° with the ground. Find the length of the ladder.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Label sides: Opposite = 9 m, Hypotenuse = ladder (unknown), angle θ = 60°</li>
+        <li>Use sine: sin θ = Opposite ÷ Hypotenuse</li>
+        <li>Substitute: sin 60° = 9 ÷ Hypotenuse → 0.866 = 9 ÷ Hypotenuse</li>
+        <li>Solve: Hypotenuse = 9 ÷ 0.866 ≈ 10.39 m</li>
+        </ol>
+        <p><strong>Answer:</strong> Ladder length ≈ 10.39 m</p>
+
+        <h3>Question 10</h3>
+        <p>A right-angled triangle has sides 5 cm (opposite) and 12 cm (adjacent). Find the angle opposite the 5 cm side and the hypotenuse.</p>
+        <p><strong>Solution:</strong></p>
+        <ol>
+        <li>Find the angle using tangent: tan θ = Opposite ÷ Adjacent = 5 ÷ 12 ≈ 0.4167</li>
+        <li>θ = tan⁻¹(0.4167) ≈ 23°</li>
+        <li>Find hypotenuse using Pythagoras theorem: Hypotenuse² = 5² + 12² = 25 + 144 = 169 → Hypotenuse = √169 = 13 cm</li>
+        </ol>
+        <p><strong>Answer:</strong> Angle ≈ 23°, Hypotenuse = 13 cm</p>
+
+
+
+
+
+                    
+                        
+
+
+       
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j3/1.html" class="iam">
+                <br>
+                <li > ALGEBRAIC OPERATIONS</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j3/2.html" class="iam">
+
+                <li >FACTORIZATION    </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j1/3.html" class="iam">
+
+                <li > SIMPLE EQUATIONS INVOLVING FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/4.html" class="iam">
+
+                <li >SIMULTANEOUS LINEAR EQUATIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/5.html" class="iam">
+                
+                <li > SIMILAR SHAPES   </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j3/6.html" class="iam">
+                <br>
+                <li > TRIGONOMETRY  </li>
+            </a>
+             <br>
+
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

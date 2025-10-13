@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+              <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/first-term/math-first/first-term-js2-math.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 20:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+    // WHOLE NUMBERS
+    { question: "What is the predecessor of 301?", a: "300", b: "302", c: "299", correct: "a" },
+    { question: "Which number is not a whole number?", a: "-1", b: "0", c: "1", correct: "a" },
+    { question: "What is the place value of 8 in 8,473?", a: "80", b: "800", c: "8000", correct: "c" },
+    { question: "The sum of the first 5 whole numbers is:", a: "10", b: "15", c: "20", correct: "b" },
+    { question: "The smallest whole number is:", a: "0", b: "1", c: "-1", correct: "a" },
+    { question: "What is the value of 300 + 0?", a: "0", b: "300", c: "30", correct: "b" },
+    { question: "Which of these is a whole number?", a: "2.5", b: "5", c: "1/2", correct: "b" },
+    { question: "The successor of 9999 is:", a: "10000", b: "9998", c: "1000", correct: "a" },
+
+    // COMMERCIAL ARITHMETIC
+    { question: "If cost price = ₦500 and selling price = ₦600, profit is:", a: "₦100", b: "₦110", c: "₦90", correct: "a" },
+    { question: "A trader bought goods for ₦800 and sold for ₦640. The loss is:", a: "₦120", b: "₦160", c: "₦140", correct: "b" },
+    { question: "Profit = Selling Price − ?", a: "Cost Price", b: "Discount", c: "Interest", correct: "a" },
+    { question: "If discount is ₦50 on ₦500, the rate of discount is:", a: "10%", b: "5%", c: "15%", correct: "a" },
+    { question: "Simple Interest on ₦1000 for 2 years at 5% is:", a: "₦100", b: "₦200", c: "₦150", correct: "a" },
+    { question: "The formula for Simple Interest is:", a: "SI = PRT/100", b: "SI = PR/T", c: "SI = PT/R", correct: "a" },
+    { question: "If a man deposits ₦2000 at 10% per annum for 3 years, interest = ?", a: "₦600", b: "₦500", c: "₦700", correct: "a" },
+    { question: "Selling price = Cost price + ?", a: "Profit", b: "Loss", c: "Discount", correct: "a" },
+    { question: "If cost price = ₦900 and profit = ₦100, selling price = ?", a: "₦1000", b: "₦800", c: "₦950", correct: "a" },
+
+    // APPROXIMATION / DECIMAL PLACE
+    { question: "Round 4.678 to 2 decimal places:", a: "4.67", b: "4.68", c: "4.66", correct: "b" },
+    { question: "Round 7.324 to the nearest whole number:", a: "7", b: "8", c: "6", correct: "a" },
+    { question: "Round 85.47 to 1 decimal place:", a: "85.5", b: "85.4", c: "85.6", correct: "a" },
+    { question: "Round 99.999 to the nearest hundred:", a: "100", b: "0", c: "1000", correct: "a" },
+    { question: "Round 15.555 to 2 decimal places:", a: "15.55", b: "15.56", c: "15.54", correct: "b" },
+    { question: "Round 0.499 to the nearest whole number:", a: "0", b: "1", c: "5", correct: "a" },
+    { question: "Round 1.345 to 2 decimal places:", a: "1.35", b: "1.34", c: "1.33", correct: "a" },
+
+    // SIGNIFICANT FIGURES
+    { question: "Write 0.00345 in 2 significant figures:", a: "0.0034", b: "0.0035", c: "0.004", correct: "b" },
+    { question: "Round 2456 to 3 significant figures:", a: "2460", b: "2450", c: "2400", correct: "a" },
+    { question: "Round 0.006789 to 2 significant figures:", a: "0.0068", b: "0.0067", c: "0.007", correct: "a" },
+    { question: "Write 78,943 to 4 significant figures:", a: "78,940", b: "78,900", c: "78,950", correct: "a" },
+    { question: "Round 12.546 to 3 significant figures:", a: "12.5", b: "12.6", c: "13.0", correct: "b" },
+    { question: "Round 0.00458 to 3 significant figures:", a: "0.00458", b: "0.0046", c: "0.00457", correct: "a" },
+
+    // QUANTITATIVE REASONING
+    { question: "If a car travels 60 km in 2 hours, speed is:", a: "30 km/h", b: "40 km/h", c: "20 km/h", correct: "a" },
+    { question: "Find the missing number: 2, 4, 8, 16, ?", a: "32", b: "30", c: "28", correct: "a" },
+    { question: "What is next in the sequence: 5, 10, 20, 40, ?", a: "60", b: "80", c: "70", correct: "b" },
+    { question: "If 3 pens cost ₦90, find the cost of 5 pens:", a: "₦120", b: "₦150", c: "₦180", correct: "b" },
+    { question: "A train travels 120 km in 3 hours. Average speed is:", a: "30 km/h", b: "40 km/h", c: "50 km/h", correct: "b" },
+    { question: "Find the value that fits: 4 → 16, 5 → 25, 6 → ?", a: "36", b: "25", c: "30", correct: "a" },
+    { question: "If 12 workers finish a job in 6 days, 6 workers will finish in:", a: "12 days", b: "9 days", c: "3 days", correct: "a" },
+    { question: "The sum of two consecutive even numbers is 26. The smaller number is:", a: "12", b: "13", c: "14", correct: "a" },
+
+    // MULTIPLICATION AND DIVISION OF DIRECTED NUMBERS
+    { question: "What is (−4) × (−5)?", a: "20", b: "−20", c: "25", correct: "a" },
+    { question: "(−8) ÷ (2) equals:", a: "−4", b: "4", c: "−8", correct: "a" },
+    { question: "(−9) × (+3) equals:", a: "−27", b: "27", c: "−9", correct: "a" },
+    { question: "The product of two negative numbers is:", a: "Positive", b: "Negative", c: "Zero", correct: "a" },
+    { question: "(−10) ÷ (−2) equals:", a: "5", b: "−5", c: "10", correct: "a" },
+    { question: "(+6) × (−2) =", a: "−12", b: "12", c: "−8", correct: "a" },
+    { question: "(−7) × 0 =", a: "0", b: "−7", c: "7", correct: "a" },
+    { question: "(−12) ÷ (+3) =", a: "−4", b: "4", c: "−3", correct: "a" },
+    { question: "(+9) ÷ (−3) =", a: "−3", b: "3", c: "−6", correct: "a" },
+
+    // SQUARE AND SQUARE ROOT TABLE
+    { question: "Square of 12 is:", a: "144", b: "124", c: "142", correct: "a" },
+    { question: "√49 =", a: "6", b: "7", c: "8", correct: "b" },
+    { question: "Square of 15 =", a: "215", b: "225", c: "250", correct: "b" },
+    { question: "√81 =", a: "8", b: "9", c: "10", correct: "b" },
+    { question: "Square of 18 =", a: "324", b: "320", c: "318", correct: "a" },
+    { question: "√100 =", a: "9", b: "10", c: "11", correct: "b" },
+    { question: "Square of 11 =", a: "121", b: "122", c: "120", correct: "a" },
+    { question: "√64 =", a: "7", b: "8", c: "9", correct: "b" },
+
+    // CHART, RECORD, AND SCHEDULES
+    { question: "A chart is used to:", a: "Present data visually", b: "Record names only", c: "Store items", correct: "a" },
+    { question: "A record is mainly used to:", a: "Keep information", b: "Draw charts", c: "Make speeches", correct: "a" },
+    { question: "A schedule is used for:", a: "Planning activities", b: "Decorating charts", c: "Counting numbers", correct: "a" },
+    { question: "Which of these is a type of chart?", a: "Bar chart", b: "Class chart", c: "List chart", correct: "a" },
+    { question: "Which chart shows parts of a whole?", a: "Pie chart", b: "Bar chart", c: "Line graph", correct: "a" },
+    { question: "A line graph is used to show:", a: "Change over time", b: "One-time data", c: "Stationary data", correct: "a" },
+    { question: "A pictograph uses:", a: "Pictures", b: "Lines", c: "Fractions", correct: "a" },
+    { question: "A record of daily sales is an example of:", a: "Record", b: "Schedule", c: "Chart", correct: "a" },
+    { question: "A timetable of classes is an example of:", a: "Schedule", b: "Chart", c: "Graph", correct: "a" },
+    { question: "In a bar chart, the bars must have:", a: "Equal width", b: "Equal height", c: "Equal numbers", correct: "a" }
+];
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1200;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "click here to See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer </span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1200;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

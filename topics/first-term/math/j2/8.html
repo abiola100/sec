@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Approximation - mathematics -jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+    <style>
+    h1,h2,h3 { color:#0b5a3a; }
+    pre { background:#f9f9f9; padding:10px; border:1px solid #e6e6e6; border-radius:6px; overflow:auto; }
+    table { border-collapse:collapse; width:100%; margin:10px 0 20px 0; }
+    th,td { border:1px solid #ccc; padding:8px; text-align:left; }
+    .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+    .note { font-size:0.95rem; color:#333; }
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/first-term/math-first/first-term-js2-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1"> 
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color:purple;color: white;"><b>APPROXIMATION</b></div>
+       
+        <h3>Meaning of Approximation</h3>
+        <p><b>Approximation</b> means finding a value that is close to, but not exactly equal to, a given number. It is used to make numbers easier to understand and work with, especially when the exact value is not needed. Approximation helps in making quick estimates, simplifying calculations, and presenting data in a more readable form.</p>
+
+        <p>For example:</p>
+        <ol>
+        <li>The population of a town may be approximately 20,000 instead of the exact 19,784.</li><br>
+        <li>A pencil may be said to be about 15 cm long instead of 14.8 cm.</li><br>
+        </ol><br><br>
+        <div class="title" style="background-color: #0b5a3a;color: white;"><b>Why We Approximate Numbers</b></div>
+        <ol>
+        <li>To simplify large or complicated numbers.</li><br>
+        <li>To make calculations easier and faster.</li><br>
+        <li>When an exact number is not required.</li><br>
+        <li>To estimate or predict results.</li><br>
+        <li>To express measurements in simple forms.</li><br>
+        </ol><br>
+
+        <div class="title" style="background-color: rosybrown;color: black;"><b>Terms Used in Approximation</b></div>
+        <ol>
+        <li><b>Rounding off</b> – Writing a number to the nearest 10, 100, 1000, or to a certain number of decimal places.</li><br>
+        <li><b>Significant Figures</b> – The digits that give meaning to a number.</li><br>
+        <li><b>Decimal Places</b> – The number of digits after the decimal point.</li><br>
+        <li><b>Estimation</b> – Finding a rough value that is close to the actual answer.</li><br>
+        </ol>
+
+        <h3>Rounding Off Numbers</h3>
+        <p>To round off a number, look at the digit after the place you want to round to:</p>
+        <ol>
+        <li>If it is 5 or more, increase the previous digit by 1.</li><br>
+        <li>If it is less than 5, keep the previous digit the same and change the rest to zero (for whole numbers) or remove them (for decimals).</li><br>
+        </ol>
+
+        <p><b>Examples:</b></p>
+        <ol>
+        <li>467 rounded to the nearest 10 = 470</li><br>
+        <li>467 rounded to the nearest 100 = 500</li><br>
+        <li>3.846 rounded to 2 decimal places = 3.85</li><br>
+        </ol>
+
+        <h3>Rules for Rounding Off</h3>
+        <ol>
+        <li>Identify the place value you are rounding to.</li><br>
+        <li>Look at the next digit to the right (the rounding digit).</li><br>
+        <li>If the rounding digit is 5 or greater, add 1 to the digit being rounded.</li><br>
+        <li>If the rounding digit is less than 5, leave the number as it is.</li><br>
+        <li>Replace all digits to the right with zeros (for whole numbers) or remove them (for decimals).</li><br>
+        </ol>
+
+        <h3>Significant Figures</h3>
+        <p>Significant figures are the digits in a number that show its accuracy.</p>
+        <p><b>Rules:</b></p>
+        <ol>
+        <li>All non-zero digits are significant.</li><br>
+        <li>Zeros between non-zero digits are significant.</li><br>
+        <li>Leading zeros are not significant.</li><br>
+        <li>Trailing zeros in a decimal are significant.</li><br>
+        </ol>
+
+        <p><b>Examples:</b></p>
+        <ol>
+        <li>23.47 → 4 significant figures</li><br>
+        <li>0.00456 → 3 significant figures</li><br>
+        <li>2500 → 2 significant figures</li><br>
+        <li>2500.0 → 5 significant figures</li><br>
+        </ol>
+
+        <h3>Rounding to Significant Figures</h3>
+        <p>When rounding to significant figures, count from the first non-zero digit.</p>
+
+        <p><b>Examples:</b></p>
+        <ol>
+        <li>3467 to 2 s.f. = 3500</li><br>
+        <li>0.004563 to 2 s.f. = 0.0046</li><br>
+        <li>12.345 to 3 s.f. = 12.3</li><br>
+        </ol>
+
+        <h3>Decimal Places</h3>
+        <p>Decimal places show how many digits come after the decimal point.</p>
+
+        <p><b>Examples:</b></p>
+        <ol>
+        <li>3.768 rounded to 1 decimal place = 3.8</li><br>
+        <li>7.3246 rounded to 2 decimal places = 7.32</li><br>
+        <li>4.999 rounded to 2 decimal places = 5.00</li><br>
+        </ol>
+
+        <h3>Estimation</h3>
+        <p>Estimation is the process of finding an approximate value close to the actual answer. It helps in checking the reasonableness of answers.</p>
+
+        <p><b>Examples:</b></p>
+        <ol>
+        <li>Estimate 47 × 19 ≈ 50 × 20 = 1000</li><br>
+        <li>Estimate 198 + 305 + 92 ≈ 200 + 300 + 100 = 600</li><br>
+        </ol><br><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b> Examples</b></div>
+        <ol>
+        <li>
+        <b>Round 253 to the nearest 10:</b><br><br>
+        Step 1: Identify the digit in the tens place → 5 (in 253).<br><br>
+        Step 2: Look at the next digit (units place) → 3.<br><br>
+        Step 3: Since 3 &lt; 5, keep the tens digit the same and replace the units digit with 0.<br><br>
+        Answer: 253 ≈ 250
+        </li><br>
+
+        <li>
+        <b>Round 253 to the nearest 100:</b><br><br>
+        Step 1: Identify the digit in the hundreds place → 2.<br><br>
+        Step 2: Look at the tens digit → 5.<br><br>
+        Step 3: Since 5 ≥ 5, increase the hundreds digit by 1 → 3, and change tens and units digits to 0.<br><br>
+        Answer: 253 ≈ 300
+        </li><br>
+
+        <li>
+        <b>Round 46.78 to 1 decimal place:</b><br><br>
+        Step 1: Identify the first decimal place → 7 (tenths).<br><br>
+        Step 2: Look at the next decimal place → 8 (hundredths).<br><br>
+        Step 3: Since 8 ≥ 5, increase the tenths digit by 1 → 8.<br><br>
+        Answer: 46.78 ≈ 46.8
+        </li><br>
+
+        <li>
+        <b>Round 0.0456 to 2 significant figures:</b><br><br>
+        Step 1: Identify the first two significant figures → 4 and 5.<br><br>
+        Step 2: Look at the next digit → 6.<br><br>
+        Step 3: Since 6 ≥ 5, increase the second significant figure by 1 → 6.<br><br>
+        Answer: 0.0456 ≈ 0.046
+        </li><br>
+
+        <li>
+        <b>Round 78,346 to 3 significant figures:</b><br><br>
+        Step 1: Identify first 3 significant digits → 7, 8, 3.<br><br>
+        Step 2: Look at the next digit → 4.<br><br>
+        Step 3: Since 4 &lt; 5, keep the third significant digit as 3.<br><br>
+        Step 4: Replace remaining digits with zeros.<br><br>
+        Answer: 78,346 ≈ 78,300
+        </li><br>
+
+        <li>
+        <b>Estimate 199 + 302 + 98:</b><br><br>
+        Step 1: Round each number to the nearest hundred → 200, 300, 100.<br><br>
+        Step 2: Add rounded numbers → 200 + 300 + 100 = 600.<br><br>
+        Answer: ≈ 600
+        </li><br>
+
+        <li>
+        <b>Estimate 47 × 21:</b><br><br>
+        Step 1: Round 47 → 50, Round 21 → 20.<br><br>
+        Step 2: Multiply rounded numbers → 50 × 20 = 1000.<br><br>
+        Answer: ≈ 1000
+        </li><br>
+
+        <li>
+        <b>Round 5.6789 to 2 decimal places:</b><br><br>
+        Step 1: Identify the second decimal place → 7.<br><br>
+        Step 2: Look at the next decimal place → 8.<br><br>
+        Step 3: Since 8 ≥ 5, increase 7 by 1 → 8.<br><br>
+        Answer: 5.6789 ≈ 5.68
+        </li><br>
+
+        <li>
+        <b>Round 48,527 to the nearest 1000:</b><br><br>
+        Step 1: Identify the thousands place → 8.<br><br>
+        Step 2: Look at the hundreds place → 5.<br><br>
+        Step 3: Since 5 ≥ 5, increase 8 by 1 → 9, and replace hundreds, tens, units with zeros.<br><br>
+        Answer: 48,527 ≈ 49,000
+        </li><br>
+
+        <li>
+        <b>Round 0.009876 to 3 significant figures:</b><br><br>
+        Step 1: Identify first 3 significant digits → 9, 8, 7.<br><br>
+        Step 2: Look at the next digit → 6.<br><br>
+        Step 3: Since 6 ≥ 5, increase 7 → 8.<br><br>
+        Answer: 0.009876 ≈ 0.00988
+        </li><br>
+
+        <li>
+        <b>Round 637.48 to the nearest 10:</b><br><br>
+        Step 1: Identify tens place → 3.<br><br>
+        Step 2: Look at units place → 7.<br><br>
+        Step 3: Since 7 ≥ 5, increase tens digit → 4.<br><br>
+        Answer: 637.48 ≈ 640
+        </li><br>
+
+        <li>
+        <b>Round 6.54321 to 4 decimal places:</b><br><br>
+        Step 1: Identify the fourth decimal place → 3.<br><br>
+        Step 2: Look at fifth decimal place → 2.<br><br>
+        Step 3: Since 2 &lt; 5, keep 3 the same.<br><br>
+        Answer: 6.54321 ≈ 6.5432
+        </li><br>
+
+        <li>
+        <b>Estimate 304 × 98:</b><br><br>
+        Step 1: Round 304 → 300, 98 → 100.<br><br>
+        Step 2: Multiply rounded numbers → 300 × 100 = 30,000.<br><br>
+        Answer: ≈ 30,000
+        </li><br>
+
+        <li>
+        <b>Round 2.999 to the nearest whole number:</b><br><br>
+        Step 1: Look at decimal part → 0.999.<br><br>
+        Step 2: Since 0.999 ≥ 0.5, increase 2 by 1 → 3.<br><br>
+        Answer: 2.999 ≈ 3
+        </li><br>
+
+        <li>
+        <b>Round 74,289 to 2 significant figures:</b><br><br>
+        Step 1: Identify first 2 significant digits → 7 and 4.<br><br>
+        Step 2: Look at next digit → 2.<br><br>
+        Step 3: Since 2 &lt; 5, keep 4.<br><br>
+        Step 4: Replace remaining digits with zeros.<br><br>
+        Answer: 74,289 ≈ 74,000
+        </li><br>
+        </ol><br><br>
+        <div class="title" style="background-color: darkkhaki;color: black;"><b>Applications of Approximation</b></div>
+        <ol>
+        <li>Used in shopping for estimating total cost.</li><br>
+        <li>Used in budgeting and financial planning.</li><br>
+        <li>Used in measuring quantities in science and cooking.</li><br>
+        <li>Used in engineering and construction for tolerances.</li><br>
+        <li>Used in data presentation and reporting.</li><br>
+        </ol><br>
+
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Common Mistakes Students Make</b></div>
+        <ol>
+        <li>Forgetting to check the rounding digit before deciding.</li><br>
+        <li>Confusing significant figures with decimal places.</li><br>
+        <li>Adding or removing zeros wrongly.</li><br>
+        <li>Failing to identify the first non-zero digit in significant figures.</li><br>
+        <li>Rounding too early in a calculation, causing inaccurate results.</li><br>
+        </ol>
+
+        <h3>Practice Questions</h3>
+        <ol>
+        <li>Round 46,738 to the nearest 1000.</li><br>
+        <li>Round 0.003456 to 2 significant figures.</li><br>
+        <li>Estimate the value of 49 × 19.</li><br>
+        <li>Round 7.8365 to 3 decimal places.</li><br>
+        <li>Round 543 to the nearest 10.</li><br>
+        <li>Round 5.678 to 2 significant figures.</li><br>
+        <li>Estimate the sum of 201 + 398 + 102.</li><br>
+        <li>Round 68,429 to 1 significant figure.</li><br>
+        <li>Round 0.0567 to 2 decimal places.</li><br>
+        <li>Round 2.8459 to 3 significant figures.</li><br>
+        </ol>
+
+        <h3>Conclusion</h3>
+        <p>Approximation is a vital part of arithmetic that simplifies numbers and calculations. It helps us to estimate, plan, and communicate figures easily in daily life, business, and science. Learning how to approximate correctly ensures accuracy and efficiency in solving mathematical and real-life problems.</p>
+       <br><br>
+       <hr>
+       <h3>Approximation of Numbers & Decimal Places</h3>
+
+        <h4>Decimal Place</h4>
+        <p>
+        Decimal places refer to the digits that come after the decimal point in a number. The first digit after the decimal point is the tenths place, the second is the hundredths place, the third is the thousandths place, and so on. Understanding decimal places is important when rounding or estimating numbers.
+        </p>
+
+        <h4>Rounding Numbers to Decimal Places</h4>
+        <p>Step-by-step rules:</p>
+        <ol>
+        <li>Identify the decimal place you want to round to.</li><br>
+        <li>Look at the digit immediately to the right (next decimal place).</li><br>
+        <li>If the digit is 5 or greater, increase the rounding digit by 1.</li><br>
+        <li>If the digit is less than 5, keep the rounding digit the same.</li><br>
+        <li>Remove all digits after the place you are rounding to.</li><br>
+        </ol>
+
+        <h4>Worked Examples (Decimal Places)</h4>
+        <ol>
+        <li>
+        <b>Round 3.768 to 1 decimal place:</b><br><br>
+        Step 1: Identify the first decimal place → 7 (tenths).<br><br>
+        Step 2: Look at the next digit → 6 (hundredths).<br><br>
+        Step 3: Since 6 ≥ 5, increase 7 by 1 → 8.<br><br>
+        Answer: 3.768 ≈ 3.8
+        </li><br>
+
+        <li>
+        <b>Round 7.3246 to 2 decimal places:</b><br><br>
+        Step 1: Identify second decimal place → 2 (hundredths).<br><br>
+        Step 2: Look at the next digit → 4 (thousandths).<br><br>
+        Step 3: Since 4 &lt; 5, keep 2 the same.<br><br>
+        Answer: 7.3246 ≈ 7.32
+        </li><br>
+
+        <li>
+        <b>Round 4.999 to 2 decimal places:</b><br><br>
+        Step 1: Identify second decimal place → 9.<br><br>
+        Step 2: Look at the next digit → 9.<br><br>
+        Step 3: Since 9 ≥ 5, increase 9 → 10 → carry 1 to previous digit.<br><br>
+        Step 4: Adjust the number → 5.00<br><br>
+        Answer: 4.999 ≈ 5.00
+        </li><br>
+
+        <li>
+        <b>Round 6.54321 to 4 decimal places:</b><br><br>
+        Step 1: Identify fourth decimal place → 3.<br><br>
+        Step 2: Look at fifth decimal place → 2.<br><br>
+        Step 3: Since 2 &lt; 5, keep 3 the same.<br><br>
+        Answer: 6.54321 ≈ 6.5432
+        </li><br>
+
+        <li>
+        <b>Round 2.87654 to 3 decimal places:</b><br><br>
+        Step 1: Identify third decimal place → 6.<br><br>
+        Step 2: Look at fourth decimal place → 5.<br><br>
+        Step 3: Since 5 ≥ 5, increase 6 by 1 → 7.<br><br>
+        Answer: 2.87654 ≈ 2.877
+        </li><br>
+        </ol>
+
+        <h4>Practical  Questions (Decimal Places)</h4>
+        <ol>
+        <li>Round 12.3467 to 2 decimal places.</li><br>
+        <li>Round 0.009876 to 3 decimal places.</li><br>
+        <li>Round 98.7654 to 1 decimal place.</li><br>
+        <li>Round 7.89123 to 4 decimal places.</li><br>
+        <li>Round 45.6789 to the nearest tenth.</li><br>
+        </ol>
+
+
+        
+       
+
+
+        
+
+
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/first-term/math/j2/1.html" class="iam">
+                <br>
+                <li >  WHOLE NUMBERS </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j2/2.html" class="iam">
+
+                <li >PRIME FACTORS </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j2/3.html" class="iam">
+                <li > FRACTIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/4.html" class="iam">
+
+                <li > QUANTITATIVE REASONING OF FRACTIONS, RATIOS AND PERCENTAGES</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/5.html" class="iam">
+                
+                <li >  TRANSACTIONS IN THE HOME AND OFFICES    </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j2/6.html" class="iam">
+                <br>
+                <li >HOUSEHOLD ARITHMETICS </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j2/7.html" class="iam">
+                
+                <li >  COMMERCIAL ARITHMETICS    </li>
+            </a>
+            <br>
+            </a>
+            
+           <a href="../../../../topics/first-term/math/j2/8.html" class="iam">
+                <br>
+                <li >APPROXIMATION</li>
+            </a>
+             <br>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/9.html" class="iam">
+
+                <li > SIGNIFICANT FIGURES</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j2/10.html" class="iam">
+                
+                <li >  QUANTITATIVE REASONING    </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j2/11.html" class="iam">
+                <br>
+                <li >MULTIPLICATION AND DIVISION OF DIRECTED NUMBERS </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j2/12.html" class="iam">
+                
+                <li >   SQUARE AND SQUARE ROOT TABLE    </li>
+            </a>
+            <br>
+            </a>
+            
+           <a href="../../../../topics/first-term/math/j2/13.html" class="iam">
+                <br>
+                <li >CHART RECORD AND SCHEDULES </li>
+            </a>
+             <br>
+            </a>
+           
+           
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

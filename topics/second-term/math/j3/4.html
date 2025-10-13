@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>simultaneous linear equation - mathematics-topic jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+         .check { color:#0a7; font-weight:700; margin-top:6px; }
+         .section { margin-bottom:24px; }
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <header class="header-back">
+        <a href="../../../../terms/second-term/math-second/second-term-js3-math.html">
+        <div class="arrow-back">
+            
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color: purple;color: white;"><b>SIMULTANEOUS LINEAR EQUATIONS </b></div>
+       
+
+        <h3>DEFINITION</h3>
+        <p>A <b>simultaneous linear equation</b> is a set of two or more equations that have two or more unknowns (letters), and we must find the values of those unknowns that make both equations true at the same time.</p>
+        <p>The word “simultaneous” means “together” or “at the same time”.</p>
+        <p>So, simultaneous equations are solved together, not one after another.</p>
+
+        <h3>EXAMPLE</h3>
+        <p>Let us look at these two equations:</p>
+        <p>2x + y = 7</p>
+        <p>x + y = 5</p>
+        <p>Here, we have two equations and two unknowns (x and y). We must find values of x and y that make both equations true at the same time.</p>
+
+        <br><br>
+        <div class="title" style="background-color: seagreen;color: white;"><b>WHY WE LEARN SIMULTANEOUS EQUATIONS</b></div>
+        
+        <ol>
+        <li>It helps us to Find the values of two unknown numbers that are connected together.</li><br>
+        <li>It helps us to Solve problems that involve two related quantities, like price and quantity, or age and years.</li><br>
+        <li>It helps us to Understand how algebra can represent real-life situations.</li><br>
+        <li>It helps us to Prepare us for more advanced topics in algebra.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkcyan;color: white;"><b>IMPORTANT IDEAS TO REMEMBER</b></div>
+        <ol>
+        <li>We must always have at least two equations when there are two unknowns.</li><br>
+        <li>We can use different methods to solve them (like elimination or substitution).</li><br>
+        <li>The answer is a pair of values (for example, x = 2, y = 3).</li><br>
+        <li>The solution must satisfy both equations at the same time.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>METHODS OF SOLVING SIMULTANEOUS EQUATIONS</b></div>
+        <p>There are two main methods that we use at the Junior Secondary level:</p>
+        <ol>
+        <li>The Elimination Method</li><br>
+        <li>The Substitution Method</li><br>
+        </ol>
+        <p>Let us learn them one by one.</p>
+
+        <h3>1. ELIMINATION METHOD</h3>
+        
+        <p>This method means that we remove (or “eliminate”) one of the unknowns so that we can find the other one.</p>
+
+        <h4>Steps:</h4>
+        <ol>
+        <li>Write down both equations neatly.</li><br>
+        <li>Make the number in front of one of the unknowns (the coefficient) the same in both equations.</li><br>
+        <li>Subtract or add the equations to cancel (eliminate) one unknown.</li><br>
+        <li>Solve the remaining equation to find one unknown.</li><br>
+        <li>Substitute that value into one of the original equations to find the other unknown.</li><br>
+        <li>Write your final answer as x = ..., y = ...</li><br>
+        </ol>
+
+        <h4>Example 1 (Elimination Method)</h4>
+        <p>Solve these equations:</p>
+        <p>2x + y = 7</p>
+        <p>x + y = 5</p>
+
+        <p><strong>Step 1:</strong> Make the coefficients of y the same (they are already the same).</p>
+        <p><strong>Step 2:</strong> Subtract equation (2) from equation (1):</p>
+        <p>(2x + y) − (x + y) = 7 − 5<br>2x − x + y − y = 2<br>x = 2</p>
+
+        <p><strong>Step 3:</strong> Put x = 2 into any of the equations (let us use equation 2).</p>
+        <p>x + y = 5<br>2 + y = 5<br>y = 3</p>
+        <p> <strong>Final Answer:</strong> x = 2, y = 3</p>
+
+        <h4>Example 2 (Elimination Method)</h4>
+        <p>Solve:</p>
+        <p>3x + 2y = 12</p>
+        <p>2x + 2y = 10</p>
+
+        <p><strong>Step 1:</strong> The y coefficients are already the same (2).</p>
+        <p><strong>Step 2:</strong> Subtract equation (2) from equation (1):</p>
+        <p>(3x + 2y) − (2x + 2y) = 12 − 10<br>x = 2</p>
+
+        <p><strong>Step 3:</strong> Substitute x = 2 into equation (2):</p>
+        <p>2(2) + 2y = 10<br>4 + 2y = 10<br>2y = 6<br>y = 3</p>
+        <p> <strong>Final Answer:</strong> x = 2, y = 3</p>
+
+        <h3>2. SUBSTITUTION METHOD</h3>
+        <p>This method means we find one unknown in terms of the other, and then substitute (replace) it in the second equation.</p>
+
+        <h4>Steps:</h4>
+        <ol>
+        <li>Make one of the unknowns the subject (for example, write y = ... or x = ...).</li><br>
+        <li>Substitute this expression into the other equation.</li><br>
+        <li>Solve for the remaining unknown.</li><br>
+        <li>Put the value you found into one of the original equations to find the other unknown.</li><br>
+        <li>Write the final answer clearly.</li><br>
+        </ol>
+
+        <h4>Example 3 (Substitution Method)</h4>
+        <p>Solve:</p>
+        <p>x + y = 6</p>
+        <p>2x − y = 4</p>
+
+        <p><strong>Step 1:</strong> From equation (1), make y the subject.<br>y = 6 − x</p>
+        <p><strong>Step 2:</strong> Substitute y = 6 − x into equation (2):<br>2x − (6 − x) = 4<br>2x − 6 + x = 4<br>3x = 10<br>x = 10 ÷ 3<br>x = 3⅓</p>
+
+        <p><strong>Step 3:</strong> Substitute x = 3⅓ into y = 6 − x<br>y = 6 − 3⅓ = 2⅔</p>
+        <p> <strong>Final Answer:</strong> x = 3⅓, y = 2⅔</p>
+
+        <h4>Example 4 (Substitution Method)</h4>
+        <p>Solve:</p>
+        <p>4x + y = 11</p>
+        <p>x − y = 1</p>
+
+        <p><strong>Step 1:</strong> From equation (2), make x the subject.<br>x = 1 + y</p>
+        <p><strong>Step 2:</strong> Substitute x = 1 + y into equation (1):<br>4(1 + y) + y = 11<br>4 + 4y + y = 11<br>5y + 4 = 11<br>5y = 7<br>y = 7 ÷ 5<br>y = 1.4</p>
+
+        <p><strong>Step 3:</strong> Substitute y = 1.4 into x = 1 + y<br>x = 1 + 1.4 = 2.4</p>
+        <p> <strong>Final Answer:</strong> x = 2.4, y = 1.4</p>
+
+        <h3>3. CHECKING YOUR ANSWER</h3>
+        <p>After solving, you can check your answers by substituting x and y back into both equations. If both sides of each equation are equal, then your answers are correct.</p>
+
+        <h3>REAL-LIFE APPLICATIONS OF SIMULTANEOUS EQUATIONS</h3>
+        <p>Simultaneous equations are useful in solving real-life problems such as:</p>
+        <ol>
+        <li>Finding the price of two items when their total cost is known in two different situations.</li><br>
+        <li>Finding the age of two people if their age differences and sums are given.</li><br>
+        <li>Sharing or comparing quantities.</li><br>
+        </ol>
+
+        <h4>Example 5 (Word Problem)</h4>
+        <p>The sum of two numbers is 20, and their difference is 4. Find the two numbers.</p>
+        <p><strong>Step 1:</strong> Let the numbers be x and y.<br>x + y = 20 …(1)<br>x − y = 4 …(2)</p>
+        <p><strong>Step 2:</strong> Add both equations:<br>(x + y) + (x − y) = 20 + 4<br>2x = 24<br>x = 12</p>
+        <p><strong>Step 3:</strong> Substitute x = 12 into equation (1):<br>12 + y = 20<br>y = 8</p>
+        <p><strong>Final Answer:</strong> The two numbers are 12 and 8.</p>
+
+        <h4>Example 6 (Word Problem)</h4>
+        <p>Two pens and one pencil cost ₦50, while one pen and two pencils cost ₦40. Find the cost of one pen and one pencil.</p>
+        <p><strong>Step 1:</strong> Let the cost of a pen = x and pencil = y.</p>
+        <p>Equation 1: 2x + y = 50<br>Equation 2: x + 2y = 40</p>
+        <p><strong>Step 2:</strong> Multiply equation (2) by 2 to make the coefficients of x the same:<br>2x + 4y = 80</p>
+        <p>Now subtract equation (1):<br>(2x + 4y) − (2x + y) = 80 − 50<br>3y = 30<br>y = 10</p>
+        <p><strong>Step 3:</strong> Substitute y = 10 into equation (1):<br>2x + 10 = 50<br>2x = 40<br>x = 20</p>
+        <p> <strong>Final Answer:</strong> One pen costs ₦20, one pencil costs ₦10.</p>
+
+        <h3>SUMMARY</h3>
+        <ol>
+        <li>Simultaneous equations are solved together because they share the same unknowns.</li><br>
+        <li>The main methods are elimination and substitution.</li><br>
+        <li>The solution is a pair of values (x and y).</li><br>
+        <li>Always check your answers by substituting back into both equations.</li><br>
+        </ol><br><br>
+        <hr>
+        <br><br>
+
+
+        <div class="title" style="background-color: rosybrown;color: black;"><b>COMPILATION OF TABLE OF VALUES FOR TWO LINEAR EQUATIONS</b></div>
+
+        <h3>DEFINITION</h3>
+        <p>
+        A table of values is a list that shows the different values of two variables, usually x and y, that make an equation true. 
+        It helps us to see how x and y are related and to draw their graphs easily.
+        </p>
+
+        <p>
+        When we have two linear equations, we can make a table of values for each of them. 
+        The point where the two graphs meet gives the solution of the two equations (that is, the values of x and y that satisfy both equations at the same time).
+        </p>
+
+        <h3>WHAT IS A LINEAR EQUATION?</h3>
+        <p>
+        A linear equation is an equation whose highest power of the variable is 1.
+        </p>
+
+        <p>Examples:</p>
+        <p>y = 2x + 3</p>
+        <p>3x + 2y = 6</p>
+        <p>x – y = 4</p>
+
+        <p>
+        When we draw a graph for a linear equation, it always forms a straight line.
+        </p>
+
+        <h3>WHY WE LEARN TO COMPILE TABLES OF VALUES</h3>
+        
+        <ol>
+        <li>It helps us to Understand the relationship between x and y in an equation.</li><br>
+        <li>It helps us to Draw straight-line graphs correctly.</li><br>
+        <li>It helps us to Find the point where two equations meet (that point is the solution).</li><br>
+        <li>It helps us to Visualize equations instead of just solving them with numbers.</li><br>
+        </ol>
+
+        <h3>HOW TO COMPILE A TABLE OF VALUES</h3>
+        <p>Follow these steps carefully:</p>
+        <ol>
+        <li>Write down the equation in the form y = mx + c if possible (that is, make y the subject).</li><br>
+        <li>Choose some convenient values for x (for example: −2, −1, 0, 1, 2).</li><br>
+        <li>Substitute each value of x into the equation to get the corresponding value of y.</li><br>
+        <li>Write the results in a table with two columns (one for x and one for y).</li><br>
+        <li>Repeat the same process for the second equation.</li><br>
+        <li>Use the pairs (x, y) to plot points on a graph if required.</li><br>
+        </ol>
+
+        <h3>EXAMPLE 1</h3>
+        <p>Use a table of values to represent these two equations:</p>
+        <p>y = 2x + 1</p>
+        <p>y = x + 4</p>
+
+        <h4>Step 1: Choose values for x</h4>
+        <p>Let us choose x = −2, −1, 0, 1, 2</p>
+
+        <h4>Step 2: Find values of y for each equation</h4>
+
+        <p><b>For y = 2x + 1</b></p>
+
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>Calculation</th><th>y</th></tr>
+        <tr><td>-2</td><td>2(-2) + 1 = -4 + 1</td><td>-3</td></tr>
+        <tr><td>-1</td><td>2(-1) + 1 = -2 + 1</td><td>-1</td></tr>
+        <tr><td>0</td><td>2(0) + 1 = 1</td><td>1</td></tr>
+        <tr><td>1</td><td>2(1) + 1 = 2 + 1</td><td>3</td></tr>
+        <tr><td>2</td><td>2(2) + 1 = 4 + 1</td><td>5</td></tr>
+        </table>
+
+        <p><b>Table 1 (for y = 2x + 1)</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th></tr>
+        <tr><th>y</th><td>-3</td><td>-1</td><td>1</td><td>3</td><td>5</td></tr>
+        </table>
+
+        <p><b>For y = x + 4</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>Calculation</th><th>y</th></tr>
+        <tr><td>-2</td><td>(-2) + 4 = 2</td><td>2</td></tr>
+        <tr><td>-1</td><td>(-1) + 4 = 3</td><td>3</td></tr>
+        <tr><td>0</td><td>0 + 4 = 4</td><td>4</td></tr>
+        <tr><td>1</td><td>1 + 4 = 5</td><td>5</td></tr>
+        <tr><td>2</td><td>2 + 4 = 6</td><td>6</td></tr>
+        </table>
+
+        <p><b>Table 2 (for y = x + 4)</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th></tr>
+        <tr><th>y</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        </table>
+
+        <h4>Step 3: Plotting the Graphs (if required)</h4>
+        <p>
+        If we draw both lines on the same graph using the (x, y) points:
+        </p>
+        <p>The line for y = 2x + 1 will rise faster because its slope (2) is greater.</p>
+        <p>The line for y = x + 4 rises more gently.</p>
+        <p>The two lines will meet (intersect) at a point — that point is the solution of the two equations.</p>
+
+        <h4>Step 4: Solving to Check the Intersection Point</h4>
+        <p>
+        We can also solve the equations algebraically to confirm.
+        </p>
+        <p>y = 2x + 1</p>
+        <p>y = x + 4</p>
+        <p>Since both equal y, we can set them equal to each other:</p>
+
+        <p>
+        2x + 1 = x + 4<br>
+        2x − x = 4 − 1<br>
+        x = 3
+        </p>
+
+        <p>
+        Substitute x = 3 into y = x + 4:<br>
+        y = 3 + 4 = 7
+        </p>
+
+        <p><b> Therefore, the two lines meet at (3, 7).</b></p>
+
+        <h3>EXAMPLE 2</h3>
+        <p>Complete the table of values for these equations:</p>
+        <p>y = 3x − 2</p>
+        <p>y = −x + 4</p>
+        <p>Let x = −1, 0, 1, 2, 3</p>
+
+        <p><b>For y = 3x − 2</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>Calculation</th><th>y</th></tr>
+        <tr><td>-1</td><td>3(-1) − 2 = -3 − 2</td><td>-5</td></tr>
+        <tr><td>0</td><td>3(0) − 2 = 0 − 2</td><td>-2</td></tr>
+        <tr><td>1</td><td>3(1) − 2 = 3 − 2</td><td>1</td></tr>
+        <tr><td>2</td><td>3(2) − 2 = 6 − 2</td><td>4</td></tr>
+        <tr><td>3</td><td>3(3) − 2 = 9 − 2</td><td>7</td></tr>
+        </table>
+
+        <p><b>Table 1</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+        <tr><th>y</th><td>-5</td><td>-2</td><td>1</td><td>4</td><td>7</td></tr>
+        </table>
+
+        <p><b>For y = −x + 4</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>Calculation</th><th>y</th></tr>
+        <tr><td>-1</td><td>−(−1) + 4 = 1 + 4</td><td>5</td></tr>
+        <tr><td>0</td><td>−(0) + 4 = 4</td><td>4</td></tr>
+        <tr><td>1</td><td>−(1) + 4 = 3</td><td>3</td></tr>
+        <tr><td>2</td><td>−(2) + 4 = 2</td><td>2</td></tr>
+        <tr><td>3</td><td>−(3) + 4 = 1</td><td>1</td></tr>
+        </table>
+
+        <p><b>Table 2</b></p>
+        <table border="1" cellspacing="0" cellpadding="5">
+        <tr><th>x</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr>
+        <tr><th>y</th><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+        </table>
+
+        <h4>Step 3: Find the Point of Intersection</h4>
+        <p>
+        To find where the lines meet, solve:
+        </p>
+
+        <p>
+        3x − 2 = −x + 4<br>
+        3x + x = 4 + 2<br>
+        4x = 6<br>
+        x = 1.5
+        </p>
+
+        <p>
+        Substitute into y = 3x − 2<br>
+        y = 3(1.5) − 2 = 4.5 − 2 = 2.5
+        </p>
+
+        <p><b> The two lines meet at (1.5, 2.5)</b></p>
+
+        <h3>IMPORTANT POINTS TO REMEMBER</h3>
+        <ol>
+        <li>Always choose small and simple values for x (like −2, −1, 0, 1, 2).</li><br>
+        <li>Write your answers neatly in a table.</li><br>
+        <li>Use the table to plot points correctly on a graph if required.</li><br>
+        <li>The point where both lines meet gives the solution to the two equations.</li><br>
+        <li>Always label your graph clearly (x-axis and y-axis).</li><br>
+        </ol>
+
+        <h3>REAL-LIFE USES OF TABLE OF VALUES</h3>
+        <ol>
+        <li>In business — to compare costs and profits.</li><br>
+        <li>In science — to study how one quantity changes when another changes.</li><br>
+        <li>In engineering — to predict measurements or relationships.</li><br>
+        <li>In economics — to show the relationship between demand and price.</li><br>
+        </ol>
+
+        <h3>SUMMARY</h3>
+        <ol>
+        <li>A table of values shows how x and y are related in an equation.</li><br>
+        <li>Each equation gives a straight line on a graph.</li><br>
+        <li>The point where two lines meet gives the solution.</li><br>
+        <li>This method helps us to solve and visualize simultaneous linear equations easily.</li><br>
+        </ol><br><br>
+        <hr>
+        <br><br>
+
+
+
+       <div class="title" style="background-color: sienna; color: white;"><b>GRAPHICAL SOLUTION OF SIMULTANEOUS LINEAR EQUATIONS IN TWO VARIABLES</b></div>
+
+        <h2>DEFINITION</h2>
+        <p>
+        A graphical solution of simultaneous linear equations means finding the point where the two straight lines representing the equations meet (intersect) on a graph.
+        </p>
+        <p>
+        That point of intersection gives the values of x and y that satisfy both equations at the same time.
+        </p>
+        <p>
+        The word <em>graphical</em> comes from the word <em>graph</em>, which means drawing or plotting points on a coordinate plane (x-axis and y-axis).
+        </p>
+
+        <h2>WHY WE LEARN GRAPHICAL SOLUTION</h2>
+        
+        <ul>
+        <li>It helps us to Understand how two equations can be solved using pictures instead of algebra.</li><br>
+        <li>It helps us to See how x and y are related visually.</li><br>
+        <li>It helps us to Find where two lines meet, which gives the solution.</li><br>
+        <li>It helps us to Interpret real-life problems using graphs.</li><br>
+        </ul>
+
+        <h2>STEPS IN SOLVING SIMULTANEOUS EQUATIONS GRAPHICALLY</h2>
+        <ol>
+        <li>Write both equations in the form <em>y = mx + c</em> (make y the subject).</li><br>
+        <li>Choose convenient values for x (for example, −2, −1, 0, 1, 2).</li><br>
+        <li>Calculate the corresponding values of y for each x.</li><br>
+        <li>Draw a table of values for each equation.</li><br>
+        <li>Plot the two lines on a graph using the (x, y) points.</li><br>
+        <li>The point where the two lines meet is the solution.</li><br>
+        </ol>
+
+        <h2>EXAMPLE 1</h2>
+        <p>Solve graphically:</p>
+        <pre>
+        y = 2x + 1
+        y = x + 4
+        </pre>
+
+        <h3>Table 1 (for y = 2x + 1)</h3>
+        <table>
+        <tr><th>x</th><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td></tr>
+        <tr><th>y</th><td>-3</td><td>-1</td><td>1</td><td>3</td><td>5</td></tr>
+        </table>
+
+        <h3>Table 2 (for y = x + 4)</h3>
+        <table>
+        <tr><th>x</th><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td></tr>
+        <tr><th>y</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        </table>
+
+<h3>Text Diagram (Rough Sketch)</h3>
+<pre>
+      y
+      |
+  7   |               /
+  6   |             /
+  5   |-----------/----  y = x + 4
+  4   |         /
+  3   |      /
+  2   |   /
+  1   | /       y = 2x + 1
+      ------------------------ x
+          1   2   3   4
+</pre>
+
+        <p><strong>Point of Intersection:</strong> (3, 7)</p>
+        <p class="check"> Solution: x = 3, y = 7</p>
+
+        <hr>
+
+        <h2>EXAMPLE 2</h2>
+        <p>Solve graphically:</p>
+        <pre>
+        y = 3x - 2
+        y = -x + 4
+        </pre>
+
+        <h3>Table 1 (for y = 3x − 2)</h3>
+        <table>
+        <tr><th>x</th><td>-1</td><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><th>y</th><td>-5</td><td>-2</td><td>1</td><td>4</td><td>7</td></tr>
+        </table>
+
+        <h3>Table 2 (for y = -x + 4)</h3>
+        <table>
+        <tr><th>x</th><td>-1</td><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><th>y</th><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+        </table>
+
+        <h3>Text Diagram</h3>
+<pre>
+     y
+     |
+  7  |       /
+  6  |     /
+  5  |   /     y = -x + 4
+  4  | /     /
+  3  |/   /
+  2  |  /
+  1  | /          y = 3x - 2
+     ----------------------- x
+        1   2   3
+</pre>
+
+        <p><strong>Point of Intersection:</strong> (1.5, 2.5)</p>
+        <p class="check">Solution: x = 1.5, y = 2.5</p>
+
+        <hr>
+
+        <h2>EXAMPLE 3</h2>
+        <p>Solve graphically:</p>
+        <pre>
+        2x + y = 7
+        x + y = 5
+        </pre>
+
+        <p>First, make y the subject:</p>
+        <pre>
+        y = 7 - 2x
+        y = 5 - x
+        </pre>
+
+        <h3>Table 1 (for y = 7 - 2x)</h3>
+        <table>
+        <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>y</th><td>7</td><td>5</td><td>3</td><td>1</td><td>-1</td></tr>
+        </table>
+
+        <h3>Table 2 (for y = 5 - x)</h3>
+        <table>
+        <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>y</th><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+        </table>
+
+        <h3>Text Diagram</h3>
+<pre>
+     y
+     |
+  7  |\
+  6  | \
+  5  |--\---------- y = 5 - x
+  4  |   \
+  3  |----\---- y = 7 - 2x
+  2  |      \
+  1  |        \
+     ----------------- x
+        1   2   3
+</pre>
+
+        <p><strong>Point of Intersection:</strong> (2, 3)</p>
+        <p class="check"> Solution: x = 2, y = 3</p>
+
+        <hr>
+
+        <h2>EXAMPLE 4</h2>
+        <p>Solve graphically:</p>
+        <pre>
+        x + 2y = 8
+        2x + y = 10
+        </pre>
+
+        <p>Make y the subject:</p>
+        <pre>
+        y = 4 - 0.5x
+        y = 10 - 2x
+        </pre>
+
+        <h3>Table 1 (for y = 4 - 0.5x)</h3>
+        <table>
+        <tr><th>x</th><td>0</td><td>2</td><td>4</td><td>6</td><td>8</td></tr>
+        <tr><th>y</th><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+        </table>
+
+        <h3>Table 2 (for y = 10 - 2x)</h3>
+        <table>
+        <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>y</th><td>10</td><td>8</td><td>6</td><td>4</td><td>2</td></tr>
+        </table>
+
+        <h3>Text Diagram</h3>
+<pre>
+     y
+     |
+ 10  |\
+  8  | \
+  6  |  \
+  4  |----\---------- y = 4 - 0.5x
+  2  |     \
+  0  |       \
+     ----------------- x
+        1   2   3   4
+</pre>
+
+        <p><strong>Point of Intersection:</strong> (2, 6)</p>
+        <p class="check"> Solution: x = 2, y = 6</p>
+
+
+
+
+<div class="section">
+  <h2>EXAMPLE 5 (Word Problem)</h2>
+  <p><strong>Problem:</strong> The sum of two numbers is 20, and their difference is 4. Find the two numbers using the graphical method.</p>
+
+  <h3>Step 1: Form the equations</h3>
+  <p>Let the two numbers be <em>x</em> and <em>y</em>.</p>
+  <pre>x + y = 20    …(1)
+x − y = 4     …(2)</pre>
+
+  <h3>Step 2: Make y the subject</h3>
+  <pre>From (1): y = 20 − x
+From (2): y = x − 4</pre>
+
+  <h3>Step 3: Make tables</h3>
+  <p>Table 1 (for <em>y = 20 − x</em>)</p>
+  <table>
+    <tr><th>x</th><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td></tr>
+    <tr><th>y</th><td>10</td><td>8</td><td>6</td><td>4</td><td>2</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = x − 4</em>)</p>
+  <table>
+    <tr><th>x</th><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td></tr>
+    <tr><th>y</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td></tr>
+  </table>
+
+  <h3>Step 4: Draw text graph</h3>
+  <pre>
+       y
+       |
+  12   |\
+  10   | \
+   8   |--\------ y = 20 - x
+   6   |   \
+   4   |----\------ y = x - 4
+   2   |     \
+       ------------------- x
+          8   10  12  14
+  </pre>
+
+  <p>The two lines meet at <strong>(12, 8)</strong>.</p>
+  <p class="check"> Solution: x = 12, y = 8</p>
+</div>
+
+<div class="section">
+  <h2>EXAMPLE 6 (Word Problem)</h2>
+  <p><strong>Problem:</strong> Two pens and one pencil cost ₦50. One pen and two pencils cost ₦40. Find the cost of one pen and one pencil.</p>
+
+  <h3>Step 1: Form the equations</h3>
+  <pre>Let cost of pen = x, cost of pencil = y.
+
+2x + y = 50    …(1)
+x + 2y = 40    …(2)</pre>
+
+  <h3>Step 2: Make y the subject</h3>
+  <pre>From (1): y = 50 − 2x
+From (2): y = (40 − x)/2</pre>
+
+  <h3>Step 3: Make tables</h3>
+  <p>Table 1 (for <em>y = 50 − 2x</em>)</p>
+  <table>
+    <tr><th>x</th><td>10</td><td>15</td><td>20</td><td>25</td></tr>
+    <tr><th>y</th><td>30</td><td>20</td><td>10</td><td>0</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = (40 − x)/2</em>)</p>
+  <table>
+    <tr><th>x</th><td>10</td><td>15</td><td>20</td><td>25</td></tr>
+    <tr><th>y</th><td>15</td><td>12.5</td><td>10</td><td>7.5</td></tr>
+  </table>
+
+  <h3>Step 4: Draw text graph</h3>
+  <pre>
+        y
+        |
+  30    |\
+  25    | \
+  20    |--\------ y = 50 - 2x
+  15    |   \
+  10    |----\------ y = (40 - x)/2
+   5    |     \
+        --------------------- x
+           10   15   20   25
+  </pre>
+
+  <p>They meet at <strong>(20, 10)</strong>.</p>
+  <p class="check"> Solution: Pen = ₦20, Pencil = ₦10</p>
+</div>
+
+<div class="section">
+  <h2>EXAMPLE 7</h2>
+  <p><strong>Problem:</strong> Solve graphically:</p>
+  <pre>2x + 3y = 12
+x + y = 4</pre>
+
+  <h3>Step 1: Make y the subject</h3>
+  <pre>From (1): 3y = 12 − 2x  →  y = (12 − 2x)/3
+From (2): y = 4 − x</pre>
+
+  <h3>Step 2: Make tables</h3>
+  <p>Table 1 (for <em>y = (12 − 2x)/3</em>)</p>
+  <table>
+    <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th>y</th><td>4</td><td>3.33</td><td>2.67</td><td>2</td><td>1.33</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = 4 − x</em>)</p>
+  <table>
+    <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th>y</th><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+  </table>
+
+  <h3>Step 3: Draw text graph</h3>
+  <pre>
+      y
+      |
+  5   |\
+  4   |--\------- y = 4 - x
+  3   |  \
+  2   |---\----- y = (12 - 2x)/3
+  1   |    \
+      ----------------- x
+         1   2   3   4
+  </pre>
+
+  <p>They meet around <strong>(1.5, 2.5)</strong>.</p>
+  <p class="check"> Solution: x = 1.5, y = 2.5</p>
+</div>
+
+<div class="section">
+  <h2>EXAMPLE 8</h2>
+  <p><strong>Problem:</strong> Solve graphically:</p>
+  <pre>x + 2y = 6
+3x − y = 3</pre>
+
+  <h3>Step 1: Make y the subject</h3>
+  <pre>From (1): y = (6 − x)/2
+From (2): y = 3x − 3</pre>
+
+  <h3>Step 2: Make tables</h3>
+  <p>Table 1 (for <em>y = (6 − x)/2</em>)</p>
+  <table>
+    <tr><th>x</th><td>0</td><td>2</td><td>4</td><td>6</td></tr>
+    <tr><th>y</th><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = 3x − 3</em>)</p>
+  <table>
+    <tr><th>x</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+    <tr><th>y</th><td>-3</td><td>0</td><td>3</td><td>6</td></tr>
+  </table>
+
+  <h3>Step 3: Text graph</h3>
+  <pre>
+        y
+        |
+  6     |        /
+  4     |     /
+  2     |  /        y = 3x - 3
+  0     |/---\
+ -2     |    \
+ -4     |     \
+        ----------------- x
+          1   2   3   4
+  </pre>
+
+  <p>Lines meet at <strong>(1.5, 1.5)</strong>.</p>
+  <p class="check"> Solution: x = 1.5, y = 1.5</p>
+</div>
+
+<div class="section">
+  <h2>EXAMPLE 9</h2>
+  <p><strong>Problem:</strong> Solve graphically:</p>
+  <pre>2x + y = 10
+x − y = 2</pre>
+
+  <h3>Step 1: Make y the subject</h3>
+  <pre>From (1): y = 10 − 2x
+From (2): y = x − 2</pre>
+
+  <h3>Step 2: Make tables</h3>
+  <p>Table 1 (for <em>y = 10 − 2x</em>)</p>
+  <table>
+    <tr><th>x</th><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+    <tr><th>y</th><td>6</td><td>4</td><td>2</td><td>0</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = x − 2</em>)</p>
+  <table>
+    <tr><th>x</th><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+    <tr><th>y</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+
+  <h3>Step 3: Text graph</h3>
+  <pre>
+       y
+       |
+  6    |\
+  5    | \
+  4    |  \------ y = 10 - 2x
+  3    |   \
+  2    |----\------ y = x - 2
+  1    |     \
+       -------------------- x
+          2   3   4   5
+  </pre>
+
+  <p>Lines meet at <strong>(4, 2)</strong>.</p>
+  <p class="check"> Solution: x = 4, y = 2</p>
+</div>
+
+<div class="section">
+  <h2>EXAMPLE 10</h2>
+  <p><strong>Problem:</strong> Solve graphically:</p>
+  <pre>3x + y = 12
+x + 2y = 8</pre>
+
+  <h3>Step 1: Make y the subject</h3>
+  <pre>From (1): y = 12 − 3x
+From (2): y = (8 − x)/2</pre>
+
+  <h3>Step 2: Make tables</h3>
+  <p>Table 1 (for <em>y = 12 − 3x</em>)</p>
+  <table>
+    <tr><th>x</th><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th>y</th><td>6</td><td>3</td><td>0</td></tr>
+  </table>
+
+  <p>Table 2 (for <em>y = (8 − x)/2</em>)</p>
+  <table>
+    <tr><th>x</th><td>0</td><td>2</td><td>4</td></tr>
+    <tr><th>y</th><td>4</td><td>3</td><td>2</td></tr>
+  </table>
+
+  <h3>Step 3: Text graph</h3>
+  <pre>
+       y
+       |
+  6    |\
+  5    | \
+  4    |--\------- y = (8 - x)/2
+  3    |   \
+  2    |----\------ y = 12 - 3x
+       --------------------- x
+          1   2   3   4
+  </pre>
+
+  <p>Lines meet at <strong>(2, 3)</strong>.</p>
+  <p class="check"> Solution: x = 2, y = 3</p>
+</div>
+
+<div class="section">
+  <h2>SUMMARY</h2>
+  <ul>
+    <li>Graphical method uses two straight lines to find where they meet.</li>
+    <li>The meeting point gives the solution (x, y).</li>
+    <li>Each line is drawn using a table of values (choose convenient x values, compute y).</li>
+    <li>This method helps us to see how equations relate visually.</li>
+    <li>Always label axes and plot points carefully when drawing by hand or on graph paper.</li>
+  </ul>
+</div><br><br>
+
+<hr>
+
+<br><br>
+
+
+  <div class="title" style="background-color: #0a7;color: white;"><b>SOLUTION OF SIMULTANEOUS LINEAR EQUATIONS</b></div>
+
+  <section class="section">
+    <h2> Solution using the Elimination Method</h2>
+
+    <h3>Definition</h3>
+    <p>The <strong>elimination method</strong> is a way of solving two linear equations by removing (eliminating) one of the unknowns so that we can find the value of the other one easily. We do this by adding or subtracting the equations so that one variable disappears. After that we solve for the remaining variable and then use its value to find the other one.</p>
+
+    <h3>Explanation</h3>
+    <p>When we have two equations like:</p>
+    <pre>2x + y = 10
+x + y = 7</pre>
+    <p>We can make one letter disappear by subtracting or adding the equations. That is why it is called <em>elimination</em> — because we eliminate (remove) one letter.</p>
+
+    <h3>Steps to solve using elimination</h3>
+    <ol>
+      <li>Arrange both equations properly (x terms together, y terms together, and equal signs aligned).</li><br>
+      <li>Make the coefficients (numbers in front of x or y) the same, if possible.</li><br>
+      <li>Add or subtract one equation from the other to remove one variable.</li><br>
+      <li>Solve for the remaining variable.</li><br>
+      <li>Substitute the value found into one of the original equations to find the second variable.</li><br>
+      <li>Check your answers by substituting both values into both equations.</li><br>
+    </ol>
+
+    <div class="examples">
+      <h3>Examples</h3>
+
+      <div class="example">
+        <h4>Example 1</h4>
+        <p>Solve by elimination:</p>
+        <pre>2x + y = 10
+x + y  = 7</pre>
+        <ol>
+          <li>Write them clearly: (1) 2x + y = 10 ; (2) x + y = 7</li><br>
+          <li>Eliminate y: subtract (2) from (1): (2x+y) − (x+y) = 10 − 7 → x = 3</li><br>
+          <li>Substitute x = 3 into (2): 3 + y = 7 → y = 4</li>
+        </ol>
+        <p class="check">Answer: x = 3, y = 4</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 2</h4>
+        <p>Solve:</p>
+        <pre>3x + 2y = 12
+x  + 2y =  8</pre>
+        <ol>
+          <li>Subtract the second from the first to remove 2y: (3x+2y) − (x+2y) = 12 − 8 → 2x = 4 → x = 2</li><br>
+          <li>Substitute x = 2 into x + 2y = 8 → 2 + 2y = 8 → 2y = 6 → y = 3</li>
+        </ol>
+        <p class="check">Answer: x = 2, y = 3</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 3 (fraction answer)</h4>
+        <p>Solve:</p>
+        <pre>4x − y = 11
+2x + y =  9</pre>
+        <ol>
+          <li>Add the two equations to eliminate y: (4x−y) + (2x+y) = 11 + 9 → 6x = 20 → x = 20/6 = 10/3</li><br>
+          <li>Substitute x = 10/3 into 2x + y = 9 → 2(10/3) + y = 9 → 20/3 + y = 9 → y = 9 − 20/3 = 7/3</li>
+        </ol>
+        <p class="check">Answer: x = 10/3, y = 7/3</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 4</h4>
+        <p>Solve:</p>
+        <pre>4x + 5y = 9
+2x + 3y = 5</pre>
+        <ol>
+          <li>Make coefficients of x equal: multiply second equation by 2 → 4x + 6y = 10</li><br>
+          <li>Subtract first from this: (4x+6y) − (4x+5y) = 10 − 9 → y = 1</li><br>
+          <li>Substitute y = 1 into 4x + 5y = 9 → 4x + 5 = 9 → 4x = 4 → x = 1</li>
+        </ol>
+        <p class="check">Answer: x = 1, y = 1</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 5</h4>
+        <p>Solve:</p>
+        <pre>7x − 2y = 3
+3x + 4y = 11</pre>
+        <ol>
+          <li>Multiply first equation by 2 to make −2y into −4y: 14x − 4y = 6</li><br>
+          <li>Add to second: (14x−4y) + (3x+4y) = 6 + 11 → 17x = 17 → x = 1</li><br>
+          <li>Substitute x = 1 into 3x + 4y = 11 → 3 + 4y = 11 → 4y = 8 → y = 2</li>
+        </ol>
+        <p class="check">Answer: x = 1, y = 2</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2> Solution using the Substitution Method</h2>
+
+    <h3>Definition</h3>
+    <p>The <strong>substitution method</strong> is a way of solving two linear equations by making one variable the subject of one equation, then substituting that expression into the other equation. This removes one variable and lets us solve for the other.</p>
+
+    <h3>Explanation</h3>
+    <p>For example, if y = 10 − x, then wherever we see y in the other equation we replace it with (10 − x). This gives one equation with one unknown and we can solve it.</p>
+
+    <h3>Steps to solve using substitution</h3>
+    <ol>
+      <li>From one equation make one variable the subject (y = ... or x = ...).</li><br>
+      <li>Substitute that expression into the other equation.</li><br>
+      <li>Solve the resulting equation to find one variable.</li><br>
+      <li>Substitute back to find the other variable.</li><br>
+      <li>Check answers in the original equations.</li>
+    </ol>
+
+    <div class="examples">
+      <h3>Examples</h3>
+
+      <div class="example">
+        <h4>Example 1</h4>
+        <p>Solve:</p>
+        <pre>x + y = 8
+2x − y = 4</pre>
+        <ol>
+          <li>From first: y = 8 − x</li><br>
+          <li>Substitute into second: 2x − (8 − x) = 4 → 2x − 8 + x = 4 → 3x = 12 → x = 4</li><br>
+          <li>y = 8 − 4 = 4</li><br>
+        </ol>
+        <p class="check">Answer: x = 4, y = 4</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 2</h4>
+        <p>Solve:</p>
+        <pre>3x + 2y = 12
+x = 2y</pre>
+        <ol>
+          <li>Substitute x = 2y into first: 3(2y) + 2y = 12 → 6y + 2y = 12 → 8y = 12 → y = 1.5</li><br>
+          <li>x = 2y = 3</li>
+        </ol>
+        <p class="check">Answer: x = 3, y = 1.5</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 3</h4>
+        <p>Solve:</p>
+        <pre>2x + 3y = 12
+x − y = 1</pre>
+        <ol>
+          <li>From second: x = y + 1</li><br>
+          <li>Substitute into first: 2(y+1) + 3y = 12 → 2y + 2 + 3y = 12 → 5y = 10 → y = 2</li><br>
+          <li>x = y + 1 = 3</li><br>
+        </ol>
+        <p class="check">Answer: x = 3, y = 2</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 4</h4>
+        <p>Solve:</p>
+        <pre>y = 5 − x
+2x + 3y = 13</pre>
+        <ol>
+          <li>Substitute y into second: 2x + 3(5 − x) = 13 → 2x + 15 − 3x = 13 → −x = −2 → x = 2</li><br>
+          <li>y = 5 − 2 = 3</li><br>
+        </ol>
+        <p class="check">Answer: x = 2, y = 3</p>
+      </div>
+
+      <div class="example">
+        <h4>Example 5</h4>
+        <p>Solve:</p>
+        <pre>x = y + 4
+3x − 2y = 5</pre>
+        <ol>
+          <li>Substitute x into second: 3(y+4) − 2y = 5 → 3y + 12 − 2y = 5 → y + 12 = 5 → y = −7</li><br>
+          <li>x = y + 4 = −3</li>
+        </ol>
+        <p class="check">Answer: x = −3, y = −7</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why learn these methods?</h2>
+    <p>Both methods let us solve pairs of equations. Use <strong>elimination</strong> when it is easy to line up and remove one variable (by adding or subtracting). Use <strong>substitution</strong> when one equation already gives one variable in terms of the other.</p>
+
+    <h3>Quick comparison</h3>
+    <table>
+      <tr><th>Method</th><th>What it does</th><th>When to use</th></tr>
+      <tr><td>Elimination</td><td>Removes one variable by adding or subtracting equations</td><td>When both equations are neatly arranged with similar terms</td></tr>
+      <tr><td>Substitution</td><td>Replaces one variable using another equation</td><td>When one equation is already written in terms of x or y</td></tr>
+    </table>
+
+    <h3>note</h3>
+    <ul>
+      <li>Always check your final answers by substituting into the original equations.</li><br>
+      <li>Multiply an equation when you need matching coefficients (for elimination).</li><br>
+      <li>Keep fractions exact (as fractions) until the end, then simplify.</li>
+    </ul>
+  </section>
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+
+       
+
+
+
+        
+        <br><br><br>
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+
+                        
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/second-term/math/j3/1.html" class="iam">
+                <br>
+                <li > ALGEBRAIC OPERATIONS</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j3/2.html" class="iam">
+
+                <li >FACTORIZATION    </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/second-term/math/j1/3.html" class="iam">
+
+                <li > SIMPLE EQUATIONS INVOLVING FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/4.html" class="iam">
+
+                <li >SIMULTANEOUS LINEAR EQUATIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/second-term/math/j3/5.html" class="iam">
+                
+                <li > SIMILAR SHAPES   </li>
+            </a>
+            <br>
+            </a>
+            <a href="../../../../topics/second-term/math/j3/6.html" class="iam">
+                <br>
+                <li > TRIGONOMETRY  </li>
+            </a>
+             <br>
+
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+    
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

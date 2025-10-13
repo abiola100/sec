@@ -1,0 +1,1375 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>topic - mathematics jss3 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+    h1,h2,h3 { color:#0b5a3a; }
+    pre { background:#f9f9f9; padding:10px; border:1px solid #e6e6e6; border-radius:6px; overflow:auto; }
+    table { border-collapse:collapse; width:100%; margin:10px 0 20px 0; }
+    th,td { border:1px solid #ccc; padding:8px; text-align:left; }
+    .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+    .note { font-size:0.95rem; color:#333; }
+   </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/first-term/math-first/first-term-js3-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01"><b>BINARY NUMBER SYSTEM </b></div>
+        <h2>What is a number system?</h2>
+<p>First, you know how we normally count: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, then we go to 10, 11, 12, and so on. That system is called the <strong>decimal</strong> (or <strong>base-10</strong>) system. It has ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.</p>
+<p>A <strong>number system</strong> is just a way of writing numbers using a certain set of digits, and a certain base. The base tells us how many digits we use before “starting over” (carrying) to the next place. In base 10, when you count “9 + 1” you carry over to make 10, because there are ten digits (0 to 9).</p>
+
+<h2>What is the binary number system?</h2>
+<p>The <strong>binary number system</strong> (also called <em>base 2</em>) is a special number system. In binary:</p>
+<p>We only use two digits: <strong>0</strong> and <strong>1</strong>.</p>
+<p>After 1, we can’t go to 2 (because 2 is not allowed in base 2), so we carry over to the next place.</p>
+<p>So binary looks like: 0, 1, 10, 11, 100, 101, 110, 111, 1000, … and so on.</p>
+<p>Binary is very important for computers, because inside a computer, things are often “on” or “off” (which can be like 1 or 0).</p>
+
+<h3>How to read a binary number (what each “place” means)</h3>
+<p>Just like in decimal, every digit’s position has a value (units, tens, hundreds, etc.), in binary each position is a <em>power of 2</em>.</p>
+
+<p>Let me show:</p>
+<p>In decimal, the number “345” means</p>
+<pre><code>3 × 10<sup>2</sup> (that is 3 × 100)
+plus 4 × 10<sup>1</sup> (that is 4 × 10 = 40)
+plus 5 × 10<sup>0</sup> (that is 5 × 1 = 5).
+</code></pre>
+
+<p>In binary, the positions are like:</p>
+<table>
+  <thead>
+    <tr>
+      <th>place</th>
+      <th>name</th>
+      <th>binary weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>rightmost (first)</td><td>&quot;2<sup>0</sup>&quot; place</td><td>1</td></tr>
+    <tr><td>next to left</td><td>&quot;2<sup>1</sup>&quot; place</td><td>2</td></tr>
+    <tr><td>next</td><td>&quot;2<sup>2</sup>&quot; place</td><td>4</td></tr>
+    <tr><td>next</td><td>&quot;2<sup>3</sup>&quot; place</td><td>8</td></tr>
+    <tr><td>next</td><td>&quot;2<sup>4</sup>&quot; place</td><td>16</td></tr>
+  </tbody>
+</table>
+
+<p>So if you have a binary number like <code>10110<sub>2</sub></code> (the “<sub>2</sub>” means base 2), you read it as:</p>
+<ul>
+  <li>In the 2<sup>4</sup> place: 1 → that means 1 × 16.</li><br>
+  <li>In the 2<sup>3</sup> place: 0 → 0 × 8.</li><br>
+  <li>In the 2<sup>2</sup> place: 1 → 1 × 4.</li><br>
+  <li>In the 2<sup>1</sup> place: 1 → 1 × 2.</li><br>
+  <li>In the 2<sup>0</sup> place: 0 → 0 × 1.</li><br>
+</ul>
+<p>Add them: 16 + 0 + 4 + 2 + 0 = 22.</p>
+<p>So <code>10110<sub>2</sub> = 22<sub>10</sub></code> (in decimal).</p>
+
+<h3>How to convert from decimal (base 10) to binary</h3>
+<p>To change a normal decimal number into binary, there is a method:</p>
+<ol>
+  <li>Take the decimal number.</li><br>
+  <li>Divide by 2.</li><br>
+  <li>Record the remainder (it will be 0 or 1).</li><br>
+  <li>Use the quotient (the result of the division) for the next step: divide that by 2, record its remainder.</li><br>
+  <li>Keep doing until the quotient becomes 0.</li><br>
+  <li>Then write down all the remainders from bottom to top (the last remainder you got becomes the leftmost bit).</li><br>
+</ol>
+
+<p><strong>Example: Convert 13 (decimal) to binary</strong></p>
+<pre><code>13 ÷ 2 = 6 remainder 1
+6 ÷ 2 = 3 remainder 0
+3 ÷ 2 = 1 remainder 1
+1 ÷ 2 = 0 remainder 1
+
+Now write remainders bottom to top: 1101.
+
+So 13<sub>10</sub> = 1101<sub>2</sub>.
+</code></pre>
+
+<h3>How to convert binary to decimal (base 10)</h3>
+<p>This is like we saw before: expand by powers of 2.</p>
+<p><strong>Example: convert <code>1101<sub>2</sub></code> to decimal</strong></p>
+<pre><code>From right to left:
+
+The rightmost digit is 1 in the 2<sup>0</sup> place → 1 × 1 = 1
+Next is 0 in the 2<sup>1</sup> place → 0 × 2 = 0
+Next is 1 in the 2<sup>2</sup> place → 1 × 4 = 4
+Next is 1 in the 2<sup>3</sup> place → 1 × 8 = 8
+
+Add them: 8 + 4 + 0 + 1 = 13.
+
+So 1101<sub>2</sub> = 13<sub>10</sub>.
+</code></pre>
+
+<h3>Doing arithmetic (adding, subtracting) in binary</h3>
+<p>You can also add and subtract in binary, like you do in decimal, but you only have digits 0 and 1.</p>
+
+<p><strong>Addition rules in binary:</strong></p>
+<ul>
+  <li>0 + 0 = 0</li><br>
+  <li>0 + 1 = 1</li><br>
+  <li>1 + 0 = 1</li><br>
+  <li>1 + 1 = 10 (i.e. 0 in that place, carry 1 to the next place)</li><br>
+  <li>1 + 1 + 1 = 11 (i.e. 1 in that place, carry 1)</li><br>
+</ul>
+
+<p><strong>Example: Add <code>1011<sub>2</sub> + 110<sub>2</sub></code></strong></p>
+<pre><code>First, align them:
+
+  1011
++ 0110
+
+(We put leading 0s to match the lengths.)
+
+Add bit by bit from rightmost:
+
+1 + 0 = 1
+1 + 1 = 10 → write 0, carry 1
+(carry 1) + 0 + 1 = 10 → write 0, carry 1
+(carry 1) + 1 + 0 = 10 → write 0, carry 1
+
+Now carry 1 goes to a new place:
+
+So result is 10001<sub>2</sub>.
+</code></pre>
+
+<p>You can check by converting both to decimal:</p>
+<pre><code>1011<sub>2</sub> = 1×8 + 0×4 + 1×2 + 1×1 = 8 + 0 + 2 + 1 = 11
+0110<sub>2</sub> = 0×8 + 1×4 + 1×2 + 0×1 = 4 + 2 = 6
+11 + 6 = 17
+
+10001<sub>2</sub> = 1×16 + 0×8 + 0×4 + 0×2 + 1×1 = 16 + 1 = 17. It matches. Good!
+</code></pre>
+
+<p>Subtraction is similar, with borrowing, but using base 2 logic.</p>
+
+<h3>Why binary is important / where it is used</h3>
+<p>Computers use binary because their basic parts (transistors, circuits) can be in one of two states: ON (1) or OFF (0).</p>
+<p>Everything inside a computer — numbers, letters, images — is eventually turned into strings (lots) of 0s and 1s.</p>
+<p>Understanding binary helps with computer science, coding, digital electronics, etc.</p>
+
+<h3>Simple summary (like telling a little child)</h3>
+<ol>
+  <li>In “normal counting” we use 10 symbols (0 to 9).</li><br>
+  <li>In binary counting we only use 0 and 1.</li><br>
+  <li>Every place in a binary number is worth some power of 2 (1, 2, 4, 8, 16, etc.).</li><br>
+  <li>To change a decimal number to binary, divide by 2 many times and collect remainders.</li><br>
+  <li>To go from binary to decimal, multiply each bit by its place’s power of 2 and add.</li><br>
+  <li>You can add and subtract in binary, but you carry or borrow like in decimal — just you only ever see 0s and 1s.</li><br>
+</ol>
+<br><br>
+<hr>
+<br><br>
+
+<div class="title" style="background-color: darkolivegreen;color: white;"><b>ADDITION OF TWO OR THREE DIGIT BINARY NUMBERS</b></div>
+
+<h3> Meaning of Binary Addition </h3>
+<p><b>Binary addition</b> means adding two or more numbers that are written in the binary number system (that is, numbers made up of only 0s and 1s).</p>
+<p>It is just like normal addition (in base 10), but here we only use two digits: 0 and 1.</p>
+<p>Computers perform most of their calculations using binary addition because they only understand 0 (OFF) and 1 (ON).</p>
+
+<h3> BINARY ADDITION RULES</h3>
+<p>When adding binary numbers, there are four simple rules to remember:</p>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Binary Addition</th>
+    <th>Result</th>
+    <th>What to do</th>
+  </tr>
+  <tr>
+    <td>0 + 0</td>
+    <td>0</td>
+    <td>Write 0</td>
+  </tr>
+  <tr>
+    <td>0 + 1</td>
+    <td>1</td>
+    <td>Write 1</td>
+  </tr>
+  <tr>
+    <td>1 + 0</td>
+    <td>1</td>
+    <td>Write 1</td>
+  </tr>
+  <tr>
+    <td>1 + 1</td>
+    <td>10</td>
+    <td>Write 0 and carry 1 to the next column</td>
+  </tr>
+</table>
+
+<p>If you ever have <b>1 + 1 + 1</b>, then:</p>
+<p> 1 + 1 + 1 = 11 → Write 1 and carry 1.</p>
+
+<h3> EXPLANATION (Like for a little child)</h3>
+<p>Think of binary addition like you are counting with only two fingers —</p>
+<p>If you have 0 sweets and get 1 more, you have 1 sweet.</p>
+<p>But if you have 1 sweet and get 1 more, you can’t say “2” (because “2” doesn’t exist in binary).</p>
+<p>So you write 0 and carry 1 to the next group — just like how 9 + 1 in normal numbers gives you 10.</p>
+
+<h3> HOW TO ADD BINARY NUMBERS</h3>
+<p>We add binary numbers from right to left, just like we do in normal addition.</p>
+<p>Let us work through some examples </p>
+
+<h3> EXAMPLES (TWO-DIGIT BINARY ADDITION)</h3>
+
+<p><b>Example 1:</b> Add 10₂ + 01₂</p>
+<pre>
+   10
++  01
+------
+   11
+</pre>
+<p><b> Answer:</b> 11₂</p>
+<p>(Explanation: 0+1=1, 1+0=1)</p>
+
+<p><b>Example 2:</b> Add 11₂ + 01₂</p>
+<pre>
+   11
++  01
+------
+  100
+</pre>
+<p><b> Answer:</b> 100₂</p>
+<p>(Explanation: Rightmost: 1+1=10 → write 0, carry 1. <br><br>
+Next: carry 1 + 1 + 0 = 10 → write 0, carry 1 again. <br><br>
+Write the carry at front → 100₂.)</p>
+
+<p><b>Example 3:</b> Add 10₂ + 10₂</p>
+<pre>
+   10
++  10
+------
+  100
+</pre>
+<p><b> Answer:</b> 100₂</p>
+
+<h3>  EXAMPLES (THREE-DIGIT BINARY ADDITION)</h3>
+
+<p><b>Example 4:</b> Add 101₂ + 010₂</p>
+<pre>
+   101
++  010
+-------
+   111
+</pre>
+<p><b> Answer:</b> 111₂</p>
+
+<p><b>Example 5:</b> Add 111₂ + 001₂</p>
+<pre>
+   111
++  001
+-------
+  1000
+</pre>
+<p><b> Answer:</b> 1000₂</p>
+<p>(Explanation: 1+1=10 → write 0 carry 1 <br><br>
+carry 1 + 1 + 0 = 10 → write 0 carry 1 <br><br>
+carry 1 + 1 + 0 = 10 → write 0 carry 1 <br><br>
+write carry 1 → 1000₂)</p>
+
+<p><b>Example 6:</b> Add 101₂ + 011₂</p>
+<pre>
+   101
++  011
+-------
+  1000
+</pre>
+<p><b> Answer:</b> 1000₂</p>
+
+<p><b>Example 7:</b> Add 110₂ + 101₂</p>
+<pre>
+   110
++  101
+-------
+  1011
+</pre>
+<p><b> Answer:</b> 1011₂</p>
+
+<p><b>Example 8:</b> Add 111₂ + 111₂</p>
+<pre>
+   111
++  111
+-------
+ 1110
+</pre>
+<p>Let’s check:</p>
+<p>1+1=10 → write 0 carry 1 <br><br>
+1+1+carry1=11 → write 1 carry 1 <br><br>
+1+1+carry1=11 → write 1 carry 1 <br>
+So answer = 1110₂</p>
+<p><b> Answer:</b> 1110₂</p>
+
+<h3> MORE EXAMPLES FOR PRACTICE</h3>
+<p>Try these by yourself:</p>
+<ol>
+<li>100₂ + 010₂</li><br>
+<li>101₂ + 001₂</li><br>
+<li>111₂ + 010₂</li><br>
+<li>011₂ + 100₂</li><br>
+<li>110₂ + 011₂</li><br>
+<li>101₂ + 010₂</li><br>
+<li>111₂ + 011₂</li><br>
+<li>010₂ + 010₂</li><br>
+<li>100₂ + 011₂</li><br>
+<li>101₂ + 111₂</li><br>
+</ol>
+
+
+<h2>Binary addition is very important because:</h2>
+<ol>
+<li>It helps us to understand how computers do calculations.</li><br>
+<li>It helps us to convert binary numbers to decimal and vice versa.</li><br>
+<li>It helps us to design logic circuits and computer programs.</li><br>
+</ol><br><br>
+
+<hr>
+<br><br>
+
+
+<div class="title" style="background-color: sienna;color: white;"><b>SUBTRACTION OF TWO OR THREE DIGIT BINARY NUMBERS</b></div>
+
+<h3> MEANING </h3>
+<p><b>Binary subtraction</b> means taking one binary number away from another — that is, subtracting numbers made up of 0s and 1s only.</p>
+<p>It is just like normal subtraction (in base 10), but here, you can only use 0 and 1.</p>
+<p>Binary subtraction is very important because computers use it when they perform operations like “difference,” “comparison,” or “minus.”</p>
+
+
+<p>You already know how to subtract in normal numbers:</p>
+<p>If you have 7 sweets and give 3 away, you have 4 left.</p>
+<p>In binary, we do the same thing — but we only have two numbers: 0 and 1.</p>
+<p>So sometimes we may need to borrow when we can’t subtract 1 from 0.</p>
+<p>When that happens, we borrow 1 from the next column, just like we do in normal subtraction, but in binary the rule is a little simpler.</p>
+
+<h3> BINARY SUBTRACTION RULES</h3>
+<p>There are only four main rules you must know for binary subtraction:</p>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Binary Subtraction</th>
+    <th>Result</th>
+    <th>Explanation</th>
+  </tr>
+  <tr>
+    <td>0 − 0</td>
+    <td>0</td>
+    <td>Nothing left</td>
+  </tr>
+  <tr>
+    <td>1 − 0</td>
+    <td>1</td>
+    <td>One minus nothing is one</td>
+  </tr>
+  <tr>
+    <td>1 − 1</td>
+    <td>0</td>
+    <td>One minus one is nothing</td>
+  </tr>
+  <tr>
+    <td>0 − 1</td>
+    <td>1 (with borrow 1 from next column)</td>
+    <td>We borrow 1 (which is 2 in binary), making 10₂ − 1 = 1</td>
+  </tr>
+</table>
+
+<h3> HOW TO SUBTRACT BINARY NUMBERS</h3>
+<p>We subtract from right to left, just like normal subtraction.</p>
+<p>If the top digit (minuend) is smaller than the bottom digit (subtrahend), we borrow 1 from the next left digit.</p>
+<p>When we borrow in binary:</p>
+<ol>
+<li>The 1 in the next column becomes 0 because we took it.</li><br>
+<li>The 0 we borrowed into becomes 10₂ (which is 2 in decimal).</li><br>
+<li>Then we can do the subtraction easily.</li><br>
+</ol>
+
+<h3> WORDS TO REMEMBER</h3>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Term</th>
+    <th>Meaning</th>
+  </tr>
+  <tr>
+    <td>Minuend</td>
+    <td>The number you are subtracting from (the top number).</td>
+  </tr>
+  <tr>
+    <td>Subtrahend</td>
+    <td>The number you are subtracting (the bottom number).</td>
+  </tr>
+  <tr>
+    <td>Difference</td>
+    <td>The answer after subtraction.</td>
+  </tr>
+</table>
+
+<h3> EXAMPLES (TWO-DIGIT BINARY SUBTRACTION)</h3>
+
+<p><b>Example 1:</b> Subtract 01₂ from 10₂ (that means 10₂ − 01₂)</p>
+<pre>
+   10
+ - 01
+ ----
+   01
+</pre>
+<p><b> Answer:</b> 01₂</p>
+<p><b>Explanation:</b> 0 − 1 → we borrow from the next left column. <br>
+So 10 − 1 = 1. <br>
+Then 0 (left column after borrowing) − 0 = 0. <br>
+Final answer = 01₂</p>
+
+<p><b>Example 2:</b> Subtract 10₂ from 11₂ (that means 11₂ − 10₂)</p>
+<pre>
+   11
+ - 10
+ ----
+   01
+</pre>
+<p><b> Answer:</b> 01₂</p>
+<p><b>Explanation:</b> Right side: 1 − 0 = 1 <br>
+Left side: 1 − 1 = 0 <br>
+Answer = 01₂</p>
+
+<p><b>Example 3:</b> Subtract 01₂ from 11₂ (that means 11₂ − 01₂)</p>
+<pre>
+   11
+ - 01
+ ----
+   10
+</pre>
+<p><b> Answer:</b> 10₂</p>
+
+<h3>  EXAMPLES (THREE-DIGIT BINARY SUBTRACTION)</h3>
+
+<p><b>Example 4:</b> Subtract 001₂ from 010₂ (that means 010₂ − 001₂)</p>
+<pre>
+   010
+ - 001
+ -----
+   001
+</pre>
+<p><b> Answer:</b> 001₂</p>
+<p><b>Explanation:</b> Rightmost: 0 − 1 → borrow from next column (becomes 10 − 1 = 1) <br>
+Middle: after borrowing, 0 becomes 0, 1 − 0 = 1 <br>
+Leftmost: 0 − 0 = 0 <br>
+Answer = 001₂</p>
+
+<p><b>Example 5:</b> Subtract 011₂ from 101₂ (that means 101₂ − 011₂)</p>
+<pre>
+   101
+ - 011
+ -----
+   010
+</pre>
+<p><b> Answer:</b> 010₂</p>
+
+<p><b>Example 6:</b> Subtract 001₂ from 100₂ (that means 100₂ − 001₂)</p>
+<pre>
+   100
+ - 001
+ -----
+   011
+</pre>
+<p><b> Answer:</b> 011₂</p>
+<p><b>Explanation:</b> Rightmost: 0 − 1 → borrow 1 from next column <br>
+Middle: after borrowing becomes 0 − 0 = 0 <br>
+Leftmost: 0 (after borrow) − 0 = 0 <br>
+Answer = 011₂</p>
+
+<p><b>Example 7:</b> Subtract 010₂ from 110₂ (that means 110₂ − 010₂)</p>
+<pre>
+   110
+ - 010
+ -----
+   100
+</pre>
+<p><b> Answer:</b> 100₂</p>
+
+<p><b>Example 8:</b> Subtract 101₂ from 111₂ (that means 111₂ − 101₂)</p>
+<pre>
+   111
+ - 101
+ -----
+   010
+</pre>
+<p><b> Answer:</b> 010₂</p>
+
+<p><b>Example 9:</b> Subtract 011₂ from 111₂ (that means 111₂ − 011₂)</p>
+<pre>
+   111
+ - 011
+ -----
+   100
+</pre>
+<p><b> Answer:</b> 100₂</p>
+
+<h3> EXAMPLES TO TRY BY YOURSELF</h3>
+<ol>
+<li>010₂ − 001₂</li><br>
+<li>011₂ − 010₂</li><br>
+<li>111₂ − 011₂</li><br>
+<li>100₂ − 011₂</li><br>
+<li>110₂ − 101₂</li><br>
+<li>111₂ − 110₂</li><br>
+<li>101₂ − 001₂</li><br>
+<li>011₂ − 001₂</li><br>
+<li>110₂ − 011₂</li><br>
+<li>101₂ − 011₂</li><br>
+</ol>
+
+<h3> SUMMARY</h3>
+<ol>
+<li>Binary subtraction means taking one binary number away from another using 0s and 1s only.</li><br>
+<li>We subtract from right to left.</li><br>
+<li>If the top digit is smaller, borrow 1 from the next column (it becomes 10₂).</li><br>
+<li>Important rules are:  
+ • 0 − 0 = 0  
+ • 1 − 0 = 1  
+ • 1 − 1 = 0  
+ • 0 − 1 = 1 (borrow 1)</li><br>
+<li>Binary subtraction is used in computers to perform “minus” and comparison operations.</li><br>
+</ol>
+
+<h3> REAL-LIFE IMPORTANCE</h3>
+<ol>
+<li>It helps us to understand how computers and calculators perform subtraction.</li><br>
+<li>It helps us to design computer programs and circuits.</li><br>
+<li>It helps us to understand digital electronics and computer logic.</li><br>
+</ol><br><br>
+<hr>
+<br><br>
+
+
+
+<div class="title" style="background-color: tan;color: black;"><b>MULTIPLICATION OF TWO OR THREE-DIGIT BINARY NUMBERS </b></div>
+
+<h3> MEANING </h3>
+<p><b>Binary multiplication</b> means multiplying two numbers that are written in the binary number system — that is, numbers made up of only 0s and 1s.</p>
+<p>It is just like the normal multiplication we do in base 10, but here we use only 0 and 1.</p>
+<p>Computers use binary multiplication all the time when they do calculations, because they only understand 0 (OFF) and 1 (ON).</p>
+
+
+<p>You already know that in normal multiplication:</p>
+<p>0 × anything = 0</p>
+<p>1 × anything = that same thing</p>
+<p>It is the same in binary! When we multiply binary numbers, we just use those same simple rules — but we also have to add the results carefully, just like long multiplication in normal numbers.</p>
+
+<h3> RULES OF BINARY MULTIPLICATION</h3>
+<p>There are only four simple rules to remember:</p>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Binary Multiplication</th>
+    <th>Result</th>
+    <th>Explanation</th>
+  </tr>
+  <tr>
+    <td>0 × 0</td>
+    <td>0</td>
+    <td>Nothing times nothing is nothing</td>
+  </tr>
+  <tr>
+    <td>0 × 1</td>
+    <td>0</td>
+    <td>Anything times zero is zero</td>
+  </tr>
+  <tr>
+    <td>1 × 0</td>
+    <td>0</td>
+    <td>One times zero is zero</td>
+  </tr>
+  <tr>
+    <td>1 × 1</td>
+    <td>1</td>
+    <td>One times one is one</td>
+  </tr>
+</table>
+
+<h3> HOW TO MULTIPLY BINARY NUMBERS</h3>
+<p>When multiplying binary numbers, we follow the same steps as normal multiplication:</p>
+<ol>
+<li>Write the numbers one on top of the other.</li><br>
+<li>Multiply the bottom number by each digit of the top number, from right to left.</li><br>
+<li>Each new line you write, shift it one place to the left (just like in decimal multiplication).</li><br>
+<li>Finally, add all the partial results together (in binary).</li><br>
+</ol>
+
+<h3> EXAMPLES (TWO-DIGIT × ONE-DIGIT)</h3>
+
+<p><b>Example 1:</b> Multiply 10₂ × 1₂</p>
+<pre>
+   10
+×   1
+------
+   10
+</pre>
+<p><b> Answer:</b> 10₂</p>
+<p>(Explanation: anything multiplied by 1 is itself.)</p>
+
+<p><b>Example 2:</b> Multiply 11₂ × 1₂</p>
+<pre>
+   11
+×   1
+------
+   11
+</pre>
+<p><b> Answer:</b> 11₂</p>
+
+<p><b>Example 3:</b> Multiply 10₂ × 0₂</p>
+<pre>
+   10
+×   0
+------
+   00
+</pre>
+<p><b>Answer:</b> 00₂</p>
+
+<h3> EXAMPLES (TWO-DIGIT × TWO-DIGIT)</h3>
+
+<p><b>Example 4:</b> Multiply 10₂ × 10₂</p>
+<p>Let us work it step by step </p>
+<pre>
+     10
+   × 10
+  ------
+     00   (because 10 × 0 = 00)
++   10    (because 10 × 1 = 10, shifted one place left)
+  ------
+   100
+</pre>
+<p><b> Answer:</b> 100₂</p>
+<p><b>Check:</b> 10₂ = 2 in decimal <br>
+10₂ × 10₂ = 2 × 2 = 4 <br>
+100₂ = 4 in decimal  correct!</p>
+
+<p><b>Example 5:</b> Multiply 11₂ × 10₂</p>
+<pre>
+     11
+   × 10
+  ------
+     00   (11 × 0 = 00)
++   11    (11 × 1 = 11, shifted one place left)
+  ------
+   110
+</pre>
+<p><b> Answer:</b> 110₂</p>
+<p><b>Check:</b> 11₂ = 3, 10₂ = 2 <br>
+3 × 2 = 6 <br>
+110₂ = 6  correct!</p>
+
+<p><b>Example 6:</b> Multiply 11₂ × 11₂</p>
+<pre>
+     11
+   × 11
+  ------
+     11    (11 × 1 = 11)
++   11     (11 × 1 = 11, shifted one place left)
+  ------
+   1001
+</pre>
+<p><b> Answer:</b> 1001₂</p>
+<p><b>Check:</b> 11₂ = 3, 3 × 3 = 9 <br>
+1001₂ = 9  correct!</p>
+
+<h3> EXAMPLES (THREE-DIGIT × TWO-DIGIT)</h3>
+
+<p><b>Example 7:</b> Multiply 101₂ × 10₂</p>
+<pre>
+     101
+   ×  10
+  ------
+     000   (101 × 0 = 000)
++   101    (101 × 1 = 101, shifted one place left)
+  ------
+   1010
+</pre>
+<p><b> Answer:</b> 1010₂</p>
+<p><b>Check:</b> 101₂ = 5, 10₂ = 2, 5 × 2 = 10 <br>
+1010₂ = 10  correct!</p>
+
+<p><b>Example 8:</b> Multiply 111₂ × 11₂</p>
+<pre>
+     111
+   ×  11
+  ------
+     111   (111 × 1 = 111)
++   111    (111 × 1 = 111, shifted one place left)
+  ------
+   1110
+</pre>
+<p><b> Answer:</b> 1110₂</p>
+<p><b>Check:</b> 111₂ = 7, 11₂ = 3, 7 × 3 = 21 <br>
+1110₂ = 21  correct!</p>
+
+<p><b>Example 9:</b> Multiply 101₂ × 11₂</p>
+<pre>
+     101
+   ×  11
+  ------
+     101   (101 × 1 = 101)
++   101    (101 × 1 = 101, shifted one place left)
+  ------
+   1111
+</pre>
+<p><b> Answer:</b> 1111₂</p>
+<p><b>Check:</b> 101₂ = 5, 11₂ = 3, 5 × 3 = 15 <br>
+1111₂ = 15  correct!</p>
+
+<p><b>Example 10:</b> Multiply 110₂ × 11₂</p>
+<pre>
+     110
+   ×  11
+  ------
+     110   (110 × 1 = 110)
++   110    (110 × 1 = 110, shifted one place left)
+  ------
+   10010
+</pre>
+<p><b>Answer:</b> 10010₂</p>
+<p><b>Check:</b> 110₂ = 6, 11₂ = 3, 6 × 3 = 18 <br>
+10010₂ = 18  correct!</p>
+
+<h3> PRACTICE QUESTIONS (Try these yourself!)</h3>
+<ol>
+<li>101₂ × 10₂</li><br>
+<li>111₂ × 10₂</li><br>
+<li>110₂ × 100₂</li><br>
+<li>101₂ × 101₂</li><br>
+<li>111₂ × 111₂</li><br>
+<li>100₂ × 11₂</li><br>
+<li>101₂ × 111₂</li><br>
+<li>110₂ × 101₂</li><br>
+<li>111₂ × 100₂</li><br>
+<li>100₂ × 101₂</li><br>
+</ol>
+
+<h3> SUMMARY</h3>
+<ol>
+<li>Binary multiplication means multiplying numbers that use only 0 and 1.</li><br>
+<li>We use these rules:  • 0 × 0 = 0  • 0 × 1 = 0  • 1 × 0 = 0  • 1 × 1 = 1</li><br>
+<li>We multiply from right to left and shift each line to the left (like in normal multiplication).</li><br>
+<li>After multiplying, we add the partial results (using binary addition).</li><br>
+<li>Binary multiplication is used in computers to perform fast calculations and digital processing.</li><br>
+</ol>
+
+<h3> WHY IT IS IMPORTANT</h3>
+<ol>
+<li>It helps us to understand how computers perform multiplication.</li><br>
+<li>It helps us to design computer hardware and digital systems.</li><br>
+<li>It helps us to write computer programs that deal with binary numbers.</li><br>
+</ol><br><br>
+
+<hr>
+<br><br>
+
+<div class="title" style="background-color: darkcyan;color: white;"><b>DIVISION OF TWO OR THREE-DIGIT BINARY NUMBERS</b></div>
+
+<h3>MEANING </h3>
+<p>Binary division means splitting one binary number by another binary number.<br>
+It is the same as normal long division that you already know, but instead of numbers 0–9, we only use 0 and 1.</p>
+
+<p>Just like in base 10, we call the numbers:</p>
+<table border="1" cellpadding="6">
+<tr><th>Word</th><th>Meaning</th></tr>
+<tr><td>Dividend</td><td>The number you want to divide (the big number).</td></tr>
+<tr><td>Divisor</td><td>The number you are dividing by (the small number).</td></tr>
+<tr><td>Quotient</td><td>The answer you get after dividing.</td></tr>
+<tr><td>Remainder</td><td>What is left over after the division.</td></tr>
+</table>
+
+<h3> EXPLANATION </h3>
+<p>When we divide in binary, we are simply asking:<br>
+“How many times does this small number fit into this bigger number?”</p>
+
+<p>Since we only have 0 and 1, the answer (quotient digit) can only be 0 or 1.</p>
+<p>If the divisor can fit into the dividend part → write 1.<br>
+If it cannot fit → write 0.</p>
+<p>We use binary subtraction to remove (subtract) each part as we go, just like in normal long division.</p>
+
+<h3> BINARY DIVISION RULES</h3>
+<table border="1" cellpadding="6">
+<tr><th>Division</th><th>Result</th></tr>
+<tr><td>0 ÷ 1</td><td>0</td></tr>
+<tr><td>1 ÷ 1</td><td>1</td></tr>
+<tr><td>0 ÷ 0</td><td>Not possible</td></tr>
+<tr><td>1 ÷ 0</td><td>Not possible</td></tr>
+</table>
+
+<p><b>Remember:</b> dividing by zero is never allowed, even in normal numbers.</p>
+
+<h3> STEPS IN BINARY DIVISION</h3>
+<ol>
+<li>Write the dividend (the big number) and the divisor (the small number).</li><br>
+<li>See if the divisor can go into the first few digits of the dividend.</li><br>
+<li>If it can’t, bring down another digit.</li><br>
+<li>When it can, write 1 on top (in the quotient).</li><br>
+<li>Multiply the divisor by 1 and subtract from that part of the dividend.</li><br>
+<li>Bring down the next digit and continue until you finish.</li><br>
+<li>If there’s something left that can’t be divided again, that is the remainder.</li><br>
+</ol>
+
+<h3> EXAMPLES (TWO-DIGIT BINARY DIVISION)</h3>
+
+<p><b>Example 1</b><br>
+Divide 10₂ by 1₂ (that means 10 ÷ 1)</p>
+<pre>
+   1 0 ÷ 1
+</pre>
+<p>Now, 1 can go into 1 → write 1.<br>
+Multiply 1 × 1 = 1<br>
+Subtract → 1 − 1 = 0<br>
+Bring down next 0 → 0 ÷ 1 = 0</p>
+<p> <b>Answer:</b> Quotient = 10₂, Remainder = 0</p>
+
+<hr>
+
+<p><b>Example 2</b><br>
+Divide 10₂ by 10₂</p>
+<pre>
+   10 ÷ 10
+</pre>
+<p>10 goes into 10 exactly once.<br>
+Write 1 on top.<br>
+Subtract 10 − 10 = 00.</p>
+<p> <b>Answer:</b> Quotient = 1₂, Remainder = 0</p>
+
+<hr>
+
+<p><b>Example 3</b><br>
+Divide 11₂ by 10₂</p>
+<pre>
+   11 ÷ 10
+</pre>
+<p>10 goes into 11 once.<br>
+Write 1.<br>
+Subtract: 11 − 10 = 01.</p>
+<p> <b>Answer:</b> Quotient = 1₂, Remainder = 1₂</p>
+
+<h3>EXAMPLES (THREE-DIGIT BINARY DIVISION)</h3>
+
+<p><b>Example 4</b><br>
+Divide 110₂ by 10₂</p>
+<pre>
+   10 | 110
+</pre>
+<p>10 goes into 11 → yes, once (write 1).<br>
+Subtract 11 − 10 = 01.<br>
+Bring down next 0 → 010.<br>
+10 goes into 01 → no, write 0.<br>
+Bring down next → remainder 10.</p>
+<p> <b>Answer:</b> Quotient = 11₂, Remainder = 0</p>
+
+<hr>
+
+<p><b>Example 5</b><br>
+Divide 101₂ by 10₂</p>
+<pre>
+   10 | 101
+</pre>
+<p>10 goes into 10 → once (write 1).<br>
+Subtract 10 − 10 = 00.<br>
+Bring down 1 → 01.<br>
+10 cannot go into 01 → write 0.</p>
+<p> <b>Answer:</b> Quotient = 10₂, Remainder = 1₂</p>
+
+<hr>
+
+<p><b>Example 6</b><br>
+Divide 111₂ by 11₂</p>
+<pre>
+   11 | 111
+</pre>
+<p>11 goes into 11 → once (write 1).<br>
+Subtract → 11 − 11 = 00.<br>
+Bring down last 1 → 01.<br>
+11 cannot go into 01 → write 0.</p>
+<p> <b>Answer:</b> Quotient = 10₂, Remainder = 1₂</p>
+
+<hr>
+
+<p><b>Example 7</b><br>
+Divide 1001₂ by 10₂</p>
+<pre>
+   10 | 1001
+</pre>
+<p>Step 1: 10 into 10 → once (write 1).<br>
+Subtract → 10 − 10 = 00.<br>
+Bring down next 0 → 000.<br>
+10 cannot go → write 0.<br>
+Bring down last 1 → 001.<br>
+10 cannot go → write 0.</p>
+<p><b>Answer:</b> Quotient = 100₂, Remainder = 1₂</p>
+
+<h3> PRACTICE QUESTIONS (Try these yourself!)</h3>
+<ol>
+<li>110₂ ÷ 10₂</li><br>
+<li>111₂ ÷ 10₂</li><br>
+<li>101₂ ÷ 11₂</li><br>
+<li>100₂ ÷ 10₂</li><br>
+<li>111₂ ÷ 11₂</li><br>
+<li>1011₂ ÷ 10₂</li><br>
+<li>1100₂ ÷ 11₂</li><br>
+<li>1111₂ ÷ 10₂</li><br>
+<li>1010₂ ÷ 10₂</li><br>
+<li>1001₂ ÷ 11₂</li><br>
+</ol>
+
+<h3> SUMMARY</h3>
+<ol>
+<li>Binary division means dividing one binary number by another.</li><br>
+<li>The answer to division is called the <b>quotient</b>, and what is left is the <b>remainder</b>.</li><br>
+<li>Division in binary uses subtraction and follows the same pattern as normal long division.</li><br>
+<li>The only possible quotient digits are <b>0</b> and <b>1</b>.</li><br>
+<li>Binary division helps computers perform sharing and logic operations.</li><br>
+</ol>
+
+<h3> WHY IT IS IMPORTANT</h3>
+<p>It helps us to understand how computers share or split data.<br><br>
+It helps us to learn binary arithmetic, which is the language of computers.<br><br>
+It helps us to understand logic operations and programming.</p>
+<br><br>
+
+<hr>
+
+<br><br>
+<div class="title" style="background-color: saddlebrown;color: white;"><b>WORD PROBLEMS</b></div>
+
+<h2>ADDITION </h2>
+
+<h3>Problem A1 — Apples</h3>
+<p>Ada has 11₂ apples (that is 3 apples). Her friend gives her 11₂ more apples (another 3). How many apples does Ada have now?</p>
+
+<h4>Step-by-step solution</h4>
+<p>Write the sum: 11₂ + 11₂. (3 + 3)</p>
+<pre>
+   11
+ + 11
+ ----
+</pre>
+<p>Rightmost: 1 + 1 = 10₂ → write 0, carry 1.<br>
+Next column (left): 1 + 1 + carry1 = 1+1+1 = 11₂ → write 1, carry 1.<br>
+Put the final carry at the left: result = 110₂.</p>
+<p>Decimal check: 11₂ = 3, so 3 + 3 = 6. And 110₂ = 6. </p>
+<p><b>Answer:</b> 110₂ (which is 6 apples).</p>
+
+<hr>
+
+<h3>Problem A2 — Candies</h3>
+<p>Sam had 101₂ candies (5). He found 011₂ more (3). How many candies now?</p>
+
+<h4>Step-by-step solution</h4>
+<p>101₂ + 011₂ (5 + 3)</p>
+<pre>
+   101
+ + 011
+ -----
+</pre>
+<p>Rightmost: 1 + 1 = 0, carry 1.<br>
+Middle: 0 + 1 + carry1 = 0+1+1 = 10₂ → write 0, carry 1.<br>
+Leftmost: 1 + 0 + carry1 = 1+0+1 = 10₂ → write 0, carry 1.<br>
+Final carry gives new left digit → 1000₂.</p>
+<p>Decimal check: 5 + 3 = 8, and 1000₂ = 8. </p>
+<p><b>Answer:</b> 1000₂ (which is 8 candies).</p>
+
+<hr>
+
+<h3>Problem A3 — Toy cars</h3>
+<p>Tunde has 110₂ toy cars (6). He buys 101₂ more (5). How many toy cars now?</p>
+
+<h4>Step-by-step solution</h4>
+<p>110₂ + 101₂ (6 + 5)</p>
+<pre>
+   110
+ + 101
+ -----
+</pre>
+<p>Rightmost: 0 + 1 = 1.<br>
+Middle: 1 + 0 = 1.<br>
+Leftmost: 1 + 1 = 10₂ → write 0, carry 1.<br>
+Put the carry to leftmost → 1011₂.</p>
+<p>Decimal check: 6 + 5 = 11, and 1011₂ = 11. </p>
+<p><b>Answer:</b> 1011₂ (which is 11 toy cars).</p>
+
+<hr>
+
+<h2>SUBTRACTION </h2>
+
+<h3>Problem S1 — Cookies</h3>
+<p>Lola had 101₂ cookies (5). She ate 011₂ cookies (3). How many cookies left?</p>
+
+<h4>Step-by-step solution</h4>
+<p>101₂ − 011₂ (5 − 3)</p>
+<pre>
+   101
+ - 011
+ -----
+</pre>
+<p>Rightmost: 1 − 1 = 0.<br>
+Middle: 0 − 1 → borrow 1 from leftmost. Leftmost becomes 0, middle becomes 10₂. Now 10₂ − 1 = 1.<br>
+Leftmost after borrow: 0 − 0 = 0.<br>
+Result = 010₂ (or 10₂).</p>
+<p>Decimal check: 5 − 3 = 2, and 010₂ = 2. </p>
+<p><b>Answer:</b> 010₂ (which is 2 cookies left).</p>
+
+<hr>
+
+<h3>Problem S2 — Balloons</h3>
+<p>Aya has 100₂ balloons (4). She gives 001₂ balloon (1) to a friend. How many left?</p>
+
+<h4>Step-by-step solution</h4>
+<p>100₂ − 001₂ (4 − 1)</p>
+<pre>
+   100
+ - 001
+ -----
+</pre>
+<p>Rightmost: 0 − 1 → borrow. Middle is 0 so we borrow from leftmost: leftmost 1 → 0, middle becomes 10₂. Then middle lends 1 to rightmost: middle becomes 1, rightmost becomes 10₂.<br>
+Rightmost now: 10₂ − 1 = 1.<br>
+Middle: 1 − 0 = 1.<br>
+Leftmost: 0 − 0 = 0.<br>
+Result = 011₂.</p>
+<p>Decimal check: 4 − 1 = 3, 011₂ = 3. </p>
+<p><b>Answer:</b> 011₂ (which is 3 balloons left).</p>
+
+<hr>
+
+<h3>Problem S3 — Marbles (borrow chain)</h3>
+<p>Bola has 100₂ marbles (4). She loses 011₂ marbles (3). How many remain?</p>
+
+<h4>Step-by-step solution</h4>
+<p>100₂ − 011₂ (4 − 3)</p>
+<pre>
+   100
+ - 011
+ -----
+</pre>
+<p>Rightmost: 0 − 1 → borrow. Middle is 0, so we must borrow from leftmost 1. Leftmost becomes 0, middle becomes 10₂. Then middle lends to rightmost: middle becomes 1, rightmost becomes 10₂.<br>
+Rightmost: 10₂ − 1 = 1.<br>
+Middle: 1 − 1 = 0.<br>
+Leftmost: 0 − 0 = 0.<br>
+Result = 001₂.</p>
+<p>Decimal check: 4 − 3 = 1, 001₂ = 1. </p>
+<p><b>Answer:</b> 001₂ (which is 1 marble remain).</p>
+
+<hr>
+
+<h2>MULTIPLICATION </h2>
+
+<h3>Problem M1 — Small groups of flowers</h3>
+<p>In a garden, each row has 11₂ flowers (3). There are 11₂ rows (3). How many flowers in total?</p>
+
+<h4>Step-by-step solution</h4>
+<p>11₂ × 11₂ (3 × 3)</p>
+<pre>
+    11
+  × 11
+  ----
+    11
+ + 11
+ ------
+  1001
+</pre>
+<p>Decimal check: 3 × 3 = 9, and 1001₂ = 9. </p>
+<p><b>Answer:</b> 1001₂ (which is 9 flowers).</p>
+
+<hr>
+
+<h3>Problem M2 — Toy stacking</h3>
+<p>One box can hold 101₂ toys (5). There are 10₂ boxes (2). How many toys can all boxes hold?</p>
+
+<h4>Step-by-step solution</h4>
+<p>101₂ × 10₂ (5 × 2)</p>
+<pre>
+    101
+  ×  10
+  -----
+    000
+ + 101
+ ------
+   1010
+</pre>
+<p>Decimal check: 5 × 2 = 10, 1010₂ = 10. </p>
+<p><b>Answer:</b> 1010₂ (which is 10 toys).</p>
+
+<hr>
+
+<h3>Problem M3 — Candy packs</h3>
+<p>A packet has 110₂ candies (6). There are 101₂ packets (5). How many candies total?</p>
+
+<h4>Step-by-step solution</h4>
+<p>110₂ × 101₂ (6 × 5)</p>
+<pre>
+     110
+   × 101
+   ------
+     110
+    000
+ + 11000
+ --------
+   11110
+</pre>
+<p>Decimal check: 6 × 5 = 30, and 11110₂ = 30. </p>
+<p><b>Answer:</b> 11110₂ (which is 30 candies).</p>
+
+<hr>
+
+<h2>DIVISION </h2>
+
+<h3>Problem D1 — Sharing crackers</h3>
+<p>There are 110₂ crackers (6). They are shared equally among 10₂ children (2). How many crackers each child gets and any remainder?</p>
+
+<h4>Step-by-step solution</h4>
+<p>110₂ ÷ 10₂ (6 ÷ 2)</p>
+<p>10 goes into 11 once → write 1, subtract 11 − 10 = 01.<br>
+Bring down last 0 → 010.<br>
+10 goes into 10 once → write 1, subtract 10 − 10 = 0.</p>
+<p> <b>Answer:</b> Quotient = 11₂, Remainder = 0</p>
+<p>Decimal check: 6 ÷ 2 = 3, 11₂ = 3. </p>
+<p>Each child gets 11₂ (3) crackers, remainder 0.</p>
+
+<hr>
+
+<h3>Problem D2 — Sharing sweets (remainder)</h3>
+<p>There are 101₂ sweets (5). They are put into boxes of 11₂ sweets each (3). How many full boxes and how many sweets left?</p>
+
+<h4>Step-by-step solution</h4>
+<p>101₂ ÷ 11₂ (5 ÷ 3)</p>
+<p>11 does not fit into first 10, so look at 101.<br>
+11 fits into 101 once → write 1.<br>
+Subtract 101 − 011 = 010.<br>
+Nothing more to bring → remainder 010₂.</p>
+<p> <b>Answer:</b> 1 full box (1₂) and remainder 10₂ (2) sweets.</p>
+<p>Decimal check: 5 ÷ 3 = 1 remainder 2. 010₂ = 2. </p>
+
+<hr>
+
+<h3>Problem D3 — Sharing stickers</h3>
+<p>There are 111₂ stickers (7). They are shared into groups of 10₂ (2). How many in each group and what's left?</p>
+
+<h4>Step-by-step solution</h4>
+<p>111₂ ÷ 10₂ (7 ÷ 2)</p>
+<p>10 goes into 11 once → subtract 11 − 10 = 01.<br>
+Bring down next 1 → 011.<br>
+10 goes into 011 once → write 1, subtract 011 − 010 = 001.</p>
+<p> <b>Answer:</b> Quotient = 11₂, Remainder = 001₂</p>
+<p>Decimal check: 7 ÷ 2 = 3 remainder 1. 11₂ = 3, 001₂ = 1. </p>
+<p>Each group has 11₂ (3), remainder 1 (001₂).</p>
+
+
+
+
+
+
+
+       
+           
+
+        </ol>
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/first-term/math/j3/1.html" class="iam">
+                <br>
+                <li >BINARY NUMBER SYSTEM       </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j3/2.html" class="iam">
+
+                <li > USING COMPUTERS FOR SIMPLE MATHEMATICAL CALCULATIONS</li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j3/3.html" class="iam">
+
+                <li > TRANSLATION OF WORD PROBLEMS INTO NUMERICAL EXPRESSIONS </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j3/4.html" class="iam">
+
+                <li > EXPRESSIONS INVOLVING BRACKETS AND FRACTIONS</li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j3/5.html" class="iam">
+                
+                <li > DIRECT AND INVERSE PROPORTION   </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j3/6.html" class="iam">
+                <br>
+                <li >  COMPOUND INTEREST </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j3/6.html" class="iam">
+                <br>
+                <li >  COMPOUND INTEREST </li>
+            </a>
+            <br>
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

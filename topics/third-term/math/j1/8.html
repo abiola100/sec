@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
+    crossorigin="anonymous"></script>
+    
+</head>
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+       </div>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/math-third/math-third.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+     const quizData = [
+  // PLANE SHAPES – similarities, perimeter, area
+  { question: "Which property is common to both a square and a rectangle?", a: "Opposite sides are equal", b: "All angles are obtuse", c: "Diagonals are not equal", correct: "a" },
+  { question: "What makes a square different from a rectangle?", a: "All sides are equal", b: "All angles are equal", c: "Opposite sides are equal", correct: "a" },
+  { question: "Which shape has exactly one line of symmetry?", a: "Trapezium", b: "Square", c: "Circle", correct: "a" },
+  { question: "Which of these shapes has no straight sides?", a: "Circle", b: "Square", c: "Triangle", correct: "a" },
+  { question: "The perimeter of a regular hexagon with side 5 cm is:", a: "30 cm", b: "25 cm", c: "35 cm", correct: "a" },
+  { question: "What is the perimeter of a square of side 9 cm?", a: "36 cm", b: "18 cm", c: "81 cm", correct: "a" },
+  { question: "Which of the following is the formula for the area of a rectangle?", a: "Length × Breadth", b: "Length + Breadth", c: "2(Length + Breadth)", correct: "a" },
+  { question: "The area of a triangle with base 10 cm and height 6 cm is:", a: "30 cm²", b: "60 cm²", c: "16 cm²", correct: "a" },
+  { question: "The area of a parallelogram is calculated as:", a: "Base × Height", b: "½ × Base × Height", c: "Length × Breadth", correct: "a" },
+  { question: "The area of a circle of radius 7 cm is (use π=22/7):", a: "154 cm²", b: "44 cm²", c: "77 cm²", correct: "a" },
+
+  // THREE-DIMENSIONAL FIGURES – properties, volumes
+  { question: "Which solid has all its faces square?", a: "Cube", b: "Cuboid", c: "Pyramid", correct: "a" },
+  { question: "What is the difference between a cube and a cuboid?", a: "Cube has equal edges, cuboid does not", b: "Cuboid has all square faces", c: "Cube has triangular faces", correct: "a" },
+  { question: "A cone has how many faces?", a: "2", b: "3", c: "1", correct: "a" },
+  { question: "Which solid has one curved surface and two flat surfaces?", a: "Cylinder", b: "Cone", c: "Sphere", correct: "a" },
+  { question: "A sphere has how many flat surfaces?", a: "0", b: "1", c: "2", correct: "a" },
+  { question: "The volume of a cube of side 4 cm is:", a: "64 cm³", b: "16 cm³", c: "32 cm³", correct: "a" },
+  { question: "The volume of a cuboid is given by:", a: "Length × Breadth × Height", b: "2(Length + Breadth)", c: "Length × Breadth", correct: "a" },
+  { question: "Which solid has a square base and triangular sides meeting at a point?", a: "Square pyramid", b: "Cube", c: "Cone", correct: "a" },
+  { question: "How many edges does a cuboid have?", a: "12", b: "8", c: "6", correct: "a" },
+  { question: "Which of these has only one surface with no edges or vertices?", a: "Sphere", b: "Cone", c: "Cylinder", correct: "a" },
+
+  // CONSTRUCTION – lines, bisection, angles
+  { question: "What instrument is most important in constructing angles?", a: "Compass", b: "Ruler", c: "Divider", correct: "a" },
+  { question: "To construct a perpendicular bisector of a line, you use:", a: "Compass and ruler", b: "Protractor only", c: "Divider only", correct: "a" },
+  { question: "A 90° angle can be constructed by:", a: "Bisecting a straight angle", b: "Drawing a triangle", c: "Adding 45° and 30°", correct: "a" },
+  { question: "A 60° angle can be constructed by:", a: "Using an equilateral triangle", b: "Bisecting 90°", c: "Bisecting 120°", correct: "a" },
+  { question: "Parallel lines are:", a: "Lines that never meet", b: "Lines that meet at one point", c: "Lines crossing each other", correct: "a" },
+  { question: "When two lines cross and form equal opposite angles, they are:", a: "Intersecting lines", b: "Parallel lines", c: "Perpendicular lines", correct: "a" },
+  { question: "Perpendicular lines meet at:", a: "90°", b: "180°", c: "45°", correct: "a" },
+  { question: "The instrument used to measure an angle directly is:", a: "Protractor", b: "Compass", c: "Divider", correct: "a" },
+  { question: "To bisect a line means to:", a: "Divide it into two equal parts", b: "Make it longer", c: "Cut it into three parts", correct: "a" },
+  { question: "Which of these cannot be constructed using a compass?", a: "Trapezium", b: "Equilateral triangle", c: "Perpendicular bisector", correct: "a" },
+
+  // MEASUREMENT OF ANGLES – definitions, properties
+  { question: "Angles around a point add up to:", a: "360°", b: "180°", c: "90°", correct: "a" },
+  { question: "Angles on a straight line add up to:", a: "180°", b: "360°", c: "90°", correct: "a" },
+  { question: "Which type of angle is less than 90°?", a: "Acute", b: "Right", c: "Obtuse", correct: "a" },
+  { question: "A straight angle measures:", a: "180°", b: "90°", c: "360°", correct: "a" },
+  { question: "An angle greater than 180° but less than 360° is:", a: "Reflex angle", b: "Obtuse angle", c: "Acute angle", correct: "a" },
+  { question: "Vertically opposite angles are formed when:", a: "Two lines intersect", b: "Two lines are parallel", c: "Two lines are perpendicular", correct: "a" },
+  { question: "Corresponding angles are equal when:", a: "A transversal cuts parallel lines", b: "Two lines intersect", c: "Two lines overlap", correct: "a" },
+  { question: "Alternate angles are equal when:", a: "A transversal cuts parallel lines", b: "Two lines meet at a point", c: "Two lines form a triangle", correct: "a" },
+  { question: "Adjacent angles share:", a: "A common arm and vertex", b: "Different arms", c: "No common point", correct: "a" },
+  { question: "The sum of angles in a triangle is:", a: "180°", b: "360°", c: "90°", correct: "a" },
+
+  // STATISTICS – meaning, data, mean, median, mode, range
+  { question: "Statistics deals with:", a: "Collecting and analyzing data", b: "Drawing only", c: "Measuring angles", correct: "a" },
+  { question: "Which is NOT a method of data collection?", a: "Guessing", b: "Observation", c: "Interview", correct: "a" },
+  { question: "Which chart uses bars with gaps between them?", a: "Bar chart", b: "Histogram", c: "Pie chart", correct: "a" },
+  { question: "Which chart uses bars that touch each other?", a: "Histogram", b: "Bar chart", c: "Line graph", correct: "a" },
+  { question: "Which diagram shows data in slices of a circle?", a: "Pie chart", b: "Bar chart", c: "Line graph", correct: "a" },
+  { question: "The mean of 4, 6, 10 is:", a: "6.67", b: "7", c: "8", correct: "a" },
+  { question: "The median of 5, 7, 9 is:", a: "7", b: "8", c: "6", correct: "a" },
+  { question: "The mode of 2, 3, 3, 4, 5 is:", a: "3", b: "4", c: "2", correct: "a" },
+  { question: "The range of 12, 15, 10, 20 is:", a: "10", b: "5", c: "8", correct: "a" },
+  { question: "The mean is calculated as:", a: "Sum ÷ Number of data", b: "Middle value", c: "Most repeated value", correct: "a" },
+  { question: "The median is:", a: "The middle value", b: "The average", c: "The largest value", correct: "a" },
+  { question: "The mode is:", a: "The most frequent value", b: "The middle value", c: "The smallest value", correct: "a" },
+  { question: "The total of all frequencies in a table is called:", a: "Total frequency", b: "Range", c: "Mean", correct: "a" },
+  { question: "Data arranged in rows and columns is called:", a: "Frequency table", b: "Bar chart", c: "Line graph", correct: "a" },
+  { question: "In statistics, tally marks are used to:", a: "Count frequency", b: "Show angles", c: "Measure length", correct: "a" },
+  { question: "Which of these is a stage of statistics?", a: "Data collection", b: "Guessing", c: "Random drawing", correct: "a" },
+  { question: "The purpose of statistics is:", a: "To summarize and understand data", b: "To confuse people", c: "To guess answers", correct: "a" },
+  { question: "If the marks are 10, 20, 30, 40, the median is:", a: "25", b: "20", c: "30", correct: "a" },
+  { question: "If ages are 12, 12, 13, 14, 14, 14, 15, the mode is:", a: "14", b: "12", c: "15", correct: "a" },
+  { question: "If the largest number is 50 and smallest is 20, the range is:", a: "30", b: "25", c: "20", correct: "a" }
+];
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got this one right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You selected the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
+
+    
+    <script src="../../../../script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,988 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Construction - mathematics - jss2</title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+   
+        h1,h2,h3{color:#0b5a3a;}
+        h1{font-size:1.6rem;}
+        p{margin:8px 0;}
+      
+        .example{background:#fcfcfc;border-left:4px solid #0b5a3a;padding:10px 12px;margin:12px 0;border-radius:4px;}
+        pre{background:#f8f8f8;border:1px solid #eee;padding:10px;border-radius:4px;overflow:auto;}
+        table{border-collapse:collapse;width:100%;margin:12px 0;}
+        th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+        .note{font-size:0.95rem;color:#333;}
+  </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header> 
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/third-term/math-third/third-term-js2-math.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1">
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title" style="background-color: purple;color: white;"><b>CONSTRUCTION</b></div>
+       
+
+ 
+
+        <h2>Meaning of Construction</h2>
+        <p>Construction in Mathematics means drawing shapes, angles, and lines accurately using only a ruler (straight edge) and a compass — not by guessing or using freehand.</p>
+        <p>It helps us to draw perfect geometric figures like triangles, angles, perpendicular lines, and bisectors.</p>
+        <p>When we construct, we follow exact measurements. For example, if a question says “Construct a line 6 cm long,” we must use the ruler and compass to make it exactly 6 cm — not “about 6 cm.”</p>
+
+        <br><br>
+        <div class="title" style="background-color: #0b5a3a;color: white;"><b>Why We Learn Construction</b></div>
+        <ol>
+            <li>It helps us to draw accurate shapes.</li><br>
+            <li>It helps us to understand geometry better.</li><br>
+            <li>It helps us to make angles and lines correctly.</li><br>
+            <li>It helps us in engineering, technical drawing, and design.</li><br>
+            <li>It helps us to measure and divide lines or angles exactly.</li>
+        </ol><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>Important Mathematical Instruments Used in Construction</b></div>
+        <ol>
+            <li><strong>Ruler (or straight edge)</strong> — used to draw straight lines and measure lengths.</li><br>
+            <li><strong>Compass</strong> — used to draw circles and arcs, and to measure distances.</li><br>
+            <li><strong>Protractor</strong> — used to measure or draw angles.</li><br>
+            <li><strong>Pencil</strong> — used to draw and mark points.</li><br>
+            <li><strong>Eraser</strong> — used to remove wrong lines or marks.</li><br>
+            <li><strong>Set squares</strong> — used to draw special angles like 30°, 45°, 60°, and 90°.</li>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkcyan;color: white;"><b>Basic Constructions in Geometry</b></div>
+        <p>In  Mathematics, these are the main constructions you must learn before constructing triangles:</p>
+
+        <h3>1. To Construct a Line Segment of a Given Length</h3>
+        <p><strong>Example:</strong> Construct a line 6 cm long.</p>
+        <div class="steps">
+            <ol>
+            <li>Place your ruler on the paper.</li><br>
+            <li>Mark point <strong>A</strong> at 0 cm and point <strong>B</strong> at 6 cm.</li><br>
+            <li>Join A and B using your ruler.</li>
+            </ol>
+        </div>
+  <pre>
+A----------------------B
+0cm                   6cm
+  </pre>
+
+        <h3>2. To Bisect a Given Line Segment (Find its Middle Point)</h3>
+        <p><strong>Example:</strong> Bisect line AB.</p>
+        <div class="steps">
+            <ol>
+            <li>Draw line AB (any length).</li>
+            <li>Put your compass at A, open it more than half of AB, and draw arcs above and below the line.</li><br>
+            <li>Without changing the compass width, put the compass at B and draw arcs to cut the first arcs.</li><br>
+            <li>Join the points where the arcs meet. The line you draw cuts AB into two equal parts.</li>
+            </ol>
+        </div>
+  <pre>
+     ×           ×
+      \         /
+       \       /
+A-------\-----/-------B
+        /     \
+       /       \
+     ×           ×
+  </pre>
+        <p class="note">The line through the "×" marks is the perpendicular bisector of AB.</p>
+
+        <h3>3. To Construct a Perpendicular Line from a Point on a Line</h3>
+        <div class="steps">
+            <ol>
+            <li>Draw line AB.</li><br>
+            <li>Mark a point <strong>P</strong> on it.</li><br>
+            <li>Put your compass at P and draw small arcs to cut the line at two points (say X and Y).</li><br>
+            <li>Without changing the compass, put it at X and Y one by one, and draw arcs above the line to meet at a point <strong>Q</strong>.</li>
+            <li>Join Q and P.</li>
+            </ol>
+        </div>
+  <pre>
+       Q
+       |
+       |
+X------P------Y
+       |
+       |
+       A------B
+  </pre>
+        <p class="note">Line PQ is perpendicular to AB.</p>
+
+        <h3>4. To Construct a Perpendicular from a Point Outside a Line</h3>
+        <div class="steps">
+            <ol>
+            <li>Draw a line AB.</li><br>
+            <li>Mark a point <strong>P</strong> above it (not on the line).</li><br>
+            <li>With center P, draw an arc that cuts AB at two points (say X and Y).</li><br>
+            <li>Without changing the compass, draw arcs below the line from X and Y to meet at <strong>Q</strong>.</li>
+            <li>Join P and Q.</li>
+            </ol>
+        </div>
+  <pre>
+        P
+       / \
+      /   \
+     X-----Y
+      \   /
+       \ /
+        Q
+  </pre>
+        <p class="note">Line PQ is perpendicular to AB.</p>
+
+        <h3>5. To Construct an Angle of 60°</h3>
+        <div class="steps">
+            <ol>
+            <li>Draw a straight line AB.</li><br>
+            <li>With center A, draw an arc to cut AB at point <strong>X</strong>.</li><br>
+            <li>Without changing the compass, put it at X and draw another arc that cuts the first arc at point <strong>Y</strong>.</li>
+            <li>Join A and Y.</li>
+            </ol>
+        </div>
+  <pre>
+       Y
+      /
+     /
+A----X-----------B
+  </pre>
+        <p >Angle <strong>YAX</strong> = 60°.</p>
+
+        <h3>6. To Bisect an Angle</h3>
+        <div >
+            <ol>
+            <li>Draw an angle ∠AOB.</li><br>
+            <li>With center O, draw an arc to cut OA and OB at points <strong>X</strong> and <strong>Y</strong>.</li><br>
+            <li>With centers X and Y, draw two arcs that meet at point <strong>P</strong>.</li>
+            <li>Join O to P.</li>
+            </ol>
+        </div>
+  <pre>
+     A
+     \
+      \
+       P
+      / \
+     /   \
+    X     Y
+     \   /
+      \ /
+       O
+        \
+         B
+  </pre>
+  <p class="note">Line OP divides ∠AOB into two equal parts.</p>
+
+  <h3>7. To Construct an Angle of 90° (Right Angle)</h3>
+  <div class="steps">
+    <ol>
+      <li>Draw line AB.</li><br>
+      <li>Mark a point <strong>A</strong> on it.</li><br>
+      <li>With center A, draw an arc that cuts AB at point <strong>X</strong>.</li><br>
+      <li>Without changing the compass, place it at X and draw another arc above the line to meet the first one at <strong>Y</strong>.</li>
+      <li>Join A and Y.</li>
+    </ol>
+  </div>
+  <pre>
+       Y
+       |
+       |
+A------X-----------B
+  </pre>
+  <p class="note">Angle <strong>YAX</strong> = 90°.</p>
+
+  <h3>8. To Construct an Angle of 45°</h3>
+  <p>To get 45°, first construct a 90° angle and then bisect it.</p>
+  <pre>
+       /
+      /
+     /
+A----+-----------B
+  </pre>
+  <p class="note">Angle = 45°.</p>
+
+  <h3>9. To Construct an Angle of 30°</h3>
+  <p>To get 30°, first construct a 60° angle and then bisect it.</p>
+  <pre>
+      /
+     /
+    /
+A---+-----------B
+  </pre>
+  <p class="note">Angle = 30°.</p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>Construction means drawing shapes accurately using ruler and compass.</li><br>
+    <li>You must know how to draw and bisect lines, construct perpendicular lines, and construct and bisect angles (30°, 45°, 60°, 90°).</li><br>
+    <li>These constructions are used later to construct triangles, quadrilaterals, and other shapes.</li><br>
+    <li>Always keep your compass tight and draw arcs clearly. Label all points neatly.</li>
+  </ul>
+
+  
+
+  <hr />
+    
+  <h2>Practice Questions — Steps & Solutions</h2>
+
+  <h3>Practice 1 — Draw a line segment AB = 8 cm</h3>
+  <p><strong>Question:</strong> Construct line segment AB of length 8 cm.</p>
+  <div class="steps">
+    <ol>
+      <li>Place your ruler on the paper.</li><br>
+      <li>Using the ruler, mark a point and label it <strong>A</strong>.</li><br>
+      <li>From A along the ruler mark a point 8 cm away and label it <strong>B</strong>.</li><br>
+      <li>Use the ruler to join A and B with a straight line.</li>
+    </ol>
+  </div>
+  <pre>
+A ---------------- B
+0cm              8cm
+  </pre>
+  <p><strong>Answer:</strong> Line segment <strong>AB = 8 cm</strong> is drawn.</p>
+
+  <h3>Practice 2 — Bisect a line segment AB</h3>
+  <p><strong>Question:</strong> Given segment AB, find its midpoint M (bisect AB).</p>
+  <div class="steps">
+    <ol>
+      <li>Draw the line segment AB.</li><br>
+      <li>Open your compass to a width more than half of AB (so arcs will cross).</li><br>
+      <li>With center at <strong>A</strong>, draw an arc above and below the line.</li><br>
+      <li>With the same compass width and center at <strong>B</strong>, draw arcs that cut the first arcs above and below.</li><br>
+      <li>Label the two intersection points of the arcs <strong>P</strong> (above) and <strong>Q</strong> (below).</li><br>
+      <li>Use the ruler to draw line <strong>PQ</strong>. It crosses AB at <strong>M</strong>.</li><br>
+      <li>Point <strong>M</strong> is the midpoint: <strong>AM = MB</strong>.</li>
+    </ol>
+  </div>
+  <pre>
+     ×           ×
+      \         /
+       \       /
+A-------\-----/-------B
+        /     \
+       /       \
+     ×           ×
+  </pre>
+  <p><strong>Answer:</strong> Midpoint <strong>M</strong> found; AB is bisected.</p>
+
+  <h3>Practice 3 — Construct a perpendicular at a point P on a line</h3>
+  <p><strong>Question:</strong> Given line ℓ and a point <strong>P</strong> on it, draw a line through P perpendicular to ℓ.</p>
+  <div class="steps">
+    <ol>
+      <li>On line ℓ mark point <strong>P</strong>.</li><br>
+      <li>With compass center at <strong>P</strong>, draw small arcs that cut line ℓ at two points; label them <strong>X</strong> and <strong>Y</strong> (one on each side of P).</li><br>
+      <li>With the compass set to a radius larger than PX, draw an arc with center at <strong>X</strong> above the line.</li><br>
+      <li>With the same radius draw an arc with center at <strong>Y</strong> above the line so the two arcs meet at <strong>Q</strong>.</li><br>
+      <li>Join <strong>P</strong> and <strong>Q</strong> with the ruler. Line <strong>PQ</strong> is perpendicular to ℓ.</li>
+    </ol>
+  </div>
+  <pre>
+      Q
+      |
+X ----P---- Y
+      |
+      |
+  </pre>
+  <p><strong>Answer:</strong> Line through P (<strong>PQ</strong>) is perpendicular to ℓ.</p>
+
+  <h3>Practice 4 — Construct a perpendicular from a point P outside a line</h3>
+  <p><strong>Question:</strong> Given line ℓ and a point <strong>P</strong> not on ℓ, draw a perpendicular from P to ℓ.</p>
+  <div class="steps">
+    <ol>
+      <li>From point <strong>P</strong>, open your compass to a radius that reaches the line ℓ and draw an arc that cuts ℓ at two points; call them <strong>X</strong> and <strong>Y</strong>.</li><br>
+      <li>With center <strong>X</strong>, open your compass more than half the distance XY and draw an arc below (or above) the line.</li><br>
+      <li>With the same compass width and center <strong>Y</strong>, draw an arc that meets the previous arc; label intersection <strong>Q</strong>.</li><br>
+      <li>Join <strong>P</strong> and <strong>Q</strong>. Line <strong>PQ</strong> meets ℓ at a right angle.</li>
+    </ol>
+  </div>
+  <pre>
+    P
+   / \
+  /   \
+ X-----Y  <- line ℓ
+  \   /
+   \ /
+    Q
+  </pre>
+  <p><strong>Answer:</strong> Line <strong>PQ</strong> is perpendicular to ℓ and passes through P.</p>
+
+  <h3>Practice 5 — Construct an angle of 60° at point A on ray AB</h3>
+  <p><strong>Question:</strong> At point A on ray AB construct an angle of 60°.</p>
+  <div class="steps">
+    <ol>
+      <li>Draw ray <strong>AB</strong> (a straight line with direction from A to B).</li><br>
+      <li>Put compass point at <strong>A</strong> and draw an arc that cuts AB at point <strong>C</strong>.</li><br>
+      <li>Without changing the compass width, put the compass at <strong>C</strong> and draw another arc that meets the first arc at point <strong>D</strong>.</li><br>
+      <li>Draw a straight line from <strong>A</strong> through <strong>D</strong>. Angle between AB and AD is 60°.</li><br>
+    </ol>
+  </div>
+  <pre>
+     D
+    /
+   /
+A--C--------B
+  </pre>
+  <p><strong>Answer:</strong> ∠BAD = 60°.</p>
+
+  <h3>Practice 6 — Bisect an angle ∠X O Y</h3>
+  <p><strong>Question:</strong> Given angle ∠X O Y, construct its bisector (a line that divides the angle into two equal angles).</p>
+  <div class="steps">
+    <ol>
+      <li>With center <strong>O</strong>, draw an arc that cuts both rays <strong>OX</strong> and <strong>OY</strong> at points <strong>A</strong> and <strong>B</strong> respectively.</li><br>
+      <li>With center <strong>A</strong> draw an arc inside the angle.</li><br>
+      <li>With the same compass width and center <strong>B</strong>, draw another arc that meets the previous arc at <strong>P</strong>.</li><br>
+      <li>Join <strong>O</strong> to <strong>P</strong>. Line <strong>OP</strong> bisects ∠XOY.</li>
+    </ol>
+  </div>
+  <pre>
+   X
+    \
+     \
+      P
+     / \
+    /   \
+   O-----B
+    \
+     \
+      A
+       \
+        Y
+  </pre>
+  <p><strong>Answer:</strong> OP is the angle bisector of ∠XOY.</p>
+
+  <h3>Practice 7 — Construct 45° at point A (make 90° then bisect)</h3>
+  <p><strong>Question:</strong> Construct an angle of 45° at point A on a ray AB.</p>
+  <div class="steps">
+    <ol>
+      <li>First construct a 90° angle at A using the perpendicular construction. Let the perpendicular ray be <strong>AR</strong> (so ∠BAR = 90°).</li><br>
+      <li>Now bisect angle ∠BAR using the angle bisector method. The bisector <strong>AS</strong> will make a 45° angle with AB.</li>
+    </ol>
+  </div>
+  <pre>
+      R
+      |
+      |
+A -----+-------
+      /
+     /
+    S
+  </pre>
+  <p><strong>Answer:</strong> ∠BAS = 45°.</p>
+  <br><br><br>
+
+  <hr>
+
+  <br><br><br>
+
+  <div class="title" style="background-color: sienna;color: white;"><b> Constructing Triangles</b></div>
+
+<h3>Meaning</h3>
+<p>To <b>construct a triangle</b> means to draw it accurately using a ruler and compass, according to the information given — such as the lengths of sides or angles. You must not draw it roughly by hand. Each line and angle must be exact.</p>
+
+<p>We use triangle construction when we are given:</p>
+
+<ol>
+<li>The lengths of three sides (SSS)</li><br>
+<li>Two sides and the included angle (SAS)</li><br>
+<li>One side and two angles (ASA or AAS)</li><br>
+</ol><br><br>
+
+<div class="title" style="background-color: darkcyan;color: white;"><b>Instruments Needed</b></div>
+
+<ol>
+<li>Ruler (or straight edge)</li><br>
+<li>Compass</li><br>
+<li>Pencil</li><br>
+<li>Protractor (for measuring angles, if needed)</li><br>
+<li>Eraser</li><br>
+</ol><br>
+
+<div class="title" style="background-color: darkolivegreen;color: white;"><b>Important Notes Before You Start</b></div>
+
+<ol>
+<li>Always draw one side first — usually the base.</li><br>
+<li>Label all points carefully (A, B, C).</li><br>
+<li>Keep compass width steady when drawing arcs.</li><br>
+<li>Use light lines for arcs and dark lines for triangle sides.</li><br>
+<li>Always check what data are given before starting (sides or angles).</li><br>
+</ol>
+
+<h3>Case 1 — Constructing a Triangle When Three Sides Are Given (SSS)</h3>
+
+<p><b>Example:</b> Construct triangle ABC where AB = 6 cm, BC = 5 cm, and CA = 4 cm.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw a line AB = 6 cm using your ruler.</li><br>
+<li>With the compass point at A, open 4 cm and draw an arc above the line.</li><br>
+<li>With the compass point at B, open 5 cm and draw another arc to cut the first arc at point C.</li><br>
+<li>Join A to C and B to C.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+      C
+     / \
+    /   \
+A---------B
+(6 cm)
+</pre>
+
+<p><b>Answer:</b> Triangle ABC with sides 4 cm, 5 cm, and 6 cm is constructed.</p>
+
+<h3>Case 2 — Constructing a Triangle When Two Sides and the Included Angle Are Given (SAS)</h3>
+
+<p><b>Example:</b> Construct triangle PQR such that PQ = 6 cm, PR = 5 cm, and ∠QPR = 60°.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw base PQ = 6 cm.</li><br>
+<li>At P, construct an angle of 60° using a compass (as in previous construction).</li><br>
+<li>With center P and radius 5 cm, draw an arc that cuts the angle line at R.</li><br>
+<li>Join R to Q.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+     R
+    /
+   /
+P----------Q
+   (6 cm)
+</pre>
+
+<p><b>Answer:</b> Triangle PQR with ∠QPR = 60°, PQ = 6 cm, PR = 5 cm is constructed.</p>
+
+<h3>Case 3 — Constructing a Triangle When Two Angles and One Side Are Given (ASA or AAS)</h3>
+
+<p><b>Example:</b> Construct triangle XYZ where XY = 7 cm, ∠XYZ = 45°, and ∠YXZ = 75°.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw XY = 7 cm using a ruler.</li><br>
+<li>At X, use a protractor or compass to construct an angle of 75°.</li><br>
+<li>At Y, construct an angle of 45°.</li><br>
+<li>Extend both angle arms until they meet at Z.</li><br>
+<li>Join Z to X and Z to Y to complete the triangle.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+       Z
+      / \
+     /   \
+    X-----Y
+     (7 cm)
+</pre>
+
+<p><b>Answer:</b> Triangle XYZ with XY = 7 cm, ∠X = 75°, and ∠Y = 45° is constructed.</p>
+
+<h3>Case 4 — Constructing a Right-Angled Triangle</h3>
+
+<p><b>Example:</b> Construct triangle ABC where AB = 8 cm, AC = 6 cm, and ∠A = 90°.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw base AB = 8 cm.</li><br>
+<li>At A, construct a 90° angle using your compass.</li><br>
+<li>On the 90° line from A, mark 6 cm and label it C.</li><br>
+<li>Join B and C.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+       C
+       |
+       |
+A------B
+</pre>
+
+<p><b>Answer:</b> Triangle ABC with ∠A = 90°, AB = 8 cm, AC = 6 cm is constructed.</p>
+
+<h3>Case 5 — Constructing an Isosceles Triangle</h3>
+
+<p><b>Example:</b> Construct an isosceles triangle where equal sides = 5 cm and base = 6 cm.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw the base AB = 6 cm.</li><br>
+<li>With the compass point at A, open 5 cm and draw an arc above the line.</li><br>
+<li>With the compass point at B, open 5 cm and draw another arc to cut the first one at C.</li><br>
+<li>Join A to C and B to C.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+      C
+     / \
+    /   \
+A---------B
+   (6 cm)
+</pre>
+
+<p><b>Answer:</b> Isosceles triangle ABC is constructed with base 6 cm and equal sides 5 cm.</p>
+
+<h3>Case 6 — Constructing an Equilateral Triangle</h3>
+
+<p><b>Example:</b> Construct an equilateral triangle of side 5 cm.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw line AB = 5 cm.</li><br>
+<li>With center A and radius 5 cm, draw an arc.</li><br>
+<li>With center B and radius 5 cm, draw another arc cutting the first arc at C.</li><br>
+<li>Join A to C and B to C.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+      C
+     / \
+    /   \
+A---------B
+ (5 cm each side)
+</pre>
+
+<p><b>Answer:</b> Equilateral triangle of side 5 cm is constructed.</p>
+
+<h3>Case 7 — Constructing a Triangle from Two Sides and the Angle Opposite One of Them (SSA)</h3>
+
+<p><b>Example:</b> Construct triangle LMN where LM = 5 cm, MN = 7 cm, and ∠L = 40°.</p>
+
+<p><b>Steps:</b></p>
+<ol>
+<li>Draw LM = 5 cm.</li><br>
+<li>At L, draw an angle of 40°.</li><br>
+<li>With center M, open 7 cm and draw an arc to cut the angle line at N.</li><br>
+<li>Join N to L and N to M.</li><br>
+</ol>
+
+<p><b>Diagram:</b></p>
+<pre>
+      N
+     /
+    /
+L--------M
+</pre>
+
+<p><b>Answer:</b> Triangle LMN constructed as required.</p>
+
+<h3>Summary of Triangle Constructions</h3>
+
+<table border="1" cellpadding="5">
+<tr>
+<th>Case</th>
+<th>Given Information</th>
+<th>Method Used</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>1</td>
+<td>3 sides (SSS)</td>
+<td>Two arcs intersection</td>
+<td>AB = 6 cm, BC = 5 cm, CA = 4 cm</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2 sides + included angle (SAS)</td>
+<td>One angle and two arcs</td>
+<td>PQ = 6 cm, PR = 5 cm, ∠QPR = 60°</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1 side + 2 angles (ASA)</td>
+<td>Two angles intersection</td>
+<td>XY = 7 cm, ∠X = 75°, ∠Y = 45°</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Right-angled triangle</td>
+<td>90° angle + sides</td>
+<td>AB = 8 cm, AC = 6 cm, ∠A = 90°</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Isosceles triangle</td>
+<td>Equal sides</td>
+<td>Equal sides = 5 cm, base = 6 cm</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Equilateral triangle</td>
+<td>All sides equal</td>
+<td>Each side = 5 cm</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SSA triangle</td>
+<td>Two sides and opposite angle</td>
+<td>LM = 5 cm, MN = 7 cm, ∠L = 40°</td>
+</tr>
+</table><br><br>
+
+<hr>
+<br>
+
+
+
+  <div class="title" style="background-color: sienna;color: white;"><b>WORD PROBLEMS ON CONSTRUCTION OF TRIANGLES</b></div>
+
+  <div >
+    <h2>Word Problem 1</h2>
+    <p>Tola is designing a triangular badge. The sides of the badge are 4 cm, 5 cm, and 6 cm. Using your mathematical instruments, construct the shape of the badge.</p>
+
+    <h3>Solution Steps:</h3>
+    <ol class="steps">
+      <li>Draw a straight line AB = 6 cm (this is the base).</li><br>
+      <li>With the compass point at A, open 4 cm and draw an arc above the line.</li><br>
+      <li>With the compass point at B, open 5 cm and draw another arc to cut the first arc at point C.</li><br>
+      <li>Join A to C and B to C using the ruler.</li>
+    </ol>
+
+    <h3>Diagram (text):</h3>
+    <pre>
+      C
+     / \
+    /   \
+A---------B
+(6 cm)
+    </pre>
+
+    <p class="answer">Answer: Triangle ABC is constructed with sides 4 cm, 5 cm, and 6 cm.</p>
+  </div>
+
+  <div >
+    <h2>Word Problem 2</h2>
+    <p>A farmer wants to fence his triangular land such that one side is 7 cm, the second is 6 cm, and the third side is 5 cm on the drawing plan. Construct the triangle representing the land.</p>
+
+    <h3>Solution Steps:</h3>
+    <ol class="steps">
+      <li>Draw base PQ = 7 cm.</li><br>
+      <li>With compass at P, open 6 cm and draw an arc.</li><br>
+      <li>With compass at Q, open 5 cm and draw another arc cutting the first one at R.</li><br>
+      <li>Join P to R and Q to R.</li>
+    </ol>
+
+    <h3>Diagram (text):</h3>
+    <pre>
+      R
+     / \
+    /   \
+P---------Q
+(7 cm)
+    </pre>
+
+    <p class="answer">Answer: The triangular land (triangle PQR) is constructed correctly.</p>
+  </div>
+
+  <div >
+    <h2>Word Problem 3</h2>
+    <p>A builder wants to make a triangular window with one angle 60° and two sides 6 cm and 5 cm. Construct the triangle.</p>
+
+    <h3>Solution Steps:</h3>
+    <ol class="steps">
+      <li>Draw base LM = 6 cm.</li><br>
+      <li>At L, construct an angle of 60° using the compass.</li><br>
+      <li>On the 60° line, mark LN = 5 cm and label point N.</li><br>
+      <li>Join N to M.</li>
+    </ol>
+
+    <h3>Diagram (text):</h3>
+    <pre>
+     N
+    /
+   /
+L--------M
+(6 cm)
+    </pre>
+
+    <p class="answer">Answer: The window shape (triangle LMN) is constructed accurately.</p>
+  </div>
+
+  <div >
+    <h2>Word Problem 4</h2>
+    <p>A boy drew a triangle on paper where the base is 8 cm, one angle is 70°, and another is 50°. Construct the triangle.</p>
+
+    <h3>Solution Steps:</h3>
+    <ol class="steps">
+      <li>Draw base XY = 8 cm.</li><br>
+      <li>At X, construct an angle of 50°.</li><br>
+      <li>At Y, construct an angle of 70°.</li><br>
+      <li>Extend both lines to meet at Z.</li><br>
+      <li>Join Z to X and Z to Y.</li>
+    </ol>
+
+    <h3>Diagram (text):</h3>
+    <pre>
+       Z
+      / \
+     /   \
+X-----------Y
+(8 cm)
+    </pre>
+
+    <p class="answer">Answer: Triangle XYZ constructed with base 8 cm, ∠X = 50°, and ∠Y = 70°.</p>
+  </div>
+
+  <div >
+    <h2>Word Problem 5</h2>
+    <p>A carpenter is making a right-angled triangular shelf. The base of the shelf is 8 cm and its height is 6 cm. Construct the triangle.</p>
+
+    <h3>Solution Steps:</h3>
+    <ol class="steps">
+      <li>Draw base AB = 8 cm.</li><br>
+      <li>At A, construct a 90° angle using the compass or set square.</li><br>
+      <li>On the 90° line, measure AC = 6 cm and mark point C.</li><br>
+      <li>Join B to C.</li>
+    </ol>
+
+    <h3>Diagram (text):</h3>
+    <pre>
+       C
+       |
+       |
+A------B
+(8 cm)
+    </pre>
+
+    <p class="answer">Answer: Right-angled triangle ABC constructed correctly.</p>
+  </div>
+
+
+
+
+<p><b>Summary:</b> Triangles can be constructed using a ruler and compass. Always start with the base line. Compass arcs help you find the third point correctly. Check your triangle by measuring sides or angles after drawing. Triangles may be SSS, SAS, ASA, right-angled, isosceles, or equilateral.</p>
+
+
+
+
+        
+       
+
+
+        
+
+
+      
+          
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/third-term/math/j2/1.html" class="iam">
+                <br>
+                <li >ANGLES </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/2.html" class="iam">
+
+                <li > BEARING      </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/3.html" class="iam">
+
+                <li > CONSTRUCTION  </li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/4.html" class="iam">
+
+                <li > BISECTING ANGLES </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/5.html" class="iam">
+                <li >DATA PRESENTATION</li>
+            </a>
+             <br>
+            
+            
+            <a href="../../../../topics/third-term/math/j2/6.html" class="iam">
+
+                <li > PROBABILITY </li>
+            </a>
+            <br>
+            </a>
+            
+            
+            
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style2.css">
+    <title>Lowest Common Multiple (LCM) & Highest Common Factor (HCF) - mathematics -jss1 </title>
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
+    <link rel="icon" href="../../../../images/logo.png" type="image/png">
+
+    <style>
+         
+        
+        pre{background:#f9f9f9; padding:10px; border:1px solid #ddd; border-radius:5px;}
+        
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+<body>
+    <div class="cover-note">
+    <header>
+        <div class="container">    
+        <div>
+           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+           <div class="nav-toggle" id="navtogle">
+               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           </div>
+           
+       </div>
+              <nav>
+                  <ul class="me">
+                      <li><a href="../../../../index.html">Home</a></li>
+                      <li><a href="../../../../pages/about.html">About</a></li>
+                      <li><a href="../../../../pages/forum.html">Forum</a></li>
+                      <li><a href="../../../../pages/contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+     <header class="header-back">
+        <a href="../../../../terms/first-term/math-first/math-first.html">
+        <div class="arrow-back">
+           
+            <div>Go Back</div>
+        </div>
+        </a>
+     </header>
+     <div class="note-flex">
+        <div class="note1"> 
+   
+   
+        <div class="cover-note">
+       <div class="note-container">
+        <div class="title01" style="background-color:purple;color: white;"><b>Lowest Common Multiple (LCM) & Highest Common Factor (HCF)</b></div>
+         <div class="t2"><b>What are Factors, Multiples, HCF, LCM</b></div>
+        <p><strong>Factor (Divisor):</strong> A whole number that divides another number exactly (no remainder).</p>
+        <p>E.g. 3 is a factor of 12, because <b> 12÷3=4</b> exactly </p>
+        <p><strong>Multiple:</strong> A number you get by multiplying the original number by a whole number.</p>
+        <p>E.g. 12, 24, 36 are multiples of 12 (since 12×1, 12×2, 12×3, …)</p>
+        <p><strong>Highest Common Factor (HCF):</strong> The largest factor that is common to two or more numbers.</p>
+        <p><strong>Lowest Common Multiple (LCM):</strong> The smallest non-zero multiple common to two or more numbers.</p>
+
+        <br><br><br>
+        <div class="title" style="background-color: seagreen;color: white;"><b>Why HCF &amp; LCM are Useful</b></div>
+        <ol>
+        <li>Simplifying fractions</li><br>
+        <li>Sharing things equally</li><br>
+        <li>Scheduling repeating events (when two schedules meet again)</li><br>
+        <li>Packaging, splitting and many everyday problems</li>
+        </ol><br><br><br>
+
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Methods to find HCF &amp; LCM</b></div>
+        <ol>
+        <li><strong>HCF</strong><br><br>
+            <ol>
+            <li>Listing factors method</li><br>
+            <li>Prime factorization method</li><br>
+            <li>Short-division (division ladder / repeated division) method</li><br>
+            </ol>
+        </li>
+        <li><strong>LCM</strong><br><br>
+            <ol>
+            <li>Listing multiples method</li><br>
+            <li>Prime factorization method</li><br>
+            <li>Using the relation (for two numbers): <code>LCM(a,b) = (a × b) / HCF(a,b)</code></li>
+            </ol>
+        </li>
+        </ol><br><br><br>
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Real Life Uses / Applications HCF & LCM</b></div>
+
+        <p>Here are many ways HCF &amp; LCM show up in daily life, so you see why learning them is useful:</p>
+
+        <ol>
+        <li>
+            <strong>Splitting things into equal parts (no leftovers)</strong> – Use HCF. E.g. cutting cloth, sharing food, dividing students into equal groups.
+        </li><br>
+        <li>
+            <strong>Synchronising events that repeat at different intervals</strong> – Use LCM. E.g. two buses have different schedules – find when both arrive at the same time.
+        </li><br>
+        <li>
+            <strong>Scheduling maintenance / chores</strong> – If one task is every 10 days, another every 15 days, LCM gives you when both coincide.
+        </li><br>
+        <li>
+            <strong>Traffic light cycles</strong> – Lights changing at different intervals – LCM helps find when they all turn green together.
+        </li><br>
+        <li>
+            <strong>Music / Rhythm (beats)</strong> – For combining beats of different lengths, LCM finds when beats align in rhythm.
+        </li><br>
+        <li>
+            <strong>Baking / Cooking in batch sizes</strong> – If recipes need grouping of ingredients, HCF can help scale or divide without waste.
+        </li><br>
+        <li>
+            <strong>Packing and manufacturing</strong> – Boxes of different sizes, products in packs — LCM helps avoid leftovers.
+        </li><br>
+        <li>
+            <strong>Tiling a floor / mosaics</strong> – To tile floor with different tile sizes, you may need HCF to decide largest square tile that fits exactly.
+        </li><br>
+        <li>
+            <strong>Time management / event planning</strong> – When different tasks recur every x days, LCM helps find common deadlines.
+        </li><br>
+        <li>
+            <strong>Fractions operations (addition, subtraction)</strong> – To add fractions with different denominators, you use LCM of denominators (lowest common denominator).
+        </li><br>
+        <li>
+            <strong>Distributing gifts / share items equally</strong> – Use HCF to ensure each person gets the same number, without leftovers.
+        </li><br>
+        <li>
+            <strong>Repetitive patterns (clothes patterns, bead designs)</strong> – LCM helps in designing repeats of pattern so they align nicely.
+        </li>
+        </ol><br><br><br>
+
+
+
+        
+
+       
+        
+        
+
+
+ 
+      <div class="title" style="background-color: darkcyan;color: white;"><b>HCF &amp; LCM — Simple Step-by-step Workings</b></div>
+
+<h2>HCF –  Examples</h2>
+<ol>
+<li>
+            <strong>8 and 12 — Listing factors</strong><br><br>
+            Factors of 8: 1, 2, 4, 8. Factors of 12: 1, 2, 3, 4, 6, 12. Common: 1, 2, 4 → <strong>HCF = 4</strong>.
+        </li><br>
+        <li>
+            <strong>15 and 20 — Prime factorization</strong><br><br>
+            15 = 3 × 5. 20 = 2² × 5. Common prime: 5 → <strong>HCF = 5</strong>.
+        </li><br>
+        <li>
+            <strong>18, 24 and 30 — Prime factorization</strong><br><br>
+            18 = 2 × 3²; 24 = 2³ × 3; 30 = 2 × 3 × 5. Common primes: 2 and 3 with lowest powers 2¹ and 3¹ → <strong>HCF = 6</strong>.
+        </li><br>
+        <li>
+            <strong>16 and 24 — Short division</strong><br><br>
+            Divide by 2 repeatedly: (16,24) → (8,12) → (4,6) → (2,3) stop. Multiply divisors used together that divided both: 2×2×2 = <strong>8</strong>.
+        </li><br>
+        <li>
+            <strong>14 and 35 — Listing factors</strong><br><br>
+            14: 1,2,7,14. 35: 1,5,7,35. Common: 7 → <strong>HCF = 7</strong>.
+        </li><br>
+        <li>
+            <strong>21, 45, 105 — Prime factorization</strong><br><br>
+            21 = 3 × 7; 45 = 3² × 5; 105 = 3 × 5 × 7. Common prime: 3 → <strong>HCF = 3</strong>.
+        </li><br>
+        <li>
+            <strong>72 and 96 — Prime factorization</strong><br><br>
+            72 = 2³ × 3²; 96 = 2⁵ × 3. Common: 2³ × 3 = 8 × 3 = <strong>24</strong>.
+        </li><br>
+        <li>
+            <strong>100 and 40 — Prime factorization</strong><br><br>
+            100 = 2² × 5²; 40 = 2³ × 5. Common: 2² × 5 = 4 × 5 = <strong>20</strong>.
+        </li><br>
+        <li>
+            <strong>27, 36, 45 — Listing / prime</strong><br><br>
+            27 = 3³; 36 = 2² × 3²; 45 = 3² × 5. Common: 3² = <strong>9</strong>.
+        </li><br>
+        <li>
+            <strong>48 and 180 — Prime factorization</strong><br><br>
+            48 = 2⁴ × 3; 180 = 2² × 3² × 5. Common: 2² × 3 = 4 × 3 = <strong>12</strong>.
+        </li><br>
+<li><strong>HCF of 6 and 8</strong>
+<pre>
+Divide both by 2 → 3 and 4
+No more common divisor.
+HCF = 2
+</pre></li>
+<li><strong>HCF of 12 and 16</strong>
+<pre>
+Divide both by 2 → 6 and 8
+Divide both by 2 → 3 and 4
+No more common divisor.
+HCF = 2 × 2 = 4
+</pre></li>
+<li><strong>HCF of 15 and 25</strong>
+<pre>
+Divide both by 5 → 3 and 5
+No more common divisor.
+HCF = 5
+</pre></li>
+<li><strong>HCF of 20 and 30</strong>
+<pre>
+Divide both by 2 → 10 and 15
+Divide both by 5 → 2 and 3
+HCF = 2 × 5 = 10
+</pre></li>
+<li><strong>HCF of 18 and 24</strong>
+<pre>
+Divide both by 2 → 9 and 12
+Divide both by 3 → 3 and 4
+HCF = 2 × 3 = 6
+</pre></li>
+<li><strong>HCF of 8 and 28</strong>
+<pre>
+Divide both by 2 → 4 and 14
+Divide both by 2 → 2 and 7
+HCF = 2 × 2 = 4
+</pre></li>
+<li><strong>HCF of 9 and 27</strong>
+<pre>
+Divide both by 3 → 3 and 9
+Divide both by 3 → 1 and 3
+HCF = 3 × 3 = 9
+</pre></li>
+<li><strong>HCF of 14 and 49</strong>
+<pre>
+Divide both by 7 → 2 and 7
+HCF = 7
+</pre></li>
+<li><strong>HCF of 24 and 36</strong>
+<pre>
+Divide both by 2 → 12 and 18
+Divide both by 2 → 6 and 9
+Divide both by 3 → 2 and 3
+HCF = 2 × 2 × 3 = 12
+</pre></li>
+<li><strong>HCF of 30 and 45</strong>
+<pre>
+Divide both by 3 → 10 and 15
+Divide both by 5 → 2 and 3
+HCF = 3 × 5 = 15
+</pre></li>
+<li><strong>HCF of 32 and 40</strong>
+<pre>
+Divide both by 2 → 16 and 20
+Divide both by 2 → 8 and 10
+Divide both by 2 → 4 and 5
+HCF = 2 × 2 × 2 = 8
+</pre></li>
+<li><strong>HCF of 35 and 50</strong>
+<pre>
+Divide both by 5 → 7 and 10
+HCF = 5
+</pre></li>
+<li><strong>HCF of 25 and 30</strong>
+<pre>
+Divide both by 5 → 5 and 6
+HCF = 5
+</pre></li>
+<li><strong>HCF of 21 and 63</strong>
+<pre>
+Divide both by 3 → 7 and 21
+Divide both by 7 → 1 and 3
+HCF = 3 × 7 = 21
+</pre></li>
+<li><strong>HCF of 16 and 24</strong>
+<pre>
+Divide both by 2 → 8 and 12
+Divide both by 2 → 4 and 6
+Divide both by 2 → 2 and 3
+HCF = 2 × 2 × 2 = 8
+</pre></li>
+<li><strong>HCF of 18 and 30</strong>
+<pre>
+Divide both by 2 → 9 and 15
+Divide both by 3 → 3 and 5
+HCF = 2 × 3 = 6
+</pre></li>
+<li><strong>HCF of 40 and 60</strong>
+<pre>
+Divide both by 2 → 20 and 30
+Divide both by 2 → 10 and 15
+Divide both by 5 → 2 and 3
+HCF = 2 × 2 × 5 = 20
+</pre></li>
+<li><strong>HCF of 27 and 36</strong>
+<pre>
+Divide both by 3 → 9 and 12
+Divide both by 3 → 3 and 4
+HCF = 3 × 3 = 9
+</pre></li>
+<li><strong>HCF of 42 and 56</strong>
+<pre>
+Divide both by 2 → 21 and 28
+Divide both by 7 → 3 and 4
+HCF = 2 × 7 = 14
+</pre></li>
+<li><strong>HCF of 12 and 18</strong>
+<pre>
+Divide both by 2 → 6 and 9
+Divide both by 3 → 2 and 3
+HCF = 2 × 3 = 6
+</pre></li>
+</ol><br><br><br>
+     <div class="title" style="background-color: darkkhaki;color: black;"><b>LCM – Simple Workings Examples</b></div>
+<ol>
+    <li>
+            <strong>4 and 6 — Listing multiples</strong><br><br>
+            Multiples of 4: 4, 8, 12, 16…; Multiples of 6: 6, 12, 18… → first common = <strong>12</strong>.
+        </li><br>
+        <li>
+            <strong>5 and 10 — Listing / prime</strong><br><br>
+            Multiples of 5: 5,10,15…; Multiples of 10: 10,20… → LCM = <strong>10</strong>.
+        </li><br>
+        <li>
+            <strong>12 and 18 — Prime factorization</strong><br><br>
+            12 = 2² × 3; 18 = 2 × 3². Take highest powers: 2² × 3² = 4 × 9 = <strong>36</strong>.
+        </li><br>
+        <li>
+            <strong>8, 9 and 12 — Prime factorization</strong><br><br>
+            8 = 2³; 9 = 3²; 12 = 2² × 3. Highest powers: 2³ × 3² = 8 × 9 = <strong>72</strong>.
+        </li><br>
+        <li>
+            <strong>14 and 35 — Prime method / relation</strong><br><br>
+            14 = 2 × 7; 35 = 5 × 7. LCM uses primes 2, 5, 7 → 2 × 5 × 7 = <strong>70</strong>.
+        </li><br>
+        <li>
+            <strong>21, 6 and 15 — Listing multiples / prime</strong><br><br>
+            Multiples: 6 -> 6,12,18,24,30…; 15 -> 15,30…; 21 -> 21,42,63… → first common = <strong>30</strong>.
+        </li><br>
+        <li>
+            <strong>16 and 30 — Prime factorization</strong><br><br>
+            16 = 2⁴; 30 = 2 × 3 × 5. Highest powers: 2⁴ × 3 × 5 = 16 × 3 × 5 = <strong>240</strong>.
+        </li><br>
+        <li>
+            <strong>18 and 24 — Prime method</strong><br><br>
+            18 = 2 × 3²; 24 = 2³ × 3. Highest: 2³ × 3² = 8 × 9 = <strong>72</strong>.
+        </li><br>
+        <li>
+            <strong>40 and 90 — Prime method</strong><br><br>
+            40 = 2³ × 5; 90 = 2 × 3² × 5. Highest: 2³ × 3² × 5 = 8 × 9 × 5 = <strong>360</strong>.
+        </li><br>
+        <li>
+            <strong>7, 11, 13 — Distinct primes</strong><br><br>
+            7, 11 and 13 are distinct primes → LCM = 7 × 11 × 13 = <strong>1001</strong>.
+        </li><br>
+<li><strong>LCM of 2 and 3</strong>
+<pre>
+2 × 3 = 6
+LCM = 6
+</pre></li>
+<li><strong>LCM of 4 and 5</strong>
+<pre>
+4 = 2 × 2
+5 is prime.
+Multiply all: 2 × 2 × 5 = 20
+LCM = 20
+</pre></li>
+<li><strong>LCM of 3 and 6</strong>
+<pre>
+6 is already a multiple of 3.
+LCM = 6
+</pre></li>
+<li><strong>LCM of 5 and 10</strong>
+<pre>
+10 is a multiple of 5.
+LCM = 10
+</pre></li>
+<li><strong>LCM of 6 and 8</strong>
+<pre>
+Multiples of 6: 6,12,18,24
+Multiples of 8: 8,16,24
+First common = 24
+LCM = 24
+</pre></li>
+<li><strong>LCM of 7 and 9</strong>
+<pre>
+Multiples of 7: 7,14,21,28,35,42,49,56,63
+Multiples of 9: 9,18,27,36,45,54,63
+First common = 63
+LCM = 63
+</pre></li>
+<li><strong>LCM of 4 and 6</strong>
+<pre>
+Multiples of 4: 4,8,12,16
+Multiples of 6: 6,12,18
+First common = 12
+LCM = 12
+</pre></li>
+<li><strong>LCM of 8 and 12</strong>
+<pre>
+Multiples of 8: 8,16,24
+Multiples of 12: 12,24,36
+First common = 24
+LCM = 24
+</pre></li>
+<li><strong>LCM of 10 and 15</strong>
+<pre>
+Multiples of 10: 10,20,30
+Multiples of 15: 15,30,45
+First common = 30
+LCM = 30
+</pre></li>
+<li><strong>LCM of 12 and 18</strong>
+<pre>
+Multiples of 12: 12,24,36
+Multiples of 18: 18,36,54
+First common = 36
+LCM = 36
+</pre></li>
+<li><strong>LCM of 14 and 20</strong>
+<pre>
+Multiples of 14: 14,28,42,56,70
+Multiples of 20: 20,40,60,80
+First common = 140
+LCM = 140
+</pre></li>
+<li><strong>LCM of 9 and 12</strong>
+<pre>
+Multiples of 9: 9,18,27,36
+Multiples of 12: 12,24,36,48
+First common = 36
+LCM = 36
+</pre></li>
+<li><strong>LCM of 8 and 10</strong>
+<pre>
+Multiples of 8: 8,16,24,32,40
+Multiples of 10:10,20,30,40
+First common = 40
+LCM = 40
+</pre></li>
+<li><strong>LCM of 4 and 9</strong>
+<pre>
+Multiples of 4: 4,8,12,16,20,24,28,32,36
+Multiples of 9: 9,18,27,36,45
+First common = 36
+LCM = 36
+</pre></li>
+<li><strong>LCM of 5 and 12</strong>
+<pre>
+Multiples of 5: 5,10,15,20,25,30,35,40,45,50,55,60
+Multiples of 12:12,24,36,48,60
+First common = 60
+LCM = 60
+</pre></li>
+<li><strong>LCM of 6 and 15</strong>
+<pre>
+Multiples of 6: 6,12,18,24,30
+Multiples of 15:15,30,45
+First common = 30
+LCM = 30
+</pre></li>
+<li><strong>LCM of 7 and 8</strong>
+<pre>
+Multiples of 7: 7,14,21,28,35,42,49,56
+Multiples of 8: 8,16,24,32,40,48,56
+First common = 56
+LCM = 56
+</pre></li>
+<li><strong>LCM of 11 and 13</strong>
+<pre>
+11 and 13 are prime.
+LCM = 11 × 13 = 143
+</pre></li>
+<li><strong>LCM of 3, 4 and 5</strong>
+<pre>
+3 × 4 × 5 = 60 (because none is multiple of another)
+LCM = 60
+</pre></li>
+<li><strong>LCM of 4, 6 and 8</strong>
+<pre>
+Multiples of 8: 8,16,24
+Check 24 is multiple of 6 and 4.
+LCM = 24
+</pre></li>
+</ol><br><br><br>
+         <div class="title" style="background-color: sienna;color: white;"><b>Combined HCF &amp; LCM Exercises (for students)</b></div>
+        <ol>
+        <li>Find HCF and LCM of <strong>9</strong> and <strong>12</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>15</strong> and <strong>25</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>18</strong> and <strong>30</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>8, 12, 20</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>14, 21, 28</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>24, 36, 60</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>32</strong> and <strong>48</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>45, 75, 90</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>27, 72, 108</strong>.</li><br>
+        <li>Find HCF and LCM of <strong>100, 150, 250</strong>.</li>
+        </ol><br><br>
+
+        <h2>Worked Answers (brief)</h2>
+        <ol>
+        <li>9 &amp; 12 → HCF = 3 ; LCM = 36</li><br>
+        <li>15 &amp; 25 → HCF = 5 ; LCM = 75</li><br>
+        <li>18 &amp; 30 → HCF = 6 ; LCM = 90</li><br>
+        <li>8,12,20 → HCF = 4 ; LCM = 120</li><br>
+        <li>14,21,28 → HCF = 7 ; LCM = 84</li><br>
+        <li>24,36,60 → HCF = 12 ; LCM = 360</li><br>
+        <li>32 &amp; 48 → HCF = 16 ; LCM = 96</li><br>
+        <li>45,75,90 → HCF = 15 ; LCM = 450</li><br>
+        <li>27,72,108 → HCF = 9 ; LCM = 216</li><br>
+        <li>100,150,250 → HCF = 50 ; LCM = 750</li>
+        </ol><br><br><br>
+
+        <div class="title" style="background-color: sienna;color: white;"><b>Common Mistakes to Watch For</b></div>
+        <ol>
+        <li>Confusing “largest common factor” with the largest of the original numbers.</li><br>
+        <li>Using highest power for HCF instead of lowest power (prime method mistake).</li><br>
+        <li>Using lowest power for LCM instead of highest power (prime method mistake).</li><br>
+        <li>Trying pairwise LCM/HCF steps incorrectly for more than two numbers — prefer prime factor method for &gt;2 numbers.</li>
+        </ol>
+
+        <h2>Teaching Tips</h2>
+        <ol>
+        <li>Start pupils on listing methods to build intuition, then move to prime factorization for speed and reliability.</li><br>
+        <li>Use real-life examples: class grouping, bell schedules, fraction addition.</li><br>
+        <li>Practice prime factor trees until pupils are fluent.</li><br>
+        </ol>
+
+        <h2>Extra Practice (challenge)</h2>
+        <ol>
+        <li>Find HCF and LCM of 126 and 210.</li><br>
+        <li>Three friends meet every 8, 12 and 20 days. If they met today, after how many days will they next meet together?</li><br>
+        <li>Find the greatest length (cm) to cut a 630 cm and 945 cm mat into equal pieces with none left over (use HCF).</li><br>
+        <li>Find the least time when events repeating every 45 min and 90 min will coincide (use LCM).</li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br>
+
+
+        
+       
+       
+        
+        
+       </div>
+           
+    </div>
+        
+            
+               
+                
+           
+                  
+        </div>
+            
+        <div class="note2">
+        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <br><br>
+        <ol class="explanation">
+            <a href="../../../../topics/first-term/math/j1/1.html" class="iam">
+                <br>
+                <li >  WHOLE NUMBER </li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j1/2.html" class="iam">
+
+                <li >  LCM & HCF </li>
+            </a>
+            <br>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/math/j1/3.html" class="iam">
+                <li > COUNTING IN BASE 2 </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j1/4.html" class="iam">
+
+                <li > FRACTIONS   </li>
+            </a>
+            <br>
+            
+            <a href="../../../../topics/first-term/math/j1/5.html" class="iam">
+                
+                <li >  ADDITION AND SUBTRACTION    </li>
+            </a>
+            <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j1/6.html" class="iam">
+                <br>
+                <li >  ADDITION AND SUBTRACTION OF POSITIVE AND NEGATIVE INTEGERS </li>
+            </a>
+            <br>
+             <a href="../../../../topics/first-term/math/j1/7.html" class="iam">
+                
+                <li >  ADDITION AND SUBTRACTION OF FRACTION    </li>
+            </a>
+            <br>
+           <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j1/8.html" class="iam">
+                <br>
+                <li > WORD PROBLEMS ON ADDITION AND SUBTRACTION OF FRACTIONS </li>
+            </a>
+             <br>
+            </a>
+            
+            <a href="../../../../topics/first-term/math/j1/9.html" class="iam">
+                <br>
+                <li > MULTIPLICATIONS AND DIVISION OF FRACTIONS </li>
+            </a>
+           
+            
+            
+           
+            
+            
+
+           
+            
+            
+        
+            
+        
+        
+        
+            
+            
+        
+            
+            
+            
+            
+        </ol>
+        <br><br><br>
+        <div class="form-container">
+            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
+            <br>
+            <input type="text" id="name" placeholder="Your Name">
+            <br>
+            <input type="text" id="title" placeholder="Title ">
+            <br>
+            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
+            <br>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+        <div class="complaints-container">
+            <h3> VIEWS </h3>
+            <br>
+            <div id="complaints-list"></div>
+            <br>
+            <br>
+        </div>
+        
+        
+        </div>
+        </div>       
+
+                
+            
+
+
+        <div class="lower-side">
+        
+
+        <br><br>
+        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+
+        <br>
+        <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
+        <img src="../../../../images/facebook.png" alt="">
+        <div class="info">Follow us on facebook</div>
+        </a>
+        <a href="https://wa.me/2348100410742" class="whatsapp"> 
+        <img src="../../../../images/whatsapp.png" alt="">
+        <div class="info">Reach us on whatsapp </div>
+        </a>
+        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
+        <img src="../../../../images/gmail.png" alt="">
+        <div class="info">Email Us </div>
+        </a>
+        </div>
+
+        </div>
+
+
+    <script src="../../../../script2.js"></script>
+    <script > 
+            var date = new Date();
+        var year = date.getFullYear()
+        let me = document.getElementById('me').innerHTML =year;
+
+        // Frame reload
+
+       
+       
+       
+
+     </script>
+    
+    
+</body>
+</html>
