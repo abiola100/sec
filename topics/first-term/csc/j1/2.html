@@ -4,267 +4,386 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>MECHANICAL COUNTING AND CALCULATING DEVICES </title>
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
-    <link rel="icon" href="../../../../images/logo.png" type="image/png">
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
-   
+    
 </head>
-<body>
-    <div class="cover-note">
-    <header>
-        <div class="container">    
-        <div>
-           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
-           <div class="nav-toggle" id="navtogle">
-                <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
-           </div>
-           
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
-              <nav>
-                  <ul class="me">
-                      <li><a href="../../../../index.html">Home</a></li>
-                      <li><a href="../../../../pages/about.html">About</a></li>
-                      <li><a href="../../../../pages/forum.html">Forum</a></li>
-                      <li><a href="../../../../pages/contact.html">Contact</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </header>
-    </div>
-     <header class="header-back">
-        <a href="../../../../terms/first-term/csc-first/csc-first.html">
-        <div class="arrow-back">
-           
-            <div>Go Back</div>
-        </div>
-        </a>
-     </header>
-     <div class="note-flex">
-        <div class="note1">
-   
-   
-        <div class="cover-note">
-       <div class="note-container">
-        <br><br>
-         <div class="topic-image"><img src="../../../../images/me.jpg" alt=""></div>
-         <br><br>
-        <div class="pollution"><b> MECHANICAL COUNTING AND CALCULATING DEVICES </b></div>
-        <p>
-            <b class="list2">Mechanical counting or calculating devices </b> are tools designed to perform counting 
-            or mathematical operations through mechanical means. Examples include:
-        </p>
-        <p>
-            <b>
-            Abacus,
-            Napier's Bones,
-            Pascaline,
-            Leibniz Wheel,
-            Adding Machine,
-            Antikythera Mechanism,
-            Difference Engine,
-            Curta Calculator,
-            Slide Rule  .
-            </b>    
-
-        </p>
-        <br><br>
-        <ol>
-            <li>
-            
-                <b>Abacus: </b>A frame with beads that represent numbers and help perform arithmetic operations.
-            </li>
-            <br>
-            <li>
-                <b>Napier's Bones: </b>A set of rods used for simplifying multiplication and division.
-            </li>
-            <br>
-            <li>
-                <b>Mechanical Calculators: </b>Devices like the Pascaline and Leibniz Wheel, using gears and wheels for basic arithmetic.
-            </li>
-            <br>
-            <li>
-                <b>Adding Machine: </b>A device that mechanically adds numbers using rotating gears.
-            </li>
-            <br>
-            <li>
-                <b>Antikythera Mechanism: </b>An ancient Greek device used to predict astronomical positions and eclipses.
-            </li>
-            <br>
-            <li>
-                <b>Difference Engine: </b>Designed by Charles Babbage in the 1830s, it could perform polynomial calculations and is a precursor to modern computers.
-            </li>
-            <br>
-            <li>
-                <b>Curta Calculator: </b>A compact, hand-cranked device from the 1940s capable of performing various arithmetic operations.
-           
-            </li>
-            <br>
-            <li>
-                <b>Slide Rule: </b>A mechanical tool used for multiplication, division, and advanced functions like logarithms and trigonometry, widely used until the 1970s.
-
-            </li>
-
-        </ol>
-        <br><br><br>
-
-
-        
        
-       
-        
-        
-       </div>
-           
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
     </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/csc-third/csc-third.html">
+    <div class="arrow-back">
         
-            
-               
-                
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
+   
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 10:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+
+    const quizData = [
+  { question: "Information transmission refers to:", a: "The process of sending information from a sender to a receiver", b: "The act of recording data in a computer", c: "The process of deleting messages", correct: "a" },
+  { question: "The person who originates or sends a message is called the:", a: "Listener", b: "Sender", c: "Receiver", correct: "b" },
+  { question: "The medium through which information travels is called:", a: "Noise", b: "Feedback", c: "Channel", correct: "c" },
+  { question: "Feedback in communication means:", a: "The response from the receiver showing understanding", b: "Repeating the same message", c: "The medium used for sending information", correct: "a" },
+  { question: "Which of the following is NOT an element of communication?", a: "Message", b: "Sender", c: "Processor", correct: "c" },
+  { question: "The purpose of information transmission includes all EXCEPT:", a: "Educating people", b: "Informing and entertaining others", c: "Creating confusion", correct: "c" },
+  { question: "Means of information transmission are grouped into:", a: "Ancient and modern", b: "Private and public", c: "Formal and informal", correct: "a" },
+  { question: "Ancient means of communication relied mainly on:", a: "Electricity", b: "Natural senses and materials", c: "Digital devices", correct: "b" },
+  { question: "Oral communication means:", a: "Using spoken words to send messages", b: "Drawing pictures on walls", c: "Sending letters", correct: "a" },
+  { question: "An example of oral communication is:", a: "Speaking to someone", b: "Writing an article", c: "Sending an email", correct: "a" },
+  { question: "One advantage of oral communication is that:", a: "It allows immediate feedback", b: "It requires machines", c: "It can be used only by literate people", correct: "a" },
+  { question: "One disadvantage of oral communication is that:", a: "It cannot be recorded easily", b: "It is time consuming", c: "It is completely private", correct: "a" },
+  { question: "Beating of drums was used to:", a: "Send messages across distances", b: "Play music only", c: "Decorate ceremonies", correct: "a" },
+  { question: "One major advantage of drum communication is that:", a: "It can reach far distances", b: "It works without electricity", c: "It can record conversations", correct: "a" },
+  { question: "A disadvantage of drum communication is that:", a: "It can be misunderstood by strangers", b: "It can only be used indoors", c: "It uses written symbols", correct: "a" },
+  { question: "Fire and smoke signals were used to:", a: "Send visual messages between places", b: "Cook food", c: "Warm houses", correct: "a" },
+  { question: "An advantage of fire or smoke signal is that:", a: "It can be seen from a long distance", b: "It can work during heavy rain", c: "It transmits complex information", correct: "a" },
+  { question: "A disadvantage of smoke signal is that:", a: "It depends on weather and daylight", b: "It is free of cost", c: "It can be heard far away", correct: "a" },
+  { question: "Whistling as communication involves:", a: "Sound signals made by mouth or instruments", b: "Writing codes on paper", c: "Using electric waves", correct: "a" },
+  { question: "One advantage of whistling is that:", a: "It is fast and requires no tools", b: "It can carry complex ideas", c: "It can be stored permanently", correct: "a" },
+  { question: "A disadvantage of whistling is that:", a: "It can be misunderstood easily", b: "It can travel thousands of kilometers", c: "It needs a computer", correct: "a" },
+  { question: "Town crying is a method where:", a: "A messenger announces information publicly", b: "People send emails", c: "Leaders post on social media", correct: "a" },
+  { question: "An advantage of town crying is that:", a: "It reaches many people quickly", b: "It is done privately", c: "It needs expensive machines", correct: "a" },
+  { question: "A disadvantage of town crying is that:", a: "It cannot reach distant villages", b: "It can record all data", c: "It requires the internet", correct: "a" },
+  { question: "Drawings and symbols were used to:", a: "Represent ideas visually", b: "Store electronic data", c: "Cook food faster", correct: "a" },
+  { question: "One advantage of drawings is that:", a: "They preserve information for a long time", b: "They require the internet", c: "They can speak aloud", correct: "a" },
+  { question: "A disadvantage of drawings is that:", a: "They can fade or be misinterpreted", b: "They are faster than speech", c: "They produce sound", correct: "a" },
+  { question: "Modern means of communication include:", a: "Telephone, radio, television, internet", b: "Drums and smoke", c: "Symbols and carvings", correct: "a" },
+  { question: "The telephone works by converting voice into:", a: "Electrical signals", b: "Printed text", c: "Smoke symbols", correct: "a" },
+  { question: "One advantage of the telephone is that:", a: "It allows instant voice feedback", b: "It works only at night", c: "It does not need electricity", correct: "a" },
+  { question: "A disadvantage of telephone use is:", a: "It depends on power or network", b: "It requires drums", c: "It cannot transmit voice", correct: "a" },
+  { question: "Radio transmits information mainly through:", a: "Sound waves", b: "Light signals", c: "Drawings", correct: "a" },
+  { question: "An advantage of radio is that:", a: "It reaches many people at the same time", b: "It displays moving pictures", c: "It is only local", correct: "a" },
+  { question: "A disadvantage of radio is that:", a: "It has no visual feedback", b: "It shows images", c: "It prints messages", correct: "a" },
+  { question: "Television transmits:", a: "Both sound and pictures", b: "Only sound", c: "Only text", correct: "a" },
+  { question: "An advantage of television is that:", a: "It educates, entertains, and informs", b: "It uses smoke signals", c: "It does not need power", correct: "a" },
+  { question: "A disadvantage of television is:", a: "It is expensive and power dependent", b: "It cannot show images", c: "It can be heard only by few people", correct: "a" },
+  { question: "The Internet is:", a: "A global network connecting computers worldwide", b: "A single local radio network", c: "A musical instrument", correct: "a" },
+  { question: "An advantage of the Internet is that:", a: "It allows instant global communication", b: "It works without data", c: "It is restricted to one area", correct: "a" },
+  { question: "A disadvantage of the Internet is:", a: "It can spread false information", b: "It works without electricity", c: "It is completely private", correct: "a" },
+  { question: "Satellite communication helps to:", a: "Transmit signals across the world", b: "Cook food", c: "Build houses", correct: "a" },
+  { question: "An advantage of satellite communication is that:", a: "It covers very large distances", b: "It is free to build", c: "It needs no power source", correct: "a" },
+  { question: "A disadvantage of satellite communication is:", a: "It is costly to build and maintain", b: "It can only be used by hand", c: "It does not need technology", correct: "a" },
+  { question: "Social media is an example of:", a: "Modern electronic communication", b: "Traditional signaling", c: "Fire message system", correct: "a" },
+  { question: "An advantage of social media is that:", a: "It allows real-time interaction", b: "It works without a device", c: "It takes many days to deliver", correct: "a" },
+  { question: "A disadvantage of social media is:", a: "It can be used to spread false news", b: "It cannot send messages", c: "It never uses data", correct: "a" },
+  { question: "Information transmitted by hearing only is:", a: "Audio", b: "Visual", c: "Audio-visual", correct: "a" },
+  { question: "Information transmitted through sight only is:", a: "Visual", b: "Audio", c: "Digital", correct: "a" },
+  { question: "Information transmitted through both hearing and sight is:", a: "Audio-visual", b: "Written", c: "Silent", correct: "a" },
+  { question: "Communication that flows in one direction only is:", a: "Simplex", b: "Half-duplex", c: "Full-duplex", correct: "a" },
+  { question: "Communication that allows two-way flow but not simultaneously is:", a: "Half-duplex", b: "Full-duplex", c: "Simplex", correct: "a" },
+  { question: "Communication that allows two-way flow at the same time is:", a: "Full-duplex", b: "Half-duplex", c: "Simplex", correct: "a" },
+  { question: "Noise in communication refers to:", a: "Anything that interferes with message transmission", b: "The tone of the speaker", c: "The speed of the network", correct: "a" },
+  { question: "An example of ancient communication tool is:", a: "Drum", b: "Internet", c: "Television", correct: "a" },
+  { question: "An example of modern communication tool is:", a: "Telephone", b: "Town crier", c: "Smoke", correct: "a" },
+  { question: "Ancient communication depended mostly on:", a: "Natural objects and human senses", b: "Electric power", c: "Computers", correct: "a" },
+  { question: "Modern communication depends mostly on:", a: "Electricity and digital devices", b: "Drums and fire", c: "Rainfall", correct: "a" },
+  { question: "Which method is both audio and visual?", a: "Television", b: "Radio", c: "Whistling", correct: "a" },
+  { question: "Which of these is NOT an ancient method?", a: "Internet", b: "Fire lighting", c: "Town crying", correct: "a" },
+  { question: "The fastest modern means of transmitting information is:", a: "Internet", b: "Drums", c: "Smoke", correct: "a" },
+  { question: "A town crier usually announces messages using:", a: "Bell or gong", b: "Computer", c: "Television", correct: "a" },
+  { question: "A visual example of communication is:", a: "Drawing and diagrams", b: "Radio talk", c: "Whistling", correct: "a" },
+  { question: "Which of these is NOT a disadvantage of modern communication?", a: "Fast delivery speed", b: "Cybercrime risk", c: "Power failure", correct: "a" },
+  { question: "The Internet can be classified as:", a: "Audio-visual communication", b: "Audio only", c: "Visual only", correct: "a" },
+  { question: "When a message travels from one point to another, it is called:", a: "Transmission", b: "Storage", c: "Processing", correct: "a" },
+  { question: "The main advantage of modern communication is:", a: "Speed and accuracy", b: "Delay and manual effort", c: "Limited distance", correct: "a" },
+  { question: "Which ancient method preserves history for long?", a: "Drawing and carvings", b: "Whistling", c: "Town crying", correct: "a" },
+  { question: "Modern communication tools can fail because of:", a: "Power or network failure", b: "Lack of smoke", c: "Absence of wind", correct: "a" },
+  { question: "An example of audio communication device is:", a: "Radio", b: "Television", c: "Poster", correct: "a" }
+];
+
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 600;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got this one right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You selected the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
            
-                  
-        </div>
-            
-        <div class="note2">
-        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
-        <br><br>
-        <ol class="explanation">
-            <a href="../../../../topics/first-term/csc/j1/2.html" class="iam">
-                <br>
-                <li > MECHANICAL COUNTING AND CALCULATING DEVICES       </li>
-            </a>
-            <br>
-            
-            
-            <a href="../../../../topics/first-term/csc/j1/3.html" class="iam">
-
-                <li > ELECTRO-MECHANICAL COUNTING DEVICES      </li>
-            </a>
-            <br>
-            </a>
-            <br>
-            
-            
-            <a href="../../../../topics/first-term/csc/j1/4.html" class="iam">
-                <li > ELECTRONIC COUNTING DEVICES </li>
-            </a>
-            <br>
-            
-            <a href="../../../../topics/first-term/csc/j1/5.html" class="iam">
-
-                <li > MODERN MACHINE   </li>
-            </a>
-            <br>
-            
-            <a href="../../../../topics/first-term/csc/j1/6.html" class="iam">
-                
-                <li > GENERATIONS OF COMPUTERS   </li>
-            </a>
-            <br>
-            </a>
-            
-            <a href="../../../../topics/first-term/csc/j1/7.html" class="iam">
-                <br>
-                <li >  DATA PROCESSING </li>
-            </a>
-            <br>
            
-            
-            
            
-            
-            
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
 
-           
-            
-            
-        
-            
-        
-        
-        
-            
-            
-        
-            
-            
-            
-            
-        </ol>
-        <br><br><br>
-        <div class="form-container">
-            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
-            <br>
-            <input type="text" id="name" placeholder="Your Name">
-            <br>
-            <input type="text" id="title" placeholder="Title ">
-            <br>
-            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-            <br>
-            <button onclick="submitComplaint()">Submit</button>
-        </div>
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
 
-        <div class="complaints-container">
-            <h3> VIEWS </h3>
-            <br>
-            <div id="complaints-list"></div>
-            <br>
-            <br>
-        </div>
-        
-        
-        </div>
-        </div>       
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 600;
+      saveState();
+    }
 
-                
-            
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
+    
 
-
-        <div class="lower-side">
-        
-
-        <br><br>
-        <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
-
-        <br>
-        <div class="social">
-        <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
-        <img src="../../../../images/facebook.png" alt="">
-        <div class="info">Follow us on facebook</div>
-        </a>
-        <a href="https://wa.me/2348100410742" class="whatsapp"> 
-        <img src="../../../../images/whatsapp.png" alt="">
-        <div class="info">Reach us on whatsapp </div>
-        </a>
-        <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
-        <img src="../../../../images/gmail.png" alt="">
-        <div class="info">Email Us </div>
-        </a>
-        </div>
-
-        </div>
-
-
+    
     <script src="../../../../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
-
-        // Frame reload
-
-       
-       
-       
-
-     </script>
-    
-    
 </body>
 </html>
