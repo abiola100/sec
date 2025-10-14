@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../../../style2.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>CBT PRACTICE| computer science | jss1 studentss</title>
+    <title>CBT PRACTICE</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
     
@@ -17,8 +17,7 @@
     <div>
        <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
        <div class="nav-toggle" id="navtogle">
-           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
        
    </div>
@@ -36,7 +35,7 @@
   </header>
    <br><br>
   <header class="header-back">
-    <a href="../../../../terms/second-term/csc-second/csc-second.html">
+    <a href="../../../../terms/first-term/csc-first/csc-first.html">
     <div class="arrow-back">
         
         <div > <button id="go-back">Leave</button></div>
@@ -48,7 +47,7 @@
 <body class="quiz-Class">
    
   <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
-  <div id="timer">Time left: 10:00</div>
+  <div id="timer">Time left: 20:00</div>
   <div id="quiz"></div>
 
   <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -72,71 +71,69 @@
 
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+    { question: "A computer is best defined as:", a: "An electronic device that processes data into information", b: "A mechanical device used for counting", c: "A manual calculating tool", correct: "a" },
+    { question: "The main function of a computer is to:", a: "Store raw data", b: "Process data into meaningful information", c: "Display pictures only", correct: "b" },
+    { question: "Data can be described as:", a: "Processed facts and figures", b: "Unprocessed facts and figures", c: "Random numbers", correct: "c" },
+    { question: "Information means:", a: "Raw facts collected from a source", b: "Processed and meaningful data", c: "Random numbers entered into a system", correct: "a" },
+    { question: "The first calculating device invented by man was:", a: "Slide rule", b: "Abacus", c: "Napier’s Bone", correct: "b" },
+    { question: "The abacus was mainly used for:", a: "Data storage", b: "Performing arithmetic calculations", c: "Typing letters", correct: "c" },
+    { question: "The mechanical calculating device that used rods for multiplication is called:", a: "Pascaline", b: "Napier’s Bone", c: "Abacus", correct: "a" },
+    { question: "The first mechanical calculator that could add and subtract was invented by:", a: "Charles Babbage", b: "Blaise Pascal", c: "Leibniz", correct: "b" },
+    { question: "The calculating machine capable of multiplication and division was invented by:", a: "Leibniz", b: "Pascal", c: "Napier", correct: "c" },
+    { question: "Charles Babbage is known as:", a: "The Father of Modern Computers", b: "The Founder of Slide Rule", c: "The Creator of Napier’s Bone", correct: "a" },
+    { question: "The Analytical Engine was designed to:", a: "Perform only addition", b: "Be a general-purpose computing device", c: "Count with stones", correct: "b" },
+    { question: "The punched card was first used by:", a: "Hollerith", b: "Charles Babbage", c: "John Napier", correct: "c" },
+    { question: "The first electro-mechanical computer was called:", a: "MARK I", b: "ENIAC", c: "UNIVAC", correct: "a" },
+    { question: "The first electronic computer built in 1946 was:", a: "EDSAC", b: "ENIAC", c: "EDVAC", correct: "b" },
+    { question: "The first generation of computers used:", a: "Transistors", b: "Vacuum tubes", c: "Integrated circuits", correct: "c" },
+    { question: "The major limitation of first-generation computers was:", a: "They were too large and generated heat", b: "They were wireless", c: "They were portable", correct: "a" },
+    { question: "Second-generation computers replaced vacuum tubes with:", a: "Microprocessors", b: "Transistors", c: "IC chips", correct: "b" },
+    { question: "The third generation of computers began around:", a: "1940", b: "1964", c: "1971", correct: "c" },
+    { question: "Integrated circuits were introduced in which generation?", a: "Third", b: "Second", c: "First", correct: "a" },
+    { question: "Fourth-generation computers used:", a: "Microprocessors", b: "Vacuum tubes", c: "Transistors", correct: "b" },
+    { question: "The main feature of fifth-generation computers is:", a: "Artificial Intelligence", b: "Mechanical Calculation", c: "Manual Data Entry", correct: "c" },
+    { question: "One major advantage of modern computers is:", a: "They make errors easily", b: "They process data quickly and accurately", c: "They only count manually", correct: "a" },
+    { question: "Data processing means:", a: "Converting raw data into meaningful information", b: "Collecting data and storing it only", c: "Deleting unwanted files", correct: "b" },
+    { question: "Manual data processing involves:", a: "The use of computers", b: "The use of human effort and paper", c: "Automated software", correct: "c" },
+    { question: "Electronic data processing involves:", a: "Manual calculation", b: "Use of computers and electronic devices", c: "Mechanical abacus", correct: "a" },
+    { question: "Which of the following is a step in data processing?", a: "Data collection", b: "Painting", c: "Driving", correct: "b" },
+    { question: "Data collection, preparation, and input belong to:", a: "Data processing cycle", b: "Data transmission", c: "System rebooting", correct: "c" },
+    { question: "Data output in computers means:", a: "Entering data", b: "Displaying processed information", c: "Erasing files", correct: "a" },
+    { question: "Storage in data processing refers to:", a: "Keeping processed information for future use", b: "Deleting records", c: "Changing keyboard layout", correct: "b" },
+    { question: "A major importance of computers in data processing is:", a: "High speed of operation", b: "Manual effort", c: "Paper wastage", correct: "c" },
+    { question: "The accuracy of computers in processing data depends on:", a: "Correct input data", b: "Random guessing", c: "Human reasoning", correct: "a" },
+    { question: "Garbage In, Garbage Out (GIGO) means:", a: "Correct input gives wrong output", b: "Wrong input gives wrong output", c: "Computers guess answers", correct: "b" },
+    { question: "Which of the following best shows computer reliability?", a: "They can work long hours without fatigue", b: "They always make errors", c: "They stop without notice", correct: "c" },
+    { question: "The ability of computers to perform many tasks is known as:", a: "Versatility", b: "Speed", c: "Accuracy", correct: "a" },
+    { question: "One major limitation of the computer is that:", a: "It cannot think or reason on its own", b: "It is living", c: "It repairs itself", correct: "b" },
+    { question: "The dependence of computers on electricity means:", a: "They can work without power", b: "They stop working when power fails", c: "They run on water", correct: "c" },
+    { question: "Obsolescence means:", a: "Becoming outdated with time", b: "Being improved daily", c: "Becoming more efficient", correct: "a" },
+    { question: "Data security in computing involves:", a: "Protecting data from unauthorized access", b: "Erasing all data", c: "Changing font colors", correct: "b" },
+    { question: "Which of the following helps ensure data security?", a: "Encryption and passwords", b: "Leaving files open", c: "Sharing login details", correct: "c" },
+    { question: "Computers reduce cost because they:", a: "Work faster and reduce manual labour", b: "Use more paper", c: "Require many people", correct: "a" },
+    { question: "Storage and retrieval of data help to:", a: "Keep records for future use", b: "Delete old data", c: "Slow down operations", correct: "b" },
+    { question: "Efficiency in computing means:", a: "Doing more work in less time", b: "Doing less work slowly", c: "Making many errors", correct: "c" },
+    { question: "Which of the following is not a limitation of computers?", a: "Dependence on electricity", b: "Ability to think like humans", c: "Obsolescence", correct: "a" },
+    { question: "Automation of repetitive tasks means:", a: "Tasks are done automatically by computer programs", b: "Tasks require constant manual input", c: "Tasks are never repeated", correct: "b" },
+    { question: "Computers help decision making by:", a: "Analyzing data and presenting results clearly", b: "Guessing answers", c: "Ignoring instructions", correct: "c" },
+    { question: "Which of these devices is an input device?", a: "Keyboard", b: "Monitor", c: "Printer", correct: "a" },
+    { question: "Which of these devices displays processed information?", a: "Mouse", b: "Monitor", c: "Scanner", correct: "b" },
+    { question: "The output of data processing is called:", a: "Information", b: "Raw data", c: "Code", correct: "c" },
+    { question: "Computers help organizations by:", a: "Increasing productivity and accuracy", b: "Causing more manual work", c: "Reducing speed", correct: "a" },
+    { question: "Which generation introduced Artificial Intelligence?", a: "Fifth", b: "Fourth", c: "Second", correct: "b" },
+    { question: "Which of the following was a limitation of first-generation computers?", a: "Small size", b: "Overheating and large size", c: "Wireless network", correct: "c" },
+    { question: "The first commercial computer was called:", a: "UNIVAC", b: "MARK I", c: "ENIAC", correct: "a" },
+    { question: "The language of early computers was:", a: "Binary language", b: "English", c: "Assembly only", correct: "b" },
+    { question: "A transistor replaced vacuum tubes because:", a: "It was smaller, faster, and more reliable", b: "It used more power", c: "It was slower", correct: "c" },
+    { question: "Which device first used punched cards for data?", a: "Hollerith Tabulator", b: "Pascaline", c: "Slide Rule", correct: "a" },
+    { question: "Computers differ from calculators because:", a: "They can store and execute programs", b: "They only add numbers", c: "They cannot process data", correct: "b" },
+    { question: "A limitation of computer use in developing nations is:", a: "Lack of electricity and skilled workers", b: "Abundance of software", c: "Availability of experts", correct: "c" },
+    { question: "Modern computers are also called:", a: "Digital systems", b: "Mechanical systems", c: "Analog devices", correct: "a" },
+    { question: "The term hardware refers to:", a: "The physical components of a computer", b: "Software programs", c: "Data files", correct: "b" },
+    { question: "Software is best described as:", a: "Programs that tell the computer what to do", b: "Wires and circuits", c: "Mouse and keyboard", correct: "c" }
+   ];
 
-        const quizData = [
-                    { question: "What is the purpose of using dust covers for computers?", a: "To improve computer performance", b: "To prevent dust accumulation and protect from damage", c: "To enhance the computer's appearance", correct: "b" },
-
-                    { question: "Why is it important to clean computers with a soft cloth?", a: "To reduce electricity consumption", b: "To prevent scratches and damage to components", c: "To make the computer look shiny", correct: "b" },
-
-                    { question: "What should be avoided in a computer lab to maintain cleanliness?", a: "Food and drinks", b: "Loud conversations", c: "Using the computer too much", correct: "a" },
-
-                    { question: "What is one way to ensure energy efficiency in a computer lab?", a: "Leave the computers on when not in use", b: "Turn off computers when not in use", c: "Use computers only at night", correct: "b" },
-
-                    { question: "What does ICT help us with in communication?", a: "Managing schedules", b: "Staying connected with others through phones, emails, and social media", c: "Organizing physical files", correct: "b" },
-
-                    { question: "How does ICT support education?", a: "By providing access to online resources and digital platforms", b: "By reducing the need for books", c: "By replacing teachers in classrooms", correct: "a" },
-
-                    { question: "What is one of the uses of ICT in banking?", a: "Managing physical money", b: "Allowing mobile transactions and online bill payments", c: "Closing down physical bank branches", correct: "b" },
-
-                    { question: "How does ICT impact healthcare?", a: "By preventing health problems", b: "By providing access to medical information and virtual consultations", c: "By replacing doctors", correct: "b" },
-
-                    { question: "What is one benefit of using ICT for entertainment?", a: "Watching TV shows only on cable", b: "Accessing movies, music, and games from personal devices", c: "Buying physical DVDs and CDs", correct: "b" },
-
-                    { question: "How does ICT improve transportation?", a: "By providing manual maps", b: "By tracking vehicles, navigating with GPS, and booking rides", c: "By eliminating traffic completely", correct: "b" },
-
-                    { question: "What is the role of ICT in time management?", a: "It tracks physical activities only", b: "It helps schedule tasks and set reminders", c: "It eliminates the need for any planning", correct: "b" },
-
-                    { question: "What is one of the responsibilities in managing a computer room?", a: "Smoking to stay awake", b: "Keeping the room clean and organized", c: "Ignoring safety rules", correct: "b" },
-
-                    { question: "What is the role of ICT in traffic management?", a: "Managing traffic lights and monitoring road conditions", b: "Eliminating all traffic jams", c: "Controlling the weather", correct: "a" },
-
-                    { question: "Why should computers be kept out of direct heat or sunlight?", a: "To make the computer run faster", b: "To prevent damage to components", c: "To improve battery life", correct: "b" },
-
-                    { question: "What is a key advantage of using ICT in information processing?", a: "It decreases the amount of data collected", b: "It enables fast data collection, storage, and sharing", c: "It removes the need for analysis", correct: "b" },
-
-                    { question: "What is the purpose of using adequate lighting in a computer room?", a: "To reduce eye strain and provide clear visibility", b: "To make the room more colorful", c: "To increase the electricity bill", correct: "a" },
-
-                    { question: "Why is it important to keep cables tidy in a computer room?", a: "To prevent tripping and avoid damage", b: "To make the room look nice", c: "To increase the amount of cable", correct: "a" },
-
-                    { question: "How does ICT assist in online shopping?", a: "By limiting access to shopping sites", b: "By allowing people to buy goods and services anytime from anywhere", c: "By only allowing shopping during office hours", correct: "b" },
-
-                    { question: "Why should computers be unplugged if not in use for a long time?", a: "To prevent overheating", b: "To save energy and avoid unnecessary power consumption", c: "To improve their internet speed", correct: "b" },
-
-                    { question: "What is the benefit of using ICT in organizing data?", a: "By storing it physically on paper", b: "By organizing and sharing it across networks for easy access", c: "By preventing data from being used properly", correct: "b" },
-
-                    { question: "What should you avoid bringing into a computer room to keep it clean?", a: "Laptops", b: "Food and drinks", c: "Computer accessories", correct: "b" },
-
-                    { question: "How does ICT assist in customer service?", a: "By providing automated responses and live chats", b: "By reducing the need for human staff", c: "By eliminating customer complaints", correct: "a" },
-
-                    { question: "What is the role of ICT in professional communication?", a: "Making personal calls during work hours", b: "Facilitating quick communication through emails, video calls, and platforms", c: "Limiting communication to face-to-face meetings", correct: "b" },
-
-                    { question: "How does ICT support remote work?", a: "By providing tools for online meetings and collaboration", b: "By requiring employees to be physically present in the office", c: "By limiting work hours", correct: "a" },
-
-                    { question: "Why is it important to maintain proper airflow in a computer room?", a: "To ensure computers don’t overheat", b: "To increase the computer's processing speed", c: "To make the room smell fresh", correct: "a" },
-
-                    { question: "What should be done when the computer is not in use for an extended period?", a: "Leave it on to finish tasks", b: "Turn it off or unplug it to save power", c: "Allow the computer to run continuously", correct: "b" },
-
-                    { question: "What is the benefit of using ICT in healthcare?", a: "It replaces physical visits to doctors", b: "It enables virtual consultations and easy access to health information", c: "It eliminates the need for any medical staff", correct: "b" },
-
-                    { question: "What does ICT help with in time control?", a: "Reducing the time spent on activities", b: "Planning meetings and reminders for better time management", c: "Only tracking work hours", correct: "b" },
-
-                    { question: "Why should computers be turned off when not in use?", a: "To save power and extend the lifespan of the device", b: "To make the computer more secure", c: "To stop it from making noise", correct: "a" },
-
-                    { question: "What is the role of ICT in global communication?", a: "It limits communication to specific countries", b: "It enables instant communication across different locations globally", c: "It only allows for text-based communication", correct: "b" }
-
- 
-
-        ];
 
 
  
@@ -154,7 +151,7 @@
     let shuffledQuestions = [];
     let currentQuestionIndex = 0;
     let userAnswers = {};
-    let timeLeft = 600;
+    let timeLeft = 1200;
     let timerInterval;
     let quizCompleted = false;
 
@@ -369,7 +366,7 @@
     } else {
       shuffledQuestions = shuffle([...quizData]);
       currentQuestionIndex = 0;
-      timeLeft = 600;
+      timeLeft = 1200;
       saveState();
     }
 
