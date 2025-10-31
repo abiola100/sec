@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>CBT PRACTICE| COMPUTER SCIENCE | JSS2| SECOND TERM</title>
+    <title>CBT PRACTICE</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
     
@@ -17,8 +17,7 @@
     <div>
        <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
        <div class="nav-toggle" id="navtogle">
-           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
        
    </div>
@@ -48,7 +47,7 @@
 <body class="quiz-Class">
    
   <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
-  <div id="timer">Time left: 10:00</div>
+  <div id="timer">Time left: 25:00</div>
   <div id="quiz"></div>
 
   <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -73,69 +72,337 @@
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
 
-        const quizData = [
-  // BASIC PROGRAMMING LANGUAGE
-  { question: "What is a programming language?", a: "A language used to give instructions to a computer", b: "A language spoken by humans", c: "A type of music", correct: "a" },
-  { question: "Which of these is an example of a programming language?", a: "Python", b: "English", c: "French", correct: "a" },
-  { question: "What is the main purpose of a programming language?", a: "To instruct the computer on what to do", b: "To decorate the computer", c: "To clean the computer", correct: "a" },
-  { question: "Which of these is NOT a programming language?", a: "Calculator", b: "Java", c: "C++", correct: "a" },
-  { question: "Which programming language is commonly used to create websites?", a: "JavaScript", b: "Spanish", c: "Swahili", correct: "a" },
+    const quizData = [ 
+
+  // PROGRAMMING LANGUAGE
+  { question: "What is a programming language?", 
+    a: "A system of rules and symbols used to communicate with a computer", 
+    b: "A spoken language used for human communication", 
+    c: "A type of data storage system", 
+    correct: "a" },
+
+  { question: "Which of these is an example of a programming language?", 
+    a: "HTML", 
+    b: "Python", 
+    c: "Spreadsheet", 
+    correct: "b" },
+
+  { question: "What is the main purpose of a programming language?", 
+    a: "To provide instructions for a computer to perform tasks", 
+    b: "To change the color of the screen", 
+    c: "To store computer hardware", 
+    correct: "a" },
+
+  { question: "Which of these is NOT a programming language?", 
+    a: "C++", 
+    b: "Java", 
+    c: "Calculator", 
+    correct: "c" },
+
+  { question: "Which programming language is commonly used to create websites?", 
+    a: "C#", 
+    b: "JavaScript", 
+    c: "Python", 
+    correct: "b" },
 
   // BASIC CHARACTER SET
-  { question: "What does 'character set' mean in computing?", a: "The letters, numbers, and symbols a computer can use", b: "The actors in a play", c: "The colors of a screen", correct: "a" },
-  { question: "Which of these is a character in a computer character set?", a: "@", b: "Tree", c: "Sun", correct: "a" },
-  { question: "Which of these is part of the basic character set?", a: "A to Z", b: "Fruits", c: "Cars", correct: "a" },
-  { question: "Which symbol is used in email addresses?", a: "@", b: "#", c: "&", correct: "a" },
-  { question: "Which is NOT part of a computer's character set?", a: "Bird", b: "1", c: "?", correct: "a" },
+  { question: "What does 'character set' mean in computing?", 
+    a: "The collection of letters, digits, and symbols recognized by a computer", 
+    b: "The set of programs stored in memory", 
+    c: "The collection of images stored on a disk", 
+    correct: "a" },
+
+  { question: "Which of these is a character in a computer’s character set?", 
+    a: "$", 
+    b: "House", 
+    c: "Green", 
+    correct: "a" },
+
+  { question: "Which of the following is part of the basic character set?", 
+    a: "A to Z", 
+    b: "Red, Blue, Green", 
+    c: "Circle and Square", 
+    correct: "a" },
+
+  { question: "Which symbol is used in email addresses?", 
+    a: "#", 
+    b: "@", 
+    c: "&", 
+    correct: "b" },
+
+  { question: "Which is NOT part of a computer’s character set?", 
+    a: "1", 
+    b: "?", 
+    c: "Tree", 
+    correct: "c" },
 
   // KEY BASIC STATEMENT
-  { question: "What is a statement in programming?", a: "A line of code that tells the computer what to do", b: "A sentence in English", c: "A song", correct: "a" },
-  { question: "Which of these is a basic programming statement?", a: "Print", b: "Dance", c: "Sing", correct: "a" },
-  { question: "What does a PRINT statement do?", a: "Displays information on the screen", b: "Plays music", c: "Opens a file", correct: "a" },
-  { question: "What does an INPUT statement do?", a: "Takes information from the user", b: "Plays a video", c: "Closes a program", correct: "a" },
-  { question: "Which of these is used to get data from a user?", a: "INPUT", b: "JUMP", c: "RUN", correct: "a" },
+  { question: "What is a statement in programming?", 
+    a: "A line of code that performs a specific instruction", 
+    b: "A user command typed in plain English", 
+    c: "A paragraph in a story", 
+    correct: "a" },
+
+  { question: "Which of these is a BASIC programming statement?", 
+    a: "PRINT", 
+    b: "COPY", 
+    c: "PASTE", 
+    correct: "a" },
+
+  { question: "What does a PRINT statement do?", 
+    a: "Displays output on the screen", 
+    b: "Saves data to a file", 
+    c: "Erases information", 
+    correct: "a" },
+
+  { question: "What does an INPUT statement do?", 
+    a: "Receives data from the user", 
+    b: "Displays data to the user", 
+    c: "Ends a program", 
+    correct: "a" },
+
+  { question: "Which statement is used to get data from a user?", 
+    a: "READ", 
+    b: "INPUT", 
+    c: "SCAN", 
+    correct: "b" },
 
   // COMPUTER ETHICS
-  { question: "What are computer ethics?", a: "Rules for using computers properly", b: "How to cook food", c: "How to play games", correct: "a" },
-  { question: "Which is an example of good computer ethics?", a: "Respecting others' privacy", b: "Hacking into accounts", c: "Stealing files", correct: "a" },
-  { question: "Which of these is bad computer practice?", a: "Spreading viruses", b: "Protecting your password", c: "Using antivirus software", correct: "a" },
-  { question: "Why should you follow computer ethics?", a: "To use computers responsibly and fairly", b: "To win prizes", c: "To play better games", correct: "a" },
-  { question: "Which of these is NOT part of computer ethics?", a: "Cheating in online games", b: "Respecting copyrights", c: "Being honest online", correct: "a" },
+  { question: "What are computer ethics?", 
+    a: "Principles that guide the proper use of computers", 
+    b: "Rules for formatting computer text", 
+    c: "Steps for repairing computers", 
+    correct: "a" },
 
-  // ABUSE OF COMPUTER
-  { question: "What is computer abuse?", a: "Using a computer to harm others", b: "Using a computer for learning", c: "Playing educational games", correct: "a" },
-  { question: "Which of these is an example of computer abuse?", a: "Spreading viruses", b: "Creating a school project", c: "Learning to type", correct: "a" },
-  { question: "Which is a way people abuse computers?", a: "Hacking into other people's systems", b: "Typing notes", c: "Designing graphics", correct: "a" },
-  { question: "What is a virus in computing?", a: "A program that damages computers", b: "A type of food", c: "A type of music", correct: "a" },
-  { question: "What should you do to avoid computer abuse?", a: "Use computers for good purposes", b: "Steal files", c: "Cheat online", correct: "a" },
+  { question: "Which of these shows good computer ethics?", 
+    a: "Respecting other users’ privacy", 
+    b: "Copying software without permission", 
+    c: "Deleting others’ files", 
+    correct: "a" },
 
-  // SAFETY MEASURE IN USING COMPUTER
-  { question: "What is one safety measure when using a computer?", a: "Sit properly on a chair", b: "Sit on the floor", c: "Stand on the table", correct: "a" },
-  { question: "Why should you keep liquids away from computers?", a: "To avoid damaging the computer", b: "To clean it faster", c: "To make it look good", correct: "a" },
-  { question: "Which is a good safety habit?", a: "Switching off the computer properly", b: "Shouting at the computer", c: "Hitting the keyboard hard", correct: "a" },
-  { question: "Why is good lighting important when using a computer?", a: "To protect your eyes", b: "To see the mouse better", c: "To hear sounds clearly", correct: "a" },
-  { question: "Which of these is unsafe when using a computer?", a: "Using wet hands", b: "Using a mouse", c: "Using a keyboard", correct: "a" },
+  { question: "Which of these is an unethical computer practice?", 
+    a: "Protecting your password", 
+    b: "Spreading computer viruses", 
+    c: "Using antivirus software", 
+    correct: "b" },
+
+  { question: "Why should we follow computer ethics?", 
+    a: "To ensure fair and responsible computer use", 
+    b: "To gain more followers online", 
+    c: "To save electricity", 
+    correct: "a" },
+
+  { question: "Which of these is NOT an ethical practice?", 
+    a: "Respecting copyrights", 
+    b: "Cheating in online exams", 
+    c: "Giving credit to content creators", 
+    correct: "b" },
+
+  // COMPUTER ABUSE
+  { question: "What is computer abuse?", 
+    a: "Improper or harmful use of a computer system", 
+    b: "Using a computer for learning", 
+    c: "Typing class notes", 
+    correct: "a" },
+
+  { question: "Which of these is an example of computer abuse?", 
+    a: "Developing a program", 
+    b: "Spreading malware", 
+    c: "Creating an assignment", 
+    correct: "b" },
+
+  { question: "Which of these is a form of computer abuse?", 
+    a: "Designing graphics", 
+    b: "Hacking into another system", 
+    c: "Printing documents", 
+    correct: "b" },
+
+  { question: "What is a virus in computing?", 
+    a: "A program designed to damage or disrupt computer operations", 
+    b: "A biological infection", 
+    c: "A computer brand", 
+    correct: "a" },
+
+  { question: "How can computer abuse be avoided?", 
+    a: "By using computers responsibly and legally", 
+    b: "By installing games on every computer", 
+    c: "By deleting antivirus software", 
+    correct: "a" },
+
+  // SAFETY MEASURES
+  { question: "What is one safety measure when using a computer?", 
+    a: "Sit with your back straight and supported", 
+    b: "Lean forward at all times", 
+    c: "Use the computer while standing", 
+    correct: "a" },
+
+  { question: "Why should liquids be kept away from computers?", 
+    a: "To prevent electric shock or system damage", 
+    b: "To make the system shiny", 
+    c: "To keep the table cool", 
+    correct: "a" },
+
+  { question: "Which is a good computer safety practice?", 
+    a: "Switching off the system correctly", 
+    b: "Unplugging while it is running", 
+    c: "Shouting when it hangs", 
+    correct: "a" },
+
+  { question: "Why is proper lighting important when using a computer?", 
+    a: "To reduce eye strain and fatigue", 
+    b: "To make the computer faster", 
+    c: "To increase sound volume", 
+    correct: "a" },
+
+  { question: "Which of these is unsafe when using a computer?", 
+    a: "Handling it with wet hands", 
+    b: "Using a mouse properly", 
+    c: "Typing with clean fingers", 
+    correct: "a" },
 
   // GRAPHICS PACKAGE
-  { question: "What is a graphics package?", a: "A program for creating pictures and designs", b: "A package of food", c: "A music CD", correct: "a" },
-  { question: "Which of these is a graphics package?", a: "CorelDraw", b: "Microsoft Word", c: "Notepad", correct: "a" },
-  { question: "What is the main use of a graphics package?", a: "To create and edit images", b: "To cook food", c: "To play music", correct: "a" },
-  { question: "Which of these is NOT a graphics package?", a: "Calculator", b: "Paint", c: "CorelDraw", correct: "a" },
-  { question: "What can you do with a graphics package?", a: "Draw and color shapes", b: "Bake a cake", c: "Make a call", correct: "a" },
+  { question: "What is a graphics package?", 
+    a: "Software used to create and edit images", 
+    b: "Hardware that prints pictures", 
+    c: "A computer case used for storage", 
+    correct: "a" },
 
-  // TYPE OF GRAPHICS PACKAGE
-  { question: "Which is a type of graphics package?", a: "Paint", b: "Telephone", c: "Radio", correct: "a" },
-  { question: "Which of these is a drawing package?", a: "CorelDraw", b: "Calculator", c: "Clock", correct: "a" },
-  { question: "Which of these is NOT a graphics package?", a: "Television", b: "Paint", c: "CorelDraw", correct: "a" },
-  { question: "What type of graphics package is used for freehand drawing?", a: "Paint", b: "Microsoft Excel", c: "Calculator", correct: "a" },
-  { question: "Which type of graphics package is used for editing photos?", a: "Photo editor", b: "Radio", c: "Telephone", correct: "a" },
+  { question: "Which of these is a graphics package?", 
+    a: "Microsoft Excel", 
+    b: "CorelDRAW", 
+    c: "Notepad", 
+    correct: "b" },
 
-  // FEATURES OF GRAPHICS PACKAGE
-  { question: "Which is a feature of a graphics package?", a: "Drawing shapes", b: "Boiling water", c: "Singing songs", correct: "a" },
-  { question: "Which of these is a tool in a graphics package?", a: "Pencil tool", b: "Spoon", c: "Cup", correct: "a" },
-  { question: "What feature allows coloring in graphics packages?", a: "Fill tool", b: "Knife tool", c: "Brush tool", correct: "a" },
-  { question: "Which feature helps to add text in a graphics package?", a: "Text tool", b: "Cooking tool", c: "Music tool", correct: "a" },
-  { question: "Which of these is a common feature of graphics packages?", a: "Eraser tool", b: "Microwave", c: "Television", correct: "a" }
+  { question: "What is the main purpose of a graphics package?", 
+    a: "To design and modify visual materials", 
+    b: "To save text documents", 
+    c: "To manage computer memory", 
+    correct: "a" },
+
+  { question: "Which of these is NOT a graphics package?", 
+    a: "Paint", 
+    b: "CorelDRAW", 
+    c: "Calculator", 
+    correct: "c" },
+
+  { question: "What can be done with a graphics package?", 
+    a: "Draw and color images", 
+    b: "Send text messages", 
+    c: "Record sounds", 
+    correct: "a" },
+
+  // FEATURES OF GRAPHICS PACKAGES
+  { question: "Which is a feature of a graphics package?", 
+    a: "Drawing tools and color options", 
+    b: "Typing speed control", 
+    c: "Network sharing", 
+    correct: "a" },
+
+  { question: "Which of these tools is found in a graphics package?", 
+    a: "Eraser tool", 
+    b: "Ruler tool", 
+    c: "Stapler tool", 
+    correct: "a" },
+
+  { question: "Which feature allows coloring in graphics packages?", 
+    a: "Fill tool", 
+    b: "Blend tool", 
+    c: "Cut tool", 
+    correct: "a" },
+
+  { question: "Which tool is used to insert text into drawings?", 
+    a: "Shape tool", 
+    b: "Text tool", 
+    c: "Pencil tool", 
+    correct: "b" },
+
+  { question: "Which is a common tool in most graphics packages?", 
+    a: "Brush tool", 
+    b: "Hammer tool", 
+    c: "Knife tool", 
+    correct: "a" },
+
+  { 
+    question: "Which statement in BASIC is used to display information on the screen?", 
+    a: "PRINT", 
+    b: "INPUT", 
+    c: "READ", 
+    correct: "a" 
+  },
+
+  { 
+    question: "Which of the following is NOT part of the BASIC character set?", 
+    a: "Letters", 
+    b: "Mathematical symbols", 
+    c: "Animals", 
+    correct: "c" 
+  },
+
+  { 
+    question: "Which of these shows good computer ethics?", 
+    a: "Installing pirated software", 
+    b: "Respecting other people’s privacy", 
+    c: "Accessing someone’s files without permission", 
+    correct: "b" 
+  },
+
+  { 
+    question: "Which of the following helps to prevent computer damage from sudden power failure?", 
+    a: "Voltage stabilizer", 
+    b: "Headset", 
+    c: "Flash drive", 
+    correct: "a" 
+  },
+
+  { 
+    question: "Which ergonomic practice helps to reduce eye strain?", 
+    a: "Keeping the monitor at eye level", 
+    b: "Placing the monitor too close to the face", 
+    c: "Leaning too far away from the monitor", 
+    correct: "a" 
+  },
+
+  { 
+    question: "Which type of computer maintenance is done to prevent problems before they occur?", 
+    a: "Corrective maintenance", 
+    b: "Preventive maintenance", 
+    c: "Predictive maintenance", 
+    correct: "b" 
+  },
+
+  { 
+    question: "Which of these is a common example of a graphics package?", 
+    a: "CorelDRAW", 
+    b: "Microsoft Excel", 
+    c: "Notepad", 
+    correct: "a" 
+  },
+
+  { 
+    question: "Which feature allows coloring in graphics packages?", 
+    a: "Fill tool", 
+    b: "Blend tool", 
+    c: "Cut tool", 
+    correct: "a" 
+  },
+
+  { 
+    question: "Which tool is used to insert text into drawings?", 
+    a: "Shape tool", 
+    b: "Text tool", 
+    c: "Pencil tool", 
+    correct: "b" 
+  },
+
+  { 
+    question: "Which of these is a good safety habit when using the computer?", 
+    a: "Keeping liquids near the system", 
+    b: "Switching off the computer properly after use", 
+    c: "Touching internal parts while it is on", 
+    correct: "b" 
+  }
+
+
 ];
 
 
@@ -154,7 +421,7 @@
     let shuffledQuestions = [];
     let currentQuestionIndex = 0;
     let userAnswers = {};
-    let timeLeft = 600;
+    let timeLeft = 1500;
     let timerInterval;
     let quizCompleted = false;
 
@@ -369,7 +636,7 @@
     } else {
       shuffledQuestions = shuffle([...quizData]);
       currentQuestionIndex = 0;
-      timeLeft = 600;
+      timeLeft = 1500;
       saveState();
     }
 

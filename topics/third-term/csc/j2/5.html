@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>CBT PRACTICE | COMPUTER SCIENCE FOR JSS2 | SECOND TERM</title>
+    <title>CBT PRACTICE</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
     
@@ -17,8 +17,7 @@
     <div>
        <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
        <div class="nav-toggle" id="navtogle">
-           <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
        
    </div>
@@ -48,7 +47,7 @@
 <body class="quiz-Class">
    
   <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
-  <div id="timer">Time left: 10:00</div>
+  <div id="timer">Time left: 25:00</div>
   <div id="quiz"></div>
 
   <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -73,7 +72,7 @@
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
 
-const quizData = [
+   const quizData = [
       { question: "What is information transmission?", a: "The process of sharing information from one place to another", b: "The act of cooking food", c: "The way of building houses", correct: "a" },
       { question: "Which of these is an ancient method of transmitting information?", a: "Beating drums", b: "Using mobile phones", c: "Using computers", correct: "a" },
       { question: "How did people in ancient times send messages?", a: "By smoke signals", b: "By sending emails", c: "By printing newspapers", correct: "a" },
@@ -121,7 +120,16 @@ const quizData = [
       { question: "Which icon means ‘link’ on websites?", a: "Chain link icon", b: "Trash bin icon", c: "Home icon", correct: "a" },
       { question: "What is the main purpose of the Internet?", a: "To connect people and share information", b: "To make phones ring", c: "To send faxes", correct: "a" },
       { question: "Which of these can be done on the Internet?", a: "Online shopping", b: "Only phone calls", c: "Only faxing", correct: "a" },
-      { question: "What does a mobile phone use to connect to the GSM network?", a: "A SIM card", b: "A fax machine", c: "A landline cable", correct: "a" }
+      { question: "What does a mobile phone use to connect to the GSM network?", a: "A SIM card", b: "A fax machine", c: "A landline cable", correct: "a" },
+      { question: "Which of these best describes the relationship between GSM, Fax, and Telephone?", a: "They are all systems used for communication at different technological stages", b: "They all depend completely on Internet connection to work",  c: "They are only used for document transfer",  correct: "a" },
+      { 
+        question: "Which of these devices can access both GSM and Internet services?", 
+        a: "Smartphone", 
+        b: "Landline telephone", 
+        c: "Fax machine", 
+        correct: "a" 
+      }
+
     ];
 
  
@@ -139,7 +147,7 @@ const quizData = [
     let shuffledQuestions = [];
     let currentQuestionIndex = 0;
     let userAnswers = {};
-    let timeLeft = 600;
+    let timeLeft = 1500;
     let timerInterval;
     let quizCompleted = false;
 
@@ -354,7 +362,7 @@ const quizData = [
     } else {
       shuffledQuestions = shuffle([...quizData]);
       currentQuestionIndex = 0;
-      timeLeft = 600;
+      timeLeft = 1500;
       saveState();
     }
 

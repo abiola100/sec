@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>OPERATING SYSTEM </title>
+    <title>Operating System - computer science note - jss2 </title>
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <link rel="icon" href="../../../../images/logo.png" type="image/png">
 
+    <style>
+    h1,h2,h3 { color:#0b5a3a; }
+    pre { background:#f9f9f9; padding:10px; border:1px solid #e6e6e6; border-radius:6px; overflow:auto; }
+    table { border-collapse:collapse; width:100%; margin:10px 0 20px 0; }
+    th,td { border:1px solid #ccc; padding:8px; text-align:left; }
+    .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+    .note { font-size:0.95rem; color:#333; }
+    </style>
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
+    
    
 </head>
 <body>
@@ -21,8 +32,7 @@
         <div>
            <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
            <div class="nav-toggle" id="navtogle">
-                <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
+               <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
            </div>
            
        </div>
@@ -52,38 +62,142 @@
    
         <div class="cover-note">
        <div class="note-container">
-        <div class="title0"><b>OPERATING SYSTEM </b></div>
-        <br><br>
-        <p>
-            <b class="list2">Operating System</b> is system software that manages a computer's hardware and software, making it possible for users to interact with the computer.
-        </p>
-        <br><br>
-        <div class="title"><b class="list4">COMMON EXAMPLES OF OPERATING SYSTEM</b></div>
-        <br><br>
-        <ol>
-            <li>
-            
-                <b>Windows: </b>A popular operating system by Microsoft, used on most PCs.
-            </li>
-            <br>
-            <li>
-                <b>macOS: </b>Apple's operating system for Mac computers, known for its sleek design.
-            </li>
-            <br>
-            <li>
-                <b>Linux: </b>An open-source operating system that is free and customizable.
-            </li>
-            <br>
-            <li>
-                <b>Android: </b>A mobile operating system by Google, used in smartphones and tablets.
-            </li>
-            <br>
-            <li>
-                <b>iOS: </b>Apple's operating system for iPhones and iPads, known for its security and simplicity.
+        <div class="title01"><b>OPERATING SYSTEM </b></div>
+         <div class="t2"><b>Meaning of Operating System</b></div>
+        <p>An <strong>Operating System (OS)</strong> is a set of programs that manages and controls all the activities of a computer system.</p>
 
-            </li>
+        <p>It acts as an <strong>intermediary</strong> between the <strong>user</strong>, the <strong>application programs</strong>, and the <strong>hardware</strong> of the computer.</p>
+
+        <p>When you switch on the computer, the operating system is the first software that loads into memory. It prepares the computer for use and allows you to run other programs such as <strong>Microsoft Word</strong>, <strong>PowerPoint</strong>, or web browsers.</p>
+
+        <p>Without an operating system, a computer cannot function because the hardware alone cannot perform any meaningful operation.</p>
+
+        <p>In summary, the operating system makes the computer <strong>usable</strong>.</p>
+
+        <br><br>
+        <div class="title" style="background-color: seagreen;color: white;"><b>Examples of Operating Systems</b></div>
+        <p>Operating systems exist in different types and versions. Some examples include:</p>
+
+        <ol>
+        <li><strong>Microsoft Windows</strong> (Windows XP, Windows 7, Windows 8, Windows 10, Windows 11)</li><br>
+        <li><strong>Linux</strong></li><br>
+        <li><strong>UNIX</strong></li><br>
+        <li><strong>macOS</strong> (used on Apple computers)</li><br>
+        <li><strong>DOS</strong> (Disk Operating System)</li><br>
+        <li><strong>Android</strong> (used on mobile phones and tablets)</li><br>
+        <li><strong>iOS</strong> (used on iPhones and iPads)</li><br>
         </ol>
 
+        <p>All these perform similar functions, though they may look different or work in different ways.</p><br><br>
+
+        <div class="title" style="background-color: darkolivegreen;color: white;"><b>Types or Classifications of Operating Systems</b></div>
+        <p>There are several types of operating systems. Each type is designed for particular users or purposes.</p>
+
+        <ol>
+        <li><strong>Single-User, Single-Tasking Operating System:</strong> This type allows one user to carry out only one task at a time.<br>
+        Example: Early versions of DOS.</li><br>
+
+        <li><strong>Single-User, Multi-Tasking Operating System:</strong> This allows one user to perform several tasks at the same time. For example, typing a document while listening to music.<br>
+        Example: Windows 10, macOS.</li><br>
+
+        <li><strong>Multi-User Operating System:</strong> This allows two or more users to share the computer’s resources at the same time, usually through a network.<br>
+        Example: UNIX, Linux (server versions).</li><br>
+
+        <li><strong>Distributed Operating System:</strong> This type manages a group of computers that are connected and work together as if they are one single system.<br>
+        Example: Some advanced network systems.</li><br>
+
+        <li><strong>Embedded or Real-Time Operating System:</strong> This type is built into devices such as ATMs, washing machines, mobile phones, or traffic lights. It is designed to give <strong>immediate responses</strong>.<br>
+        Example: Embedded Linux, Android.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkcyan;color: white;"><b>Functions of the Operating System</b></div>
+        <p>The operating system performs many essential functions that help the computer to work correctly. These include:</p>
+
+        <ol>
+        <li><strong>Booting the Computer:</strong> When you switch on the computer, the OS loads into memory automatically. This process is called <strong>booting</strong>.</li><br>
+
+        <li><strong>Providing a User Interface:</strong> The OS provides a way for you to communicate with the computer. This may be a <strong>Graphical User Interface (GUI)</strong> that uses icons and windows, or a <strong>Command Line Interface (CLI)</strong> that uses typed commands.</li><br>
+
+        <li><strong>Managing System Resources:</strong> The OS controls and allocates resources such as memory, processing time, and storage so that several programs can run efficiently without conflict.</li><br>
+
+        <li><strong>File and Disk Management:</strong> The OS organises data into files and folders and controls how data is stored, retrieved, renamed, copied, and deleted.</li><br>
+
+        <li><strong>Input and Output Management:</strong> It manages how input devices (such as keyboards and mice) and output devices (such as printers and monitors) interact with the system.</li><br>
+
+        <li><strong>Security and Protection:</strong> The OS provides features such as passwords and permissions to prevent unauthorised access and to protect files from misuse.</li><br>
+
+        <li><strong>Error Detection and Handling:</strong> The OS detects and reports system errors to prevent damage to data or devices.</li><br>
+
+        <li><strong>Multitasking and Job Scheduling:</strong> It allows many programs to run at once and decides which one should use the CPU at any given time.</li><br>
+
+        <li><strong>Communication Management:</strong> The OS handles data exchange between computers in a network, such as when sending emails or browsing the internet.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkkhaki;color: black;"><b>Importance of the Operating System</b></div>
+        <p>The operating system is very important because it:</p>
+
+        <ol>
+        <li>it Makes the computer <strong>usable</strong> and functional.</li><br>
+        <li>it Provides a platform for running <strong>application software</strong>.</li><br>
+        <li>it Manages and controls all <strong>computer resources</strong> efficiently.</li><br>
+        <li>it Ensures smooth interaction between <strong>hardware</strong> and <strong>software</strong>.</li><br>
+        <li>it Protects system data and maintains <strong>security</strong>.</li><br>
+        <li>it Helps users to communicate easily with the computer.</li><br>
+        <li>it Improves the overall performance of the computer system.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: seagreen;color: white;"><b>Components of an Operating System</b></div>
+        <p>Every operating system is made up of different parts that perform specific functions.</p>
+
+        <ol>
+        <li><strong>Kernel:</strong> The kernel is the <strong>core</strong> of the OS. It directly interacts with the hardware and manages the CPU, memory, and devices.</li><br>
+
+        <li><strong>User Interface:</strong> This is the part that allows you to interact with the computer. It can be graphical (<strong>GUI</strong>) or command-based (<strong>CLI</strong>).</li><br>
+
+        <li><strong>File System:</strong> This component organises and manages how data is stored, named, and accessed on the disk.</li><br>
+
+        <li><strong>Device Drivers:</strong> These are small programs that enable the OS to communicate with hardware devices such as printers, keyboards, and monitors.</li><br>
+
+        <li><strong>System Utilities:</strong> These are programs that perform maintenance tasks like scanning for viruses, cleaning the disk, or backing up files.</li><br>
+        </ol><br><br>
+
+        <div class="title" style="background-color: darkkhaki;color: black;"><b>Key Terms to Know</b></div>
+        <ol>
+        <li><strong>Booting:</strong> The process of starting a computer and loading the OS into memory.</li><br>
+        <li><strong>Driver:</strong> A small program that allows the OS to control hardware devices.</li><br>
+        <li><strong>GUI (Graphical User Interface):</strong> A user interface that uses icons, pictures, and menus.</li><br>
+        <li><strong>CLI (Command Line Interface):</strong> A user interface where you type commands.</li><br>
+        <li><strong>Multitasking:</strong> The ability of the OS to run several programs at once.</li><br>
+        <li><strong>File Management:</strong> The process of creating, saving, or deleting files.</li><br>
+        <li><strong>Security:</strong> Protecting the computer from unauthorised access or misuse.</li><br>
+        </ol>
+
+        <h2> <strong>Summary</strong></h2>
+        <p>The <strong>Operating System</strong> is a vital <strong>system software</strong> that controls and coordinates all computer activities.</p>
+        <p>It acts as a bridge between the <strong>user</strong>, the <strong>hardware</strong>, and the <strong>application programs</strong>.</p>
+        <p>Without the OS, the computer cannot perform any meaningful work.</p>
+        <p>There are different types of operating systems such as <strong>single-user</strong>, <strong>multi-user</strong>, and <strong>real-time</strong> operating systems.</p>
+        <p>The operating system performs functions such as <strong>booting</strong>, <strong>resource management</strong>, <strong>file handling</strong>, and ensuring <strong>security</strong>.</p>
+        <p>Examples include <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, <strong>UNIX</strong>, <strong>Android</strong>, and <strong>iOS</strong>.</p>
+
+        <hr>
+        <h2> <strong>Evaluation Questions</strong></h2>
+        <ol>
+        <li>What is an operating system?</li><br>
+        <li>Mention five examples of operating systems.</li><br>
+        <li>State three types of operating systems and give examples of each.</li><br>
+        <li>List five functions of an operating system.</li><br>
+        <li>Explain the difference between GUI and CLI.</li><br>
+        <li>What happens during the booting process?</li><br>
+        <li>Why is the operating system considered the backbone of the computer?</li><br>
+        <li>What is the role of a device driver?</li><br>
+        <li>State two reasons why the OS is important.</li><br>
+        <li>Define multitasking as used in an operating system.</li><br>
+        </ol>
+
+
+        
+
        
        
 
@@ -91,7 +205,7 @@
        
        
         
-        
+        <br><br><br>
        </div>
            
     </div>
@@ -109,37 +223,30 @@
         <ol class="explanation">
             <a href="../../../../topics/first-term/csc/j2/1.html" class="iam">
                 <br>
-                <li > COMPUTER SOFTWARE          </li>
+                <li > COMPUTER SOFTWARE</li>
+            </a>
+            <br>
+            
+            
+            <a href="../../../../topics/first-term/csc/j2/2.html" class="iam">
+
+                <li > OPERATING SYSTEM   </li>
+            </a>
+            <br>
             </a>
             <br>
             
             
             <a href="../../../../topics/first-term/csc/j2/3.html" class="iam">
-
-                <li > FUNCTION,RESOURCE ALLOCATION,MONITORING,AND UTILITIES OF OPERATING SYSTEM      </li>
+                <li >COMPUTER UNIT OF STORAGE AND THEIR VALUES </li>
             </a>
             <br>
-            </a>
-            <br>
-            
             
             <a href="../../../../topics/first-term/csc/j2/4.html" class="iam">
-                <li > COMPUTER UNIT OF STORAGE AND THEIR VALUES </li>
-            </a>
-            <br>
-            
-            <a href="../../../../topics/first-term/csc/j2/5.html" class="iam">
 
-                <li > CONVERSION OF ONE UNIT TO ANOTHER    </li>
+                <li > COMPUTER PROGRAMING LANGUAGE</li>
             </a>
-            <br>
             
-            <a href="../../../../topics/first-term/csc/j2/6" class="iam">
-                
-                <li > COMPUTER PROGRAMING LANGUAGE   </li>
-            </a>
-            <br>
-            </a>
             
 
            
