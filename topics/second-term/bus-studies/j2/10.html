@@ -4,197 +4,742 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>The reception office</title>
-    <link rel="icon" href="../../../../images/logo.png" type="image/png">
-
+    <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
-   
+    
 </head>
-<body>
-    <div class="cover-note">
-    <header>
-        <div class="container">    
-        <div>
-           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
-           <div class="nav-toggle" id="navtogle">
-               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+              <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
                <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
-           </div>
-           
        </div>
-              <nav>
-                  <ul class="me">
-                      <li><a href="../../../../index.html">Home</a></li>
-                      <li><a href="../../../../pages/about.html">About</a></li>
-                      <li><a href="../../../../pages/forum.html">Forum</a></li>
-                      <li><a href="../../../../pages/contact.html">Contact</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </header>
-    </div>
-     <header class="header-back">
-        <a href="../../../../terms/second-term/b.studies-second/second-term-js2-b.studies.html">
-        <div class="arrow-back">
-            <div>Go Back</div>
-        </div>
-        </a>
-     </header>
-     <div class="note-flex">
-        <div class="note1">
-   
-   
-        <div class="cover-note">
-       <div class="note-container"> 
        
-       
-        
-        
-       </div>
-           
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
     </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/second-term/b.studies-second/second-term-js2-b.studies.html">
+    <div class="arrow-back">
         
-            
-               
-                
-           
-
-             
-</div>
-     
-<div class="note2">
- <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
  <br><br>
- <ol class="explanation">
-     <a href="../../../../topics/second-term/bus-studies/j2/2.html" class="iam">
-         <br>
-         <li >  BUSINESS OPPORTUNITIES  </li>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/second-term/bus-studies/j2/3.html" class="iam">
-
-         <li > CONSUMER RIGHT </li>
-     </a>
-     <br>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/second-term/bus-studies/j2/4.html" class="iam">
-         <li >  RESPONSIBILITIES OF A CONSUMER</li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/second-term/bus-studies/j2/5.html" class="iam">
-
-         <li >SHOPPING TIPS   </li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/second-term/bus-studies/j2/6.html" class="iam">
-         
-         <li > IMPULSE BUYING  </li>
-     </a>
-     <br>
-     </a>
-     <a href="../../../../topics/second-term/bus-studies/j2/7.html" class="iam">
-        <br>
-        <li >BOOK-KEEPING ETHICS </li>
-    </a>
-    <br>
-    
-    
-    <a href="../../../../topics/second-term/bus-studies/j2/8.html" class="iam">
-        <li > DUE PROCESS </li>
-    </a>
-    <br>
-    </a>
-    <br>
-    
-    
-    <a href="../../../../topics/second-term/bus-studies/j2/9.html" class="iam">
-        <li > LEDGER ENTRIES  </li>
-    </a>
+<body class="quiz-Class">
    
-     
-     
-     
- </ol>
- <br><br><br>
- <div class="form-container">
-     <h2 class="tell-us">TELL US YOUR VIEWS</h2>
-     <br>
-     <input type="text" id="name" placeholder="Your Name">
-     <br>
-     <input type="text" id="title" placeholder="Title ">
-     <br>
-     <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-     <br>
-     <button onclick="submitComplaint()">Submit</button>
- </div>
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
 
- <div class="complaints-container">
-     <h3> VIEWS </h3>
-     <br>
-     <div id="complaints-list"></div>
-     <br>
-     <br>
- </div>
- 
- 
-</div>
-</div>       
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
 
-         
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+  { question: " Which of the following best describes an entrepreneur?", 
+    a: "A person who works for the government", 
+    b: "A person who takes risks to start and manage a business", 
+    c: "A person who keeps financial records", 
+    correct: "b" },
+
+  { question: " One of the major characteristics of an entrepreneur is ________.", 
+    a: "dependence on others for ideas", 
+    b: "creativity and innovation", 
+    c: "fear of failure", 
+    correct: "b" },
+
+  { question: " A local business opportunity can best be described as ________.", 
+    a: "an opportunity available in foreign countries", 
+    b: "an opportunity that exists within one’s immediate environment", 
+    c: "an opportunity that requires import and export", 
+    correct: "b" },
+
+  { question: " The ability to identify a gap in the market and fill it refers to ________.", 
+    a: "management", 
+    b: "entrepreneurship", 
+    c: "production", 
+    correct: "b" },
+
+  { question: " The person who bears the risk of business failure is the ________.", 
+    a: "shareholder", 
+    b: "entrepreneur", 
+    c: "banker", 
+    correct: "b" },
+
+  { question: " A national business opportunity is one that ________.", 
+    a: "is limited to local traders only", 
+    b: "covers the entire country", 
+    c: "operates only in villages", 
+    correct: "b" },
+
+  { question: " An international business opportunity involves ________.", 
+    a: "trading within a local government area", 
+    b: "trading between two or more countries", 
+    c: "business owned by government", 
+    correct: "b" },
+
+  { question: " Consumer education mainly helps people to ________.", 
+    a: "make wise buying decisions", 
+    b: "spend money carelessly", 
+    c: "avoid paying tax", 
+    correct: "a" },
+
+  { question: " The origin of consumerism is mainly linked to ________.", 
+    a: "the exploitation of consumers by producers", 
+    b: "the rise of local trade unions", 
+    c: "government interest in profits", 
+    correct: "a" },
+
+  { question: " One of the major aims of consumer education is to ________.", 
+    a: "protect consumer rights", 
+    b: "increase sales for producers", 
+    c: "discourage competition", 
+    correct: "a" },
+
+  { question: " A consumer who checks product labels before buying is practicing ________.", 
+    a: "wise shopping", 
+    b: "impulse buying", 
+    c: "ignorant purchase", 
+    correct: "a" },
+
+  { question: " The first step in making a rational buying decision is to ________.", 
+    a: "identify your needs and wants", 
+    b: "buy the cheapest item", 
+    c: "ask friends what to buy", 
+    correct: "a" },
+
+  { question: " Impulse buying can best be avoided by ________.", 
+    a: "making a shopping list and sticking to it", 
+    b: "carrying extra cash", 
+    c: "buying attractive items only", 
+    correct: "a" },
+
+  { question: " When a consumer pays attention to quality and price before purchase, it shows ________.", 
+    a: "good consumer behavior", 
+    b: "reckless buying", 
+    c: "wasteful spending", 
+    correct: "a" },
+
+  { question: " The primary purpose of bookkeeping is to ________.", 
+    a: "advertise the business", 
+    b: "reduce cost of goods", 
+    c: "keep accurate financial records", 
+    correct: "c" },
+
+  { question: " The book of final entry is known as the ________.", 
+    a: "journal", 
+    b: "cash book", 
+    c: "ledger", 
+    correct: "c" },
+
+  { question: " The principle of double entry means that ________.", 
+    a: "each transaction is recorded once", 
+    b: "only cash transactions are recorded", 
+    c: "each transaction affects two accounts", 
+    correct: "c" },
+
+  { question: " The act of recording transactions from the journal into the ledger is called ________.", 
+    a: "balancing", 
+    b: "trial balancing", 
+    c: "posting", 
+    correct: "c" },
+
+  { question: " The ethical value of honesty in bookkeeping helps to ________.", 
+    a: "hide financial mistakes", 
+    b: "reduce transparency", 
+    c: "build trust in financial records", 
+    correct: "c" },
+
+  { question: " Due process in business transactions ensures ________.", 
+    a: "speedy but unfair decisions", 
+    b: "favoritism in contract awards", 
+    c: "transparency and accountability", 
+    correct: "c" },
+    
+  { question: " Which of the following is NOT a feature of a ledger?", 
+    a: "It records transactions once", 
+    b: "It contains debit and credit sides", 
+    c: "It is used to classify accounts", 
+    correct: "b" },
+
+  { question: " In the rule of double entry, when an asset increases, it is ________.", 
+    a: "credited", 
+    b: "debited", 
+    c: "ignored", 
+    correct: "b" },
+
+  { question: " The purchases ledger is also known as the ________.", 
+    a: "debtors’ ledger", 
+    b: "creditors’ ledger", 
+    c: "cash ledger", 
+    correct: "b" },
+
+  { question: " Which of the following accounts is recorded in the general ledger?", 
+    a: "Mr. Tunde’s account", 
+    b: "Wages account", 
+    c: "Trade debtors account", 
+    correct: "b" },
+
+  { question: " Posting a transaction to the wrong account is known as a ________.", 
+    a: "commission error", 
+    b: "posting error", 
+    c: "transposition error", 
+    correct: "b" },
+
+  { question: " In bookkeeping, the left-hand side of an account is the ________.", 
+    a: "credit side", 
+    b: "debit side", 
+    c: "balance side", 
+    correct: "b" },
+
+  { question: " The ledger that records all credit customers is called the ________.", 
+    a: "general ledger", 
+    b: "sales ledger", 
+    c: "purchases ledger", 
+    correct: "b" },
+
+  { question: " One of the main objectives of due process is to ________.", 
+    a: "ensure fairness and accountability", 
+    b: "speed up government contracts", 
+    c: "encourage favoritism in tenders", 
+    correct: "a" },
+
+  { question: " The principle of fairness in due process ensures that ________.", 
+    a: "every qualified person has equal opportunity", 
+    b: "contracts are given secretly", 
+    c: "only one bidder participates", 
+    correct: "a" },
+
+  { question: " Which of these is the first step in the due process procedure?", 
+    a: "Needs assessment", 
+    b: "Evaluation of bids", 
+    c: "Implementation", 
+    correct: "a" },
+
+  { question: " In due process, efficiency means ________.", 
+    a: "using resources effectively to achieve good results", 
+    b: "spending more money to show progress", 
+    c: "reducing workers to save money", 
+    correct: "a" },
+
+  { question: " One of the benefits of following due process is ________.", 
+    a: "promoting good governance", 
+    b: "reducing transparency", 
+    c: "encouraging corruption", 
+    correct: "a" },
+
+  { question: " Which of the following best explains 'value for money'?", 
+    a: "Getting the best result for the amount spent", 
+    b: "Spending all the money allocated", 
+    c: "Reducing the cost of a project", 
+    correct: "a" },
+
+  { question: " Ignoring due process in business leads to ________.", 
+    a: "corruption and mismanagement", 
+    b: "increased productivity", 
+    c: "public confidence", 
+    correct: "a" },
+
+  { question: " The act of spreading risk among many people is the work of ________.", 
+    a: "banking", 
+    b: "auditing", 
+    c: "insurance", 
+    correct: "c" },
+
+  { question: " The amount paid by the insured to the insurer is called the ________.", 
+    a: "policy", 
+    b: "claim", 
+    c: "premium", 
+    correct: "c" },
+
+  { question: " The principle that prevents an insured from making profit from a loss is ________.", 
+    a: "subrogation", 
+    b: "contribution", 
+    c: "indemnity", 
+    correct: "c" },
+
+  { question: " A fire that damages a factory would be covered under ________.", 
+    a: "marine insurance", 
+    b: "life assurance", 
+    c: "fire insurance", 
+    correct: "c" },
+
+  { question: " The insurance company that agrees to pay compensation is called the ________.", 
+    a: "insured", 
+    b: "policyholder", 
+    c: "insurer", 
+    correct: "c" },
+
+  { question: " The right of an insurer to recover from a third party after paying a claim is called ________.", 
+    a: "utmost good faith", 
+    b: "proximate cause", 
+    c: "subrogation", 
+    correct: "c" },
+    
+  { question: " Which of the following best defines consumerism?", 
+    a: "The act of buying and selling goods", 
+    b: "The movement that protects the rights and interests of consumers", 
+    c: "A marketing technique used to attract buyers", 
+    correct: "b" },
+
+  { question: " The origin of consumerism began when ________.", 
+    a: "governments created business laws", 
+    b: "consumers started to suffer from fake goods and dishonest sellers", 
+    c: "companies began to export goods abroad", 
+    correct: "b" },
+
+  { question: " Which of these leaders identified the four basic consumer rights in 1962?", 
+    a: "Abraham Lincoln", 
+    b: "John F. Kennedy", 
+    c: "Winston Churchill", 
+    correct: "b" },
+
+  { question: " Which Nigerian agency replaced the Consumer Protection Council (CPC)?", 
+    a: "Standard Organization of Nigeria (SON)", 
+    b: "Federal Competition and Consumer Protection Commission (FCCPC)", 
+    c: "National Agency for Food and Drug Administration (NAFDAC)", 
+    correct: "b" },
+
+  { question: " One major cause of consumerism is ________.", 
+    a: "high demand for goods", 
+    b: "production of fake and substandard products", 
+    c: "increase in import duties", 
+    correct: "b" },
+
+  { question: " Consumerism helps to ensure ________.", 
+    a: "that producers make maximum profit", 
+    b: "that consumers are treated fairly in the market", 
+    c: "that government controls all businesses", 
+    correct: "b" },
+
+  { question: " Which of the following is NOT a consumer protection agency in Nigeria?", 
+    a: "NERC", 
+    b: "NDLEA", 
+    c: "SON", 
+    correct: "b" },
+
+  { question: " The right to be heard means that consumers can ________.", 
+    a: "complain and receive attention when treated unfairly", 
+    b: "speak at government meetings only", 
+    c: "fix the prices of goods themselves", 
+    correct: "a" },
+
+  { question: " The right to safety ensures that ________.", 
+    a: "products sold are safe and not harmful", 
+    b: "consumers are forced to buy Nigerian goods", 
+    c: "only imported goods are available", 
+    correct: "a" },
+
+  { question: " Consumer education helps people to ________.", 
+    a: "understand their rights and make wise choices", 
+    b: "increase prices of goods in the market", 
+    c: "produce more goods for sale", 
+    correct: "a" },
+
+  { question: " Which of these led to the growth of consumerism in Nigeria?", 
+    a: "increase in fake imported goods", 
+    b: "creation of new political parties", 
+    c: "government’s ban on foreign products", 
+    correct: "a" },
+
+  { question: " The main goal of consumer protection agencies is to ________.", 
+    a: "safeguard the rights of buyers and promote fair trade", 
+    b: "support sellers against competition", 
+    c: "fix prices of commodities", 
+    correct: "a" },
+
+  { question: " Which of the following is a cause of the consumer movement?", 
+    a: "dishonest advertisements and overpricing", 
+    b: "increase in savings habit", 
+    c: "availability of enough resources", 
+    correct: "a" },
+
+  { question: " One major importance of consumerism is that it ________.", 
+    a: "protects consumers from exploitation", 
+    b: "increases the number of producers", 
+    c: "eliminates all competition", 
+    correct: "a" },
+
+  { question: " Buying goods suddenly without planning is known as ________.", 
+    a: "planned shopping", 
+    b: "bargain buying", 
+    c: "impulse buying", 
+    correct: "c" },
+
+  { question: " A major cause of impulse buying is ________.", 
+    a: "shortage of goods", 
+    b: "strict budgeting", 
+    c: "lack of self-control", 
+    correct: "c" },
+
+  { question: " One of the effects of impulse buying is ________.", 
+    a: "proper record keeping", 
+    b: "increase in savings", 
+    c: "waste of money and regret", 
+    correct: "c" },
+
+  { question: " Which of the following can help to avoid impulse buying?", 
+    a: "shopping without a list", 
+    b: "following friends to the market", 
+    c: "making and sticking to a shopping list", 
+    correct: "c" },
+
+  { question: " Impulse buying can lead to ________.", 
+    a: "greater financial discipline", 
+    b: "faster decision-making", 
+    c: "poor financial planning", 
+    correct: "c" },
+
+  { question: " Which of the following is a good reason to control impulse buying?", 
+    a: "to impress others", 
+    b: "to increase unnecessary expenses", 
+    c: "to save money and meet important needs", 
+    correct: "c" },
+
+  { question: " Which of the following best defines insurance?", 
+    a: "A system for saving money for the future", 
+    b: "A contract that provides financial protection against loss or damage", 
+    c: "An agreement for borrowing and lending money", 
+    correct: "b" },
+
+  { question: " The person who buys insurance is known as the ________.", 
+    a: "broker", 
+    b: "insured or policyholder", 
+    c: "underwriter", 
+    correct: "b" },
+
+  { question: " The principle of indemnity means that the insured ________.", 
+    a: "should receive more than the loss suffered", 
+    b: "should be restored to the same financial position as before the loss", 
+    c: "cannot receive any compensation", 
+    correct: "b" },
+
+  { question: " Which of the following insurance types covers damage caused by fire?", 
+    a: "Life assurance", 
+    b: "Fire insurance", 
+    c: "Accident insurance", 
+    correct: "b" },
+
+  { question: " The principle that requires the insured to tell the truth is ________.", 
+    a: "indemnity", 
+    b: "utmost good faith", 
+    c: "proximate cause", 
+    correct: "b" },
+
+  { question: " The agent who represents the insurance company to the public is called ________.", 
+    a: "the insured", 
+    b: "the insurance agent", 
+    c: "the broker", 
+    correct: "b" },
+
+  { question: " Which of the following is NOT an insurable risk?", 
+    a: "Fire accident", 
+    b: "Gambling loss", 
+    c: "Theft of goods", 
+    correct: "b" },
+
+  { question: " Life assurance is different from general insurance because ________.", 
+    a: "it covers certainty of death and not just risk", 
+    b: "it expires after one year only", 
+    c: "it does not involve any premium", 
+    correct: "a" },
+
+  { question: " The premium in insurance refers to ________.", 
+    a: "the amount of money paid by the insured to the insurer", 
+    b: "the compensation received after loss", 
+    c: "the amount borrowed from a bank", 
+    correct: "a" },
+
+  { question: " The main importance of insurance to business is that it ________.", 
+    a: "reduces the financial burden of unexpected losses", 
+    b: "increases the risk of operating a business", 
+    c: "prevents all types of business losses", 
+    correct: "a" }
+
+
+
+
+
+];
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "click here to See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer </span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
     
 
-
-<div class="lower-side">
- 
-
- <br><br>
-<footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
-
-<br>
-<div class="social">
-<a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
- <img src="../../../../images/facebook.png" alt="">
- <div class="info">Follow us on facebook</div>
-</a>
-<a href="https://wa.me/2348100410742" class="whatsapp"> 
- <img src="../../../../images/whatsapp.png" alt="">
- <div class="info">Reach us on whatsapp </div>
-</a>
-<a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
- <img src="../../../../images/gmail.png" alt="">
- <div class="info">Email Us </div>
-</a>
-</div>
-
-</div>
-
-
-
+    
     <script src="../../../../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
-
-        // Frame reload
-
-       
-       
-       
-
-     </script>
-    
-    
 </body>
 </html>

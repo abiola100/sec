@@ -2,191 +2,419 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>TRIAL BALANCE </title>
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
-    <link rel="icon" href="../../../../images/logo.png" type="image/png">
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
     
 </head>
-<body>
-    <div class="cover-note">
-    <header>
-        <div class="container">    
-        <div>
-           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
-           <div class="nav-toggle" id="navtogle">
-               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
-           </div>
-           
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
-              <nav>
-                  <ul class="me">
-                      <li><a href="../../../../index.html">Home</a></li>
-                      <li><a href="../../../../pages/about.html">About</a></li>
-                      <li><a href="../../../../pages/forum.html">Forum</a></li>
-                      <li><a href="../../../../pages/contact.html">Contact</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </header>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
     </div>
-     <header class="header-back">
-        <a href="../../../../terms/third-term/b.studies-third/third-term-js3-b.studies.html">
-        <div class="arrow-back">
-            <div class="back-image"><img src="../../../../images/backward.png" alt=""></div>
-            <div>Go Back</div>
-        </div>
-        </a>
-     </header>
-     <div class="note-flex">
-        <div class="note1">
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/third-term/b.studies-third/third-term-js3-b.studies.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
    
-        <div class="cover-note">
-       <div class="note-container">
-        <div class="title0"><b>TRIAL BALANCE </b></div>
-        <br><br>
-        
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+
+  const quizData = [
+  // Trial Balance
+  { question: "Which of the following is the main purpose of preparing a trial balance?", a: "To calculate net profit", b: "To check the arithmetical accuracy of ledger accounts", c: "To list only credit balances", correct: "b" },
+  { question: "When preparing a trial balance, debit balances are usually placed on:", a: "The right side", b: "The left side", c: "Either side", correct: "b" },
+  { question: "Which of these errors cannot be detected by a trial balance?", a: "Error of omission", b: "Error of commission in the same ledger account", c: "Error of posting to wrong ledger", correct: "b" },
+  { question: "The trial balance is extracted from which of the following?", a: "Journal only", b: "Ledger accounts", c: "Balance Sheet", correct: "b" },
+  { question: "A trial balance will balance if which of the following is true?", a: "All transactions are recorded correctly", b: "Total debit equals total credit", c: "All errors are corrected", correct: "b" },
+  { question: "Which form of trial balance shows debit and credit balances in separate columns?", a: "T-form", b: "Vertical form", c: "Account form", correct: "b" },
+  { question: "The total of debit balances in a trial balance is ₦50,000 and credit balances ₦50,000. What does this indicate?", a: "There are no errors", b: "The ledger is arithmetically correct", c: "All transactions are recorded", correct: "b" },
+
+  // Trading, Profit & Loss Account
+  { question: "Gross profit is calculated as:", a: "Net Sales + Expenses", b: "Cost of Goods Sold − Net Sales", c: "Net Sales − Cost of Goods Sold", correct: "c" },
+  { question: "Which of the following is a credit item in a Trading Account?", a: "Purchases", b: "Carriage Inwards", c: "Sales", correct: "c" },
+  { question: "Which of these appears on the debit side of a Profit and Loss Account?", a: "Gross Profit", b: "Commission Received", c: "Salaries and Wages", correct: "c" },
+  { question: "Net Profit is:", a: "Gross Profit − Expenses + Other Incomes", b: "Gross Profit − Cost of Goods Sold", c: "Total Sales − Purchases", correct: "c" },
+  { question: "If indirect incomes exceed indirect expenses, the result is:", a: "Net Loss", b: "Gross Loss", c: "Net Profit", correct: "c" },
+  { question: "Which of these rules is correct when constructing a Profit and Loss Account?", a: "Record gross profit on debit side", b: "Record all direct expenses on credit side", c: "Record all indirect expenses on debit side", correct: "c" },
+  { question: "Gross loss occurs when:", a: "Net sales < Cost of goods sold", b: "Gross profit > Expenses", c: "Sales = Purchases", correct: "c" },
+
+  // Balance Sheet
+  { question: "Assets = Liabilities + Capital is called:", a: "Accounting equation", b: "Profit formula", c: "Ledger balance", correct: "a" },
+  { question: "Cash and debtors are classified as:", a: "Fixed assets", b: "Liabilities", c: "Current assets", correct: "a" },
+  { question: "Trade creditors appear under:", a: "Current liabilities", b: "Fixed assets", c: "Capital", correct: "a" },
+  { question: "Capital of a business is calculated as:", a: "Assets − Liabilities", b: "Assets + Liabilities", c: "Sales − Expenses", correct: "a" },
+  
+  // Business Letters
+  { question: "Which part of a business letter contains the sender’s address and date?", a: "Heading", b: "Body", c: "Closing", correct: "a" },
+  { question: "Which of these is NOT a part of a business letter?", a: "Opening", b: "Trading Account", c: "Closing", correct: "a" },
+  { question: "The main content of a business letter is found in:", a: "Body", b: "Heading", c: "Layout", correct: "a" },
+  { question: "A polite ending in a business letter is called:", a: "Closing", b: "Opening", c: "Subject", correct: "a" },
+  { question: "Proper spacing and order of a business letter is called:", a: "Layout", b: "Body", c: "Heading", correct: "a" },
+
+  // Simple Tabulation
+  { question: "In a simple table, information is arranged in:", a: "Rows and columns", b: "Only rows", c: "Only columns", correct: "a" },
+  { question: "The title of a table shows:", a: "What the table is about", b: "Only totals", c: "Column headings", correct: "a" },
+
+  // Trial Balance
+  { question: "Which of the following is necessary before preparing a trial balance?", a: "Calculating net profit", b: "Posting all journal entries to ledger accounts", c: "Preparing balance sheet", correct: "b" },
+  { question: "If debit total ≠ credit total in a trial balance, it indicates:", a: "Business made profit", b: "There is an error in ledger posting", c: "Balance sheet is correct", correct: "b" },
+  { question: "Which of the following can be identified from a trial balance?", a: "Net profit", b: "Balances of ledger accounts", c: "Opening stock", correct: "b" },
+  { question: "A trial balance helps to prepare which of the following?", a: "Income tax report", b: "Final accounts", c: "Daily cash book", correct: "b" },
+  { question: "The trial balance may not detect which error?", a: "Error of omission", b: "Compensating errors", c: "Posting errors in same amount to different accounts", correct: "b" },
+
+  // Trading, Profit & Loss Account
+  { question: "Net loss occurs when:", a: "All incomes are greater than expenses", b: "Gross profit > Expenses", c: "Expenses + Indirect expenses > Gross Profit + Incomes", correct: "c" },
+  { question: "Which of the following appears on the debit side of Trading Account?", a: "Sales", b: "Gross Profit", c: "Purchases and Opening Stock", correct: "c" },
+  { question: "Commission received is classified as:", a: "Indirect income", b: "Direct income", c: "Direct expense", correct: "c" },
+  { question: "A trading account is prepared to determine:", a: "Net profit", b: "Gross profit or loss", c: "Balance sheet", correct: "c" },
+  { question: "Which formula is used to find net profit?", a: "Gross Profit + Other Incomes − All Expenses", b: "Sales − Purchases", c: "Gross Profit − Direct Expenses", correct: "c" },
+
+  // Balance Sheet
+  { question: "Fixed assets in a balance sheet include:", a: "Cash and Bank", b: "Debtors", c: "Buildings and Machinery", correct: "a" },
+  { question: "Current liabilities include:", a: "Bank loan for 5 years", b: "Trade creditors", c: "Land", correct: "a" },
+  { question: "Owner's equity in balance sheet is:", a: "Total assets − Total liabilities", b: "Total liabilities − Assets", c: "Net income − Expenses", correct: "a" },
+  { question: "A horizontal balance sheet is also called:", a: "Vertical form", b: "Ledger form", c: "T-form", correct: "a" },
+  { question: "Which of the following is a current asset?", a: "Land", b: "Machinery", c: "Stock", correct: "a" },
+
+  // Business Letters
+  { question: "Which part of a business letter shows the purpose of writing?", a: "Body", b: "Heading", c: "Closing", correct: "a" },
+  { question: "Which part comes immediately after the heading in a business letter?", a: "Receiver’s address", b: "Signature", c: "Body", correct: "a" },
+  { question: "Which of the following is necessary for good layout in a business letter?", a: "Proper spacing and alignment", b: "Gross profit calculation", c: "Trial balance preparation", correct: "a" },
+  { question: "Which part confirms receipt or acceptance in a business letter?", a: "Acknowledgment section", b: "Body", c: "Heading", correct: "a" },
+
+  // Simple Tabulation
+  { question: "A table that summarizes information for easy reading is called:", a: "Ledger", b: "Journal", c: "Simple tabulation", correct: "a" },
+  { question: "Row headings in a table:", a: "List categories horizontally", b: "Summarize totals only", c: "List items or categories across horizontal line", correct: "a" },
+  // Trial Balance
+  { question: "Which of the following must be done before preparing a trial balance?", a: "Calculating gross profit", b: "Posting all ledger balances", c: "Preparing Profit and Loss Account", correct: "b" },
+  { question: "Which of these indicates a trial balance is arithmetically correct?", a: "Net profit = 0", b: "Total debits = Total credits", c: "Total assets = Capital", correct: "b" },
+  { question: "Trial balance is usually prepared at the end of:", a: "Every day", b: "Accounting period", c: "Weekly report only", correct: "b" },
+  { question: "Which of the following is not shown in a trial balance?", a: "Debtors", b: "Gross Profit", c: "Cash", correct: "b" },
+  { question: "Which form of trial balance lists accounts horizontally with debits on left and credits on right?", a: "Vertical form", b: "T-form", c: "Ledger form", correct: "b" },
+  { question: "Compensating errors in a trial balance:", a: "Will always show total imbalance", b: "May allow the trial balance to balance", c: "Increase net profit", correct: "b" },
+  { question: "Which of the following is a primary purpose of a trial balance?", a: "To record cash transactions", b: "To detect arithmetical errors", c: "To prepare bank reconciliation", correct: "b" },
+
+  // Trading, Profit & Loss Account
+  { question: "Which of the following is a debit item in Trading Account?", a: "Sales", b: "Returns Inwards", c: "Purchases", correct: "c" },
+  { question: "Which is shown on the credit side of Trading Account?", a: "Closing Stock", b: "Opening Stock", c: "Net Sales", correct: "c" },
+  { question: "Gross Profit is calculated using:", a: "Net Profit + Expenses", b: "Sales − Purchases", c: "Net Sales − Cost of Goods Sold", correct: "c" },
+  { question: "Which of these is an indirect expense in Profit and Loss Account?", a: "Opening Stock", b: "Purchases", c: "Rent and Salaries", correct: "c" },
+  { question: "If indirect income exceeds indirect expense, the business has:", a: "Net Loss", b: "Gross Loss", c: "Net Profit", correct: "c" },
+  { question: "Rules for constructing a simple Profit and Loss Account include:", a: "Bringing gross profit to debit side", b: "Recording direct expenses on credit side", c: "Recording indirect expenses on debit side", correct: "c" },
+  { question: "Which of the following shows overall trading performance?", a: "Profit and Loss Account", b: "Balance Sheet", c: "Trading Account", correct: "c" },
+
+  // Balance Sheet
+  { question: "Assets that will be used for many years are called:", a: "Current Assets", b: "Liquid Assets", c: "Fixed Assets", correct: "b" },
+  { question: "Capital in the balance sheet is calculated as:", a: "Assets − Liabilities", b: "Liabilities − Assets", c: "Total Sales − Expenses", correct: "b" },
+  { question: "Current liabilities are:", a: "Obligations due within one year", b: "Cash in hand", c: "Buildings and Machinery", correct: "b" },
+  { question: "Balance sheet is prepared after:", a: "Trading Account only", b: "Trial Balance and Profit & Loss Account", c: "Journal entry", correct: "b" },
+  { question: "Horizontal balance sheet is also known as:", a: "Ledger form", b: "Vertical form", c: "T-form", correct: "b" },
+  { question: "Owner’s equity is:", a: "Assets − Liabilities", b: "Assets + Liabilities", c: "Gross Profit − Expenses", correct: "b" },
+
+  // Business Letters
+  { question: "The part of business letter that gives a polite ending is:", a: "Closing", b: "Heading", c: "Opening", correct: "a" },
+  { question: "Which part of a business letter includes the main content?", a: "Body", b: "Heading", c: "Closing", correct: "a" },
+  { question: "Proper layout in business letter ensures:", a: "Neatness and clarity", b: "Gross profit", c: "Balance sheet equality", correct: "a" },
+  { question: "The sender's address is found in:", a: "Heading", b: "Closing", c: "Body", correct: "a" },
 
 
 
 
-        <br><br><br>
-       
-       
-        
-        
-       </div>
+
+  ];
+
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;"> Right 👀✅!! well done</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">Wrong 👁️❌- do better</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
            
-    </div>
-        
-            
-               
-                
            
-
-                
            
-             
-</div>
-     
-<div class="note2">
- <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
- <br><br>
- <ol class="explanation">
-     <a href="../../../../topics/third-term/bus-studies/j3/2.html" class="iam">
-         <br>
-         <li > FORMS OF TRIAL BALANCE  </li>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/third-term/bus-studies/j3/3.html" class="iam">
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
 
-         <li > TRADING PROFIT AND LOSS ACCOUNT  </li>
-     </a>
-     <br>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/third-term/bus-studies/j3/4.html" class="iam">
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
 
-         <li >  BALANCE SHEET </li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/third-term/bus-studies/j3/5.html" class="iam">
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
 
-         <li > BUSINESS LETTERS  </li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/second-term/bus-studies/j3/6.html" class="iam">
-         
-         <li > SIMPLE TABULATION   </li>
-     </a>
-     <br>
-     </a>
-     
- 
- </ol>
- <br><br><br>
- <div class="form-container">
-     <h2 class="tell-us">TELL US YOUR VIEWS</h2>
-     <br>
-     <input type="text" id="name" placeholder="Your Name">
-     <br>
-     <input type="text" id="title" placeholder="Title ">
-     <br>
-     <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-     <br>
-     <button onclick="submitComplaint()">Submit</button>
- </div>
-
- <div class="complaints-container">
-     <h3> VIEWS </h3>
-     <br>
-     <div id="complaints-list"></div>
-     <br>
-     <br>
- </div>
- 
- 
-</div>
-</div>       
-
-         
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
     
 
-
-<div class="lower-side">
- 
-
- <br><br>
-<footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
-
-<br>
-<div class="social">
-<a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
- <img src="../../../../images/facebook.png" alt="">
- <div class="info">Follow us on facebook</div>
-</a>
-<a href="https://wa.me/2348100410742" class="whatsapp"> 
- <img src="../../../../images/whatsapp.png" alt="">
- <div class="info">Reach us on whatsapp </div>
-</a>
-<a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
- <img src="../../../../images/gmail.png" alt="">
- <div class="info">Email Us </div>
-</a>
-</div>
-
-</div>
-
-
-
+    
     <script src="../../../../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
-
-        // Frame reload
-
-       
-       
-       
-
-     </script>
-    
-    
 </body>
 </html>

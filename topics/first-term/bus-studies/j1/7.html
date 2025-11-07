@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -48,7 +48,7 @@
 <body class="quiz-Class">
    
   <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
-  <div id="timer">Time left: 10:00</div>
+  <div id="timer">Time left: 30:00</div>
   <div id="quiz"></div>
 
   <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -73,27 +73,82 @@
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
      const quizData = [
-        { question: "What is the primary focus of business studies?", a: "Study of money only", b: "Study of business activities and management", c: "Study of social events", correct: "b" },
-        { question: "Which of the following best defines an office?", a: "Place where goods are sold", b: "Place where administrative work is carried out", c: "Place where manufacturing occurs", correct: "b" },
-        { question: "Clerical staff are mainly responsible for:", a: "Handling office records and documents", b: "Supervising production workers", c: "Driving company vehicles", correct: "a" },
-        { question: "A good attribute of clerical staff is:", a: "Honesty and accuracy", b: "Speed without checking work", c: "Creativity in arts", correct: "a" },
-        { question: "Punctuality means:", a: "Arriving exactly on time", b: "Completing tasks fast", c: "Attending work sometimes", correct: "a" },
-        { question: "Regularity at work involves:", a: "Consistent attendance and reliability", b: "Performing tasks occasionally", c: "Coming late but working hard", correct: "a" },
-        { question: "Which reward is commonly associated with devotion to duty?", a: "Promotion or recognition", b: "Suspension", c: "Salary cut", correct: "a" },
-        { question: "Which of these is a key department in an organization?", a: "Accounting", b: "Housekeeping", c: "Gym activities", correct: "a" },
-        { question: "The main role of the purchasing department is to:", a: "Procure materials for production", b: "Sell finished goods", c: "Provide transport services", correct: "a" },
-        { question: "Commerce can be defined as:", a: "Activities that facilitate the movement of goods and services to consumers", b: "Manufacturing goods only", c: "Farming activities", correct: "a" },
-        { question: "Which of the following is considered an aid to trade?", a: "Transport", b: "Retail selling", c: "Farming", correct: "a" },
-        { question: "Home trade includes:", a: "Wholesale and Retail trade within the country", b: "Importing goods only", c: "Exporting goods only", correct: "a" },
-        { question: "Foreign trade mainly involves:", a: "Importing and Exporting goods", b: "Selling goods to local shops", c: "Producing goods for local markets", correct: "a" },
-        { question: "Production can be defined as:", a: "Creating goods and services to meet human wants", b: "Selling goods to customers", c: "Distributing goods to retailers", correct: "a" },
-        { question: "Which is an example of primary production?", a: "Mining", b: "Furniture manufacturing", c: "Transport services", correct: "a" },
-        { question: "Secondary production mainly involves:", a: "Manufacturing or processing raw materials into finished goods", b: "Extracting natural resources", c: "Providing services", correct: "a" },
-        { question: "Tertiary production includes:", a: "Services that support trade and other production activities", b: "Harvesting crops", c: "Textile manufacturing", correct: "a" },
-        { question: "Which of the following is a factor of production?", a: "Capital", b: "Finished goods", c: "Consumers", correct: "a" },
-        { question: "Entrepreneurship is best described as:", a: "Organizing production, managing resources, and taking risks", b: "Supervising workers only", c: "Performing clerical tasks", correct: "a" },
-        { question: "A negative effect of production on the environment is:", a: "Pollution", b: "Job creation", c: "Skill acquisition", correct: "a" }
-    ];
+    { question: "Which of the following best defines the role of an office manager?", a: "Supervises only clerical staff", b: "Coordinates all administrative activities in the office", c: "Manages production work directly", correct: "b" },
+    { question: "The primary objective of business studies is to:", a: "Focus only on profit-making", b: "Understand business operations, management, and decision-making", c: "Study customer behavior exclusively", correct: "b" },
+    { question: "Clerical staff primarily handle:", a: "Supervising factory workers", b: "Maintaining records and organizing office documents", c: "Managing sales outlets", correct: "b" },
+    { question: "A key attribute of a responsible office worker is:", a: "Creativity in non-administrative tasks", b: "Accuracy, honesty, and attention to detail", c: "Working long hours without breaks", correct: "b" },
+    { question: "Punctuality in an office setting ensures:", a: "Faster completion of tasks only", b: "Arriving at work and meetings at the scheduled time consistently", c: "Attendance without productivity", correct: "b" },
+    { question: "Regularity at work is demonstrated by:", a: "Working faster occasionally", b: "Consistent attendance and reliability in completing duties", c: "Showing up irregularly but performing well", correct: "b" },
+    { question: "Which reward is most directly associated with devotion to duty?", a: "Salary increase only", b: "Promotion, recognition, or trust from management", c: "Extra breaks", correct: "b" },
+    { question: "A key department in most businesses is:", a: "Housekeeping", b: "Customer recreation", c: "Accounting and finance management", correct: "c" },
+    { question: "The main role of a purchasing department is:", a: "Oversee customer payments", b: "Maintain staff schedules", c: "Procure materials and manage supplier relations", correct: "c" },
+    { question: "Commerce can best be described as:", a: "Manufacturing goods only", b: "Marketing and advertising goods", c: "All activities facilitating the movement of goods and services to consumers", correct: "c" },
+    { question: "An aid to trade includes:", a: "Farming", b: "Advertising alone", c: "Transport, banking, and warehousing services", correct: "c" },
+    { question: "Home trade mainly involves:", a: "Selling only in rural areas", b: "Exporting products overseas", c: "Wholesale and retail trade within the country", correct: "c" },
+    { question: "Foreign trade primarily consists of:", a: "Local shop sales", b: "Manufacturing for local consumption", c: "Importing and exporting goods across borders", correct: "c" },
+    { question: "Production can be defined as:", a: "Selling finished products", b: "Trading only", c: "Creating goods and services to satisfy human needs", correct: "c" },
+    { question: "An example of primary production is:", a: "Mining and agriculture", b: "Furniture manufacturing", c: "Retail services", correct: "a" },
+    { question: "Secondary production involves:", a: "Manufacturing finished goods from raw materials", b: "Mining resources only", c: "Providing service support to industries", correct: "a" },
+    { question: "Tertiary production is best described as:", a: "Extracting raw materials", b: "Creating finished goods", c: "Providing services that support trade and production", correct: "a" },
+    { question: "A critical factor of production is:", a: "Capital investment, labor, and land", b: "Finished products", c: "Consumers’ choices", correct: "a" },
+    { question: "Entrepreneurship primarily involves:", a: "Planning and organizing resources while taking risks", b: "Clerical work supervision only", c: "Operating machinery", correct: "a" },
+    { question: "A negative environmental impact of production is:", a: "Job creation", b: "Skill development", c: "Pollution and resource depletion", correct: "a" },
+    
+    { question: "Which of the following best describes the function of a ledger?", a: "Recording only cash transactions", b: "Maintaining a complete record of all financial transactions systematically", c: "Tracking inventory only", correct: "b" },
+    { question: "A trial balance is prepared to:", a: "Calculate profit directly", b: "Check the arithmetical accuracy of ledger postings", c: "Record only expenses", correct: "b" },
+    { question: "Identification of balance sheet items in a trial balance helps to:", a: "Prepare invoices", b: "Distinguish assets, liabilities, and equity for financial reporting", c: "Track sales transactions", correct: "b" },
+    { question: "Which of the following is a key purpose of a trading account?", a: "Record all liabilities", b: "Determine gross profit or loss from trading activities", c: "Track office expenses", correct: "b" },
+    { question: "The main goal of a profit and loss account is to:", a: "Track only sales revenue", b: "Determine net profit or net loss for a period", c: "Record only purchases", correct: "b" },
+    { question: "When preparing a simple trading account, which rule is applied?", a: "Record only assets", b: "Match cost of goods sold against sales revenue", c: "Ignore opening stock", correct: "b" },
+    { question: "In constructing a simple profit and loss account, one should:", a: "Include only expenses", b: "Include all income and expenses to calculate net profit or loss", c: "Ignore non-cash items", correct: "b" },
+    { question: "Forms of trial balance include:", a: "Cash-only trial balance", b: "Expense-only trial balance", c: "Total and balance method, and columnar form", correct: "c" },
+    { question: "Balance sheet items are classified as:", a: "Profit and loss entries only", b: "Revenue items only", c: "Assets, liabilities, and equity components", correct: "c" },
+    { question: "The primary purpose of a balance sheet is to:", a: "Track sales transactions", b: "Record all office expenses", c: "Show the financial position of a business at a specific date", correct: "c" },
+    { question: "Gross profit is calculated by:", a: "Subtracting operating expenses from net sales", b: "Adding closing stock to purchases", c: "Subtracting cost of goods sold from net sales", correct: "c" },
+    { question: "Net profit is determined by:", a: "Subtracting opening stock from purchases", b: "Adding sales revenue to gross profit", c: "Subtracting all expenses from gross profit", correct: "c" },
+    { question: "Trading account helps in:", a: "Recording cash only", b: "Calculating net profit directly", c: "Determining gross profit or loss from sales and cost of goods sold", correct: "c" },
+    { question: "Profit and loss account rules include:", a: "Ignoring revenue", b: "Recording only purchases", c: "Including all incomes and expenses to determine net result", correct: "c" },
+    { question: "Opening stock in a trading account is recorded on the:", a: "Debit side along with purchases", b: "Credit side only", c: "Separate balance sheet account", correct: "a" },
+    { question: "Closing stock appears in the:", a: "Trading account as an adjustment", b: "Cash account only", c: "Profit and loss account only", correct: "a" },
+    { question: "Expenses like rent and salaries are shown in the:", a: "Profit and loss account", b: "Trading account", c: "Balance sheet", correct: "a" },
+    { question: "Income like commission received is recorded in the:", a: "Trading account", b: "Balance sheet", c: "Profit and loss account", correct: "a" },
+    { question: "Trial balance errors can be detected by:", a: "Checking the equality of total debit and credit balances", b: "Ignoring minor discrepancies", c: "Comparing only ledger balances with invoices", correct: "a" },
+    { question: "The double-entry system ensures that:", a: "Every transaction affects at least two accounts", b: "Only cash is recorded", c: "Only profits are calculated", correct: "a" },
+   
+    { question: "Which of the following best defines a consumer?", a: "Someone who manufactures goods", b: "An individual who purchases or uses goods and services to satisfy needs", c: "A seller of goods only", correct: "b" },
+    { question: "The need for consumer protection arises because:", a: "Consumers have too much money", b: "Consumers may be exploited, misled, or sold unsafe products", c: "Producers are always honest", correct: "b" },
+    { question: "Consumer protection agencies primarily:", a: "Produce goods for consumers", b: "Ensure consumers’ rights are protected and complaints are addressed", c: "Provide loans to consumers", correct: "b" },
+    { question: "Which of the following is a key role of the Consumer Protection Council (C.P.C)?", a: "Collect taxes from consumers", b: "Investigate consumer complaints and educate the public on rights", c: "Monitor only manufacturers’ profits", correct: "b" },
+    { question: "The Standard Organization of Nigeria (SON) is responsible for:", a: "Selling goods directly to consumers", b: "Regulating quality standards of products in the country", c: "Monitoring consumer spending habits", correct: "b" },
+    { question: "The National Communication Commission (NCC) protects consumers by:", a: "Providing mobile phones to all citizens", b: "Regulating telecommunications services and addressing complaints", c: "Selling SIM cards", correct: "b" },
+    { question: "Consumer regulations are important because:", a: "They reduce production costs", b: "They prevent unfair trade practices and ensure quality products", c: "They increase the price of goods", correct: "b" },
+    { question: "A justified complaint from a consumer is:", a: "Based on personal preference only", b: "Always minor and trivial", c: "A valid grievance where goods or services fail to meet expected standards", correct: "c" },
+    { question: "An injured complaint refers to:", a: "Complaints made for practice", b: "Minor dissatisfaction without loss", c: "Complaints where the consumer suffers harm or financial loss", correct: "c" },
+    { question: "Which of the following is the correct first step in lodging a consumer complaint?", a: "Ignoring the problem", b: "Writing to the media immediately", c: "Contacting the seller or service provider to resolve the issue", correct: "c" },
+    { question: "Writing a consumer complaint should include:", a: "Only your name", b: "Detailed information but no evidence", c: "Clear description of the issue, proof of purchase, and requested resolution", correct: "c" },
+    { question: "Steps in lodging complaints generally include:", a: "Buying more products", b: "Ignoring minor faults", c: "Documenting the problem, contacting the provider, and escalating if unresolved", correct: "c" },
+    { question: "Which body deals specifically with complaints related to telecommunications?", a: "SON", b: "CPC", c: "NCC", correct: "c" },
+    { question: "Consumer protection regulations aim to:", a: "Reduce imports only", b: "Control pricing without considering quality", c: "Ensure safety, quality, and fair trade practices", correct: "c" },
+    { question: "Meaning of a complaint involves:", a: "A formal statement expressing dissatisfaction or grievance", b: "Buying defective goods intentionally", c: "Ignoring poor service", correct: "a" },
+    { question: "A key function of the Consumer Protection Council (CPC) includes:", a: "Investigating complaints and educating consumers", b: "Providing loans to businesses", c: "Setting tax rates", correct: "a" },
+    { question: "SON ensures that:", a: "Products meet minimum safety and quality standards", b: "Consumers get free goods", c: "Businesses only report profits", correct: "a" },
+    { question: "An example of a justified consumer complaint is:", a: "Receiving expired food from a store", b: "Not liking the color of a product arbitrarily", c: "Minor packaging differences", correct: "a" },
+    { question: "The importance of consumer protection includes:", a: "Promoting fair trade, ensuring safety, and improving product quality", b: "Helping sellers cheat customers", c: "Reducing consumer education", correct: "a" },
+    { question: "NCC protects consumers by:", a: "Monitoring service quality, pricing, and resolving complaints", b: "Selling mobile services directly", c: "Advertising telecom products", correct: "a" },
+    { question: "Which of the following best explains the main need for consumer protection?", a: "To limit consumer choices", b: "To safeguard consumers from exploitation and unsafe products", c: "To increase business profits", correct: "b" },
+    { question: "Consumer awareness is important because:", a: "It reduces competition", b: "Informed consumers can make better choices and assert their rights", c: "It increases product prices unnecessarily", correct: "b" },
+    { question: "A consumer protection agency usually:", a: "Only sells products to the public", b: "Monitors businesses, handles complaints, and educates consumers", c: "Provides discounts to buyers", correct: "b" },
+    { question: "A valid complaint should:", a: "Be emotional and exaggerated", b: "Clearly state the issue with supporting evidence", c: "Be submitted anonymously always", correct: "b" },
+    { question: "Which is a function of the Consumer Protection Council (CPC)?", a: "Setting taxes for products", b: "Investigating consumer complaints and enforcing regulations", c: "Providing loans to consumers", correct: "b" },
+    { question: "The Standard Organization of Nigeria (SON) ensures that:", a: "Products are sold cheaply", b: "Businesses are promoted without regulation", c: "Products meet minimum safety and quality standards", correct: "c" },
+    { question: "NCC protects telecom consumers by:", a: "Providing mobile devices for free", b: "Selling SIM cards directly", c: "Regulating service quality, tariffs, and resolving complaints", correct: "c" },
+    { question: "Steps in writing a consumer complaint include:", a: "Ignoring minor defects", b: "Complaining verbally only", c: "Providing clear details, proof of purchase, and desired resolution", correct: "c" },
+    { question: "An injured complaint is one where:", a: "The consumer exaggerates a small issue", b: "The complaint is made out of curiosity", c: "The consumer suffers actual loss or harm due to a product or service", correct: "c" },
+    { question: "Consumer protection regulations help:", a: "Reduce competition", b: "Increase arbitrary taxation", c: "Ensure fair trade, safe products, and uphold consumer rights", correct: "c" }
+
+
+
+  ];
 
 
 
@@ -112,7 +167,7 @@
     let shuffledQuestions = [];
     let currentQuestionIndex = 0;
     let userAnswers = {};
-    let timeLeft = 600;
+    let timeLeft = 1800;
     let timerInterval;
     let quizCompleted = false;
 
@@ -327,7 +382,7 @@
     } else {
       shuffledQuestions = shuffle([...quizData]);
       currentQuestionIndex = 0;
-      timeLeft = 600;
+      timeLeft = 1800;
       saveState();
     }
 

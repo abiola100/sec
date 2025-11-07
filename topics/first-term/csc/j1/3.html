@@ -47,7 +47,7 @@
 <body class="quiz-Class">
    
   <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
-  <div id="timer">Time left: 20:00</div>
+  <div id="timer">Time left: 30:00</div>
   <div id="quiz"></div>
 
   <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -72,67 +72,91 @@
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
     const quizData = [
-    { question: "A computer is best defined as:", a: "An electronic device that processes data into information", b: "A mechanical device used for counting", c: "A manual calculating tool", correct: "a" },
-    { question: "The main function of a computer is to:", a: "Store raw data", b: "Process data into meaningful information", c: "Display pictures only", correct: "b" },
-    { question: "Data can be described as:", a: "Processed facts and figures", b: "Unprocessed facts and figures", c: "Random numbers", correct: "c" },
-    { question: "Information means:", a: "Raw facts collected from a source", b: "Processed and meaningful data", c: "Random numbers entered into a system", correct: "a" },
-    { question: "The first calculating device invented by man was:", a: "Slide rule", b: "Abacus", c: "Napier’s Bone", correct: "b" },
-    { question: "The abacus was mainly used for:", a: "Data storage", b: "Performing arithmetic calculations", c: "Typing letters", correct: "c" },
-    { question: "The mechanical calculating device that used rods for multiplication is called:", a: "Pascaline", b: "Napier’s Bone", c: "Abacus", correct: "a" },
-    { question: "The first mechanical calculator that could add and subtract was invented by:", a: "Charles Babbage", b: "Blaise Pascal", c: "Leibniz", correct: "b" },
-    { question: "The calculating machine capable of multiplication and division was invented by:", a: "Leibniz", b: "Pascal", c: "Napier", correct: "c" },
-    { question: "Charles Babbage is known as:", a: "The Father of Modern Computers", b: "The Founder of Slide Rule", c: "The Creator of Napier’s Bone", correct: "a" },
-    { question: "The Analytical Engine was designed to:", a: "Perform only addition", b: "Be a general-purpose computing device", c: "Count with stones", correct: "b" },
-    { question: "The punched card was first used by:", a: "Hollerith", b: "Charles Babbage", c: "John Napier", correct: "c" },
-    { question: "The first electro-mechanical computer was called:", a: "MARK I", b: "ENIAC", c: "UNIVAC", correct: "a" },
-    { question: "The first electronic computer built in 1946 was:", a: "EDSAC", b: "ENIAC", c: "EDVAC", correct: "b" },
-    { question: "The first generation of computers used:", a: "Transistors", b: "Vacuum tubes", c: "Integrated circuits", correct: "c" },
-    { question: "The major limitation of first-generation computers was:", a: "They were too large and generated heat", b: "They were wireless", c: "They were portable", correct: "a" },
-    { question: "Second-generation computers replaced vacuum tubes with:", a: "Microprocessors", b: "Transistors", c: "IC chips", correct: "b" },
-    { question: "The third generation of computers began around:", a: "1940", b: "1964", c: "1971", correct: "c" },
-    { question: "Integrated circuits were introduced in which generation?", a: "Third", b: "Second", c: "First", correct: "a" },
-    { question: "Fourth-generation computers used:", a: "Microprocessors", b: "Vacuum tubes", c: "Transistors", correct: "b" },
-    { question: "The main feature of fifth-generation computers is:", a: "Artificial Intelligence", b: "Mechanical Calculation", c: "Manual Data Entry", correct: "c" },
-    { question: "One major advantage of modern computers is:", a: "They make errors easily", b: "They process data quickly and accurately", c: "They only count manually", correct: "a" },
-    { question: "Data processing means:", a: "Converting raw data into meaningful information", b: "Collecting data and storing it only", c: "Deleting unwanted files", correct: "b" },
-    { question: "Manual data processing involves:", a: "The use of computers", b: "The use of human effort and paper", c: "Automated software", correct: "c" },
-    { question: "Electronic data processing involves:", a: "Manual calculation", b: "Use of computers and electronic devices", c: "Mechanical abacus", correct: "a" },
-    { question: "Which of the following is a step in data processing?", a: "Data collection", b: "Painting", c: "Driving", correct: "b" },
-    { question: "Data collection, preparation, and input belong to:", a: "Data processing cycle", b: "Data transmission", c: "System rebooting", correct: "c" },
-    { question: "Data output in computers means:", a: "Entering data", b: "Displaying processed information", c: "Erasing files", correct: "a" },
-    { question: "Storage in data processing refers to:", a: "Keeping processed information for future use", b: "Deleting records", c: "Changing keyboard layout", correct: "b" },
-    { question: "A major importance of computers in data processing is:", a: "High speed of operation", b: "Manual effort", c: "Paper wastage", correct: "c" },
-    { question: "The accuracy of computers in processing data depends on:", a: "Correct input data", b: "Random guessing", c: "Human reasoning", correct: "a" },
-    { question: "Garbage In, Garbage Out (GIGO) means:", a: "Correct input gives wrong output", b: "Wrong input gives wrong output", c: "Computers guess answers", correct: "b" },
-    { question: "Which of the following best shows computer reliability?", a: "They can work long hours without fatigue", b: "They always make errors", c: "They stop without notice", correct: "c" },
-    { question: "The ability of computers to perform many tasks is known as:", a: "Versatility", b: "Speed", c: "Accuracy", correct: "a" },
-    { question: "One major limitation of the computer is that:", a: "It cannot think or reason on its own", b: "It is living", c: "It repairs itself", correct: "b" },
-    { question: "The dependence of computers on electricity means:", a: "They can work without power", b: "They stop working when power fails", c: "They run on water", correct: "c" },
-    { question: "Obsolescence means:", a: "Becoming outdated with time", b: "Being improved daily", c: "Becoming more efficient", correct: "a" },
-    { question: "Data security in computing involves:", a: "Protecting data from unauthorized access", b: "Erasing all data", c: "Changing font colors", correct: "b" },
-    { question: "Which of the following helps ensure data security?", a: "Encryption and passwords", b: "Leaving files open", c: "Sharing login details", correct: "c" },
-    { question: "Computers reduce cost because they:", a: "Work faster and reduce manual labour", b: "Use more paper", c: "Require many people", correct: "a" },
-    { question: "Storage and retrieval of data help to:", a: "Keep records for future use", b: "Delete old data", c: "Slow down operations", correct: "b" },
-    { question: "Efficiency in computing means:", a: "Doing more work in less time", b: "Doing less work slowly", c: "Making many errors", correct: "c" },
-    { question: "Which of the following is not a limitation of computers?", a: "Dependence on electricity", b: "Ability to think like humans", c: "Obsolescence", correct: "a" },
-    { question: "Automation of repetitive tasks means:", a: "Tasks are done automatically by computer programs", b: "Tasks require constant manual input", c: "Tasks are never repeated", correct: "b" },
-    { question: "Computers help decision making by:", a: "Analyzing data and presenting results clearly", b: "Guessing answers", c: "Ignoring instructions", correct: "c" },
-    { question: "Which of these devices is an input device?", a: "Keyboard", b: "Monitor", c: "Printer", correct: "a" },
-    { question: "Which of these devices displays processed information?", a: "Mouse", b: "Monitor", c: "Scanner", correct: "b" },
-    { question: "The output of data processing is called:", a: "Information", b: "Raw data", c: "Code", correct: "c" },
-    { question: "Computers help organizations by:", a: "Increasing productivity and accuracy", b: "Causing more manual work", c: "Reducing speed", correct: "a" },
-    { question: "Which generation introduced Artificial Intelligence?", a: "Fifth", b: "Fourth", c: "Second", correct: "b" },
-    { question: "Which of the following was a limitation of first-generation computers?", a: "Small size", b: "Overheating and large size", c: "Wireless network", correct: "c" },
-    { question: "The first commercial computer was called:", a: "UNIVAC", b: "MARK I", c: "ENIAC", correct: "a" },
-    { question: "The language of early computers was:", a: "Binary language", b: "English", c: "Assembly only", correct: "b" },
-    { question: "A transistor replaced vacuum tubes because:", a: "It was smaller, faster, and more reliable", b: "It used more power", c: "It was slower", correct: "c" },
-    { question: "Which device first used punched cards for data?", a: "Hollerith Tabulator", b: "Pascaline", c: "Slide Rule", correct: "a" },
-    { question: "Computers differ from calculators because:", a: "They can store and execute programs", b: "They only add numbers", c: "They cannot process data", correct: "b" },
-    { question: "A limitation of computer use in developing nations is:", a: "Lack of electricity and skilled workers", b: "Abundance of software", c: "Availability of experts", correct: "c" },
-    { question: "Modern computers are also called:", a: "Digital systems", b: "Mechanical systems", c: "Analog devices", correct: "a" },
-    { question: "The term hardware refers to:", a: "The physical components of a computer", b: "Software programs", c: "Data files", correct: "b" },
-    { question: "Software is best described as:", a: "Programs that tell the computer what to do", b: "Wires and circuits", c: "Mouse and keyboard", correct: "c" }
-   ];
+  { question: "Which of the following best defines a computer?", a: "A device that only stores data", b: "An electronic machine that processes data into meaningful information", c: "A tool that only displays numbers", correct: "b" },
+  { question: "What is the primary function of a computer?", a: "Store large volumes of information", b: "Process raw data into useful information", c: "Only calculate numbers manually", correct: "b" },
+  { question: "Which statement correctly defines data?", a: "Processed and organized facts", b: "Unprocessed facts and figures collected from sources", c: "Information ready for decision-making", correct: "b" },
+  { question: "Information differs from data because:", a: "It is collected randomly", b: "It is processed, organized, and meaningful", c: "It has no context or relevance", correct: "b" },
+  { question: "What was the main purpose of the abacus?", a: "Storing large amounts of data", b: "Performing arithmetic calculations manually", c: "Displaying results electronically", correct: "b" },
+  { question: "The significance of mechanical calculators is that they:", a: "Automatically store programs", b: "Reduce manual calculation errors and save time", c: "Display processed information instantly", correct: "b" },
+  { question: "Early computers were limited because they:", a: "Could perform complex reasoning", b: "Were large, generated heat, and required constant maintenance", c: "Were portable and battery-powered", correct: "b" },
+
+  { question: "The first mechanical calculator capable of addition and subtraction was invented by:", a: "Leibniz", b: "Charles Babbage", c: "Blaise Pascal", correct: "c" },
+  { question: "Which invention allowed multiplication and division using rods?", a: "Pascaline", b: "Abacus", c: "Napier’s Bone", correct: "c" },
+  { question: "Charles Babbage is known as:", a: "Inventor of the first mechanical calculator", b: "Creator of Napier’s Bone", c: "The Father of Modern Computers", correct: "c" },
+  { question: "The purpose of the Analytical Engine was to:", a: "Add and subtract manually", b: "Compute only pre-programmed tables", c: "Perform general-purpose computations", correct: "c" },
+  { question: "Punched cards were first used for:", a: "Displaying processed results", b: "Manual arithmetic calculations", c: "Storing and controlling data input in machines", correct: "c" },
+  { question: "The first electro-mechanical computer was called:", a: "ENIAC", b: "EDVAC", c: "MARK I", correct: "c" },
+  { question: "ENIAC, built in 1946, is significant because it was:", a: "Partially mechanical", b: "The first electronic computer", c: "Battery-operated", correct: "c" },
+
+  { question: "Which generation of computers first used vacuum tubes?", a: "First generation", b: "Second generation", c: "Third generation", correct: "a" },
+  { question: "A limitation of first-generation computers was that they:", a: "Were large, overheated easily, and consumed high power", b: "Could only perform basic calculations", c: "Were wireless and portable", correct: "a" },
+  { question: "Second-generation computers improved performance by using:", a: "Transistors instead of vacuum tubes", b: "Integrated circuits", c: "Mechanical relays", correct: "a" },
+  { question: "Integrated circuits were first introduced in which generation?", a: "Third generation", b: "Fourth generation", c: "Fifth generation", correct: "a" },
+  { question: "Fourth-generation computers are distinguished by their use of:", a: "Microprocessors for faster processing", b: "Vacuum tubes for logic operations", c: "Manual switches", correct: "a" },
+  
+{ question: "What is the first step in the data processing cycle?", a: "Data output", b: "Data collection", c: "Data storage", correct: "b" },
+{ question: "Which process converts raw data into meaningful information?", a: "Data storage", b: "Data processing", c: "Data deletion", correct: "b" },
+{ question: "Manual data processing relies mainly on:", a: "Computers and software", b: "Human effort and paper-based calculations", c: "Microprocessors", correct: "b" },
+{ question: "Electronic data processing is characterized by:", a: "Paper-based calculations", b: "Use of computers and electronic devices", c: "Manual recording only", correct: "b" },
+{ question: "A major benefit of data processing is:", a: "Slower decision making", b: "Faster and accurate information output", c: "More manual effort required", correct: "b" },
+{ question: "Data security primarily involves:", a: "Deleting unnecessary data", b: "Protecting data from unauthorized access", c: "Changing file formats randomly", correct: "b" },
+{ question: "Garbage In, Garbage Out (GIGO) means:", a: "Correct input gives wrong output", b: "Incorrect input leads to incorrect output", c: "Computers generate data automatically", correct: "b" },
+
+{ question: "Which of the following is an input device?", a: "Monitor", b: "Printer", c: "Keyboard", correct: "c" },
+{ question: "A device that displays processed information is called:", a: "Mouse", b: "Scanner", c: "Monitor", correct: "c" },
+{ question: "Storage in computers is important because it:", a: "Erases unwanted data", b: "Processes input data", c: "Keeps information for future use", correct: "c" },
+{ question: "Efficiency in computing means:", a: "Making more errors", b: "Working slower intentionally", c: "Completing more tasks in less time", correct: "c" },
+{ question: "Automation in computers refers to:", a: "Manual repetition of tasks", b: "Guessing outcomes automatically", c: "Tasks being executed automatically by programs", correct: "c" },
+{ question: "Which of the following ensures data confidentiality?", a: "Sharing passwords openly", b: "Leaving files unlocked", c: "Encryption and strong passwords", correct: "c" },
+{ question: "A major advantage of modern computers is:", a: "Manual calculations are faster", b: "Dependence on human effort", c: "High-speed and accurate processing", correct: "c" },
+
+{ question: "One limitation of computers is that:", a: "They cannot think or reason independently", b: "They are always reliable in reasoning", c: "They automatically correct human errors", correct: "a" },
+{ question: "Dependence on electricity implies that computers:", a: "Stop functioning when power fails", b: "Can operate without any power", c: "Run on solar energy only", correct: "a" },
+{ question: "Obsolescence in computing refers to:", a: "Becoming outdated over time", b: "Being upgraded continuously", c: "Always running faster than needed", correct: "a" },
+{ question: "Which of the following illustrates computer reliability?", a: "They can work for long hours without fatigue", b: "They stop randomly without warning", c: "They always make errors", correct: "a" },
+{ question: "Versatility of a computer means:", a: "Ability to perform multiple tasks efficiently", b: "Ability to make decisions like humans", c: "Ability to run without electricity", correct: "a" },
+{ question: "Computers help decision-making by:", a: "Analyzing and presenting data clearly", b: "Randomly generating results", c: "Ignoring instructions", correct: "a" },
+
+{ question: "Which generation of computers first used transistors?", a: "First generation", b: "Second generation", c: "Third generation", correct: "b" },
+{ question: "The main improvement in second-generation computers was:", a: "Use of vacuum tubes", b: "Faster processing and smaller size using transistors", c: "Introduction of microprocessors", correct: "b" },
+{ question: "Which of the following was a limitation of first-generation computers?", a: "Small and lightweight", b: "Large size, high heat, and expensive maintenance", c: "Battery-operated and portable", correct: "b" },
+{ question: "Third-generation computers were distinguished by:", a: "Vacuum tube technology", b: "Manual operation only", c: "Use of integrated circuits for faster and reliable processing", correct: "b" },
+{ question: "Microprocessors were first introduced in:", a: "Second generation", b: "Third generation", c: "Fourth generation", correct: "b" },
+{ question: "Fifth-generation computers are mainly designed for:", a: "Manual calculations", b: "Performing only arithmetic operations", c: "Artificial Intelligence and natural language processing", correct: "b" },
+{ question: "One major feature of fifth-generation computers is:", a: "Use of vacuum tubes", b: "Manual switches for input", c: "Ability to learn and make decisions like humans", correct: "b" },
+
+{ question: "Software refers to:", a: "The physical parts of a computer", b: "Instructions or programs that tell the computer what to do", c: "Electrical circuits inside the processor", correct: "c" },
+{ question: "Hardware can be defined as:", a: "Programs used to operate computers", b: "Digital instructions for processing data", c: "Physical components like keyboard, monitor, and CPU", correct: "c" },
+{ question: "Which of these is an example of system software?", a: "Microsoft Word", b: "Photoshop", c: "Operating System like Windows or Linux", correct: "c" },
+{ question: "Which type of software allows users to perform specific tasks?", a: "System software", b: "Utility programs", c: "Application software", correct: "c" },
+{ question: "Computers help organizations mainly by:", a: "Slowing down manual operations", b: "Increasing productivity and accuracy in operations", c: "Making employees redundant only", correct: "c" },
+{ question: "One limitation of computers in developing nations is:", a: "Abundance of electricity and experts", b: "Availability of advanced hardware", c: "Lack of electricity and trained personnel", correct: "c" },
+{ question: "Automation in businesses means:", a: "Tasks are done automatically using computer programs", b: "Tasks require constant human intervention", c: "All work is done manually without computers", correct: "c" },
+
+{ question: "Computers are considered reliable because:", a: "They can perform repeated tasks without fatigue", b: "They always guess the results", c: "They fail frequently", correct: "a" },
+{ question: "A major advantage of computers is:", a: "High speed and accuracy of data processing", b: "They make random errors often", c: "They require constant manual intervention", correct: "a" },
+{ question: "Data storage in computers helps to:", a: "Keep processed information for future use", b: "Erase old records automatically", c: "Slow down operations intentionally", correct: "a" },
+{ question: "Input devices are essential because:", a: "They allow users to enter data into the computer", b: "They display processed results", c: "They store information permanently", correct: "a" },
+{ question: "Output devices are important because:", a: "They display information in a readable format", b: "They store raw data", c: "They process data internally", correct: "a" },
+{ question: "Encryption in computing is used to:", a: "Protect data from unauthorized access", b: "Make files larger", c: "Delete unnecessary files automatically", correct: "a" },
+
+{ question: "Which of the following best illustrates computer reliability?", a: "They often stop without warning", b: "They can work long hours without fatigue", c: "They always make random errors", correct: "b" },
+{ question: "The phrase 'Garbage In, Garbage Out' (GIGO) emphasizes that:", a: "Computers can correct wrong input", b: "Incorrect input produces incorrect output", c: "Computers guess results automatically", correct: "b" },
+{ question: "One limitation of computers is that:", a: "They can think and reason independently", b: "They require correct input to produce correct output", c: "They operate without any power", correct: "b" },
+
+{ question: "Obsolescence in computing refers to:", a: "Improving performance constantly", b: "Becoming more efficient over time", c: "Becoming outdated as new technology emerges", correct: "c" },
+{ question: "Computers help in decision-making by:", a: "Guessing results randomly", b: "Delaying processes", c: "Analyzing data and presenting it clearly for users", correct: "c" },
+{ question: "Automation in businesses is:", a: "Performing tasks manually", b: "Waiting for human input constantly", c: "Executing repetitive tasks automatically using software", correct: "c" },
+
+{ question: "A major advantage of computers in organizations is:", a: "Increasing speed, accuracy, and productivity", b: "Slowing down work intentionally", c: "Replacing human reasoning completely", correct: "a" },
+{ question: "Dependence on electricity means that computers:", a: "Stop functioning when power fails", b: "Can run without batteries or power", c: "Automatically generate power", correct: "a" },
+{ question: "Versatility of a computer means:", a: "Ability to perform multiple types of tasks efficiently", b: "Only perform arithmetic calculations", c: "Cannot operate without human intervention", correct: "a" },
+{ question: "Computers enhance data security by:", a: "Using passwords, encryption, and restricted access", b: "Leaving files open for everyone", c: "Erasing files regularly", correct: "a" }
+
+
+
+
+];
 
 
 
@@ -151,7 +175,7 @@
     let shuffledQuestions = [];
     let currentQuestionIndex = 0;
     let userAnswers = {};
-    let timeLeft = 1200;
+    let timeLeft = 1800;
     let timerInterval;
     let quizCompleted = false;
 
@@ -366,7 +390,7 @@
     } else {
       shuffledQuestions = shuffle([...quizData]);
       currentQuestionIndex = 0;
-      timeLeft = 1200;
+      timeLeft = 1800;
       saveState();
     }
 

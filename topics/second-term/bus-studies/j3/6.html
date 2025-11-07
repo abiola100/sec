@@ -4,281 +4,743 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>Modesty</title>
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
-    <link rel="icon" href="../../../../images/logo.png" type="image/png">
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
-   
+    
 </head>
-<body>
-    <div class="cover-note">
-    <header>
-        <div class="container">    
-        <div>
-           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
-           <div class="nav-toggle" id="navtogle">
-               <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+              <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
                <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
-           </div>
-           
        </div>
-              <nav>
-                  <ul class="me">
-                      <li><a href="../../../../index.html">Home</a></li>
-                      <li><a href="../../../../pages/about.html">About</a></li>
-                      <li><a href="../../../../pages/forum.html">Forum</a></li>
-                      <li><a href="../../../../pages/contact.html">Contact</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </header>
+       
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
     </div>
-     <header class="header-back">
-        <a href="../../../../terms/second-term/b.studies-second/second-term-js3-b.studies.html">
-        <div class="arrow-back">
-            <div class="back-image"><img src="../../../../images/backward.png" alt=""></div>
-            <div>Go Back</div>
-        </div>
-        </a>
-     </header>
-     <div class="note-flex">
-        <div class="note1">
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/second-term/b.studies-second/second-term-js3-b.studies.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
    
-        <div class="cover-note">
-       <div class="note-container">
-        <div class="title01"><b>MODESTY </b></div>
-        <p>
-            <b class="list3">Modesty can</b> be defined as the quality of being humble, reserved, and not seeking attention in behavior, dress, or attitude.
-        </p>
-        <br>
-        <br><br>
-        <div class="title1"><b>ATTRIBUTE OF MODESTY </b></div>
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
+
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+    const quizData = [
+  { question: " A consumer is best described as __________.", 
+    a: "A person who sells goods and services", 
+    b: "A person who buys and uses goods and services", 
+    c: "A person who only produces goods", 
+    correct: "b" },
+
+  { question: " The main need of a consumer is to __________.", 
+    a: "Produce goods for others", 
+    b: "Get value and satisfaction for money spent", 
+    c: "Avoid buying any goods", 
+    correct: "b" },
+
+  { question: " Consumer protection is necessary because __________.", 
+    a: "Sellers always act honestly", 
+    b: "Some sellers exploit and cheat consumers", 
+    c: "All consumers are rich", 
+    correct: "b" },
+
+  { question: " The purpose of consumer protection is to __________.", 
+    a: "Encourage careless buying", 
+    b: "Ensure that consumers are not cheated by producers or sellers", 
+    c: "Help producers make more profit", 
+    correct: "b" },
+
+  { question: " Which of the following is NOT a consumer protection agency in Nigeria?", 
+    a: "NCC", 
+    b: "Central Bank of Nigeria", 
+    c: "CPC", 
+    correct: "b" },
+
+  { question: " The Consumer Protection Council (CPC) was established to __________.", 
+    a: "Promote export of goods", 
+    b: "Protect the interests and rights of consumers", 
+    c: "Regulate petroleum sales only", 
+    correct: "b" },
+
+  { question: " Which of these agencies ensures that communication services are efficient in Nigeria?", 
+    a: "SON", 
+    b: "NCC", 
+    c: "CPC", 
+    correct: "b" },
+
+  { question: " The National Communication Commission (NCC) mainly regulates __________.", 
+    a: "Food and drugs", 
+    b: "Banking activities", 
+    c: "Telecommunication services", 
+    correct: "c" },
+
+  { question: " The Standard Organization of Nigeria (SON) is responsible for __________.", 
+    a: "Protecting roads and bridges", 
+    b: "Fixing prices of goods", 
+    c: "Setting and enforcing product quality standards", 
+    correct: "c" },
+
+  { question: " Which of the following statements about SON is true?", 
+    a: "It issues licenses to teachers", 
+    b: "It regulates private schools", 
+    c: "It ensures goods meet acceptable standards", 
+    correct: "c" },
+
+  { question: " A major function of consumer protection agencies is to __________.", 
+    a: "Produce and sell goods to the public", 
+    b: "Train only manufacturers", 
+    c: "Investigate consumer complaints and ensure fair treatment", 
+    correct: "c" },
+
+  { question: " One reason why consumers need protection is because __________.", 
+    a: "Consumers are always dishonest", 
+    b: "Consumers want to make profit", 
+    c: "Consumers may be sold fake or harmful goods", 
+    correct: "c" },
+
+  { question: " Consumer protection regulations are important because they __________.", 
+    a: "Discourage government control", 
+    b: "Encourage importation of fake goods", 
+    c: "Ensure fairness and safety in trade", 
+    correct: "c" },
+
+  { question: " Which agency among the following ensures that goods meet national quality standards?", 
+    a: "CPC", 
+    b: "NCC", 
+    c: "SON", 
+    correct: "c" },
+
+  { question: " The main reason for creating consumer protection laws is to __________.", 
+    a: "Ensure that consumers are treated fairly", 
+    b: "Promote only large-scale businesses", 
+    c: "Encourage monopolies in trade", 
+    correct: "a" },
+
+  { question: " Which of the following can a consumer do if his rights are violated?", 
+    a: "Report to the appropriate consumer protection agency", 
+    b: "Keep silent", 
+    c: "Fight the seller", 
+    correct: "a" },
+
+  { question: " The Consumer Protection Council (CPC) can take which of these actions?", 
+    a: "Investigate and settle disputes between consumers and producers", 
+    b: "Produce and sell goods", 
+    c: "Increase market prices", 
+    correct: "a" },
+
+  { question: " A consumer who buys a faulty product can seek help from __________.", 
+    a: "The Consumer Protection Council", 
+    b: "Private school teachers", 
+    c: "The Ministry of Tourism", 
+    correct: "a" },
+
+  { question: " The main responsibility of the National Communication Commission (NCC) is to __________.", 
+    a: "Ensure efficient telecommunication services in Nigeria", 
+    b: "Monitor agricultural practices", 
+    c: "Supervise local trade unions", 
+    correct: "a" },
+
+  { question: " Which agency ensures that goods in Nigeria meet quality and safety standards?", 
+    a: "Standard Organization of Nigeria (SON)", 
+    b: "National Youth Service Corps (NYSC)", 
+    c: "Nigeria Labour Congress (NLC)", 
+    correct: "a" },
+  { question: " A complaint can be defined as __________.", 
+    a: "A way of praising a product", 
+    b: "An expression of dissatisfaction about a product or service", 
+    c: "A method of advertising goods", 
+    correct: "b" },
+
+  { question: " Consumers make complaints mainly to __________.", 
+    a: "Reward producers for good service", 
+    b: "Correct wrongs or poor treatment received from sellers", 
+    c: "Avoid paying for goods", 
+    correct: "b" },
+
+  { question: " A justified complaint is one that __________.", 
+    a: "Is made without reason", 
+    b: "Is based on genuine dissatisfaction with a product or service", 
+    c: "Is made to cause trouble", 
+    correct: "b" },
+
+  { question: " An injured complaint refers to __________.", 
+    a: "A situation where the consumer benefits unfairly", 
+    b: "A complaint made by a consumer who has suffered harm or loss", 
+    c: "A complaint written by a producer", 
+    correct: "b" },
+
+  { question: " One important step in lodging a complaint is to __________.", 
+    a: "Keep quiet and do nothing", 
+    b: "Gather all receipts and evidence before reporting", 
+    c: "Destroy the product immediately", 
+    correct: "b" },
+
+  { question: " A written complaint should include __________.", 
+    a: "Only the price of the product", 
+    b: "Details such as the date of purchase, product name, and problem", 
+    c: "Only the consumer’s name", 
+    correct: "b" },
+
+  { question: " The best person to address a consumer complaint letter to is __________.", 
+    a: "A friend of the producer", 
+    b: "The manager or head of the company concerned", 
+    c: "A customer who bought the same product", 
+    correct: "b" },
+
+  { question: " One good quality of a complaint letter is that it should be __________.", 
+    a: "Rude and emotional", 
+    b: "Too long and confusing", 
+    c: "Polite, clear, and straight to the point", 
+    correct: "c" },
+
+  { question: " The first step a consumer should take after noticing a faulty product is to __________.", 
+    a: "Throw the product away", 
+    b: "Call the police immediately", 
+    c: "Return to the seller or contact customer service", 
+    correct: "c" },
+
+  { question: " Consumers should keep receipts because they __________.", 
+    a: "Show the address of the seller only", 
+    b: "Can be used as decoration", 
+    c: "Serve as proof of purchase during complaint", 
+    correct: "c" },
+
+  { question: " A consumer complaint can be made through __________.", 
+    a: "Television advertisement", 
+    b: "Radio jingles", 
+    c: "Writing, phone calls, or online forms", 
+    correct: "c" },
+
+  { question: " When making a complaint, a consumer must be __________.", 
+    a: "Aggressive and loud", 
+    b: "Impatient and harsh", 
+    c: "Calm, polite, and factual", 
+    correct: "c" },
+
+  { question: " Which of the following helps to speed up resolution of a complaint?", 
+    a: "Ignoring the seller", 
+    b: "Not showing any evidence", 
+    c: "Presenting complete details and proof of purchase", 
+    correct: "c" },
+
+  { question: " Complaints are effective when they are made __________.", 
+    a: "Years after the problem occurred", 
+    b: "Without any document", 
+    c: "As soon as the issue is discovered", 
+    correct: "c" },
+
+  { question: " The main aim of making complaints is to __________.", 
+    a: "Seek correction or compensation for wrongs done", 
+    b: "Punish all sellers", 
+    c: "Gain attention unnecessarily", 
+    correct: "a" },
+
+  { question: " An injured complaint can arise when a consumer __________.", 
+    a: "Suffers loss or injury from a bad product", 
+    b: "Enjoys a product fully", 
+    c: "Has no receipt of purchase", 
+    correct: "a" },
+
+  { question: " Before writing a complaint, a consumer should first __________.", 
+    a: "Identify the problem and the responsible person", 
+    b: "Send a gift to the seller", 
+    c: "Tell other consumers not to buy anything", 
+    correct: "a" },
+
+  { question: " A complaint letter should always contain __________.", 
+    a: "Consumer’s signature, date, and contact information", 
+    b: "Just the consumer’s first name", 
+    c: "No identifying information", 
+    correct: "a" },
+
+  { question: " One good practice in making complaints is to __________.", 
+    a: "Be respectful and factual in communication", 
+    b: "Insult the producer", 
+    c: "Exaggerate the issue", 
+    correct: "a" },
+
+  { question: " A complaint that is not justified is one that __________.", 
+    a: "Has no genuine reason or evidence", 
+    b: "Is supported by valid proof", 
+    c: "Comes from an injured consumer", 
+    correct: "a" },
+  { question: " Consumer redress means __________.", 
+    a: "The act of buying goods on credit", 
+    b: "The process of seeking justice or compensation for unfair treatment", 
+    c: "The act of saving money in a bank", 
+    correct: "b" },
+
+  { question: " One of the main purposes of consumer redress is to __________.", 
+    a: "Help sellers increase prices", 
+    b: "Ensure consumers get fair treatment and justice", 
+    c: "Encourage people to spend more", 
+    correct: "b" },
+
+  { question: " When a product is faulty, the first step a consumer should take is to __________.", 
+    a: "Report to the media", 
+    b: "Complain to the seller or producer", 
+    c: "Destroy the product", 
+    correct: "b" },
+
+  { question: " A consumer can write a formal complaint letter when __________.", 
+    a: "The product is too expensive", 
+    b: "The seller refuses to help solve the problem", 
+    c: "They want to advertise the product", 
+    correct: "b" },
+
+  { question: " The Federal Competition and Consumer Protection Commission (FCCPC) is responsible for __________.", 
+    a: "Managing workers’ salaries", 
+    b: "Protecting consumer rights in Nigeria", 
+    c: "Importing foreign goods", 
+    correct: "b" },
+
+  { question: " Seeking redress helps to __________.", 
+    a: "Encourage unhealthy competition", 
+    b: "Make businesses more responsible and honest", 
+    c: "Stop the sale of all goods", 
+    correct: "b" },
+
+  { question: " Which of the following is NOT a way of seeking consumer redress?", 
+    a: "Reporting to consumer protection agencies", 
+    b: "Taking legal action when necessary", 
+    c: "Keeping quiet about the problem", 
+    correct: "b" },
+
+  { question: " One benefit of providing redress is that it __________.", 
+    a: "Discourages consumers from buying", 
+    b: "Leads to loss of customer trust", 
+    c: "Builds customer loyalty and confidence", 
+    correct: "c" },
+
+  { question: " The FCCPC, SON, and NAFDAC are examples of __________.", 
+    a: "Transport companies", 
+    b: "Financial institutions", 
+    c: "Consumer protection agencies", 
+    correct: "c" },
+
+  { question: " A consumer who uses social media to expose unfair practices is exercising __________.", 
+    a: "Right to safety", 
+    b: "Right to education", 
+    c: "Right to be heard", 
+    correct: "c" },
+
+  { question: " When both sides of a dispute agree peacefully, it is called __________.", 
+    a: "Litigation", 
+    b: "Advertisement", 
+    c: "Amicable settlement", 
+    correct: "c" },
+
+  { question: " The right to seek redress allows consumers to __________.", 
+    a: "Ignore sellers", 
+    b: "Buy more expensive goods", 
+    c: "Demand refund or replacement for faulty goods", 
+    correct: "c" },
+
+  { question: " An organisation that helps consumers to know their rights is called a __________.", 
+    a: "Retail store", 
+    b: "Transport agency", 
+    c: "Consumer advocacy group", 
+    correct: "c" },
+
+  { question: " The main aim of consumer education is to __________.", 
+    a: "Teach producers how to advertise", 
+    b: "Stop people from buying goods", 
+    c: "Inform consumers of their rights and responsibilities", 
+    correct: "c" },
+
+  { question: " Personal finance can best be defined as __________.", 
+    a: "The management of one’s money and financial resources", 
+    b: "Government control of businesses", 
+    c: "Company budgeting for employees", 
+    correct: "a" },
+
+  { question: " The main purpose of personal financial planning is to __________.", 
+    a: "Achieve future financial goals and stability", 
+    b: "Increase expenses", 
+    c: "Spend all income immediately", 
+    correct: "a" },
+
+  { question: " One importance of personal finance is that it __________.", 
+    a: "Helps to control spending and avoid waste", 
+    b: "Encourages borrowing unnecessarily", 
+    c: "Promotes careless spending", 
+    correct: "a" },
+
+  { question: " A person’s income includes __________.", 
+    a: "Wages, interest, rent, and dividends", 
+    b: "Only money from salary", 
+    c: "Only gifts from friends", 
+    correct: "a" },
+
+  { question: " To live within one’s income means to __________.", 
+    a: "Spend according to what one earns", 
+    b: "Spend more than one earns", 
+    c: "Borrow money always", 
+    correct: "a" },
+
+  { question: " A budget helps an individual to __________.", 
+    a: "Plan and control spending properly", 
+    b: "Ignore financial goals", 
+    c: "Waste resources", 
+    correct: "a" },
+    
+  { question: " Consumption means __________.", 
+    a: "Keeping money in a bank", 
+    b: "Using goods and services to satisfy needs and wants", 
+    c: "Producing goods for sale", 
+    correct: "b" },
+
+  { question: " Choice arises because __________.", 
+    a: "Goods are unlimited", 
+    b: "Human wants are many but resources are limited", 
+    c: "Money has no value", 
+    correct: "b" },
+
+  { question: " A scale of preference is __________.", 
+    a: "A plan for saving income", 
+    b: "A list of needs arranged in order of importance", 
+    c: "A list of all expenses in business", 
+    correct: "b" },
+
+  { question: " Modesty means __________.", 
+    a: "Showing off wealth and pride", 
+    b: "Being simple, moderate, and not wasteful", 
+    c: "Borrowing money to impress others", 
+    correct: "b" },
+
+  { question: " One attribute of modesty is __________.", 
+    a: "Pride", 
+    b: "Contentment", 
+    c: "Extravagance", 
+    correct: "b" },
+
+  { question: " The link between modesty and extravagance is that __________.", 
+    a: "Both lead to wasteful spending", 
+    b: "They are opposite habits in personal finance", 
+    c: "They both encourage borrowing", 
+    correct: "b" },
+
+  { question: " Living modestly helps an individual to __________.", 
+    a: "Spend without control", 
+    b: "Save money and avoid unnecessary debt", 
+    c: "Borrow more often", 
+    correct: "b" },
+
+  { question: " A Trial Balance is prepared to __________.", 
+    a: "Calculate total profit and loss", 
+    b: "Record daily transactions", 
+    c: "Test the arithmetic accuracy of ledger accounts", 
+    correct: "c" },
+
+  { question: " In a Trial Balance, assets and expenses are recorded on the __________.", 
+    a: "Credit side", 
+    b: "Middle section", 
+    c: "Debit side", 
+    correct: "c" },
+
+  { question: " If total debits and total credits in a Trial Balance are not equal, it means __________.", 
+    a: "There is no error at all", 
+    b: "The financial statements are ready", 
+    c: "There is an error that must be investigated", 
+    correct: "c" }
 
 
-        <ol>
-            <li>
-            
-                <b>Humility: </b>Staying humble and not showing off.
-            </li>
-            <br>
-            <li>
-                <b>Simplicity: </b>Keeping things plain and straightforward.
-            </li>
-            <br>
-            <li>
-                <b>Self-control: </b> Managing desires and actions wisely.
-            </li>
-            <br>
-            
-            <li>
-                <b>Respectfulness:  </b>Showing regard for others in actions and words.
-            </li>
-            <br>
-            <li>
-                <b>Decency:  </b>Dressing and behaving appropriately.
 
-            </li>
-        </ol>
-        <br><br><br>
-        
-        <div class="title01"><b>EFFECT OF LIVING MODESTY </b></div>
-        <br>
-        <ol>
-            <li>
+
+
+
+];
+
+   
+
+
+
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
+    
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "click here to See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got the right answer </span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You choose the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
            
-                 You feel happier with what you have.
-            </li>
-            <br>
-            <li>
-                 Being humble helps you connect with others.
-            </li>
-            <br>
-            <li>
-                 A simpler life lowers anxiety and pressure.
-            </li>
-            <br>
-            <li>
-                 Thinking carefully leads to better decisions.
-            </li>
-            <br>
-            <li>
-                 Managing desires helps create healthy habits.
-
-            </li>
-        </ol>
-        <br><br><br>
-        <div class="pollution"><b>THE LINKING BETWEEN MODESTY AND EXTRAVAGANCE</b></div>
-        <br><br>
-
-        
-        <ol>
-            <li>
-            
-                Modesty is about simplicity, while extravagance is about excess and showing off.
-
-            </li>
-            <br>
-            <li>
-                 Modest people prefer basic, practical things, while extravagant people want luxury items.
-            </li>
-            <br>
-            <li>
-            
-                Modesty values being content and grateful, while extravagance seeks attention and status.
-            </li>
-            <br>
-            <li>
-            
-                 Modesty can build community and friendship, while extravagance may cause jealousy or competition.
-            </li>
-            <br>
-            <li>
-            
-                 Living modestly can bring peace of mind, while extravagance can create stress and financial problems.
-
-            </li>
-        </ol>
-
-
-
-
-
-
-
-        <br><br><br>
-       
-       
-        
-        
-       </div>
            
-    </div>
-        
-            
-               
-                
            
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
 
-                
-           
-             
-</div>
-     
-<div class="note2">
- <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
- <br><br>
- <ol class="explanation">
-     <a href="../../../../topics/second-term/bus-studies/j3/2.html" class="iam">
-         <br>
-         <li > HOW TO MAKE COMPLAINTS  </li>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/second-term/bus-studies/j3/3.html" class="iam">
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
 
-         <li > BANNING CHEMICALS </li>
-     </a>
-     <br>
-     </a>
-     <br>
-     
-     
-     <a href="../../../../topics/second-term/bus-studies/j3/4.html" class="iam">
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
 
-         <li >  CONSUMER RIGHT AND REDRESS </li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/second-term/bus-studies/j3/5.html" class="iam">
-
-         <li > MODESTY   </li>
-     </a>
-     <br>
-     
-     <a href="../../../../topics/second-term/bus-studies/j3/6.html" class="iam">
-         
-         <li > TRIAL BALANCE   </li>
-     </a>
-     <br>
-     </a>
-     
- 
- </ol>
- <br><br><br>
- <div class="form-container">
-     <h2 class="tell-us">TELL US YOUR VIEWS</h2>
-     <br>
-     <input type="text" id="name" placeholder="Your Name">
-     <br>
-     <input type="text" id="title" placeholder="Title ">
-     <br>
-     <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-     <br>
-     <button onclick="submitComplaint()">Submit</button>
- </div>
-
- <div class="complaints-container">
-     <h3> VIEWS </h3>
-     <br>
-     <div id="complaints-list"></div>
-     <br>
-     <br>
- </div>
- 
- 
-</div>
-</div>       
-
-         
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
     
 
-
-<div class="lower-side">
- 
-
- <br><br>
-<footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
-
-<br>
-<div class="social">
-<a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
- <img src="../../../../images/facebook.png" alt="">
- <div class="info">Follow us on facebook</div>
-</a>
-<a href="https://wa.me/2348100410742" class="whatsapp"> 
- <img src="../../../../images/whatsapp.png" alt="">
- <div class="info">Reach us on whatsapp </div>
-</a>
-<a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
- <img src="../../../../images/gmail.png" alt="">
- <div class="info">Email Us </div>
-</a>
-</div>
-
-</div>
-
-
-
+    
     <script src="../../../../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
-
-        // Frame reload
-
-       
-       
-       
-
-     </script>
-    
-    
 </body>
 </html>
