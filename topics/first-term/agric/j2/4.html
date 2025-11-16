@@ -2,301 +2,415 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../../../../style2.css">
-    <title>agricultural practices</title>
     <link rel="icon" href="../../../../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-   
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199"
+    <title>CBT PRACTICE</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577634796844199" data-overlays="bottom"
     crossorigin="anonymous"></script>
+    
 </head>
-<body>
-    <div class="cover-note">
-    <header>
-        <div class="container">    
-        <div>
-           <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
-           <div class="nav-toggle" id="navtogle">
-                <img id="hambuger" class="navIcon" style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
-               <img class="navIcon hidden" style="height: 20px;" src="../../../../images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="hambuger menu">
-           </div>
-           
+<header> 
+        
+    <div class="container">    
+    <div>
+       <a href="../../../../index.html"><h2><span class="logo"><span class="s">S</span>ECONDARY</span> </h2></a>   
+       <div class="nav-toggle" id="navtogle">
+           <img style="height: 20px;" src="../../../../images/forward.png" alt="hambuger menu">
        </div>
-              <nav>
-                  <ul class="me">
-                      <li><a href="../../../../index.html">Home</a></li>
-                      <li><a href="../../../../pages/about.html">About</a></li>
-                      <li><a href="../../../../pages/forum.html">Forum</a></li>
-                      <li><a href="../../../../pages/contact.html">Contact</a></li>
-                  </ul>
-              </nav>
-          </div>
-        </div>
-      </header>
-    </div>
-     <header class="header-back">
-        <a href="../../../../terms/first-term/agric-first/first-term-js2-agric.html">
-        <div class="arrow-back">
-            <div class="back-image"><img src="../../../../images/backward.png" alt=""></div>
-            <div>Go Back</div>
-        </div>
-        </a>
-     </header>
-     <div class="note-flex">
-        <div class="note1">
-
        
+   </div>
+          <nav>
+              <ul class="me">
+                  <li><a href="../../../../index.html">Home</a></li>
+                  <li><a href="../../../../pages/about.html">About</a></li>
+                  <li><a href="../../../../pages/forum.html">Forum</a></li>
+                  <li><a href="../../../../pages/contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+
+  </header>
+   <br><br>
+  <header class="header-back">
+    <a href="../../../../terms/first-term/agric-first/first-term-js2-agric.html">
+    <div class="arrow-back">
+        
+        <div > <button id="go-back">Leave</button></div>
+    </div>
+    </a>  
+    
+ </header>
+ <br><br>
+<body class="quiz-Class">
    
-        <div class="cover-note">
-       <div class="note-container">
-        <div class="title1"><b>AGRICULTURAL PRACTICE</b></div>
-        <br><br>
-        <ul>
-        </ul>
+  <h1 id="quiz-app">SELECT THE CORRECT ANSWER</h1>
+  <div id="timer">Time left: 30:00</div>
+  <div id="quiz"></div>
 
-        <div class="pollution"><b>Pre-planting operation</b></div>
+  <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+  <button id="nextBtn" onclick="nextQuestion()">Next</button>
+  <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+
+  <div id="result" style="display:none;"></div>
+  <button id="restartBtn" style="display:none;">Restart Test</button>
+
+  <br /><br /><br />
+  <div class="explain">
+    this page is meant for computer based test(CBT) practicing, this is to
+    enable students to get familiar with computer based exam.
+  </div>
+  <br /><br /><br />
+  <div class="lower-side">
+    <footer>
+      copyright &copy; <b id="me"></b> Abisoft Technology
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'cbt_quiz_state';
+  
+    const quizData = [
+      
+        { question: "Which structure is primarily used to store hay and grains on a farm?", a: "Silo", b: "Barn", c: "Granary", correct: "b" },
+        { question: "Which farm structure prevents livestock from wandering and protects crops?", a: "Barn", b: "Fence", c: "Poultry house", correct: "b" },
+        { question: "Which of these farm buildings is designed for administrative work?", a: "Store", b: "Office", c: "Cattle pen", correct: "b" },
+        { question: "Which structure is mainly used to store maize or other grains under airtight conditions?", a: "Barn", b: "Silo", c: "Rhombus", correct: "b" },
+        { question: "Which farm building houses domestic birds like chickens or ducks?", a: "Pigsty", b: "Poultry house", c: "Cattle pen", correct: "b" },
+        { question: "Which pre-planting operation improves soil aeration and water penetration?", a: "Harrowing", b: "Ploughing", c: "Mulching", correct: "b" },
+        { question: "Which of the following is a post-planting operation to reduce overcrowding?", a: "Weeding", b: "Thinning", c: "Fertilization", correct: "b" },
+
         
-            <br><br>
-    
-        <div class="topic-image"><img src="../../../../images/pre-plantin.jpg" alt=""></div>
-        <br>
-        <i><b>what is pre-planting operation</b></i>
-        <br>
-        <p><b class="para">Pre-planting operations</b> can be define as the tasks you do before planting seeds or seedlings.
-             These steps help prepare the soil and ensure good conditions for plants to grow.</p>
-             <br>
-             <li><i><b>These operations include :</b></i></li>
-             <br>
-             <ol>
-                <li>
-                <b>Land Preparation : </b>Clear the field of weeds, rocks, and old plants. Plow, till, and level the soil to make it ready for planting.
-            </li>
-            <br>
-            <li>
-               <b>Soil Testing :</b> Check the soil's pH and nutrient levels. Add lime, compost, or fertilizers if needed to improve soil quality.
-            </li>
-            <br>
-            <li>
-                <b>Seed Selection and Treatment :</b>Choose high-quality seeds that grow well in your area. Treat seeds with chemicals if needed to protect them from diseases and pests.
-            </li>
-            <br>
-            <li>
-                <b>Irrigation Planning : </b>Plan how you will water the crops. Set up and check irrigation systems to make sure they work well.
-            </li>
-            <br>
-            <li><b>
-                Equipment Check :</b>Inspect and prepare your tools and machinery, like tractors and seeders, to ensure they are in good condition for planting.
-            </li>
-            <br><br><br>
-            </ol>
-            <br><br>
-           
-            <div class="pollution"><b>planting operation</b></div>
-            <br><br>
-            
-            <div class="topic-image"><img src="../../../../images/plantin-operation.jpg" alt=""></div>
-            <br>
-            <i><b>what is planting operation</b></i>
-            <br>
-            <p><b class="para">Planting operations </b>can be define as a process of putting seeds or young plants into the ground
-                 and ensuring they have the right conditions to grow.</p>
-                 <br>
-                 <li><i><b>These operations include :</b></i></li>
-                 <br>
-                 <ol>
-                    <li>
-                       <b> Sowing Seeds : </b>Plant seeds at the right depth and spacing, either by hand or with a machine. </li>
-                <br>
-                <li>
-                    <b>Transplanting Seedlings : </b>Move young plants to the field, keeping the right distance between them.
-                </li>
-                <br>
-                <li>
-                   <b> Fertilizer Application : </b>Add fertilizers to provide necessary nutrients for the plants.
-                </li>
-                <br>
-                <li>
-                    <b>Irrigation Planning : </b>Plan how you will water the crops. Set up and check irrigation systems to make sure they work well.
-                </li>
-                <br>
-                <li><b>Watering : </b>Water the plants to help them start growing.</li>
-                <br>
-                <li><b>Mulching :  </b>Add mulch around the plants to keep the soil moist and reduce weeds.</li>
-                </ol>
+        { question: "Which type of crop propagation produces genetically diverse plants?", a: "Vegetative", b: "Layering", c: "Seed propagation", correct: "c" },
+        { question: "Which harvesting practice preserves crop quality and reduces spoilage?", a: "Late harvesting", b: "Irregular harvesting", c: "Timely harvesting", correct: "c" },
+        { question: "Which irrigation method provides water drop by drop directly to the plant roots?", a: "Sprinkler", b: "Flood", c: "Drip irrigation", correct: "c" },
+        { question: "Which cultural practice involves cutting unwanted branches to improve air circulation?", a: "Mulching", b: "Staking", c: "Pruning", correct: "c" },
+        { question: "Which farm structure is raised above the ground using wooden poles for grain storage?", a: "Silo", b: "Barn", c: "Rhombus", correct: "c" },
+        { question: "Which post-planting operation removes unwanted plants competing for nutrients?", a: "Pruning", b: "Irrigation", c: "Weeding", correct: "c" },
+        { question: "Which modern agricultural practice reduces labor using tractors and harvesters?", a: "Irrigation", b: "Mulching", c: "Mechanization", correct: "c" },
 
-                <br><br><br>
-                <ul>
-                    
-                </ul>
-                
-               
-                <br><br><br>
-            <div class="pollution"><b>post-planting operation</b></div>
-            <br>
-            <br>
-            
-            <div class="topic-image"><img src="../../../../images/post-planting.jpg" alt=""></div>
-            <br>
-            <i><b>what is post-planting operation</b></i>
-            <br>
-            <p><b class="para">Post-planting operations</b> can be define as taking care of plants 
-                after they are in the ground to ensure they grow well and produce a good harvest.</p>
-                 <br>
-                 <li><i><b>These operations include :</b></i></li>
-                 <br>
-                 <ol>
-                    <li>
-                        <b>Weed Control:</b>Remove weeds regularly to reduce competition for resources.
-                    </li>
-                <br>
-                <li>
-                    <b>Irrigation Management :</b> Water plants consistently based on their needs and weather conditions.
-                </li>
-                <br>
-                <li>
-                    <b>Pest and Disease Management : </b>Check for and manage pests and diseases using various methods.
-
-                </li>
-                <br>
-                <li>
-                    <b>Nutrient Management : </b>Add fertilizers as needed to keep plants healthy.
-                </li>
-                <br>
-                <li>
-                   <b> Pruning and Training : </b>Trim and shape plants to improve growth and airflow.
-                </li>
-                <br>
-                <li>
-                    <b>Mulching : </b>Maintain mulch to retain moisture and control weeds.
-                </li>
-                <br>
-                <li>
-                    <b>Thinning : </b>Remove extra plants to ensure proper spacing.
-                </li>
-                <br>
-                <li>
-                    <b>Staking and Support : </b>Provide supports for plants that need help staying upright.
-                </li>
-                <br>
-                <li>
-                   <b> Harvesting : </b>Pick crops when they are ready to ensure the best quality.
-                </li>
-                <br>
-                <li>
-                    <b>Post-Harvest Handling : </b>Handle and store crops carefully to maintain their quality.
-                </li>
-                </ol>
-                <br><br><br>
-               
-       </div>
-           
-    </div>
         
-            
-     </div>
-     
-     <div class="note2">
-        <b class="learn">CHECK OTHER RELATED  TOPICS HERE</b>
-        <br><br>
-        <ol class="explanation">
-            <a href="../../../../topics/first-term/agric/j2/2.html" class="iam">
-                <br>
-                <li >MAINTENANCE OF FARM STRUCTURES AND BUILDING   </li>
-            </a>
-            <br>
-            <a href="../../../../topics/first-term/agric/j2/3.html" class="iam">
-                <li >CROP PROPAGATION AND CULTURAL PRACTICE    </li>
-            </a>
-            <br>
-            </a>
-            <br>
-            <a href="../../../../topics/first-term/agric/j2/1.html" class="iam">
-                <li >FARM STRUCTURES AND BUILDING    </li>
-            </a>
-            <br>
-            <a href="../../../../topics/first-term/agric/j2/5.html" class="iam">
-                <li >EFFECT OF TIMELY HARVESTING VERSUS LATE HARVESTING</li>
-            </a>
-            
-            
-        </ol>
-        <br><br><br>
-        <div class="form-container">
-            <h2 class="tell-us">TELL US YOUR VIEWS</h2>
-            <br>
-            <input type="text" id="name" placeholder="Your Name">
-            <br>
-            <input type="text" id="title" placeholder="Title ">
-            <br>
-            <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-            <br>
-            <button onclick="submitComplaint()">Submit</button>
-        </div>
-    
-        <div class="complaints-container">
-            <h3> VIEWS </h3>
-            <br>
-            <div id="complaints-list"></div>
-            <br>
-            <br>
-        </div>
-       
+        { question: "Which structure stores harvested crops and prevents spoilage?", a: "Granary", b: "Silo", c: "Barn", correct: "a" },
+        { question: "Which vegetative propagation method involves planting stem or root cuttings?", a: "Cuttings", b: "Grafting", c: "Tissue culture", correct: "a" },
+        { question: "Which farm practice helps crops grow well and produces high yield?", a: "Cultural practices", b: "Seed storage", c: "Weed control", correct: "a" },
+        { question: "Which structure provides a safe workplace for farm machinery and tools?", a: "Utility building", b: "Office", c: "Barn", correct: "a" },
+        { question: "Which pre-planting operation involves selecting healthy seeds or planting materials?", a: "Seed selection", b: "Ploughing", c: "Harrowing", correct: "a" } ,
+        { question: "Which post-planting operation supplies nutrients during growth stages?", a: "Fertilization", b: "Thinning", c: "Pruning", correct: "a" },
+
         
-     </div>
-    </div>     
-                
-           
+      
+        { question: "Which farm building protects tools, machinery, and small equipment?", a: "Store", b: "Tool shed/Workshop", c: "Office", correct: "b" },
+        { question: "Which structure is used by security personnel to monitor farm entrances?", a: "Utility building", b: "Security post", c: "Fence", correct: "b" },
+        { question: "Which farm structure ensures water supply for livestock and crops?", a: "Barn", b: "Water facility", c: "Silo", correct: "b" },
+        { question: "Which practice involves careful observation of plant health and growth?", a: "Weeding", b: "Monitoring/Observation", c: "Thinning", correct: "b" },
+        { question: "Which post-planting operation provides support for tall or climbing crops?", a: "Mulching", b: "Staking", c: "Pruning", correct: "b" },
+        { question: "Which modern practice combines cultural, mechanical, and biological methods to control pests?", a: "Irrigation", b: "Mechanization", c: "Integrated Pest Management", correct: "b" },
+        { question: "Which planting method involves moving seedlings from nursery to the field?", a: "Broadcasting", b: "Transplanting", c: "Drilling", correct: "b" },
 
-                
-           
 
-    
-    
-    <div class="lower-side">
+        { question: "Which fertilization method provides nutrients directly to growing crops during crop development?", a: "Seed dressing", b: "Fertilizer application before planting", c: "Top dressing", correct: "c" },
+        { question: "Which propagation method produces plants genetically identical to the parent?", a: "Seed propagation", b: "Layering", c: "Vegetative propagation", correct: "c" },
+        { question: "Which harvesting practice may reduce crop quality and market value?", a: "Timely harvesting", b: "Careful harvesting", c: "Late harvesting", correct: "c" },
+        { question: "Which crop propagation method involves joining part of one plant to another?", a: "Cuttings", b: "Layering", c: "Grafting", correct: "c" },
+        { question: "Which type of farm fence is made from live plants?", a: "Wire fence", b: "Concrete fence", c: "Hedge fence", correct: "c" },
+        { question: "Which irrigation method sprays water over crops like rainfall?", a: "Drip", b: "Flood", c: "Sprinkler", correct: "c" },
+        { question: "Which modern agricultural practice uses greenhouses or polyhouses?", a: "IPM", b: "Mechanization", c: "Controlled environment farming", correct: "c" },
+
         
-       
-        <br><br>
-    <footer >copyright &copy; <b id="me"></b> Abisoft Technology</footer>
+        { question: "Which structure is used to store harvested crops and seeds for future use?", a: "Farm store", b: "Barn", c: "Silo", correct: "a" },
+        { question: "Which pre-planting activity removes debris, shrubs, and unwanted vegetation?", a: "Land clearing", b: "Ploughing", c: "Harrowing", correct: "a" },
+        { question: "Which post-planting operation conserves soil moisture and regulates temperature?", a: "Mulching", b: "Pruning", c: "Thinning", correct: "a" },
+        { question: "Which type of propagation involves using roots, stems, or leaves to produce new plants?", a: "Vegetative propagation", b: "Seed propagation", c: "Layering", correct: "a" },
+        { question: "Which cultural practice removes extra seedlings to reduce competition?", a: "Thinning", b: "Pruning", c: "Mulching", correct: "a" },
+        { question: "Which structure provides living quarters for the farmer and family?", a: "Farmhouse", b: "Office", c: "Utility building", correct: "a" },
+        
+        // 41-47 correct answer: b
+        { question: "Which farm structure stores hay and provides shelter for livestock?", a: "Silo", b: "Barn", c: "Rhombus", correct: "b" },
+        { question: "Which cultural practice removes weeds to reduce competition for water and nutrients?", a: "Mulching", b: "Weeding", c: "Pruning", correct: "b" },
+        { question: "Which farm building is designed to house tools and provide workspace for repairs?", a: "Utility building", b: "Workshop/Tool shed", c: "Office", correct: "b" },
+        { question: "Which post-planting activity supplies nutrients to growing crops at the right growth stage?", a: "Ploughing", b: "Top dressing", c: "Mulching", correct: "b" },
+        { question: "Which farm structure keeps livestock secure and protects crops?", a: "Barn", b: "Fence", c: "Silo", correct: "b" },
+        { question: "Which propagation method involves joining tissues from two plants to form one plant?", a: "Cutting", b: "Layering", c: "Grafting", correct: "b" },
+        { question: "Which pre-planting operation improves soil structure for planting?", a: "Harrowing", b: "Ploughing", c: "Land clearing", correct: "b" },
+
+        // 48-54 correct answer: c
+        { question: "Which farm building is used to store harvested crops and prevent spoilage?", a: "Utility building", b: "Workshop", c: "Store/Farm store", correct: "c" },
+        { question: "Which irrigation method applies water directly to the roots slowly over time?", a: "Sprinkler", b: "Flood", c: "Drip", correct: "c" },
+        { question: "Which harvesting practice ensures maximum market price and reduced post-harvest loss?", a: "Late harvesting", b: "Neglecting harvesting", c: "Timely harvesting", correct: "c" },
+        { question: "Which propagation method produces new plants from vegetative parts of the parent?", a: "Seed propagation", b: "Grafting", c: "Vegetative propagation", correct: "c" },
+        { question: "Which cultural practice protects plants, conserves moisture, and controls weeds?", a: "Pruning", b: "Staking", c: "Mulching", correct: "c" },
+        { question: "Which modern agricultural practice uses high-yielding, disease-resistant varieties?", a: "Mechanization", b: "IPM", c: "Improved seeds and breeds", correct: "c" },
+        { question: "Which farm fence is made from concrete posts with wires to secure livestock?", a: "Hedge", b: "Wooden fence", c: "Concrete fence", correct: "c" },
+
+        // 55-60 correct answer: a
+        { question: "Which structure provides shelter for poultry to protect them from predators?", a: "Poultry house", b: "Barn", c: "Store", correct: "a" },
+        { question: "Which pre-planting activity helps remove shrubs, weeds, and debris from farmland?", a: "Land clearing", b: "Harrowing", c: "Ploughing", correct: "a" },
+        { question: "Which farm building houses administrative activities and record keeping?", a: "Office", b: "Utility building", c: "Store", correct: "a" },
+        { question: "Which post-planting operation removes extra seedlings to reduce overcrowding?", a: "Thinning", b: "Mulching", c: "Staking", correct: "a" },
+        { question: "Which cultural practice involves cutting unwanted branches to allow better air circulation?", a: "Pruning", b: "Thinning", c: "Weeding", correct: "a" },
+        { question: "Which modern agricultural practice reduces labor by using tractors and harvesters?", a: "Mechanization", b: "Drip irrigation", c: "Polyhouse farming", correct: "a" },
+      
+        // 61-64 correct answer: b
+        { question: "Which farm structure is tall and airtight for storing large quantities of grain?", a: "Barn", b: "Silo", c: "Rhombus", correct: "b" },
+        { question: "Which cultural practice checks plant health, growth, and signs of stress?", a: "Thinning", b: "Observation/Monitoring", c: "Weeding", correct: "b" },
+        { question: "Which pre-planting operation breaks clods and levels the land for uniform planting?", a: "Ploughing", b: "Harrowing/Leveling", c: "Mulching", correct: "b" },
+        { question: "Which post-planting operation supplies water during dry periods?", a: "Pruning", b: "Weeding", c: "Irrigation", correct: "b" },
+
+        // 65-67 correct answer: c
+        { question: "Which propagation method is suitable for crops that do not produce viable seeds?", a: "Seed propagation", b: "Layering", c: "Vegetative propagation", correct: "c" },
+        { question: "Which type of crop propagation ensures offspring are identical to the parent plant?", a: "Seed propagation", b: "Layering", c: "Vegetative propagation", correct: "c" },
+        { question: "Which harvesting practice reduces losses from pests, spoilage, and ensures maximum quality?", a: "Late harvesting", b: "Neglecting harvest", c: "Timely harvesting", correct: "c" },
+
+        // 68-70 correct answer: a
+        { question: "Which structure houses animals such as pigs, goats, or cows?", a: "Animal house", b: "Silo", c: "Tool shed", correct: "a" },
+        { question: "Which pre-planting operation improves soil fertility using manure or chemical fertilizers?", a: "Fertilizer application", b: "Harrowing", c: "Land clearing", correct: "a" },
+        { question: "Which farm building contains tools, machinery, or workshop facilities for repairs?", a: "Utility building", b: "Office", c: "Store", correct: "a" }
+
+      ];
+
+
+ 
+
+    function shuffle(array) {
+      let currentIndex = array.length, randomIndex;
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      }
+      return array;
+    }
+
+    let shuffledQuestions = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let timeLeft = 1800;
+    let timerInterval;
+    let quizCompleted = false;
+
+    const quizContainer = document.getElementById('quiz');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultContainer = document.getElementById('result');
+    const timerDisplay = document.getElementById('timer');
+    const quizapp = document.getElementById('quiz-app');
+    const restartBtn = document.getElementById('restartBtn');
+    const goback = document.getElementById('go-back');
+
+    function saveState() {
+      const state = {
+        shuffledOrder: shuffledQuestions.map(q => q.question),
+        currentQuestionIndex,
+        userAnswers,
+        timeLeft,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return null;
+      try {
+        const state = JSON.parse(saved);
+        const restored = state.shuffledOrder.map(qText => quizData.find(q => q.question === qText)).filter(Boolean);
+        if (restored.length !== quizData.length) return null;
+        return {
+          shuffledQuestions: restored,
+          currentQuestionIndex: state.currentQuestionIndex,
+          userAnswers: state.userAnswers,
+          timeLeft: state.timeLeft,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function clearState() {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+
+    function loadQuestion(index) {
+      const q = shuffledQuestions[index];
+      const savedAnswer = userAnswers[q.question] || '';
+      quizContainer.innerHTML = `
+        <h2 class="question">${q.question}</h2>
+        <label><input type="radio" name="answer" value="a" ${savedAnswer === 'a' ? 'checked' : ''}> ${q.a}</label><br>
+        <label><input type="radio" name="answer" value="b" ${savedAnswer === 'b' ? 'checked' : ''}> ${q.b}</label><br>
+        <label><input type="radio" name="answer" value="c" ${savedAnswer === 'c' ? 'checked' : ''}> ${q.c}</label>
+      `;
+      document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.addEventListener('change', e => {
+          userAnswers[q.question] = e.target.value;
+          saveState();
+        });
+      });
+
+      prevBtn.style.display = index === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = index === shuffledQuestions.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < shuffledQuestions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+        saveState();
+      }
+    }
+
+    function submitQuiz() {
+      quizCompleted = true; 
+      clearInterval(timerInterval);
+      let score = 0;
+      for (let q of shuffledQuestions) {
+        if (userAnswers[q.question] === q.correct) score++;
+      }
+
+      clearState();
+
+      quizContainer.style.display = 'none';
+      nextBtn.style.display = 'none';
+      prevBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      timerDisplay.style.display = 'none';
+
+      resultContainer.style.display = 'block';
+      resultContainer.innerHTML = `<div class="yourScore"><b class="youresult"> result </b> &nbsp; &nbsp;= <span class="fraction"><span class="numerator"> <b class="quizn">${score}</b></span><span class="denominator"><b class="quizn">${quizData.length}</b></span> </span></div>`;
+
+      if (score <= 5) {
+        quizapp.innerHTML = '<div class="first-praise">YOUR SCORE LOOKS VERY POOR, YOU NEED TO IMPROVE</div>';
+      } else if (score <= 8) {
+        quizapp.innerHTML = '<div class="second-praise">YOU HAVE AVERAGE SCORE, YOU CAN DO BETTER</div>';
+      } else {
+        quizapp.innerHTML = '<div class="third-praise">WELL DONE, YOU HAVE A GOOD SCORE</div>';
+      }
+
+      restartBtn.classList.add('my-result');
+      createAnswerToggle();
+    }
+
+    restartBtn.addEventListener('click', () => {
+      restartBtn.disabled = true;
+      restartBtn.textContent = 'Restarting now...';
+      clearState();
+      setTimeout(() => location.reload(), 1000);
+    });
+   
     
-    <br>
-    <div class="social">
-    <a href="https://www.facebook.com/profile.php?id=61556572877287" class="facebook"> 
-        <img src="../../../../images/facebook.png" alt="">
-        <div class="info">Follow us on facebook</div>
-    </a>
-    <a href="https://wa.me/2348100410742" class="whatsapp"> 
-        <img src="../../../../images/whatsapp.png" alt="">
-        <div class="info">Reach us on whatsapp </div>
-    </a>
-    <a href="mailto:seccondary.com.ng@gmail.com" class="gmail"> 
-        <img src="../../../../images/gmail.png" alt="">
-        <div class="info">Email Us </div>
-    </a>
-    </div>
-    
-    </div>
-     
-     
+    goback.addEventListener('click', () => {
+      goback.disabled = true;
+      clearInterval(timerInterval);
+      clearState();
+      setTimeout(() => location.reload(), 500);
+    });
+
+
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        saveState();
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('Time is up! The test will be submitted.');
+          submitQuiz();
+        }
+      }, 1000);
+    }
+
+    function createAnswerToggle() {
+      const toggleBtn = document.createElement("button");
+      toggleBtn.textContent = "See the correct answers ";
+      toggleBtn.id = "showAnswersBtn";
+      toggleBtn.style.display = "block";
+      toggleBtn.style.marginTop = "10px";
+
+      toggleBtn.classList.add('tg-btn');
+      
+
+      let shown = false;
+      const answerContainer = document.createElement("div");
+      answerContainer.id = "answerList";
+      answerContainer.style.display = "none";
+      answerContainer.style.marginTop = "10px";
+      answerContainer.style.textAlign = "left";
+      answerContainer.classList.add('answer-box');
+
+      toggleBtn.addEventListener("click", () => {
+        if (!shown) {
+          let html = ""; 
+          shuffledQuestions.forEach((q, idx) => {
+            if (userAnswers[q.question]) {
+             let userAnswer = userAnswers[q.question];
+                let feedback = "";
+
+                if (userAnswer === q.correct) {
+                feedback = `<span style="color:green;font-size: 18px; font-weight: 800;">You got this one right</span>`;
+                } else {
+                feedback = `<span style="color:red;font-size: 18px; font-weight: 800;">You selected the wrong answer</span>`;
+                }
+
+                html += `<div class="my-self">
+                <span><b class="list3">Question &nbsp;</b></span>${idx + 1}. ${q.question}
+                <span><b class="list3">&nbsp; answer:&nbsp;</b></span><b>${q[q.correct]}</b>
+                <span>&nbsp;| ${feedback}</span>
+                </div>`;
+
+           
+           
+           
+            }
+          });  
+          if (html === "") {
+            html = `<div class="no-answer">You didn't answer any questions.</div>`;
+          }
+          answerContainer.innerHTML = html;
+          answerContainer.style.display = "block";
+          toggleBtn.textContent = "Hide the correct answers";
+          shown = true;
+        } else {
+          answerContainer.style.display = "none";
+          toggleBtn.textContent = "See the correct answers ";
+          shown = false;
+        }
+      });
+
+      restartBtn.insertAdjacentElement("afterend", toggleBtn);
+      toggleBtn.insertAdjacentElement("afterend", answerContainer);
+    }
+
+    const restored = loadState();
+    if (restored) {
+      shuffledQuestions = restored.shuffledQuestions;
+      currentQuestionIndex = restored.currentQuestionIndex;
+      userAnswers = restored.userAnswers;
+      timeLeft = restored.timeLeft;
+    } else {
+      shuffledQuestions = shuffle([...quizData]);
+      currentQuestionIndex = 0;
+      timeLeft = 1800;
+      saveState();
+    }
+
+    loadQuestion(currentQuestionIndex);
+    startTimer();
+  </script>
     
 
+    
     <script src="../../../../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
-
-        // Frame reload
-
-       
-       
-       
-
-     </script>
-
-
-    
-    
 </body>
 </html>
