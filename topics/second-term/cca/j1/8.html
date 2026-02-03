@@ -36,7 +36,7 @@
   </header>
    <br><br>
   <header class="header-back">
-    <a href="../../../../terms/second-term/cca-second/second-term-js3-cca.html">
+    <a href="../../../../terms/second-term/cca-second/cca-second.html">
     <div class="arrow-back">
         
         <div > <button id="go-back">Leave</button></div>
@@ -72,28 +72,218 @@
 
   <script>
     const STORAGE_KEY = 'cbt_quiz_state';
-     const quizData = [
-    { question: "What is the main purpose of package design?", a: "To protect the buyer", b: "To attract and protect the product", c: "To carry company logo", correct: "b" },
-    { question: "What is marketing in art?", a: "Selling art secretly", b: "Displaying and promoting artwork to attract buyers", c: "Painting for fun", correct: "b" },
-    { question: "Which tool is commonly used in embroidery?", a: "Crochet hook", b: "Knitting needle", c: "Embroidery needle", correct: "c" },
-    { question: "What is the basic tool used in knitting?", a: "Crochet hook", b: "Knitting needle", c: "Embroidery hoop", correct: "b" },
-    { question: "Which tool is used to pull yarn in crocheting?", a: "Crochet hook", b: "Knitting pin", c: "Thread needle", correct: "a" },
-    { question: "Which part of packaging helps customers recognize a brand?", a: "Container shape", b: "Product name", c: "Label design", correct: "c" },
-    { question: "What is a target market in art marketing?", a: "The entire public", b: "People interested in artwork", c: "Artists only", correct: "b" },
-    { question: "What does an embroidery hoop do?", a: "Tightens fabric", b: "Holds the thread", c: "Cuts the fabric", correct: "a" },
-    { question: "Which of the following creates loops in knitting?", a: "Crochet needle", b: "Knitting needle", c: "Embroidery pin", correct: "b" },
-    { question: "Which stitch starts a crochet project?", a: "Backstitch", b: "Slip stitch", c: "Chain stitch", correct: "c" },
-    { question: "Which of these improves a package’s appearance?", a: "Plain wrapping", b: "Creative label design", c: "Simple folding", correct: "b" },
-    { question: "Which of these is not part of marketing artwork?", a: "Price setting", b: "Exhibition", c: "Sewing", correct: "c" },
-    { question: "Which stitch is commonly used in hand embroidery?", a: "Chain stitch", b: "Loop stitch", c: "Yarn stitch", correct: "a" },
-    { question: "What type of yarn is suitable for knitting?", a: "Steel yarn", b: "Wool yarn", c: "Paper yarn", correct: "b" },
-    { question: "Which crochet stitch is the shortest?", a: "Double crochet", b: "Chain stitch", c: "Single crochet", correct: "c" },
-    { question: "Which element is often considered in package design?", a: "Fabric pattern", b: "Color and material", c: "Thread size", correct: "b" },
-    { question: "Which of these helps promote art online?", a: "Radio jingles", b: "Social media", c: "Banner printing", correct: "b" },
-    { question: "Which of these can be used to decorate embroidery?", a: "Beads", b: "Paint", c: "Plastic", correct: "a" },
-    { question: "What is one reason people learn knitting?", a: "To decorate walls", b: "To create handmade fabric items", c: "To sew dresses", correct: "b" },
-    { question: "Which tool can be used to finish off loose crochet yarn?", a: "Sewing pin", b: "Yarn needle", c: "Crochet hook", correct: "b" }
-   ];
+      const quizData = [
+  {
+    question: "Which of the following best explains why a theatre is important in the study of drama?",
+    a: "Because it is where actors sleep",
+    b: "Because it serves as a space for rehearsals and performances",
+    c: "Because it stores costumes only",
+    correct: "b"
+  },
+  {
+    question: "In drama, what is the key difference between an actor and a character?",
+    a: "An actor performs while a character is written",
+    b: "An actor is a director's assistant",
+    c: "There is no difference",
+    correct: "a"
+  },
+  {
+    question: "Which of these is NOT usually found in a traditional theatre performance?",
+    a: "Stage lighting",
+    b: "Stage manager",
+    c: "Scorecard",
+    correct: "c"
+  },
+  {
+    question: "One main purpose of drama in education is to:",
+    a: "Replace academic subjects",
+    b: "Help students sleep well",
+    c: "Develop confidence and communication skills",
+    correct: "c"
+  },
+  {
+    question: "Which term refers to the written text of a play?",
+    a: "Manuscript",
+    b: "Script",
+    c: "Act",
+    correct: "b"
+  },
+  {
+    question: "The process of preparing and practising a play before performing it publicly is called:",
+    a: "Audition",
+    b: "Rehearsal",
+    c: "Casting",
+    correct: "b"
+  },
+  {
+    question: "Which of these is NOT a type of drama?",
+    a: "Tragedy",
+    b: "Comedy",
+    c: "Photography",
+    correct: "c"
+  },
+  {
+    question: "Mosaic art involves creating pictures or designs using:",
+    a: "Paint and canvas",
+    b: "Small pieces of coloured materials",
+    c: "Pencils and charcoal",
+    correct: "b"
+  },
+  {
+    question: "What is a major advantage of mosaic in visual storytelling?",
+    a: "It can be erased easily",
+    b: "It is often long-lasting and decorative",
+    c: "It uses sound effects",
+    correct: "b"
+  },
+  {
+    question: "Which of these materials is least commonly used in mosaic art?",
+    a: "Glass",
+    b: "Fabric",
+    c: "Stone",
+    correct: "b"
+  },
+  {
+    question: "Which of these best defines the term 'pitch' in music theory?",
+    a: "The height or depth of a musical note",
+    b: "The loudness of a song",
+    c: "The speed of a song",
+    correct: "a"
+  },
+  {
+    question: "The major scale pattern of tones and semitones is:",
+    a: "T-T-S-T-T-T-S",
+    b: "S-T-T-S-T-T-S",
+    c: "T-S-T-T-T-S-T",
+    correct: "a"
+  },
+  {
+    question: "What is the tonic note of the C major scale?",
+    a: "A",
+    b: "C",
+    c: "G",
+    correct: "b"
+  },
+  {
+    question: "Which of the following does not belong in the rudiments of music?",
+    a: "Melody",
+    b: "Harmony",
+    c: "Acting",
+    correct: "c"
+  },
+  {
+    question: "In staff notation, the five lines and four spaces are collectively called:",
+    a: "Bars",
+    b: "Staff",
+    c: "Clef",
+    correct: "b"
+  },
+  {
+    question: "Which clef is also known as the G clef?",
+    a: "Bass clef",
+    b: "Treble clef",
+    c: "Alto clef",
+    correct: "b"
+  },
+  {
+    question: "Which of the following accurately describes harmony in music?",
+    a: "A single note sung by one person",
+    b: "The combination of different musical notes sounding together",
+    c: "Playing the same melody twice",
+    correct: "b"
+  },
+  {
+    question: "Which of these best defines 'ear training'?",
+    a: "Learning to use earphones",
+    b: "Developing the ability to recognize musical sounds and intervals by hearing",
+    c: "Practicing quietness",
+    correct: "b"
+  },
+  {
+    question: "Which is a benefit of ear training?",
+    a: "Improves sports skills",
+    b: "Helps with music interpretation and pitch accuracy",
+    c: "Makes someone hear louder",
+    correct: "b"
+  },
+  {
+    question: "In a piece of music, what does the time signature tell us?",
+    a: "The name of the composer",
+    b: "How many beats are in each bar",
+    c: "The ending note",
+    correct: "b"
+  },
+  {
+    question: "Which note has the longest duration in standard music notation?",
+    a: "Half note",
+    b: "Whole note",
+    c: "Quarter note",
+    correct: "b"
+  },
+  {
+    question: "In theatre, what is a monologue?",
+    a: "A group song",
+    b: "A solo speech by one actor",
+    c: "A type of costume",
+    correct: "b"
+  },
+  {
+    question: "Which of the following is crucial for good stage performance?",
+    a: "Wearing expensive clothes",
+    b: "Clear voice and expressive movement",
+    c: "Avoiding eye contact",
+    correct: "b"
+  },
+  {
+    question: "Why is backstage work important in theatre?",
+    a: "It is unnecessary",
+    b: "It supports the performance through lighting, props, and coordination",
+    c: "It distracts the audience",
+    correct: "b"
+  },
+  {
+    question: "Which of these musical terms means ‘loud’?",
+    a: "Piano",
+    b: "Forte",
+    c: "Largo",
+    correct: "b"
+  },
+  {
+    question: "What is the function of a key signature in music?",
+    a: "To show rhythm changes",
+    b: "To indicate the key or scale of the piece",
+    c: "To give the title of the music",
+    correct: "b"
+  },
+  {
+    question: "Which of these elements is NOT essential in harmony?",
+    a: "Chords",
+    b: "Intervals",
+    c: "Dance moves",
+    correct: "c"
+  },
+  {
+    question: "Which of the following is true about mosaic tiles?",
+    a: "They must all be the same size",
+    b: "They can be arranged to form images or patterns",
+    c: "They are glued randomly",
+    correct: "b"
+  },
+  {
+    question: "Drama is described as an imitation of real life mainly because:",
+    a: "It uses cartoons",
+    b: "It reflects human actions and emotions on stage",
+    c: "It is based on fiction only",
+    correct: "b"
+  },
+  {
+    question: "What does a director mainly do during a drama production?",
+    a: "Washes costumes",
+    b: "Coordinates the entire play and guides the actors",
+    c: "Plays the lead role",
+    correct: "b"
+  }
+];
 
 
 
