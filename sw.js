@@ -1,53 +1,47 @@
-const CACHE_NAME = 'secondary-cache-v1';
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/manifest.json',
-  '/terms/first-term/agric-first/agric-first.html',
-  '/terms/second-term/agric-second/agric-second.html',
-  '/terms/third-term/agric-third/agric-third.html',
-  '/terms/first-term/agric-first/first-term-js2-agric.html',
-  '/terms/second-term/agric-second/second-term-js2-agric.html',
-  '/terms/third-term/agric-third/third-term-js3-agric.html',
-  '/terms/first-term/agric-first/first-term-js3-agric.html',
-  '/terms/second-term/agric-second/second-term-js3-agric.html',
-  '/terms/third-term/agric-third/third-term-js3-agric.html',
+// This is the "Offline page" service worker
 
-  '/style.css',   
-  '/style2.css',
-  '/script.js',
-  '/script2.js'
-  // Add CSS, JS, fonts, etc., if applicable
-];
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
+const CACHE = "secondary-offline-v1";
 
-self.addEventListener('install', event => {
+// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "offline.html";
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+self.addEventListener('install', async (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
+    caches.open(CACHE)
+      .then((cache) => cache.add(offlineFallbackPage))
   );
 });
 
-// Activate: optional cleanup for old caches
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames =>
-      Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      )
-    )
-  );
-});
+if (workbox.navigationPreload.isSupported()) {
+  workbox.navigationPreload.enable();
+}
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
-  );
+self.addEventListener('fetch', (event) => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith((async () => {
+      try {
+        const preloadResp = await event.preloadResponse;
+
+        if (preloadResp) {
+          return preloadResp;
+        }
+
+        const networkResp = await fetch(event.request);
+        return networkResp;
+      } catch (error) {
+
+        const cache = await caches.open(CACHE);
+        const cachedResp = await cache.match(offlineFallbackPage);
+        return cachedResp;
+      }
+    })());
+  }
 });
