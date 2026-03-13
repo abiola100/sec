@@ -101,3 +101,20 @@ document.addEventListener('contextmenu', function(e) {
 });
 
 
+// --- Scroll Persistence ---
+window.addEventListener('scroll', () => {
+    localStorage.setItem('scrollPosition', window.scrollY);
+});
+
+window.addEventListener('load', () => {
+    const scrollPos = localStorage.getItem('scrollPosition');
+    if (scrollPos) {
+        setTimeout(() => {
+            window.scrollTo(0, parseInt(scrollPos));
+            // Optional: Clear after restoring so it doesn't "jump" on every new page visit
+            // localStorage.removeItem('scrollPosition'); 
+        }, 150);
+    }
+});
+
+
