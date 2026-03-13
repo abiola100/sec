@@ -3,6 +3,7 @@
   "short_name": "Secondary",
   "description": "Educational resources and updates for secondary school students in Nigeria.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "background_color": "#ffffff",
@@ -40,6 +41,42 @@
       "name": "Home",
       "url": "/",
       "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Agric 1st Term",
+      "url": "/terms/first-term/agric-first/agric-first.html"
+    },
+    {
+      "name": "JSS2 1st Term",
+      "url": "/terms/first-term/agric-first/first-term-js2-agric.html"
+    },
+    {
+      "name": "JSS3 1st Term",
+      "url": "/terms/first-term/agric-first/first-term-js3-agric.html"
+    },
+    {
+      "name": "Agric 2nd Term",
+      "url": "/terms/second-term/agric-second/agric-second.html"
+    },
+    {
+      "name": "JSS2 2nd Term",
+      "url": "/terms/second-term/agric-second/second-term-js2-agric.html"
+    },
+    {
+      "name": "JSS3 2nd Term",
+      "url": "/terms/second-term/agric-second/second-term-js3-agric.html"
+    },
+    {
+      "name": "Agric 3rd Term",
+      "url": "/terms/third-term/agric-third/agric-third.html"
+    },
+    {
+      "name": "JSS2 3rd Term",
+      "url": "/terms/third-term/agric-third/third-term-js2-agric.html"
+    },
+    {
+      "name": "JSS3 3rd Term",
+      "url": "/terms/third-term/agric-third/third-term-js3-agric.html"
     }
   ]
 }
