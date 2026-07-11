@@ -22,9 +22,14 @@ body{
 
 
 }
+
 .currently-offline{
     font-size: 22px;
    
+}
+.intro-icon{
+    margin-left: 20px;
+    font-size: 100px;
 }
 .t1{
     font-size: 30px;
