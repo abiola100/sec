@@ -9,8 +9,6 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-
-// Corrected to use cache.addAll with an array wrapper []
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -36,8 +34,6 @@ self.addEventListener('activate', (event) => {
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
-
-// 1. Handle main page navigation failures (Shows the offline HTML)
 self.addEventListener('fetch', (event) => {
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
@@ -59,7 +55,6 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-// 2. Intercept and serve your CSS styling file while offline
 workbox.routing.registerRoute(
   ({request}) => request.destination === 'style',
   new workbox.strategies.StaleWhileRevalidate({
@@ -67,7 +62,7 @@ workbox.routing.registerRoute(
   })
 );
 
-// 3. Intercept and serve your images (like goo.png) while offline
+
 workbox.routing.registerRoute(
   ({request}) => request.destination === 'image',
   new workbox.strategies.CacheFirst({
