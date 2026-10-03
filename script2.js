@@ -1,25 +1,27 @@
 const navTogle = document.querySelector('#navtogle');
 const nav = document.querySelector('nav');
-const navIcon = document.querySelectorAll('.navIcon');
-const hambuger = document.querySelector('#hambuger')
 
-navTogle.addEventListener('click', ()=>{
-    nav.classList.toggle('open')
-    navIcon.forEach(icon =>{
-        icon.classList.toggle('hidden');
-    })
-})
-window.addEventListener('resize', ()=>{
-    if(document.body.clientWidth > 820){
-       nav.classList.remove('open')
-       navIcon.forEach(icon =>{
-        icon.classList.add('hidden');
-    });
-    hambuger.classList.remove('hidden')
-       
+if (navTogle && nav) {
+
+    // Remove the old menu image
+    const oldIcon = navTogle.querySelector('img');
+    if (oldIcon) {
+        oldIcon.remove();
     }
-})
 
+    navTogle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        navTogle.classList.toggle('active');
+    });
+
+    window.addEventListener('resize', () => {
+        if (document.body.clientWidth > 820) {
+            nav.classList.remove('open');
+            navTogle.classList.remove('active');
+        }
+    });
+
+}
 
 // OPINION BOX
 var date = new Date();

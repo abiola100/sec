@@ -64,7 +64,7 @@ $(document).ready(function(){
     simpleToggle('.bst-jss2', '.bst-j2-subjects');
     simpleToggle('.bst-jss3', '.bst-j3-subjects');
 
-    // CIVIC EDUCATION
+    // CIVIC EDUCATION 
     simpleToggle('.civic-sub', '.civic-class1');
     simpleToggle('.civic-jss1', '.civic-j1-subjects');
     simpleToggle('.civic-jss2', '.civic-j2-subjects');

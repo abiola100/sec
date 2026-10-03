@@ -13,6 +13,35 @@ body{
      
      
 }
+/* ================================
+   MOBILE MENU ICON
+   ================================ */
+
+/* Hide the old image icon */
+#navtogle img {
+    display: none;
+}
+
+/* Hamburger icon */
+#navtogle::before {
+    content: "☰";
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* X icon when menu is open */
+#navtogle.active::before {
+    content: "✕";
+}
+  
+.mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
 
 
  .ofline-container{
@@ -349,22 +378,25 @@ table {
 }
 .about{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
-    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    
 }
-.about-img img{
-    height: 200px;
-    width: 150px;
+.about2{
+    max-width: 70%;
+    border: solid 1px darkred;
+    padding: 10px;
+    border-radius: 30px;
+
 }
-.about-text{
-    height: 200px;
-    max-width: 300px;
-    font-size: 18px;
-}
-.contact-us{
-    font-size: 22px;
-    margin-left: 20px;
+
+
+.contact{
+    border: solid 1px darkolivegreen;
+    padding: 20px;
+    border-radius: 30px;
 }
 .delete-btn {
 
@@ -891,18 +923,12 @@ footer{
 .full img{
     margin-top: 20px;
 }
-.about{
-    display: flex;
-    flex-direction:column;
-    
+
+.about2{
+    max-width: 90%;
+
 }
-.about-img img{
-    height: 300px;
-    width: 80%;
-}
-.about-text{
-    font-size: 15px;
-}
+
 .explain{
     
     height: 100px;

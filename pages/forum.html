@@ -8,6 +8,22 @@
     <link rel="icon" href="../images/place.png" type="image/png"> 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <style>
+        .example2{border: 1px solid #ccc; padding: 15px; margin: 10px 0; background-color: #f9f9f9; }
+        .example { border-left:4px solid #0b5a3a; background:#fcfcfc; padding:8px 12px; margin:12px 0; }
+      .contact-button {
+            display: inline-block;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            border-bottom-right-radius: 50px;
+            font-weight: bold;
+            margin: 5px;
+            background-color: sienna;
+            color: white;
+            box-shadow: 10px 10px 10px gray;
+        }
+    </style>
    
 </head>
 <body>
@@ -34,126 +50,89 @@
       </header>
     </div>
     
-    
-    <div class="form-container">
-        <h2>SUBMIT YOUR SUGGESTIONS</h2>
-        <br>
-        <input type="text" id="name" placeholder="Your Name">
-        <br>
-        <input type="text" id="title" placeholder="Title of Complaint">
-        <br>
-        <textarea id="complaint" placeholder="Your Suggestion" rows="4"></textarea>
-        <br>
-        <button onclick="submitComplaint()">Submit</button>
-    </div>
+  
+        <div class="mid">
 
-    <div class="complaints-container">
-        <h3> SUGGESTIONS </h3>
-        <div id="complaints-list"></div>
-    </div>
-    
-       
-    
-        
+                <div class="contact">
+
+                    <div class="form-container">
+                        
+                        <div class="title" style="background-color: darkkhaki;color: black;"><b class="mid">JOIN OUR LEARNING COMMUNITY</b></div>
+                            
+
+                       <h3 class="example2">
+                        Connect with other learners, ask questions, share ideas,
+                            discuss topics, and learn together.
+                       </h3>
+                        <br>
+
+
+                        <!-- WHATSAPP GROUP -->
+
+                        <a
+                            href="https://chat.whatsapp.com/K7wI5gVlvIzFVMXIiXdorB?s=cl&p=a&mlu=4&ilr=4"
+                            
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-button">
+
+                            JOIN US ON OUR WHATSAPP GROUP
+
+                        </a>
+
+
+                        <br><br>
+
+
+                        <!-- EMAIL -->
+
+                        <a
+                            
+                            href="mailto:secondaryng@googlegroups.com"
+                            class="contact-button">
+
+                            EMAIL OUR LEARNING COMMUNITY
+
+                        </a>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <h2 class="mid">
+                        Copyright &copy; <b id="me"></b>
+                    </h2>
+
+                </div>
+
+        </div>
+
+
+
+            <h2 class="mid" style="color: darkred;">
+                <i>Powered by Abisoft Technology</i>
+            </h2>
+
+
+
             
-               
-                
-           
-
-                
-           
 
     
-    <div class="lower-side">
-        <footer >copyright &copy; <b id="me"></b></footer>
-        <div class="powered"><div class="info"> powered by Busari Abiola Sulyman</div> 
-        <div><img src="../images/ab-pics.jpg" alt=""></div></div>
-    </div>
-    
+            <script src="../script2.js"></script>
+            <script>
 
-    <script src="../script2.js"></script>
-    <script > 
-            var date = new Date();
-        var year = date.getFullYear()
-        let me = document.getElementById('me').innerHTML =year;
+                /* COPYRIGHT YEAR */
 
-        // Frame reload
+                const date = new Date();
 
-        // form 
-        document.addEventListener('DOMContentLoaded', (event) => {
-            loadComplaints();
-        });
+                const year = date.getFullYear();
 
-        function submitComplaint() {
-            const name = document.getElementById('name').value;
-            const title = document.getElementById('title').value;
-            const complaint = document.getElementById('complaint').value;
+                document.getElementById("me").textContent = year;
 
-            if (name && title && complaint) {
-                const complaintData = { name, title, complaint, id: new Date().getTime() };
-                saveComplaint(complaintData);
-                addComplaintToDOM(complaintData);
+            </script>
 
-                // Clear the form fields
-                document.getElementById('name').value = '';
-                document.getElementById('title').value = '';
-                document.getElementById('complaint').value = '';
-            } else {
-                alert('Please fill out all fields.');
-            }
-        }
-
-        function saveComplaint(complaint) {
-            let complaints = localStorage.getItem('complaints');
-            if (complaints) {
-                complaints = JSON.parse(complaints);
-            } else {
-                complaints = [];
-            }
-            complaints.push(complaint);
-            localStorage.setItem('complaints', JSON.stringify(complaints));
-        }
-
-        function loadComplaints() {
-            let complaints = localStorage.getItem('complaints');
-            if (complaints) {
-                complaints = JSON.parse(complaints);
-                complaints.forEach(complaint => {
-                    addComplaintToDOM(complaint);
-                });
-            }
-        }
-
-        function addComplaintToDOM(complaint) {
-            const complaintBox = document.createElement('div');
-            complaintBox.className = 'complaint-box';
-            complaintBox.innerHTML = `
-                <h4>NAME  : ${complaint.name}  <br><br>TITLE  : ${complaint.title}</h4>
-                
-                <p><b class="complain">${complaint.complaint}</b></p>
-                <button class="delete-btn" onclick="deleteComplaint(${complaint.id})">Delete</button>
-            `;
-            document.getElementById('complaints-list').appendChild(complaintBox);
-        }
-
-        function deleteComplaint(id) {
-            let complaints = localStorage.getItem('complaints');
-            if (complaints) {
-                complaints = JSON.parse(complaints);
-                complaints = complaints.filter(complaint => complaint.id !== id);
-                localStorage.setItem('complaints', JSON.stringify(complaints));
-                document.getElementById('complaints-list').innerHTML = '';
-                loadComplaints();
-            }
-        }
-
-
-       
-       
-       
-
-     </script>
-    
     
 </body>
 </html>
